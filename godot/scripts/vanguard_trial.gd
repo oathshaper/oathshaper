@@ -288,10 +288,15 @@ func _briefing() -> void:
 	_button(panel, "begin", "Enter the garden", Rect2(125, 657, 500, 62), _begin).grab_focus()
 	_button(panel, "leave", "Return to quay" if campaign_mode else "Return to menu", Rect2(655, 657, 500, 62), _finish)
 
+func _capture_mouse() -> void:
+	# Unfocusable preview/test windows must never take the desktop pointer.
+	if not get_window().unfocusable:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 func _begin() -> void:
 	_clear_modal()
 	submit({"kind":"begin"})
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	_capture_mouse()
 
 func _wheel() -> void:
 	if state.status != "engaged":
@@ -355,7 +360,7 @@ func _power(actor: String, power: String) -> void:
 func _close_wheel() -> void:
 	_clear_modal()
 	submit({"kind":"pause","owner":"wheel","paused":false})
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	_capture_mouse()
 
 func _menu() -> void:
 	var panel := _base_modal("menu")
@@ -364,7 +369,7 @@ func _menu() -> void:
 	_button(panel,"resume","Resume",Rect2(390,380,500,60),func() -> void:
 		_clear_modal()
 		submit({"kind":"pause","owner":"menu","paused":false})
-		Input.mouse_mode=Input.MOUSE_MODE_CAPTURED).grab_focus()
+		_capture_mouse()).grab_focus()
 	_button(panel,"restart","Restart encounter",Rect2(390,460,500,60),_restart)
 	_button(panel,"leave","Return to quay" if campaign_mode else "Return to menu",Rect2(390,540,500,60),_finish)
 	_button(panel,"audio","Audio",Rect2(390,620,500,60),func() -> void: preload("res://scripts/game_audio.gd").ensure(self).open_settings())

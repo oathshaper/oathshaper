@@ -2,7 +2,7 @@
 
 Comparative design research follows the [research and third-party rights notice](docs/research/NOTICE.md). References identify inspirations and do not imply affiliation, endorsement or permission to redistribute their assets.
 
-Oathshaper is an early BioWare-inspired foundation for dialogue-heavy 3D RPGs. Its code is MIT licensed. Godot handles scenes, input, camera, audio, and UI. A Godot-independent Rust crate owns deterministic dialogue rules and story state. **Oathshaper is a working name.**
+Oathshaper is an early BioWare-inspired foundation for dialogue-heavy 3D RPGs. Its code and [project-owned media](ASSET-LICENSE.md) use the MIT license; third-party notices remain applicable. Godot handles scenes, input, camera, audio, and UI. A Godot-independent Rust crate owns deterministic dialogue rules and story state. **Oathshaper is a working name.**
 
 Dedicated to the people of BioWare, whose worlds made companions, conversations, and difficult choices central to so many adventures. This independent homage follows the studio's [October 2026 closure announcement](https://www.ea.com/news/building-eas-next-chapter).
 

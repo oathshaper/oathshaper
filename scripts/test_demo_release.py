@@ -30,6 +30,7 @@ def fixture(root, platform, *, extra=None, bad_file=False, manifest_revision=SHA
     if platform == "macos":
         executable = "Oathshaper.app/Contents/MacOS/Oathshaper"
     files = {executable: b"fixture executable", "licenses/LICENSE": b"fixture notice",
+             "licenses/ASSET-LICENSE.md": b"fixture media grant",
              "licenses/godot/assets/audio/generated/ATTRIBUTION.md": b"fixture credits"}
     if platform == "macos":
         files["Oathshaper.app/Contents/Info.plist"] = plistlib.dumps({"CFBundleExecutable": "Oathshaper"})

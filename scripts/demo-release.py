@@ -92,7 +92,8 @@ def verify_archive(archive, platform, revision):
             relative(name)
         expected = {stem + "/" + n for n in files} | {stem + "/BUILD-MANIFEST.json"}
         require(set(names) == expected, "Unmanifested or missing archive files")
-        require({"licenses/LICENSE", "licenses/godot/assets/audio/generated/ATTRIBUTION.md"} <= files.keys(),
+        require({"licenses/LICENSE", "licenses/ASSET-LICENSE.md",
+                 "licenses/godot/assets/audio/generated/ATTRIBUTION.md"} <= files.keys(),
                 "Required code/voice notices missing")
         for name, sha in files.items():
             with read(stem + "/" + name) as stream:

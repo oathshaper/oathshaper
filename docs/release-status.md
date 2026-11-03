@@ -17,7 +17,7 @@ Recent native checks and the edited showcase exercise these paths. They are deve
 
 ## Publication requirements
 
-- **Code:** first-party code uses [MIT](../LICENSE). Third-party licenses and notices remain separate.
+- **Code and project media:** first-party code uses [MIT](../LICENSE), extended to [project-owned media](../ASSET-LICENSE.md). Third-party licenses and notices remain separate.
 - **Media:** Kenney audio, the harbor recordings and animation donors have their own recorded licenses. Fonts retain OFL notices. Generated voice credits identify every conditioning source, model and processing step; preserve them with redistributed audio.
 - **Owner-supplied models:** the owner reports paid-plan, private Meshy generation. Meshy-origin distribution permission is cleared under its paid-plan terms. The account status is an owner report; generation inputs have not been independently inspected. See [model provenance](../godot/assets/meshes/README.md) and [voice attribution](../godot/assets/audio/generated/ATTRIBUTION.md).
 - **Native archives:** build from a clean captured revision. Retain `BUILD-MANIFEST.json`, checksums and `licenses/`. Startup checks cover only the host that ran them; verify gameplay on each advertised platform before distribution.

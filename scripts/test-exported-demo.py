@@ -59,6 +59,12 @@ def prepare_driver(name, directory):
     text = text.replace("/tmp/", directory.as_posix() + "/")
     text = text.replace("user://", directory.as_posix() + "/")
     if "extends SceneTree" in text:
+        helper = prepare_driver("release_input", directory)
+        text = text.replace("extends SceneTree", "extends SceneTree\nconst RELEASE_INPUT = preload("
+                            + json.dumps(helper.as_posix()) + ")", 1)
+        text = re.sub(r'(?m)^func _initialize\(\) -> void:[ \t]*\n?[ \t]*',
+                      'func _initialize() -> void:\n\tRELEASE_INPUT.install(root)\n\t', text, count=1)
+        text = text.replace("Input.parse_input_event(", "RELEASE_INPUT.send(")
         # Exercise normal audio teardown before a test-owned SceneTree exits.
         text = re.sub(r'(?m)^(\s*)quit\((1 if failures else 0|0 if failures.is_empty\(\) else 1)\)$',
                       r'\1await _release_test_finish(\2)', text)
@@ -165,6 +171,7 @@ def main():
     report = {"source_commit": revision, "platform": platform,
               "executable_sha256": sha(executable), "manifest_files_verified": len(manifest["files"]),
               "rendered": args.rendered, "physical_controller": False, "audio_driver": "Dummy",
+              "input_scope": "Scripted events; rendered window is unfocusable and click-through, OS events discarded",
               "scope": "Packaged scene/rules/UI routes with fixture positioning; not a human hardware playtest.",
               "results": results, "skipped": skipped, "passed": all(row["passed"] for row in results)}
     (output / "acceptance.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
