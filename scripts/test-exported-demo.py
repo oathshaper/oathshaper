@@ -65,9 +65,10 @@ def prepare_driver(name, directory):
         text += '''
 func _release_test_finish(code: int) -> void:
 \tvar audio = root.get_meta("oathshaper_audio", null)
-\tif is_instance_valid(audio): audio._release_playback()
-\tawait create_timer(.2).timeout
-\tquit(code)
+\tif is_instance_valid(audio):
+\t\tawait audio.quit_game(code)
+\telse:
+\t\tquit(code)
 '''
     target = directory / (name + ".gd")
     target.write_text(text, encoding="utf-8")

@@ -106,26 +106,43 @@ func _ready() -> void:
 	add_child(_music)
 	_music.play()
 
-func _release_playback() -> void:
+func _release_playback() -> Array[WeakRef]:
 	set_process(false)
-	for child in get_children():
+	var pending: Array[WeakRef] = []
+	var players := get_children()
+	if is_inside_tree(): players.append_array(get_tree().get_nodes_in_group("dialogue_audio"))
+	for child in players:
 		if child is AudioStreamPlayer:
+			if child.has_stream_playback(): pending.append(weakref(child.get_stream_playback()))
 			child.stop()
 			child.stream = null
 	_streams.clear()
 	_players.clear()
 	_beds.clear()
 	_music = null
+	return pending
 
-func quit_game() -> void:
+func _playback_pending(playbacks: Array[WeakRef]) -> bool:
+	for playback in playbacks:
+		if playback.get_ref() != null: return true
+	return false
+
+func quit_game(exit_code := 0) -> void:
 	if _quitting: return
 	_quitting = true
 	var tree := get_tree()
-	_release_playback()
-	# Godot 4.3's audio thread needs a mix interval to retire stopped Vorbis
-	# playback before the resource cache is destroyed (godotengine/godot#76745).
-	await tree.create_timer(.15, true, false, true).timeout
-	tree.quit()
+	var pending := _release_playback()
+	# Godot 4.3 retires stopped playback asynchronously. A fixed delay alone
+	# races its audio thread on slower machines (godotengine/godot#76745).
+	# Weak references let us observe release without keeping playback alive.
+	await tree.create_timer(.2, true, false, true).timeout
+	var deadline := Time.get_ticks_msec() + 2000
+	while _playback_pending(pending) and Time.get_ticks_msec() < deadline:
+		await tree.process_frame
+	if _playback_pending(pending):
+		push_error("Audio playback did not drain before shutdown")
+		exit_code = 1
+	tree.quit(exit_code)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
