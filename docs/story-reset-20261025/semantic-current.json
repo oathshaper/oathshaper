@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 2,
+  "profile": "fiction",
+  "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+  "summary": {
+    "findingCount": 4,
+    "bySeverity": {
+      "high": 0,
+      "medium": 4,
+      "low": 0
+    },
+    "revisionPriority": 19,
+    "band": "focused",
+    "wordCount": 1399,
+    "sentenceCount": 175,
+    "paragraphCount": 33
+  },
+  "metrics": {
+    "sentenceWords": {
+      "mean": 7.87,
+      "sd": 4.31,
+      "cv": 0.547,
+      "p10": 2,
+      "p50": 8,
+      "p90": 13.6
+    },
+    "paragraphWords": {
+      "mean": 41.82,
+      "sd": 38.24,
+      "cv": 0.914,
+      "p10": 14.6,
+      "p50": 33,
+      "p90": 67
+    },
+    "properNounCount": 87,
+    "valueCount": 5,
+    "parentheticalCount": 0,
+    "ellipsisCount": 0,
+    "emDashCount": 1,
+    "featureVector": {
+      "lexical": {
+        "uniqueWords": 366,
+        "typeTokenRatio": 0.262,
+        "rootTypeTokenRatio": 9.785,
+        "mattr50": 0.764,
+        "hapaxShare": 0.5,
+        "averageWordLength": 4.36,
+        "longWordShare": 0.062,
+        "wordUnigramEntropyBits": 7.406,
+        "characterTrigramEntropyBits": 9.584,
+        "uniqueBigramShare": 0.715,
+        "gzipCompressionRatio": 0.367,
+        "stopWordShare": 0.296,
+        "digitTokenShare": 0.001,
+        "contractionPer100Words": 1.93
+      },
+      "readability": {
+        "estimatedSyllablesPerWord": 1.338,
+        "fleschReadingEase": 85.52
+      },
+      "syntax": {
+        "posShares": {
+          "adjective": 0.057,
+          "adverb": 0.014,
+          "conjunction": 0.038,
+          "determiner": 0.135,
+          "noun": 0.455,
+          "preposition": 0.059,
+          "pronoun": 0.065,
+          "verb": 0.203
+        },
+        "passiveSentenceShare": 0.04,
+        "firstPersonPer100Words": 2.788,
+        "secondPersonPer100Words": 1.358,
+        "sentenceStartEntropyBits": 6.906,
+        "sentenceStartUniqueShare": 0.783,
+        "posSignatureEntropyBits": 6.41,
+        "posSignatureUniqueShare": 0.657,
+        "properNounPer100Words": 6.576,
+        "valuePer100Words": 0.357
+      },
+      "structure": {
+        "questionSentenceShare": 0.017,
+        "exclamationSentenceShare": 0,
+        "singleSentenceParagraphShare": 0.061,
+        "meanSentenceWords": 7.869,
+        "sentenceLengthCv": 0.547,
+        "meanParagraphWords": 41.818,
+        "paragraphLengthCv": 0.914,
+        "quotationSpansPer1000Words": 2.859
+      },
+      "punctuationPer1000Words": {
+        "colon": 30.021,
+        "semicolon": 3.574,
+        "emDash": 0.715,
+        "parenthetical": 0,
+        "ellipsis": 0
+      },
+      "discourse": {
+        "explicitTransitionSentenceShare": 0,
+        "sequenceOpenerSentenceShare": 0,
+        "retextMessageCounts": {
+          "retext-intensify": 76,
+          "retext-passive": 1,
+          "retext-readability": 8,
+          "retext-repeated-words": 0
+        }
+      },
+      "flat": {
+        "lexical.uniqueWords": 366,
+        "lexical.typeTokenRatio": 0.262,
+        "lexical.rootTypeTokenRatio": 9.785,
+        "lexical.mattr50": 0.764,
+        "lexical.hapaxShare": 0.5,
+        "lexical.averageWordLength": 4.36,
+        "lexical.longWordShare": 0.062,
+        "lexical.wordUnigramEntropyBits": 7.406,
+        "lexical.characterTrigramEntropyBits": 9.584,
+        "lexical.uniqueBigramShare": 0.715,
+        "lexical.gzipCompressionRatio": 0.367,
+        "lexical.stopWordShare": 0.296,
+        "lexical.digitTokenShare": 0.001,
+        "lexical.contractionPer100Words": 1.93,
+        "readability.estimatedSyllablesPerWord": 1.338,
+        "readability.fleschReadingEase": 85.52,
+        "syntax.posShares.adjective": 0.057,
+        "syntax.posShares.adverb": 0.014,
+        "syntax.posShares.conjunction": 0.038,
+        "syntax.posShares.determiner": 0.135,
+        "syntax.posShares.noun": 0.455,
+        "syntax.posShares.preposition": 0.059,
+        "syntax.posShares.pronoun": 0.065,
+        "syntax.posShares.verb": 0.203,
+        "syntax.passiveSentenceShare": 0.04,
+        "syntax.firstPersonPer100Words": 2.788,
+        "syntax.secondPersonPer100Words": 1.358,
+        "syntax.sentenceStartEntropyBits": 6.906,
+        "syntax.sentenceStartUniqueShare": 0.783,
+        "syntax.posSignatureEntropyBits": 6.41,
+        "syntax.posSignatureUniqueShare": 0.657,
+        "syntax.properNounPer100Words": 6.576,
+        "syntax.valuePer100Words": 0.357,
+        "structure.questionSentenceShare": 0.017,
+        "structure.exclamationSentenceShare": 0,
+        "structure.singleSentenceParagraphShare": 0.061,
+        "structure.meanSentenceWords": 7.869,
+        "structure.sentenceLengthCv": 0.547,
+        "structure.meanParagraphWords": 41.818,
+        "structure.paragraphLengthCv": 0.914,
+        "structure.quotationSpansPer1000Words": 2.859,
+        "punctuationPer1000Words.colon": 30.021,
+        "punctuationPer1000Words.semicolon": 3.574,
+        "punctuationPer1000Words.emDash": 0.715,
+        "punctuationPer1000Words.parenthetical": 0,
+        "punctuationPer1000Words.ellipsis": 0,
+        "discourse.explicitTransitionSentenceShare": 0,
+        "discourse.sequenceOpenerSentenceShare": 0,
+        "discourse.retextMessageCounts.retext-intensify": 76,
+        "discourse.retextMessageCounts.retext-passive": 1,
+        "discourse.retextMessageCounts.retext-readability": 8,
+        "discourse.retextMessageCounts.retext-repeated-words": 0
+      }
+    },
+    "semantic": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "5f8986ea538762fd82a43a768d583a5a9d71d1ec",
+      "sentenceThreshold": 0.84,
+      "paragraphThreshold": 0.88,
+      "sentenceComparisons": 6105,
+      "paragraphComparisons": 231,
+      "semanticSentencePairs": 1,
+      "semanticParagraphPairs": 0,
+      "truncated": false
+    }
+  },
+  "findings": [
+    {
+      "category": "repetition",
+      "confidence": "high",
+      "id": "repeated-multiword-phrase",
+      "label": "A multiword phrase repeats verbatim",
+      "severity": "medium",
+      "measurement": {
+        "phrase": "the clerk by the tower",
+        "count": 4,
+        "ngramWords": 5
+      },
+      "evidence": [
+        {
+          "line": 14,
+          "paragraph": 5,
+          "text": "The clerk by the tower"
+        },
+        {
+          "line": 18,
+          "paragraph": 6,
+          "text": "the clerk by the tower"
+        },
+        {
+          "line": 28,
+          "paragraph": 7,
+          "text": "the clerk by the tower"
+        }
+      ],
+      "why": "A five-word sequence recurs at least three times outside masked code and URLs, suggesting formula reuse or avoidable recap.",
+      "direction": "Keep repetition that establishes terminology or deliberate rhythm. Otherwise consolidate the repeated thought rather than paraphrasing each occurrence cosmetically."
+    },
+    {
+      "category": "lexical",
+      "confidence": "medium",
+      "id": "lexical-confidence-fog",
+      "label": "Hedges, fillers, or weasel words accumulate",
+      "severity": "medium",
+      "measurement": {
+        "count": 76,
+        "per100Words": 5.432,
+        "filler": 10,
+        "hedge": 27,
+        "weasel": 39,
+        "library": "retext-intensify"
+      },
+      "evidence": [
+        {
+          "line": 13,
+          "paragraph": 5,
+          "text": "still"
+        },
+        {
+          "line": 14,
+          "paragraph": 5,
+          "text": "Start"
+        },
+        {
+          "line": 17,
+          "paragraph": 6,
+          "text": "Can"
+        }
+      ],
+      "why": "Repeated qualification and intensification can make confidence sound manufactured while leaving the claim imprecise.",
+      "direction": "For each term, state the actual uncertainty, degree, comparison, or evidence. Keep hedges that express real epistemic limits."
+    },
+    {
+      "category": "repetition",
+      "confidence": "medium",
+      "id": "lexical-restatement-cluster",
+      "label": "Several sentences restate the same content vocabulary",
+      "severity": "medium",
+      "measurement": {
+        "pairs": 3,
+        "strongestJaccard": 1
+      },
+      "evidence": [
+        {
+          "line": 28,
+          "paragraph": 7,
+          "text": "Ask the clerk by the tower for the flood ledger."
+        },
+        {
+          "line": 31,
+          "paragraph": 8,
+          "text": "Ask the clerk by the tower for the flood ledger."
+        },
+        {
+          "line": 56,
+          "paragraph": 13,
+          "text": "The flood ledger is in the iron cabinet inside."
+        },
+        {
+          "line": 68,
+          "paragraph": 15,
+          "text": "The flood ledger is in the iron cabinet inside."
+        }
+      ],
+      "why": "Multiple non-adjacent sentence pairs share most of their content words, a transparent proxy for paraphrastic recap.",
+      "direction": "Decide which occurrence advances the argument. Merge repetitions or make later occurrences add evidence, consequence, or contradiction."
+    },
+    {
+      "id": "semantic-restatement",
+      "label": "Non-adjacent sentences make nearly the same semantic move",
+      "category": "semantic-repetition",
+      "severity": "medium",
+      "confidence": "medium",
+      "measurement": {
+        "pairs": 1,
+        "strongestCosine": 0.8603,
+        "lexicalOverlap": 0.4,
+        "model": "Xenova/all-MiniLM-L6-v2@5f8986ea538762fd82a43a768d583a5a9d71d1ec"
+      },
+      "evidence": [
+        {
+          "line": 114,
+          "paragraph": 26,
+          "text": "The man in red has fitted his own command seal."
+        },
+        {
+          "line": 117,
+          "paragraph": 27,
+          "text": "The man in red carries their command seal.\""
+        }
+      ],
+      "why": "A pinned local sentence-embedding model found high semantic similarity despite lower word overlap. This is evidence of possible paraphrastic recap, not authorship.",
+      "direction": "Check whether the later sentence changes the claim, evidence, consequence, or audience decision. Merge it if it only rephrases the earlier move."
+    }
+  ],
+  "semanticQuestions": [
+    {
+      "id": "thematic-overdetermination",
+      "question": "Does narration or dialogue state the theme or moral instead of leaving the reader room to infer it?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "causal-streamlining",
+      "question": "Is the plot one continuous chain with too few independent pressures, subplots, reversals, or loose ends for this story?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "tidy-resolution",
+      "question": "Does the protagonist control the resolution and arrive at a complete internal lesson too neatly?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "embodied-performativity",
+      "question": "Do bodily sensation, sensory detail, or setting repeatedly perform emotions that the scene already establishes?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "temporal-recontextualization",
+      "question": "Do revelation and time structure ever change how earlier events are understood, or only disclose the next fact?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "moral-ambiguity",
+      "question": "Does the narrative allow consequential choices to remain morally mixed?",
+      "requiresCitedSpan": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "sha256": "69010ab42741d45b34f45bbbea8db595c8749ac7a9ce70ee50bae3d2b3ac29fd",
+  "seconds": 30.0,
+  "sample_rate": 48000,
+  "channels": 2,
+  "finite": true,
+  "rms": 0.11520238826073864,
+  "peak": 0.8912353515625,
+  "clipped_samples": 0,
+  "listening_status": "Opened in QuickTime for user audition; musical suitability not yet confirmed."
+}

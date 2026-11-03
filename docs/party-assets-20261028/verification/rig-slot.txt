@@ -1,0 +1,11 @@
+Initialize godot-rust (API v4.3.stable.official, runtime v4.3.stable.official)
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+OpenGL API 4.1 Metal - 89.3 - Compatibility - Using Device: Apple - Apple M4 Pro
+
+2026-10-28 16:19:04.669 Godot[94020:978256011] +[IMKClient subclass]: chose IMKClient_Modern
+[1;33mWARNING:[0;93m Rigged character needs a weighted skin and required clips; using fallback: user://oathshaper_unweighted_slot_fixture.tscn
+[0;90m     at: push_warning (core/variant/variant_utility.cpp:1112)[0m
+2026-10-28 16:19:04.757 Godot[94020:978256011] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+[1;33mWARNING:[0;93m Character model has no visible mesh; using primitive art: user://oathshaper_empty_slot_fixture.tscn
+[0;90m     at: push_warning (core/variant/variant_utility.cpp:1112)[0m
+Oathshaper rig slot Idle/Walk, procedural foot-anchored motion, opt-out and empty fallback checks passed

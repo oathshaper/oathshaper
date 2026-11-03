@@ -1,0 +1,21 @@
+Public evidence copy: workstation paths normalized; test output otherwise unchanged.
+
+   Compiling oathshaper-core v0.1.0 (<project>/crates/oathshaper-core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.97s
+     Running unittests src/lib.rs (target/debug/deps/oathshaper_core-fa0f0f8e9187caca)
+
+running 1 test
+
+thread 'command::tests::obsolete_attacks_are_cleared_together_without_repeated_resume_pauses' (946326268) panicked at crates/oathshaper-core/src/command/tests.rs:1436:5:
+All queued strikes at the defeated target should retire together
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test command::tests::obsolete_attacks_are_cleared_together_without_repeated_resume_pauses ... FAILED
+
+failures:
+
+failures:
+    command::tests::obsolete_attacks_are_cleared_together_without_repeated_resume_pauses
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 39 filtered out; finished in 0.03s
+
+error: test failed, to rerun pass `-p oathshaper-core --lib`

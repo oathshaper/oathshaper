@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 2,
+  "profile": "nonfiction",
+  "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+  "summary": {
+    "findingCount": 10,
+    "bySeverity": {
+      "high": 0,
+      "medium": 8,
+      "low": 2
+    },
+    "revisionPriority": 39,
+    "band": "substantial",
+    "wordCount": 19510,
+    "sentenceCount": 2558,
+    "paragraphCount": 2428
+  },
+  "metrics": {
+    "sentenceWords": {
+      "mean": 3.44,
+      "sd": 2.7,
+      "cv": 0.784,
+      "p10": 2,
+      "p50": 2,
+      "p90": 7
+    },
+    "paragraphWords": {
+      "mean": 8.03,
+      "sd": 6.57,
+      "cv": 0.818,
+      "p10": 2,
+      "p50": 6,
+      "p90": 12
+    },
+    "properNounCount": 288,
+    "valueCount": 190,
+    "parentheticalCount": 2,
+    "ellipsisCount": 1,
+    "emDashCount": 0,
+    "featureVector": {
+      "lexical": {
+        "uniqueWords": 1862,
+        "typeTokenRatio": 0.095,
+        "rootTypeTokenRatio": 13.331,
+        "mattr50": 0.533,
+        "hapaxShare": 0.491,
+        "averageWordLength": 5.322,
+        "longWordShare": 0.155,
+        "wordUnigramEntropyBits": 7.352,
+        "characterTrigramEntropyBits": 9.349,
+        "uniqueBigramShare": 0.301,
+        "gzipCompressionRatio": 0.174,
+        "stopWordShare": 0.042,
+        "digitTokenShare": 0.073,
+        "contractionPer100Words": 0.118
+      },
+      "readability": {
+        "estimatedSyllablesPerWord": 1.654,
+        "fleschReadingEase": 59.15
+      },
+      "syntax": {
+        "posShares": {
+          "adjective": 0.073,
+          "adverb": 0.013,
+          "conjunction": 0.026,
+          "determiner": 0.043,
+          "noun": 0.648,
+          "preposition": 0.021,
+          "pronoun": 0.009,
+          "verb": 0.14
+        },
+        "passiveSentenceShare": 0.007,
+        "firstPersonPer100Words": 0.087,
+        "secondPersonPer100Words": 0.215,
+        "sentenceStartEntropyBits": 6.595,
+        "sentenceStartUniqueShare": 0.428,
+        "posSignatureEntropyBits": 4.928,
+        "posSignatureUniqueShare": 0.176,
+        "properNounPer100Words": 1.481,
+        "valuePer100Words": 0.974
+      },
+      "structure": {
+        "questionSentenceShare": 0.002,
+        "exclamationSentenceShare": 0,
+        "singleSentenceParagraphShare": 0.951,
+        "meanSentenceWords": 3.44,
+        "sentenceLengthCv": 0.784,
+        "meanParagraphWords": 8.034,
+        "paragraphLengthCv": 0.818,
+        "quotationSpansPer1000Words": 0
+      },
+      "punctuationPer1000Words": {
+        "colon": 33.265,
+        "semicolon": 3.178,
+        "emDash": 0,
+        "parenthetical": 0.103,
+        "ellipsis": 0.051
+      },
+      "discourse": {
+        "explicitTransitionSentenceShare": 0,
+        "sequenceOpenerSentenceShare": 0.002,
+        "retextMessageCounts": {
+          "retext-intensify": 141,
+          "retext-passive": 3,
+          "retext-readability": 596,
+          "retext-repeated-words": 0
+        }
+      },
+      "flat": {
+        "lexical.uniqueWords": 1862,
+        "lexical.typeTokenRatio": 0.095,
+        "lexical.rootTypeTokenRatio": 13.331,
+        "lexical.mattr50": 0.533,
+        "lexical.hapaxShare": 0.491,
+        "lexical.averageWordLength": 5.322,
+        "lexical.longWordShare": 0.155,
+        "lexical.wordUnigramEntropyBits": 7.352,
+        "lexical.characterTrigramEntropyBits": 9.349,
+        "lexical.uniqueBigramShare": 0.301,
+        "lexical.gzipCompressionRatio": 0.174,
+        "lexical.stopWordShare": 0.042,
+        "lexical.digitTokenShare": 0.073,
+        "lexical.contractionPer100Words": 0.118,
+        "readability.estimatedSyllablesPerWord": 1.654,
+        "readability.fleschReadingEase": 59.15,
+        "syntax.posShares.adjective": 0.073,
+        "syntax.posShares.adverb": 0.013,
+        "syntax.posShares.conjunction": 0.026,
+        "syntax.posShares.determiner": 0.043,
+        "syntax.posShares.noun": 0.648,
+        "syntax.posShares.preposition": 0.021,
+        "syntax.posShares.pronoun": 0.009,
+        "syntax.posShares.verb": 0.14,
+        "syntax.passiveSentenceShare": 0.007,
+        "syntax.firstPersonPer100Words": 0.087,
+        "syntax.secondPersonPer100Words": 0.215,
+        "syntax.sentenceStartEntropyBits": 6.595,
+        "syntax.sentenceStartUniqueShare": 0.428,
+        "syntax.posSignatureEntropyBits": 4.928,
+        "syntax.posSignatureUniqueShare": 0.176,
+        "syntax.properNounPer100Words": 1.481,
+        "syntax.valuePer100Words": 0.974,
+        "structure.questionSentenceShare": 0.002,
+        "structure.exclamationSentenceShare": 0,
+        "structure.singleSentenceParagraphShare": 0.951,
+        "structure.meanSentenceWords": 3.44,
+        "structure.sentenceLengthCv": 0.784,
+        "structure.meanParagraphWords": 8.034,
+        "structure.paragraphLengthCv": 0.818,
+        "structure.quotationSpansPer1000Words": 0,
+        "punctuationPer1000Words.colon": 33.265,
+        "punctuationPer1000Words.semicolon": 3.178,
+        "punctuationPer1000Words.emDash": 0,
+        "punctuationPer1000Words.parenthetical": 0.103,
+        "punctuationPer1000Words.ellipsis": 0.051,
+        "discourse.explicitTransitionSentenceShare": 0,
+        "discourse.sequenceOpenerSentenceShare": 0.002,
+        "discourse.retextMessageCounts.retext-intensify": 141,
+        "discourse.retextMessageCounts.retext-passive": 3,
+        "discourse.retextMessageCounts.retext-readability": 596,
+        "discourse.retextMessageCounts.retext-repeated-words": 0
+      }
+    },
+    "semantic": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "5f8986ea538762fd82a43a768d583a5a9d71d1ec",
+      "sentenceThreshold": 0.84,
+      "paragraphThreshold": 0.88,
+      "sentenceComparisons": 9730,
+      "paragraphComparisons": 1485,
+      "semanticSentencePairs": 6,
+      "semanticParagraphPairs": 120,
+      "truncated": true
+    }
+  },
+  "findings": [
+    {
+      "category": "repetition",
+      "confidence": "high",
+      "id": "repeated-multiword-phrase",
+      "label": "A multiword phrase repeats verbatim",
+      "severity": "medium",
+      "measurement": {
+        "phrase": "godot content rpg catalog json",
+        "count": 903,
+        "ngramWords": 5
+      },
+      "evidence": [
+        {
+          "line": 1971,
+          "paragraph": 936,
+          "text": "godot/content/rpg_catalog.json"
+        },
+        {
+          "line": 1975,
+          "paragraph": 938,
+          "text": "godot/content/rpg_catalog.json"
+        },
+        {
+          "line": 1979,
+          "paragraph": 940,
+          "text": "godot/content/rpg_catalog.json"
+        }
+      ],
+      "why": "A five-word sequence recurs at least three times outside masked code and URLs, suggesting formula reuse or avoidable recap.",
+      "direction": "Keep repetition that establishes terminology or deliberate rhythm. Otherwise consolidate the repeated thought rather than paraphrasing each occurrence cosmetically."
+    },
+    {
+      "category": "credibility",
+      "confidence": "high",
+      "id": "universalizing-claims",
+      "label": "Absolute scope claims recur",
+      "severity": "medium",
+      "measurement": {
+        "count": 9
+      },
+      "evidence": [
+        {
+          "line": 415,
+          "paragraph": 200,
+          "text": "All"
+        },
+        {
+          "line": 559,
+          "paragraph": 269,
+          "text": "never"
+        },
+        {
+          "line": 665,
+          "paragraph": 320,
+          "text": "all"
+        }
+      ],
+      "why": "Repeated all/always/never language claims a population or certainty the surrounding evidence may not support.",
+      "direction": "State the observed population, condition, frequency, or counterexample. Keep an absolute only when the mechanism makes it genuinely universal."
+    },
+    {
+      "category": "repetition",
+      "confidence": "medium",
+      "id": "lexical-restatement-cluster",
+      "label": "Several sentences restate the same content vocabulary",
+      "severity": "medium",
+      "measurement": {
+        "pairs": 47943,
+        "strongestJaccard": 1
+      },
+      "evidence": [
+        {
+          "line": 5,
+          "paragraph": 3,
+          "text": "## godot/scripts/character_model_slot.gd:60"
+        },
+        {
+          "line": 9,
+          "paragraph": 4,
+          "text": "## godot/scripts/character_model_slot.gd:64"
+        },
+        {
+          "line": 5,
+          "paragraph": 3,
+          "text": "## godot/scripts/character_model_slot.gd:60"
+        },
+        {
+          "line": 13,
+          "paragraph": 5,
+          "text": "## godot/scripts/character_model_slot.gd:72"
+        }
+      ],
+      "why": "Multiple non-adjacent sentence pairs share most of their content words, a transparent proxy for paraphrastic recap.",
+      "direction": "Decide which occurrence advances the argument. Merge repetitions or make later occurrences add evidence, consequence, or contradiction."
+    },
+    {
+      "category": "discourse-proxy",
+      "confidence": "medium",
+      "id": "repeated-conclusion",
+      "label": "Ending restates an earlier sentence",
+      "severity": "medium",
+      "measurement": {
+        "jaccard": 0.867
+      },
+      "evidence": [
+        {
+          "line": 2395,
+          "paragraph": 1148,
+          "text": "Also: godot/content/rpg_catalog.json#/profiles/flow/builds/mara/gear/0/detail, godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/gear/0/detail, godot/content/rpg_catalog.json#/profiles/flow/builds/clerk/gear/0/detail"
+        },
+        {
+          "line": 3837,
+          "paragraph": 1869,
+          "text": "Also: godot/content/rpg_catalog.json#/profiles/momentum/builds/mara/gear/1/detail, godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/gear/1/detail, godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/gear/1/detail"
+        }
+      ],
+      "why": "The closing reuses most of an earlier sentence’s content words, which can turn the ending into a recap.",
+      "direction": "Keep the clearer version once, or make the ending add a consequence, image, decision, or unresolved implication."
+    },
+    {
+      "category": "rhythm",
+      "confidence": "medium",
+      "id": "repeated-syntax-template",
+      "label": "Repeated grammatical template",
+      "severity": "medium",
+      "measurement": {
+        "consecutive": 7,
+        "signature": "Noun>Noun"
+      },
+      "evidence": [
+        {
+          "line": 907,
+          "paragraph": 430,
+          "text": "## godot/scripts/command_ledger.gd:401"
+        },
+        {
+          "line": 909,
+          "paragraph": 431,
+          "text": "Weapon sets"
+        },
+        {
+          "line": 911,
+          "paragraph": 432,
+          "text": "## godot/scripts/command_ledger.gd:403"
+        }
+      ],
+      "why": "The first five part-of-speech tags repeat across consecutive sentences, a useful but fallible proxy for parallel construction.",
+      "direction": "Combine one sentence, subordinate another, or make the actual relationship conditional or causal."
+    },
+    {
+      "id": "semantic-paragraph-sameness",
+      "label": "Separated paragraphs perform nearly the same semantic job",
+      "category": "semantic-repetition",
+      "severity": "medium",
+      "confidence": "medium",
+      "measurement": {
+        "pairs": 120,
+        "strongestCosine": 0.9376,
+        "lexicalOverlap": 0.6875,
+        "model": "Xenova/all-MiniLM-L6-v2@5f8986ea538762fd82a43a768d583a5a9d71d1ec"
+      },
+      "evidence": [
+        {
+          "line": 4453,
+          "paragraph": 2210,
+          "text": "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/gear/3/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/3/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/gear/3/detail"
+        },
+        {
+          "line": 4483,
+          "paragraph": 2225,
+          "text": "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/abilities/1/source, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/abilities/1/source, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/abilities"
+        },
+        {
+          "line": 4441,
+          "paragraph": 2204,
+          "text": "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/gear/1/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/1/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/gear/1/detail"
+        },
+        {
+          "line": 4483,
+          "paragraph": 2225,
+          "text": "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/abilities/1/source, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/abilities/1/source, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/abilities"
+        }
+      ],
+      "why": "High embedding similarity between separated paragraphs suggests repeated rhetorical function beyond exact phrase overlap.",
+      "direction": "Assign each paragraph one distinct job. Combine duplicated setup or interpretation; retain separate paragraphs when their evidence or implications differ materially."
+    },
+    {
+      "id": "semantic-restatement",
+      "label": "Non-adjacent sentences make nearly the same semantic move",
+      "category": "semantic-repetition",
+      "severity": "medium",
+      "confidence": "medium",
+      "measurement": {
+        "pairs": 6,
+        "strongestCosine": 0.874,
+        "lexicalOverlap": 0.5556,
+        "model": "Xenova/all-MiniLM-L6-v2@5f8986ea538762fd82a43a768d583a5a9d71d1ec"
+      },
+      "evidence": [
+        {
+          "line": 165,
+          "paragraph": 81,
+          "text": "Also: godot/scripts/journal_menu.gd:433, godot/scripts/objective_tracker.gd:5"
+        },
+        {
+          "line": 247,
+          "paragraph": 120,
+          "text": "Also: godot/scripts/journal_menu.gd:425"
+        },
+        {
+          "line": 186,
+          "paragraph": 91,
+          "text": "Also: godot/scripts/combat_style_inspector.gd:303"
+        },
+        {
+          "line": 521,
+          "paragraph": 256,
+          "text": "## godot/scripts/combat_style_inspector.gd:296"
+        }
+      ],
+      "why": "A pinned local sentence-embedding model found high semantic similarity despite lower word overlap. This is evidence of possible paraphrastic recap, not authorship.",
+      "direction": "Check whether the later sentence changes the claim, evidence, consequence, or audience decision. Merge it if it only rephrases the earlier move."
+    },
+    {
+      "category": "credibility",
+      "confidence": "medium",
+      "id": "unsupported-evaluative-claim",
+      "label": "Evaluative claim lacks nearby evidence",
+      "severity": "medium",
+      "measurement": {
+        "count": 2
+      },
+      "evidence": [
+        {
+          "line": 2447,
+          "paragraph": 1174,
+          "text": "Fast close strikes."
+        },
+        {
+          "line": 2805,
+          "paragraph": 1353,
+          "text": "Faster shield recovery"
+        }
+      ],
+      "why": "A skeptical reader cannot inspect what makes the result fast, easy, secure, reliable, or significant from this sentence.",
+      "direction": "Name the mechanism, measurement, comparison, or boundary. If the evidence is unavailable, narrow or remove the claim."
+    },
+    {
+      "category": "rhetorical-template",
+      "confidence": "medium",
+      "id": "rhetorical-triad-stack",
+      "label": "Three-part rhetorical lists recur",
+      "severity": "low",
+      "measurement": {
+        "count": 11
+      },
+      "evidence": [
+        {
+          "line": 273,
+          "paragraph": 129,
+          "text": "Let readiness build, watch enemy positions, and unite two or three allies in a linked technique."
+        },
+        {
+          "line": 299,
+          "paragraph": 142,
+          "text": "Build warrior, rogue, and mage roles around companion tactics."
+        },
+        {
+          "line": 319,
+          "paragraph": 152,
+          "text": "Read attacks, guard or evade, and change styles in motion."
+        }
+      ],
+      "why": "Repeated three-part cadence can make unrelated ideas feel packaged to the same template.",
+      "direction": "Keep true three-part sets. Let other ideas take the number and shape their content requires."
+    },
+    {
+      "category": "readability",
+      "confidence": "low",
+      "id": "readability-cluster",
+      "label": "Multiple sentences trigger several readability formulas",
+      "severity": "low",
+      "measurement": {
+        "sentences": 596,
+        "share": 0.233,
+        "library": "retext-readability"
+      },
+      "evidence": [
+        {
+          "line": 3,
+          "paragraph": 2,
+          "text": "Repeated strings are deduplicated; references identify their screen source."
+        },
+        {
+          "line": 3,
+          "paragraph": 2,
+          "text": "Dynamic values, runtime visibility and layout require Godot verification."
+        },
+        {
+          "line": 15,
+          "paragraph": 6,
+          "text": "Character model has no visible mesh; using primitive art:"
+        }
+      ],
+      "why": "Several formula families agree that these sentences are structurally difficult. Formulas do not measure conceptual difficulty or quality.",
+      "direction": "Check whether clause depth, abstraction, or unnecessary qualification hides the main action. Preserve necessary technical terms."
+    }
+  ],
+  "semanticQuestions": [
+    {
+      "id": "interpretation-repetition",
+      "question": "Does the essay restate its thesis after examples instead of letting them complicate it?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "resistant-example",
+      "question": "Is there a true example, source, or observation that resists the cleanest version of the thesis?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "causal-tidiness",
+      "question": "Does the narrative compress dead ends, coincidence, or uncertainty into an inevitable lesson?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "author-discovery",
+      "question": "Does the writer discover or revise anything on the page, or only deliver settled conclusions?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "earned-specificity",
+      "question": "Which abstract claims require a named source, date, number, scene, or constraint from the author?",
+      "requiresCitedSpan": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "story_id": "lantern_quay",
+  "scope": "Boolean menu-state matrix; initial numeric scores; fresh choice history; no world reachability or render proof",
+  "complete_within_scope": true,
+  "evaluated_states": 2048,
+  "matched_rule_states": 3072,
+  "findings": []
+}

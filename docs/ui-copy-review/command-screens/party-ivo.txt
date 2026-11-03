@@ -1,0 +1,38 @@
+Party ledger · Ivo
+Close · Esc / B
+Inspecting Ivo  ·  Orders remain with Corsair  ·  Camp
+Character
+Equipment
+Powers
+Party
+Inventory
+Journal
+Save
+Ivo
+Reserve · Humanoid
+Mercy · Neutral
+Level 6
+Health  86 / 86
+Inspect party
+Corsair
+Mara
+Civic clerk
+Ivo
+Party roles
+Inspect or deploy a companion.
+Corsair · Deployed · 0 queued
+Mara · Deployed · 0 queued
+Civic clerk · Guest Deployed · 0 queued
+Ivo · Reserve · 0 queued
+Invite Ivo
+Replace Mara with Ivo
+Replace Civic clerk with Ivo
+Companion behavior · Ivo
+Resource policy
+Conservative
+When the queue is empty
+Role
+Hold after explicit orders
+Apply companion behavior
+Last decision: Unavailable: reserve or incapacitated
+LB / RB Tabs  ·  L3 / R3 Inspect party  ·  D-pad / Tab Focus  ·  A / Enter Choose  ·  B Back

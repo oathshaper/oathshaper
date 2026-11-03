@@ -1,0 +1,54 @@
+{
+  "id": "dockside_robbery",
+  "title": "The Quay Robbery",
+  "location": "Lantern Garden",
+  "premise": "Under cover of darkness, a raider emptied the clerk's payroll chest. Ivo has cornered him and his two mechanical guards in Lantern Garden.",
+  "briefing": "Ivo: \"There he is. The payroll pouch is on his belt.\"\n\nTessa Ward: \"Give us the money. You have nowhere to go.\"\n\nCrimson Raider: \"Then you should have stayed outside. Guards!\"",
+  "objective": "Defeat the raider and his guards. Take back the stolen payroll.",
+  "discovery": "The raider has surrendered. Search him for the payroll pouch.",
+  "resolution": "Ivo: \"I'll hold him here. Take the payroll back to the clerk.\"\n\nMara: \"Let's get everyone paid.\"",
+  "records": "A visitor's history of Lantern Quay: the old timber piers, the rebuilding of the tower, and the public garden planted above the eastern sea wall.",
+  "map_note": "Lantern Garden is a walled terrace reached through the east gate.",
+  "opening": [
+    {
+      "speaker": "Mara",
+      "text": "The tower's gone out. I was waiting for my pay to buy more oil.",
+      "shot": "tower"
+    },
+    {
+      "speaker": "Mara",
+      "text": "Did you hear that? Glass breaking, over at the clerk's office.",
+      "shot": "office"
+    },
+    {
+      "speaker": "Tessa Ward",
+      "text": "I'll check on her. Stay here.",
+      "shot": "mara"
+    }
+  ],
+  "ending": [
+    {
+      "speaker": "Mara",
+      "text": "There's enough oil now to keep the tower burning till morning.",
+      "shot": "tower"
+    },
+    {
+      "speaker": "Mara",
+      "text": "I can see every plank again. Thank you for coming back with me.",
+      "shot": "quay"
+    }
+  ],
+  "ending_early": [
+    {
+      "speaker": "Mara",
+      "text": "Your oil kept the tower burning while we were gone. I've bought enough for the rest of the night.",
+      "shot": "tower"
+    },
+    {
+      "speaker": "Mara",
+      "text": "I can see every plank again. Thank you for coming back with me.",
+      "shot": "quay"
+    }
+  ],
+  "surrender": "Crimson Raider: \"I surrender! Take the payroll pouch. Just call them off.\""
+}

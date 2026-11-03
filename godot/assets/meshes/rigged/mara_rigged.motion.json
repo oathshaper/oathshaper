@@ -1,0 +1,8 @@
+{
+  "run_speed_threshold": 2.8,
+  "reference_height_metres": 2.0,
+  "walk_cycle_distance": 0.885,
+  "walk_source": "Quaternius UAL1 / Walk_Loop (CC0)",
+  "run_cycle_distance": 3.71,
+  "run_source": "Quaternius UAL1 / Jog_Fwd_Loop (CC0)"
+}

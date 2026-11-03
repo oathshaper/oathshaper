@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "lantern_quay",
+  "story": "godot/content/lantern_quay.json",
+  "rules": "godot/content/lantern_quay.continuity.json",
+  "journeys": "godot/content/lantern_quay.journeys.json",
+  "voices": "godot/content/voice_script.json",
+  "suites": [
+    {"id": "chapter-oil-shared", "script": "res://tests/chapter_route_test.gd", "args": ["--oil=shared"]},
+    {"id": "chapter-oil-kept", "script": "res://tests/chapter_route_test.gd", "args": ["--oil=kept"]},
+    {"id": "chapter-oil-undecided", "script": "res://tests/chapter_route_test.gd", "args": ["--oil=undecided"]},
+    {"id": "travel-camera-grip", "script": "res://tests/playtest_continuity_test.gd"},
+    {"id": "command-controls", "script": "res://tests/command_controls_test.gd"},
+    {"id": "combat-pacing", "script": "res://tests/combat_pacing_test.gd"},
+    {"id": "camera-hold", "script": "res://tests/camera_hold_test.gd"},
+    {"id": "garden-confrontation", "script": "res://tests/garden_confrontation_test.gd"},
+    {"id": "companion-focus", "script": "res://tests/companion_focus_test.gd"},
+    {"id": "voice-playback", "script": "res://tests/generated_voice_test.gd"}
+  ]
+}

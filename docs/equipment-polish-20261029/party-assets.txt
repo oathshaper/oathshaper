@@ -1,0 +1,5 @@
+Initialize godot-rust (API v4.3.stable.official, runtime v4.3.stable.official)
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+OpenGL API 4.1 Metal - 89.3 - Compatibility - Using Device: Apple - Apple M4 Pro
+
+PARTY_ASSETS: 54 checks, 0 failures

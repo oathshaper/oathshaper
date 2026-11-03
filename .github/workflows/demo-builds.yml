@@ -1,0 +1,76 @@
+name: Native demo builds
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, 'release/**']
+    tags: ['demo-*']
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: demo-builds-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux
+            runner: ubuntu-22.04
+          - platform: windows
+            runner: windows-2022
+          - platform: macos
+            runner: macos-14
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install pinned Rust toolchain
+        run: rustup toolchain install 1.95.0 --profile minimal
+      - name: Check public source and package boundaries
+        run: |
+          python scripts/check-public-tree.py
+          python -m unittest discover -s scripts -p test_public_tree.py
+          python -m unittest discover -s scripts -p test_release_packaging.py
+          python -m unittest discover -s scripts -p test_exported_acceptance.py
+      - name: Build, import, export, and smoke launch
+        run: python scripts/export-release.py --platform ${{ matrix.platform }} --work-dir "${{ runner.temp }}/oathshaper-build" --output "${{ runner.temp }}/oathshaper-artifacts"
+      - name: Install Linux rendering test dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y xvfb libgl1-mesa-dri libgl1 libxrandr2 libxinerama1 libxcursor1 libxi6 libasound2
+      - name: Extract and test packaged story and combat (Linux renderer)
+        if: runner.os == 'Linux'
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+        run: xvfb-run -a python scripts/test-exported-demo.py --rendered --archives-dir "${{ runner.temp }}/oathshaper-artifacts" --output "${{ runner.temp }}/oathshaper-acceptance"
+      - name: Extract and test packaged story and combat (macOS renderer)
+        if: runner.os == 'macOS'
+        run: python scripts/test-exported-demo.py --rendered --archives-dir "${{ runner.temp }}/oathshaper-artifacts" --output "${{ runner.temp }}/oathshaper-acceptance"
+      - name: Extract and test packaged story and combat (Windows headless)
+        if: runner.os == 'Windows'
+        run: python scripts/test-exported-demo.py --archives-dir "${{ runner.temp }}/oathshaper-artifacts" --output "${{ runner.temp }}/oathshaper-acceptance"
+      - name: Upload acceptance receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: oathshaper-acceptance-${{ matrix.platform }}-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/oathshaper-acceptance/acceptance.json
+            ${{ runner.temp }}/oathshaper-acceptance/*/runtime.log
+          if-no-files-found: warn
+      - name: Upload candidate archive and checksums
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: oathshaper-demo-${{ matrix.platform }}-${{ github.sha }}
+          path: ${{ runner.temp }}/oathshaper-artifacts/*
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

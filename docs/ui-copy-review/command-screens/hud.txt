@@ -1,0 +1,46 @@
+LANTERN GARDEN
+PAUSED
+Resume · Space
+Party · I
+Menu
+Iron Sentinel
+‹
+›
+Basic attack
+Binding current
+THE DISPUTED CHARTER
+Recover the seal from the garden sentries.
+Combat log ▾
+
+Corsair · F1
+80 / 80 HP · AI
+
+Mara · F2
+50 / 50 HP
+
+Ivo · F3
+86 / 86 HP · AI
+‹ Party
+Party ›
+Mara   ·   Focus 56 / 56   ·   18 committed
+Weapons
+Powers
+Devices
+Items
+Movement
+‹
+›
+1  Binding current
+18 focus
+2  Gale arc
+10 focus
+3  Mend
+16 focus
+4  Veil
+20 focus
+CURRENT
+Ready
+1 · Binding current
+Clear
+Disengage
+Tab Party · I Ledger · Space Pause · 1–6 Actions · T Target · E Attack · X Disengage

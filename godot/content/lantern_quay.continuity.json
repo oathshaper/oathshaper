@@ -1,0 +1,412 @@
+{
+  "schema": 1,
+  "story_id": "lantern_quay",
+  "rules": [
+    {
+      "id": "tower-light-invalidates-darkness",
+      "node": "mara_greeting",
+      "reason": "The tower is lit by shared oil or the returned payroll. Present-tense darkness topics are obsolete.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "oil_shared",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "ask_lamp"
+      ],
+      "forbidden_text": [
+        "tower's gone dark",
+        "tower is dark"
+      ]
+    },
+    {
+      "id": "clerk-visit-invalidates-offer-to-check",
+      "node": "mara_greeting",
+      "reason": "The player has already obtained the clerk's account of the robbery.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "robbery_known",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "check_office"
+      ]
+    },
+    {
+      "id": "report-to-mara-has-reply",
+      "node": "mara_greeting",
+      "reason": "A player who heard the clerk's account can reassure Mara and ask her to help.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "robbery_known",
+            "value": true
+          },
+          {
+            "kind": "flag",
+            "id": "mara_recruited",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "raiders_defeated",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "pay_recovered",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": false
+          }
+        ]
+      ],
+      "enabled_choices": [
+        "accept_help"
+      ]
+    },
+    {
+      "id": "victory-retires-ivo-preparation",
+      "node": "ivo_gate",
+      "reason": "After the guards are defeated, Ivo can discuss the recovery, not entering a guarded garden.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "raiders_defeated",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_recovered",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "open_gate",
+        "ask_about_gate",
+        "ask_sentries"
+      ],
+      "forbidden_text": [
+        "he's got two mechanical guards",
+        "keep the guards busy",
+        "get mara"
+      ]
+    },
+    {
+      "id": "recruitment-retires-fetching-mara",
+      "node": "ivo_gate",
+      "reason": "Mara has already agreed to come; Ivo must not send the player to fetch her again.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "mara_recruited",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "ask_about_gate"
+      ]
+    },
+    {
+      "id": "victory-retires-mara-rendezvous",
+      "node": "mara_greeting",
+      "reason": "After the battle Mara is helping recover the pouch, not meeting the player at the gate.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "raiders_defeated",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_recovered",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "check_office",
+        "accept_help",
+        "ask_theft",
+        "ask_pay",
+        "ask_for_favor",
+        "ask_lamp",
+        "share_oil",
+        "keep_oil"
+      ],
+      "forbidden_text": [
+        "I'll meet you at the garden gate",
+        "Ivo will know where the thief went",
+        "Is the clerk hurt?"
+      ]
+    },
+    {
+      "id": "victory-retires-clerk-pursuit",
+      "node": "clerk_greeting",
+      "reason": "The thief has been stopped; the clerk should ask about the money rather than send the player after him.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "raiders_defeated",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_recovered",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "ask_robbery"
+      ],
+      "forbidden_text": [
+        "Ivo chased the thief east"
+      ]
+    },
+    {
+      "id": "mara-does-not-know-untold-payroll-theft",
+      "node": "mara_greeting",
+      "reason": "The robbery_known flag is Tessa's knowledge, not Mara's. Tessa tells Mara when recruiting her.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "mara_recruited",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "gate_open",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "raiders_defeated",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "pay_recovered",
+            "value": false
+          },
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": false
+          }
+        ]
+      ],
+      "forbidden_text": [
+        "The payroll?",
+        "whole week's wages"
+      ]
+    },
+    {
+      "id": "open-gate-retires-mara-rendezvous",
+      "node": "mara_greeting",
+      "reason": "The party has already assembled and opened the gate.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "gate_open",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "ask_for_favor"
+      ],
+      "forbidden_text": [
+        "I'll meet you at the garden gate"
+      ]
+    },
+    {
+      "id": "recruited-mara-retires-clerk-fetch-task",
+      "node": "clerk_greeting",
+      "reason": "The clerk should not send the player to recruit an existing companion.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "mara_recruited",
+            "value": true
+          }
+        ]
+      ],
+      "forbidden_text": [
+        "Tell her I'm safe",
+        "Mara was waiting"
+      ]
+    },
+    {
+      "id": "vendor-does-not-inherit-offscreen-payout-knowledge",
+      "node": "vendor_greeting",
+      "reason": "The vendor sees the tower; nobody has told him about the payout.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "forbidden_text": [
+        "Mara has her money"
+      ]
+    },
+    {
+      "id": "ivo-does-not-inherit-offscreen-payout-knowledge",
+      "node": "ivo_gate",
+      "reason": "Ivo remains guarding the prisoner; he can observe the beacon but not the clerk taking payment.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "forbidden_text": [
+        "The clerk has the payroll"
+      ]
+    },
+    {
+      "id": "returned-payroll-retires-return-action",
+      "node": "clerk_greeting",
+      "reason": "The payroll can only be returned once.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "pay_returned",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "return_pay",
+        "ask_robbery"
+      ],
+      "forbidden_text": [
+        "Did you find the money",
+        "Tell Mara"
+      ]
+    },
+    {
+      "id": "briefing-does-not-repeat-fetch-task",
+      "node": "clerk_greeting",
+      "reason": "Once Tessa has heard the report or recruited Mara, the original briefing is complete.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "robbery_known",
+            "value": true
+          }
+        ],
+        [
+          {
+            "kind": "flag",
+            "id": "mara_recruited",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "ask_robbery"
+      ]
+    },
+    {
+      "id": "recruitment-retires-mara-discovery",
+      "node": "mara_greeting",
+      "reason": "Tessa has briefed Mara; the initial discovery question is obsolete.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "mara_recruited",
+            "value": true
+          }
+        ]
+      ],
+      "absent_choices": [
+        "ask_theft",
+        "ask_pay"
+      ]
+    },
+    {
+      "id": "mara-help-does-not-invent-guard-knowledge",
+      "node": "mara_help",
+      "reason": "Tessa has told Mara about the payroll, but has not yet described the guards.",
+      "when_any": [
+        [
+          {
+            "kind": "flag",
+            "id": "gate_open",
+            "value": false
+          }
+        ]
+      ],
+      "forbidden_text": [
+        "machines",
+        "guards"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Ready vctk/p339_023.wav
+Mara cb0bcc7aaef9af3c 3.78 seconds; QC passed
+Ready vctk/p231_023.wav
+Clerk 741fa6ab76a44f3c 3.66 seconds; QC passed
+Ready voice-donations/dwp_enhanced.wav
+Vendor 565d1e18b5e146a0 4.88 seconds; QC passed
+Completed 76 batch clips

@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "profile": "fiction",
+  "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+  "summary": {
+    "findingCount": 1,
+    "bySeverity": {
+      "high": 0,
+      "medium": 1,
+      "low": 0
+    },
+    "revisionPriority": 4,
+    "band": "light",
+    "wordCount": 936,
+    "sentenceCount": 126,
+    "paragraphCount": 21
+  },
+  "metrics": {
+    "sentenceWords": {
+      "mean": 7.42,
+      "sd": 3.73,
+      "cv": 0.502,
+      "p10": 2,
+      "p50": 7,
+      "p90": 12
+    },
+    "paragraphWords": {
+      "mean": 41.05,
+      "sd": 31.44,
+      "cv": 0.766,
+      "p10": 16,
+      "p50": 29,
+      "p90": 66
+    },
+    "properNounCount": 43,
+    "valueCount": 9,
+    "parentheticalCount": 0,
+    "ellipsisCount": 0,
+    "emDashCount": 0,
+    "featureVector": {
+      "lexical": {
+        "uniqueWords": 319,
+        "typeTokenRatio": 0.341,
+        "rootTypeTokenRatio": 10.427,
+        "mattr50": 0.755,
+        "hapaxShare": 0.552,
+        "averageWordLength": 4.464,
+        "longWordShare": 0.054,
+        "wordUnigramEntropyBits": 7.314,
+        "characterTrigramEntropyBits": 9.521,
+        "uniqueBigramShare": 0.767,
+        "gzipCompressionRatio": 0.393,
+        "stopWordShare": 0.301,
+        "digitTokenShare": 0.001,
+        "contractionPer100Words": 1.496
+      },
+      "readability": {
+        "estimatedSyllablesPerWord": 1.384,
+        "fleschReadingEase": 82.25
+      },
+      "syntax": {
+        "posShares": {
+          "adjective": 0.066,
+          "adverb": 0.012,
+          "conjunction": 0.021,
+          "determiner": 0.143,
+          "noun": 0.446,
+          "preposition": 0.082,
+          "pronoun": 0.051,
+          "verb": 0.189
+        },
+        "passiveSentenceShare": 0.056,
+        "firstPersonPer100Words": 2.03,
+        "secondPersonPer100Words": 2.03,
+        "sentenceStartEntropyBits": 6.386,
+        "sentenceStartUniqueShare": 0.802,
+        "posSignatureEntropyBits": 6.097,
+        "posSignatureUniqueShare": 0.706,
+        "properNounPer100Words": 5.128,
+        "valuePer100Words": 0.962
+      },
+      "structure": {
+        "questionSentenceShare": 0.008,
+        "exclamationSentenceShare": 0,
+        "singleSentenceParagraphShare": 0.048,
+        "meanSentenceWords": 7.421,
+        "sentenceLengthCv": 0.502,
+        "meanParagraphWords": 41.048,
+        "paragraphLengthCv": 0.766,
+        "quotationSpansPer1000Words": 4.274
+      },
+      "punctuationPer1000Words": {
+        "colon": 49.145,
+        "semicolon": 4.274,
+        "emDash": 0,
+        "parenthetical": 0,
+        "ellipsis": 0
+      },
+      "discourse": {
+        "explicitTransitionSentenceShare": 0,
+        "sequenceOpenerSentenceShare": 0,
+        "retextMessageCounts": {
+          "retext-intensify": 51,
+          "retext-passive": 0,
+          "retext-readability": 4,
+          "retext-repeated-words": 0
+        }
+      },
+      "flat": {
+        "lexical.uniqueWords": 319,
+        "lexical.typeTokenRatio": 0.341,
+        "lexical.rootTypeTokenRatio": 10.427,
+        "lexical.mattr50": 0.755,
+        "lexical.hapaxShare": 0.552,
+        "lexical.averageWordLength": 4.464,
+        "lexical.longWordShare": 0.054,
+        "lexical.wordUnigramEntropyBits": 7.314,
+        "lexical.characterTrigramEntropyBits": 9.521,
+        "lexical.uniqueBigramShare": 0.767,
+        "lexical.gzipCompressionRatio": 0.393,
+        "lexical.stopWordShare": 0.301,
+        "lexical.digitTokenShare": 0.001,
+        "lexical.contractionPer100Words": 1.496,
+        "readability.estimatedSyllablesPerWord": 1.384,
+        "readability.fleschReadingEase": 82.25,
+        "syntax.posShares.adjective": 0.066,
+        "syntax.posShares.adverb": 0.012,
+        "syntax.posShares.conjunction": 0.021,
+        "syntax.posShares.determiner": 0.143,
+        "syntax.posShares.noun": 0.446,
+        "syntax.posShares.preposition": 0.082,
+        "syntax.posShares.pronoun": 0.051,
+        "syntax.posShares.verb": 0.189,
+        "syntax.passiveSentenceShare": 0.056,
+        "syntax.firstPersonPer100Words": 2.03,
+        "syntax.secondPersonPer100Words": 2.03,
+        "syntax.sentenceStartEntropyBits": 6.386,
+        "syntax.sentenceStartUniqueShare": 0.802,
+        "syntax.posSignatureEntropyBits": 6.097,
+        "syntax.posSignatureUniqueShare": 0.706,
+        "syntax.properNounPer100Words": 5.128,
+        "syntax.valuePer100Words": 0.962,
+        "structure.questionSentenceShare": 0.008,
+        "structure.exclamationSentenceShare": 0,
+        "structure.singleSentenceParagraphShare": 0.048,
+        "structure.meanSentenceWords": 7.421,
+        "structure.sentenceLengthCv": 0.502,
+        "structure.meanParagraphWords": 41.048,
+        "structure.paragraphLengthCv": 0.766,
+        "structure.quotationSpansPer1000Words": 4.274,
+        "punctuationPer1000Words.colon": 49.145,
+        "punctuationPer1000Words.semicolon": 4.274,
+        "punctuationPer1000Words.emDash": 0,
+        "punctuationPer1000Words.parenthetical": 0,
+        "punctuationPer1000Words.ellipsis": 0,
+        "discourse.explicitTransitionSentenceShare": 0,
+        "discourse.sequenceOpenerSentenceShare": 0,
+        "discourse.retextMessageCounts.retext-intensify": 51,
+        "discourse.retextMessageCounts.retext-passive": 0,
+        "discourse.retextMessageCounts.retext-readability": 4,
+        "discourse.retextMessageCounts.retext-repeated-words": 0
+      }
+    },
+    "semantic": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "5f8986ea538762fd82a43a768d583a5a9d71d1ec",
+      "sentenceThreshold": 0.84,
+      "paragraphThreshold": 0.88,
+      "sentenceComparisons": 3321,
+      "paragraphComparisons": 66,
+      "semanticSentencePairs": 0,
+      "semanticParagraphPairs": 0,
+      "truncated": false
+    }
+  },
+  "findings": [
+    {
+      "category": "lexical",
+      "confidence": "medium",
+      "id": "lexical-confidence-fog",
+      "label": "Hedges, fillers, or weasel words accumulate",
+      "severity": "medium",
+      "measurement": {
+        "count": 51,
+        "per100Words": 5.449,
+        "filler": 3,
+        "hedge": 18,
+        "weasel": 30,
+        "library": "retext-intensify"
+      },
+      "evidence": [
+        {
+          "line": 3,
+          "paragraph": 2,
+          "text": "Read"
+        },
+        {
+          "line": 3,
+          "paragraph": 2,
+          "text": "can"
+        },
+        {
+          "line": 7,
+          "paragraph": 3,
+          "text": "That"
+        }
+      ],
+      "why": "Repeated qualification and intensification can make confidence sound manufactured while leaving the claim imprecise.",
+      "direction": "For each term, state the actual uncertainty, degree, comparison, or evidence. Keep hedges that express real epistemic limits."
+    }
+  ],
+  "semanticQuestions": [
+    {
+      "id": "thematic-overdetermination",
+      "question": "Does narration or dialogue state the theme or moral instead of leaving the reader room to infer it?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "causal-streamlining",
+      "question": "Is the plot one continuous chain with too few independent pressures, subplots, reversals, or loose ends for this story?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "tidy-resolution",
+      "question": "Does the protagonist control the resolution and arrive at a complete internal lesson too neatly?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "embodied-performativity",
+      "question": "Do bodily sensation, sensory detail, or setting repeatedly perform emotions that the scene already establishes?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "temporal-recontextualization",
+      "question": "Do revelation and time structure ever change how earlier events are understood, or only disclose the next fact?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "moral-ambiguity",
+      "question": "Does the narrative allow consequential choices to remain morally mixed?",
+      "requiresCitedSpan": true
+    }
+  ]
+}

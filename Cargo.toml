@@ -1,0 +1,12 @@
+[workspace]
+members = ["crates/oathshaper-core", "crates/oathshaper-godot"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+
+# The game uses the development extension locally. Keep symbols/assertions while
+# optimizing simulation, transport and their dependencies for real-time play.
+[profile.dev]
+opt-level = 2

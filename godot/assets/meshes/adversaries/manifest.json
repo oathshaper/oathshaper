@@ -1,0 +1,137 @@
+{
+  "lantern_sentinel": {
+    "source": "Meshy_AI_Lantern_Sentinel_1022201654_texture.glb",
+    "original": {
+      "sha256": "c367ccbdc6ba5a76692b460724752125513fc31a9b8940babed814fd18312e79",
+      "bytes": 55985560,
+      "triangles": 1562824,
+      "vertices": 829656,
+      "skins": 0,
+      "animations": 0,
+      "image_sha256": [
+        "19ae0fea454b84027aaf331bd338d63376cb427fc564f96920292ade359b2e23",
+        "4443a11486502384bce0d0e7262cabb0921861379e42a7782e954fadccb206c6",
+        "ca78a79178c4bbee62fc595a6c64d9215571b9757c4b45f7bb83237a1b121b5f"
+      ]
+    },
+    "game_mesh": {
+      "sha256": "1b7f7c6618a3a573438e6572f11b9ffaee5299f1efe9b3302438450ef5615e28",
+      "bytes": 12443240,
+      "triangles": 60000,
+      "vertices": 43786,
+      "skins": 0,
+      "animations": 0,
+      "image_sha256": [
+        "19ae0fea454b84027aaf331bd338d63376cb427fc564f96920292ade359b2e23",
+        "4443a11486502384bce0d0e7262cabb0921861379e42a7782e954fadccb206c6",
+        "ca78a79178c4bbee62fc595a6c64d9215571b9757c4b45f7bb83237a1b121b5f"
+      ]
+    },
+    "authored_rig": {
+      "bytes": 13352888,
+      "sha256": "56ceb98630dc98f501bbdcd61ad075d0323b0fb338130fec8d3e6db168f9c746",
+      "skin_bones": 11,
+      "animations": [
+        "Idle",
+        "Walk",
+        "Strike",
+        "Hit"
+      ],
+      "image_sha256": [
+        "19ae0fea454b84027aaf331bd338d63376cb427fc564f96920292ade359b2e23",
+        "4443a11486502384bce0d0e7262cabb0921861379e42a7782e954fadccb206c6",
+        "ca78a79178c4bbee62fc595a6c64d9215571b9757c4b45f7bb83237a1b121b5f"
+      ]
+    }
+  },
+  "iron_sentinel": {
+    "source": "Meshy_AI_Iron_Sentinel_1022202019_texture.glb",
+    "original": {
+      "sha256": "d4125c098efff293b2d9cd133f3466635670ebb6e3fa27ec1ef3cf3e15ba0764",
+      "bytes": 59908808,
+      "triangles": 1729424,
+      "vertices": 918205,
+      "skins": 0,
+      "animations": 0,
+      "image_sha256": [
+        "40c367d6ea88a2a9244e2112d9b3b258f5b6a3733e41a5bca2bfff10818149a1",
+        "7c37c8488f6b7c46bd76e5d92fa59677f0acba767ccb5f035cae567c27de2c6b",
+        "b642a4bb9b7f3eab5d37a6f685991d47262dfec3f550752c828afb222eb029db"
+      ]
+    },
+    "game_mesh": {
+      "sha256": "82272c6d8462ee18483995e183171125be2d3ed7552c13c5865d469ccffedb7e",
+      "bytes": 11532820,
+      "triangles": 60000,
+      "vertices": 43757,
+      "skins": 0,
+      "animations": 0,
+      "image_sha256": [
+        "40c367d6ea88a2a9244e2112d9b3b258f5b6a3733e41a5bca2bfff10818149a1",
+        "7c37c8488f6b7c46bd76e5d92fa59677f0acba767ccb5f035cae567c27de2c6b",
+        "b642a4bb9b7f3eab5d37a6f685991d47262dfec3f550752c828afb222eb029db"
+      ]
+    },
+    "authored_rig": {
+      "bytes": 12445020,
+      "sha256": "fb366ca9833a88c718b860ef42ae4c0b01ae177f9cc021424d99f5be911bd6de",
+      "skin_bones": 15,
+      "animations": [
+        "Idle",
+        "Walk",
+        "Strike",
+        "Hit"
+      ],
+      "image_sha256": [
+        "40c367d6ea88a2a9244e2112d9b3b258f5b6a3733e41a5bca2bfff10818149a1",
+        "7c37c8488f6b7c46bd76e5d92fa59677f0acba767ccb5f035cae567c27de2c6b",
+        "b642a4bb9b7f3eab5d37a6f685991d47262dfec3f550752c828afb222eb029db"
+      ]
+    }
+  },
+  "crimson_corsair": {
+    "source": "Meshy_AI_Crimson_Corsair_1022202011_texture.glb",
+    "original": {
+      "sha256": "225276c56b1ee19c094e0cd4f50e3586e6f4697926a4bdd69a45dc96a8dd247a",
+      "bytes": 36886612,
+      "triangles": 987176,
+      "vertices": 529994,
+      "skins": 0,
+      "animations": 0,
+      "image_sha256": [
+        "11025de47af0258e44cc2f24d0b5177fc80cb557d74c8d54ef2f74650ef7694c",
+        "1fa30cb37379a7f2453ab5872feab5980cc240ffc33d1c84b14af5c562c26226",
+        "acc8d615e21595add4897d9c506771fd230a8ac4d3dee011ff05b6fb712482f8"
+      ]
+    },
+    "game_mesh": {
+      "sha256": "ce38f40bde3837740a7e0284357a9d108c01d498a414dde90d6401486256b862",
+      "bytes": 9407992,
+      "triangles": 45000,
+      "vertices": 33059,
+      "skins": 0,
+      "animations": 0,
+      "image_sha256": [
+        "11025de47af0258e44cc2f24d0b5177fc80cb557d74c8d54ef2f74650ef7694c",
+        "1fa30cb37379a7f2453ab5872feab5980cc240ffc33d1c84b14af5c562c26226",
+        "acc8d615e21595add4897d9c506771fd230a8ac4d3dee011ff05b6fb712482f8"
+      ]
+    },
+    "authored_rig": {
+      "bytes": 10116620,
+      "sha256": "dc8b51e8aa3bf1c9024846761bde579724bca145830090aceec1211756bd863d",
+      "skin_bones": 19,
+      "animations": [
+        "Idle",
+        "Walk",
+        "Strike",
+        "Hit"
+      ],
+      "image_sha256": [
+        "11025de47af0258e44cc2f24d0b5177fc80cb557d74c8d54ef2f74650ef7694c",
+        "1fa30cb37379a7f2453ab5872feab5980cc240ffc33d1c84b14af5c562c26226",
+        "acc8d615e21595add4897d9c506771fd230a8ac4d3dee011ff05b6fb712482f8"
+      ]
+    }
+  }
+}

@@ -1,0 +1,193 @@
+Initialize godot-rust (API v4.3.stable.official, runtime v4.3.stable.official)
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+CONTINUITY_JSON:{"checks":13,"context":{},"failures":0,"observations":[{"description":"Moving alongside Mara does not select her","failures":0,"id":"a13c0ee619a1","samples":1},{"description":"Walking interaction key cannot accidentally talk to the follower","failures":0,"id":"56a72757dc94","samples":1},{"description":"Walking beside Mara leaves no follower reticle","failures":0,"id":"8bda51bcf0a9","samples":1},{"description":"Unreticled NPC name badges are hidden","failures":0,"id":"d46d7e532ba4","samples":1},{"description":"Walking beside Mara leaves no talk prompt","failures":0,"id":"8014f1b9e3a4","samples":1},{"description":"Stopping and looking toward Mara permits conversation","failures":0,"id":"dde679434c78","samples":1},{"description":"Deliberate companion focus shows both bracket and prompt","failures":0,"id":"675722a7f422","samples":1},{"description":"Only the reticled NPC displays a name badge","failures":0,"id":"dfcabe30cbd6","samples":1},{"description":"Looking away dismisses the companion target","failures":0,"id":"1f172bbe2368","samples":1},{"description":"Looking away also removes the name badge","failures":0,"id":"347bec19c204","samples":1},{"description":"Ordinary stationary NPCs retain their approach interaction","failures":0,"id":"1c4eebc1b416","samples":1},{"description":"Mara travelling to the gate is not selected by proximity","failures":0,"id":"e53ea3ff7c5e","samples":1},{"description":"Hidden companions are never selectable","failures":0,"id":"15566bed4071","samples":1}],"schema":1,"scope":"Actual exploration target, prompt and bracket with moving, stopped, looking-away and stationary-NPC fixtures.","status":"passed","suite":"companion-focus"}
+
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m
+[1;31mERROR:[0;91m Parameter "m" is null.
+[0;90m   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)[0m

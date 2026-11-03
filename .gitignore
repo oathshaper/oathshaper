@@ -1,0 +1,30 @@
+/target/
+/.agent-worktrees/
+/godot/.godot/
+/godot/bin/
+/godot/user-data/
+*.log
+.DS_Store
+
+# Local Python tooling
+__pycache__/
+*.py[cod]
+/.artifacts/
+/.ruff_cache/
+
+# Local credentials and signing material; templates may be committed.
+.env
+.env.*
+!.env.example
+!.env.sample
+.secrets/
+export_credentials.cfg
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+
+# Private planning, licensing discussions and release-audit handoffs.
+/.private/

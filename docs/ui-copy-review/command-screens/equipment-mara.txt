@@ -1,0 +1,68 @@
+Party ledger · Mara
+Close · Esc / B
+Inspecting Mara  ·  Orders remain with Corsair  ·  Camp
+Character
+Equipment
+Powers
+Party
+Inventory
+Journal
+Save
+Mara
+Deployed · Humanoid
+Mercy · Neutral
+Level 6
+Health  50 / 50
+Focus  56 / 56
+Inspect party
+Corsair
+Mara
+Civic clerk
+Ivo
+Equipment
+Equipped
+
+Focus / tool
+Empty
+
+Head
+Empty
+
+Accessory
+Empty
+
+Main Hand
+Ash staff
+
+Body
+Travel robe
+
+Offhand
+Ash staff
+
+Hands
+Empty
+
+Belt
+Empty
+Defense 12  ·  Attack 3
+Items used by queued orders are locked.
+Main Hand · Party inventory
+Equipped: Ash staff
+Ash staff
+Uses both hands · Grants Attack
+Ash staff
+Uses both hands · Equipped by Mara · Grants Attack
+Unequip Ash staff
+Uses both hands
+Corsair sabre
+Equipped by Corsair · Grants Attack · Grants Lunge
+Equipped by another party member. Unequip it first.
+Guard mace
+Equipped by Ivo · Grants Attack
+Requires equipment training.
+Survey crossbow
+Uses both hands · Equipped by Civic clerk · Grants Attack · Grants Pinning Bolt
+Equipped by another party member. Unequip it first.
+Choose an item to compare changes before equipping it.
+LB / RB Tabs  ·  L3 / R3 Inspect party  ·  D-pad / Tab Focus  ·  A / Enter Choose  ·  B Back

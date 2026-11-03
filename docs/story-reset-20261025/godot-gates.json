@@ -1,0 +1,182 @@
+[
+  {
+    "test": "tests/headless_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-headless_test.log",
+    "summary": [
+      "Oathshaper native bridge, four controller NPC entries, adaptive input hints, guarded hub routes, collision, recorded greeting and save/load checks passed"
+    ]
+  },
+  {
+    "test": "tests/rig_slot_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-rig_slot_test.log",
+    "summary": [
+      "Oathshaper rig slot Idle/Walk, procedural foot-anchored motion, opt-out and empty fallback checks passed"
+    ]
+  },
+  {
+    "test": "tests/dialogue_response_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-dialogue_response_test.log",
+    "summary": [
+      "Timed response checks passed: automatic return, B/Esc skip, ledger pause, voice duration, missing audio, save/load, focus, no repeated effects, and persistent grey topics for Mara, clerk and Ivo"
+    ]
+  },
+  {
+    "test": "tests/map_widget_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-map_widget_test.log",
+    "summary": [
+      "map_widget_test passed"
+    ]
+  },
+  {
+    "test": "tests/garden_mesh_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-garden_mesh_test.log",
+    "summary": [
+      "garden_mesh_test passed: actual mesh fit, three lanes both ways, floor heights, planter, rails and closed gate"
+    ]
+  },
+  {
+    "test": "tests/records_office_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-records_office_test.log",
+    "summary": [
+      "Records office collision, cutaway, entry/exit, drawer open/close and collection checks passed"
+    ]
+  },
+  {
+    "test": "tests/route_integration_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-route_integration_test.log",
+    "summary": [
+      "Records route integration passed: open office, clerk conversation, controller map and journal, cabinet, records, and save/load"
+    ]
+  },
+  {
+    "test": "tests/combat_frontend_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-combat_frontend_test.log",
+    "summary": [
+      "COMBAT_FRONTEND_OK: 10733 checks"
+    ]
+  },
+  {
+    "test": "tests/playable_profiles_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-playable_profiles_test.log",
+    "summary": [
+      "PLAYABLE_PROFILES: 16 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/command_trial_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-command_trial_test.log",
+    "summary": [
+      "COMMAND_TRIAL_TEST: 45 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/command_controls_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-command_controls_test.log",
+    "summary": [
+      "COMMAND_CONTROLS: 35 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/command_targeting_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-command_targeting_test.log",
+    "summary": [
+      "COMMAND_TARGETING: 28 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/command_ledger_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-command_ledger_test.log",
+    "summary": [
+      "COMMAND_LEDGER_TEST: 275 assertions, 0 failures (UI projection only)"
+    ]
+  },
+  {
+    "test": "tests/command_equipment_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-command_equipment_test.log",
+    "summary": [
+      "COMMAND_EQUIPMENT_TEST: 273 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/equipment_mount_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-equipment_mount_test.log",
+    "summary": [
+      "EQUIPMENT_MOUNTS: 12 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/flow_input_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-flow_input_test.log",
+    "summary": []
+  },
+  {
+    "test": "tests/flow_trial_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-flow_trial_test.log",
+    "summary": []
+  },
+  {
+    "test": "tests/vanguard_trial_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-vanguard_trial_test.log",
+    "summary": [
+      "VANGUARD_TRIAL_TEST: 23 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/chapter_route_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-chapter_route_test.log",
+    "summary": [
+      "CHAPTER_ROUTE: 218 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/player_voice_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-player_voice_test.log",
+    "summary": [
+      "PLAYER_VOICE: 8 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/generated_voice_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-generated_voice_test.log",
+    "summary": [
+      "GENERATED_VOICE: 86 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/quay_opening_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-quay_opening_test.log",
+    "summary": [
+      "QUAY_OPENING: 12 checks, 0 failures"
+    ]
+  },
+  {
+    "test": "tests/tower_lighting_test.gd",
+    "exit": 0,
+    "log": "/tmp/oathshaper-accept-tower_lighting_test.log",
+    "summary": [
+      "TOWER_LIGHTING: 5 checks, 0 failures"
+    ]
+  }
+]

@@ -1,0 +1,643 @@
+{
+  "schema": 1,
+  "created_utc": "20261027T155346776399Z",
+  "requested_scope": "narrative and current Godot fixtures",
+  "stages": [
+    {
+      "id": "matrix",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.71,
+      "command": [
+        "cargo",
+        "run",
+        "--quiet",
+        "--locked",
+        "-p",
+        "oathshaper-core",
+        "--bin",
+        "check_continuity",
+        "--",
+        "godot/content/lantern_quay.json",
+        "godot/content/lantern_quay.continuity.json"
+      ],
+      "log": "matrix.txt",
+      "engine_error_lines": 0,
+      "diagnostics": {
+        "known_count": 0,
+        "unexpected_count": 0,
+        "known": [],
+        "unexpected": []
+      },
+      "evidence": "matrix.json",
+      "review_findings": 0
+    },
+    {
+      "id": "dialogue-script",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.45,
+      "command": [
+        "cargo",
+        "run",
+        "--quiet",
+        "--locked",
+        "-p",
+        "oathshaper-core",
+        "--bin",
+        "check_dialogue_script",
+        "--",
+        "godot/content/lantern_quay.json",
+        "godot/content/voice_script.json"
+      ],
+      "log": "dialogue-script.txt",
+      "engine_error_lines": 0,
+      "diagnostics": {
+        "known_count": 0,
+        "unexpected_count": 0,
+        "known": [],
+        "unexpected": []
+      },
+      "evidence": "dialogue-script.json",
+      "review_findings": 1
+    },
+    {
+      "id": "replay",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.38,
+      "command": [
+        "cargo",
+        "run",
+        "--quiet",
+        "--locked",
+        "-p",
+        "oathshaper-core",
+        "--bin",
+        "replay_continuity",
+        "--",
+        "godot/content/lantern_quay.json",
+        "godot/content/lantern_quay.continuity.json",
+        "godot/content/lantern_quay.journeys.json"
+      ],
+      "log": "replay.txt",
+      "engine_error_lines": 0,
+      "diagnostics": {
+        "known_count": 0,
+        "unexpected_count": 0,
+        "known": [],
+        "unexpected": []
+      },
+      "evidence": "replay.json",
+      "review_findings": 0
+    },
+    {
+      "id": "host-build",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.81,
+      "command": [
+        "sh",
+        "scripts/build-host.sh"
+      ],
+      "log": "host-build.txt",
+      "engine_error_lines": 0,
+      "diagnostics": {
+        "known_count": 0,
+        "unexpected_count": 0,
+        "known": [],
+        "unexpected": []
+      }
+    },
+    {
+      "id": "import",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 9.78,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--import"
+      ],
+      "log": "import.txt",
+      "engine_error_lines": 0,
+      "diagnostics": {
+        "known_count": 0,
+        "unexpected_count": 0,
+        "known": [],
+        "unexpected": []
+      }
+    },
+    {
+      "id": "chapter-oil-shared",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 9.85,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/chapter_route_test.gd",
+        "--",
+        "--oil=shared"
+      ],
+      "log": "chapter-oil-shared.txt",
+      "engine_error_lines": 208,
+      "diagnostics": {
+        "known_count": 208,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "chapter-oil-shared.json",
+      "review_findings": 0
+    },
+    {
+      "id": "chapter-oil-kept",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.68,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/chapter_route_test.gd",
+        "--",
+        "--oil=kept"
+      ],
+      "log": "chapter-oil-kept.txt",
+      "engine_error_lines": 208,
+      "diagnostics": {
+        "known_count": 208,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "chapter-oil-kept.json",
+      "review_findings": 0
+    },
+    {
+      "id": "chapter-oil-undecided",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.8,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/chapter_route_test.gd",
+        "--",
+        "--oil=undecided"
+      ],
+      "log": "chapter-oil-undecided.txt",
+      "engine_error_lines": 208,
+      "diagnostics": {
+        "known_count": 208,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "chapter-oil-undecided.json",
+      "review_findings": 0
+    },
+    {
+      "id": "travel-camera-grip",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.45,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/playtest_continuity_test.gd",
+        "--"
+      ],
+      "log": "travel-camera-grip.txt",
+      "engine_error_lines": 162,
+      "diagnostics": {
+        "known_count": 162,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "travel-camera-grip.json",
+      "review_findings": 0
+    },
+    {
+      "id": "command-controls",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 4.54,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/command_controls_test.gd",
+        "--"
+      ],
+      "log": "command-controls.txt",
+      "engine_error_lines": 99,
+      "diagnostics": {
+        "known_count": 99,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          },
+          {
+            "message": "ERROR: 2 resources still in use at exit (run with --verbose for details).",
+            "location": "at: clear (core/io/resource.cpp:604)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "command-controls.json",
+      "review_findings": 0
+    },
+    {
+      "id": "combat-pacing",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 5.6,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/combat_pacing_test.gd",
+        "--"
+      ],
+      "log": "combat-pacing.txt",
+      "engine_error_lines": 68,
+      "diagnostics": {
+        "known_count": 68,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "combat-pacing.json",
+      "review_findings": 0
+    },
+    {
+      "id": "camera-hold",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.23,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/camera_hold_test.gd",
+        "--"
+      ],
+      "log": "camera-hold.txt",
+      "engine_error_lines": 93,
+      "diagnostics": {
+        "known_count": 93,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "camera-hold.json",
+      "review_findings": 0
+    },
+    {
+      "id": "garden-confrontation",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 15.26,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/garden_confrontation_test.gd",
+        "--"
+      ],
+      "log": "garden-confrontation.txt",
+      "engine_error_lines": 449,
+      "diagnostics": {
+        "known_count": 449,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "garden-confrontation.json",
+      "review_findings": 0
+    },
+    {
+      "id": "companion-focus",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.69,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/companion_focus_test.gd",
+        "--"
+      ],
+      "log": "companion-focus.txt",
+      "engine_error_lines": 94,
+      "diagnostics": {
+        "known_count": 94,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "companion-focus.json",
+      "review_findings": 0
+    },
+    {
+      "id": "voice-playback",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 7.94,
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "godot",
+        "--script",
+        "res://tests/generated_voice_test.gd",
+        "--"
+      ],
+      "log": "voice-playback.txt",
+      "engine_error_lines": 95,
+      "diagnostics": {
+        "known_count": 95,
+        "unexpected_count": 0,
+        "known": [
+          {
+            "message": "ERROR: Parameter \"m\" is null.",
+            "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+          },
+          {
+            "message": "ERROR: 3 resources still in use at exit (run with --verbose for details).",
+            "location": "at: clear (core/io/resource.cpp:604)"
+          }
+        ],
+        "unexpected": []
+      },
+      "evidence": "voice-playback.json",
+      "review_findings": 0
+    }
+  ],
+  "limits": [
+    "No LLM, Humanizer or Obelus is required. Authored rules still need human review.",
+    "Menu-state matrix is not reachability proof. Narrative journeys assume host entry access.",
+    "Command fixtures earn combat outcomes but position the player at some approaches; this is not a navigation bot.",
+    "Camera checks are geometric samples. Headless checks do not judge appearance, acting or physical controls.",
+    "No exhaustive scene/branch coverage or labor-saving percentage is claimed.",
+    "Known Godot 4.3 dummy-renderer null-mesh and exit resource diagnostics are counted and retained; these checks do not establish clean resource teardown. Unexpected errors fail the run."
+  ],
+  "chapter": "lantern_quay",
+  "git_head": "c8910d47e9e30aa4a8f7d55975d694467bbdbe30",
+  "working_tree": [
+    " M crates/oathshaper-core/src/command/combat.rs",
+    " M crates/oathshaper-core/src/command/content.rs",
+    " M crates/oathshaper-core/src/command/mod.rs",
+    " M crates/oathshaper-core/src/command/space.rs",
+    " M crates/oathshaper-core/src/command/tests.rs",
+    " M crates/oathshaper-core/src/command/view.rs",
+    " M crates/oathshaper-core/src/dialogue_script.rs",
+    " M crates/oathshaper-core/src/flow/rules.rs",
+    " M crates/oathshaper-core/src/vanguard/mod.rs",
+    " M docs/design/combat-profile-preview.html",
+    " M docs/design/party-catalog.js",
+    " M godot/content/garden_chapter.json",
+    " M godot/content/lantern_quay.checks.json",
+    " M godot/content/rpg_catalog.json",
+    " M godot/project.godot",
+    " M godot/scripts/combat_pose.gd",
+    " M godot/scripts/combat_profiles.gd",
+    " M godot/scripts/command_action_icons.gd",
+    " M godot/scripts/command_hud.gd",
+    " M godot/scripts/command_stage.gd",
+    " M godot/scripts/command_trial.gd",
+    " M godot/scripts/command_weapon.gd",
+    " M godot/scripts/command_world_markers.gd",
+    " M godot/scripts/companion_rendezvous.gd",
+    " M godot/scripts/demo.gd",
+    " M godot/scripts/dialogue_panel.gd",
+    " M godot/scripts/flow_trial.gd",
+    " M godot/scripts/garden_chapter.gd",
+    " M godot/scripts/interaction_focus.gd",
+    " M godot/scripts/main.gd",
+    " M godot/scripts/save_store.gd",
+    " M godot/scripts/vanguard_stage.gd",
+    " M godot/scripts/vanguard_trial.gd",
+    " M godot/scripts/voice_library.gd",
+    " M godot/tests/adversary_stage_test.gd",
+    " M godot/tests/chapter_route_test.gd",
+    " M godot/tests/command_ledger_test.gd",
+    " M godot/tests/command_targeting_test.gd",
+    " M godot/tests/command_trial_test.gd",
+    " M godot/tests/generated_voice_test.gd",
+    " M godot/tests/player_voice_test.gd",
+    " M scripts/check.sh",
+    " M scripts/export-voice-script.py",
+    "?? art/concepts/party-weapons/",
+    "?? docs/garden-cutscene-20261027/",
+    "?? godot/scripts/garden_confrontation.gd",
+    "?? godot/tests/companion_focus_test.gd",
+    "?? godot/tests/garden_confrontation_test.gd"
+  ],
+  "source_sha256": {
+    "Cargo.lock": "e418e16859cad4ca5b67e84920102fb70dd9f5776d58307165d55758dd4790cd",
+    "Cargo.toml": "802f4ed7e670cbe94245198ddcabd974baf72f9a093a891ef2379b3a72583966",
+    "crates/oathshaper-core/Cargo.toml": "07ec8a2580a8ca32ec3c1b9ae03849ddab46a5af73c22aff554b082c080127b2",
+    "crates/oathshaper-core/src/bin/check_continuity.rs": "e79811af37c1997e2c00ca6d027e2c1dc3629233da63e311267f7f5f7e8d3cd5",
+    "crates/oathshaper-core/src/bin/check_dialogue_script.rs": "05b8ef2a6624859de65b859c23590af4c8d4683d75e76aa64f50c1f5c3070c17",
+    "crates/oathshaper-core/src/bin/replay_continuity.rs": "3c3330277cdac943f5b6f3e744a260e971d24a4d7c66aba47a9661e8853c39c6",
+    "crates/oathshaper-core/src/bin/validate_dialogue.rs": "fe55dcb45ca150b7a0a0ce459166c12ad094365e27b879e724ee295d4d1cc766",
+    "crates/oathshaper-core/src/command/combat.rs": "601eb05ecb082688ee1a147281c58b8ecefd6584d5e071a4e80c102b2479392e",
+    "crates/oathshaper-core/src/command/content.rs": "bd467eb1eaac5ed320259d78c0919e655d0b46eaf5a7f540423c4157651985e3",
+    "crates/oathshaper-core/src/command/mod.rs": "93469efef0a585d34fcde6bf2e9a51414a754478b55afa5770f234f7bedbde48",
+    "crates/oathshaper-core/src/command/progression.rs": "8745a6daac675d7e2d06c18054f03597f75f38b079651b4ff8299f9f67273de6",
+    "crates/oathshaper-core/src/command/rules.rs": "d6e8b4f8c9cf120a541d038061830b942cad814518bbbc44d3b5efa81433475f",
+    "crates/oathshaper-core/src/command/space.rs": "bdd6e58c0ca32d8b1b66befbd633ee51c88d791f608bd694b60d2d13fce24038",
+    "crates/oathshaper-core/src/command/tests.rs": "385eb1d011d15eb656963573863e121b1340aa077597158a947fba0cb885382a",
+    "crates/oathshaper-core/src/command/types.rs": "1c16d237162c1e74b59b92b84f60b8a5bb181f3ff9fb4d4daa94cc3a77ae25f7",
+    "crates/oathshaper-core/src/command/view.rs": "646f299334aff167e931f827b609d1540279dbad32eaec79259af295e629680a",
+    "crates/oathshaper-core/src/continuity.rs": "821dd6c1d02b945352ef2e0cd4975331cf34cf8338227ed2a94e7dc5e52bafd2",
+    "crates/oathshaper-core/src/continuity_replay.rs": "54eade7042125c32b4454c6a3ef25202d240511653e89a8484fb4a419b180cd6",
+    "crates/oathshaper-core/src/dialogue_script.rs": "2fc237b05fc226a160372977d3bccec7cc32b9814f91a65a106486588f61cdef",
+    "crates/oathshaper-core/src/flow/combat.rs": "90db256ce5abf8cc4265ac37a170a41127cc2608f0d50dbeda67afbbd226e4f6",
+    "crates/oathshaper-core/src/flow/mod.rs": "097c3d7678ac9cca4ca4e5438a574e0a3d95754e80ce01eaa8d12f2d992943b6",
+    "crates/oathshaper-core/src/flow/rules.rs": "cc0329dc543af42743f6bdd3645eeb9f33800afe07b025f7759db60bf2adfd38",
+    "crates/oathshaper-core/src/flow/space.rs": "6ff10f715e90a6227199cee25d5987832a85b9f3d33238f1ba89c9097ac59c6d",
+    "crates/oathshaper-core/src/flow/view.rs": "9cc6937f51ad98eb11d007fb23adfe17cc2c6824fc5c1f9f1094437e82ddb942",
+    "crates/oathshaper-core/src/lib.rs": "7f93b1ba7ed8f2ac6a78529820b5b8d45f22c7920f58839b6f31ac0514e9b173",
+    "crates/oathshaper-core/src/rpg/mod.rs": "707de4e9a933edd699228806281396a021a6da022cf50bc13dc2ae066142486f",
+    "crates/oathshaper-core/src/runtime/manifest.rs": "01ddc2e38a19ee4c9e1d059b3279a6c5c9146077e25395f94dc282fc117dd028",
+    "crates/oathshaper-core/src/runtime/mod.rs": "2e928b2d2686348fa7d90556154526c57809185ecc8d2f9be044b78af40adaea",
+    "crates/oathshaper-core/src/vanguard/mod.rs": "e5cd40423360f517b62dc4543d15d3cf85346c2f0b99bd9a4946bd911438009e",
+    "crates/oathshaper-core/tests/command.rs": "627a10b7331b0ca9dd96d4501394b7c64b36616454233833aedb6d6d340f50df",
+    "crates/oathshaper-core/tests/flow.rs": "da90de36d21ccdaf799ed22f9d808ba12cdf598f9d3e9e96a304fe3612713682",
+    "crates/oathshaper-core/tests/narrative.rs": "87684426da64df20d7656874f1e87e3afd760c298704eb312503ad382efe9d99",
+    "crates/oathshaper-core/tests/runtime_kernel.rs": "4d3b8d8ceff8f290859755052ab11e58b4304f5fb3cebc0b9755de7f314361e7",
+    "crates/oathshaper-core/tests/vanguard.rs": "1da16033920ae555cf4691707a80638a8ad870c4a72454315a1220b604fefefb",
+    "crates/oathshaper-godot/Cargo.toml": "3d60f36a6737ecd9f54f0f767859e81c2a02583d697b8cbd8dc6995f07c80c36",
+    "crates/oathshaper-godot/src/command_bridge.rs": "be355583cc1f9f75ee186ec3af292ef2bb6f3ef3e75c8301a29e750c7ba2828e",
+    "crates/oathshaper-godot/src/flow_bridge.rs": "6a0bd33894091fe86aac238b39370eed184df4b77ebc0090bc0447b51e607d0b",
+    "crates/oathshaper-godot/src/lib.rs": "92f6e13ee6d477fb2c85d712ef6dbd2fe92c0447b9cf2a50adc25c145dd7b357",
+    "crates/oathshaper-godot/src/vanguard_bridge.rs": "a7de14bff6922a72ed48644ef1c19f3d44a8d5eb04d9cf7d9a62664c5d39fa0c",
+    "godot/content/command_garden.json": "3c38c8b131e8061525dfd6fd644fe2fcd7be015bf1305a17c315ce6d4e0d03ab",
+    "godot/content/equipment_mounts.json": "7f9a332cfcedd77a41f7f03273aaa628a18098257767bd8f6d6ea9a017c72dfc",
+    "godot/content/garden_chapter.json": "d61ee29b8e2003dd00d982e100f8dcf4b3b9989da66ef7448ab5ef2b0a106dbe",
+    "godot/content/lantern_quay.checks.json": "934b957d7e5ce7d8475cea798cf3751b6c81ea219f99cf303da2c7f93f6dc5d3",
+    "godot/content/lantern_quay.continuity.json": "0ef6401bd82ef16f1c28e27a44a4d3e9c5680fbc5315157df16e398f192bdccd",
+    "godot/content/lantern_quay.journeys.json": "a0ff5b54b71696756ef2ad899d7f6d9f0f955eb34852fe0430ad32d4b9e7ced7",
+    "godot/content/lantern_quay.json": "782bcd983ffbaf3b686fd42d83ce384dc46204183572e14fdec895df47cea758",
+    "godot/content/rpg_catalog.json": "2b01151ceebb8ae7516b6be464b6a79c82a4c62905c5cfd28fbb2c230b122153",
+    "godot/content/voice_script.json": "f8349f93762235b6b40b0972a9a82cba3a548bb550e9d3a7970c0654b0f6aba6",
+    "godot/project.godot": "9a53d2104005a361daf3ed2b4203259f5299e6a0dcb8c312e134085e1db8bb4a",
+    "godot/scenes/demo.tscn": "6825425a9cbe33a9c43a8f32012349b3f15c898749f576571c3e4783b979543b",
+    "godot/scenes/main.tscn": "a5c5e5f9915869721f705fbf13c252a907a4c30337148ae92d22283ec4b26143",
+    "godot/scripts/camera_rig.gd": "fd5e0283d0113e8bfc64171bb83375393f6febe662a7806bfc83807d41a6bc83",
+    "godot/scripts/chapter_voice.gd": "76b5dfff363281757cb992fc461636c737819fc93f2c0f04fceaa0c6ddfa6929",
+    "godot/scripts/character_model_slot.gd": "0ed55bb410ce7ace902c0e70112f577d232881974736f6379d8d7031930fe7fc",
+    "godot/scripts/combat_audio.gd": "428fa9fc819d442f5e5a06db34cf9a5b67845b598cfaccb9bad9d6e9056f7a8f",
+    "godot/scripts/combat_frontend.gd": "b509c5cc3319570a2ac3a8bf09b79c08738101e23808136b22268c9607a730f1",
+    "godot/scripts/combat_pose.gd": "f394c1303e72521e47c46a7d349c43fa03c3e784472759cb93c9d9c5754083bd",
+    "godot/scripts/combat_profiles.gd": "0962e010d74c2f6f363b91dcbc324bee089f4d1a1fbe68b57094d0026f3f4b04",
+    "godot/scripts/combat_style_inspector.gd": "1f1040db5a44154a28af2ee87563d9b63423f616c71e0b89ec0a5a2b207a369d",
+    "godot/scripts/combat_theme.gd": "ef7bd509abbbaad5f5ddf48bdddd04e73d9be4199406b5ce9e66d931fa0cddec",
+    "godot/scripts/command_action_icons.gd": "3a53792eb2e687392308ea38f40dd21e6c7f5935530ef66d4627dab8833a3a1b",
+    "godot/scripts/command_adversary.gd": "496256dd9f54f3f1cc33ce3d049fedb278360e17b7de02220b8257e5b1f62997",
+    "godot/scripts/command_construct.gd": "da631e3d0bb166796af3fdd017c488d2c94b6d81ae51dabcf062cee6b4876538",
+    "godot/scripts/command_hud.gd": "0ddebace38102486c8fc6956e2919bc667887afc5270e802bd70a3efe27a314c",
+    "godot/scripts/command_ledger.gd": "9788189a6a09f85558b3e415d0665bc2bd19d27d0d2d7bf4db6afbf93134e285",
+    "godot/scripts/command_space.gd": "418fa96794bd385b1a0e23a87bf056e4b07a3d67e587f152915ea3be0781226a",
+    "godot/scripts/command_stage.gd": "ea74ccaad4f591c01de50c6348aaef280b9a8292f5f5e1dfde8d3ed21acaeed3",
+    "godot/scripts/command_trial.gd": "30aac00bc0970d7c383661ec17799d766eeda08e294811b347120988809fcca1",
+    "godot/scripts/command_weapon.gd": "b85fdbbb67c326ad1e74c7119808764d80ff3df3f9dab6788c6d1457dac34990",
+    "godot/scripts/command_world_markers.gd": "f457e2d66f4b564853850d8b9c618b0fb630695b641953abf3bbcf894be52009",
+    "godot/scripts/companion_rendezvous.gd": "c51ee5290e57fd0a74bbe35798a5bb5e81b01fd978e4c242df6c85c54f8ffde8",
+    "godot/scripts/demo.gd": "9ac29538be01a25e9699e6453f19fc6d24d1462d5fa9b84b636bd5fd022bc5ad",
+    "godot/scripts/dialogue_panel.gd": "be6f0011c542c4bbe94b5602d728bf1a086559e3061e2f8e4dc09527cfab25e9",
+    "godot/scripts/equipment_mount.gd": "109c0fe30b392cd9a013d85b66e5d57f9a0dc2c21590071d61efc76924dae5e7",
+    "godot/scripts/flow_hud.gd": "d13ab6691d11fdfb2f79eac9a2c4165899b617e195a25b8f3e0f1dbd0cb3e2d9",
+    "godot/scripts/flow_stage.gd": "e9108b849f6a93462c0f455de46d60df3038ede98de948ff5e004797703c1702",
+    "godot/scripts/flow_trial.gd": "dbdb08d69f4bc8467cc7212757c5e09f77e5b50d3f8f8ace562c1d5f99547faf",
+    "godot/scripts/garden_chapter.gd": "0711c5e555a343256e1defc0b40bee09539672fd8e9cc5536e2b42f669ed409e",
+    "godot/scripts/garden_confrontation.gd": "46dcde95e90c7fabd4859e0e9da7fd035e8f99c9c1edf9ed63ee3254bbae1bd0",
+    "godot/scripts/garden_layout.gd": "242b4c6be6ab66cecd47b96951c6b7300ff174022ad8f35e378695f89fdb5e6c",
+    "godot/scripts/grounded_idle_character.gd": "2f9dc63e0bae0bd61057165d31a7c227b1c249efaf6ba2903629ded568bf5d09",
+    "godot/scripts/hand_attachment.gd": "c9901f71064f42ed063865f5b5f6b79ac0d85dff90bfec0f68caf4417d1be711",
+    "godot/scripts/hub_environment.gd": "0264cbc7cf40275c18e18355900264a969918314ba37b434873dc6d58dc103d6",
+    "godot/scripts/input_hints.gd": "5ac578d241706fc83c3d48b032a0ab414773bb66cffd4398eb721ee3dfb1e753",
+    "godot/scripts/interaction_focus.gd": "e6ab6c03e75036a688965ef2093b3175cb91b571180b3ed6b6b30998279a65b7",
+    "godot/scripts/journal_menu.gd": "6d3b041f83bb9d87a794315ee2e7d568c49a47b190d4ce6853be30a4e929947b",
+    "godot/scripts/main.gd": "28577d0ce23e2b0c9cd9541d1224cc712499273590fb1f69e4829c13dc0d97e5",
+    "godot/scripts/map_widget.gd": "bfdc086f5790eb5223fdd03dceda1b7a77a27de88b89815fdb4db2ca77c4e7fa",
+    "godot/scripts/objective_tracker.gd": "734915fb8c21a6a091b8d07df9887729bcc4c70418ee9f2076a0875bea65ffda",
+    "godot/scripts/party_catalog.gd": "424c43fb3401d290968fd80bba8ae4f1fee4b3e2342192e73f6453e72af4043c",
+    "godot/scripts/pay_chest.gd": "44ec65f755208ce4c55a9c7262e1b4a8c4909be912c97cdbe35dbbd78f4d24ba",
+    "godot/scripts/payroll_pouch.gd": "0b4cae2285684ce8b97c43f4470130af49030c5cc686612a27ec5a69cbbbe1e2",
+    "godot/scripts/player.gd": "e052d8aa60526cb9a3f14a37e4f08de0234b4197341057f40eba94080e24c4fd",
+    "godot/scripts/quay_opening.gd": "1b5b165c34e61debb0c82e4dc84b64c06ef3f9ee2e5f3e7f1d1a7b11044c09dc",
+    "godot/scripts/records_office.gd": "f9b42123b67708ba71a92c8f2df6f1e2e726199f7656c5b60a8f5f4ae791b92a",
+    "godot/scripts/save_store.gd": "50a943d9287dc6f864051e98b2722a1a83352c5bf1893f4f987429cb460f8cc7",
+    "godot/scripts/vanguard_stage.gd": "4f0bb6bf8665e4a4d58ca056634e2eb8b58023d37b7bae5d55fc9e6f71ec1a4a",
+    "godot/scripts/vanguard_trial.gd": "a2a150d7080fae16f017e59a3b0b91b65bdb6da74d1bbd0c2905480c01c9a3b7",
+    "godot/scripts/vanguard_weapon.gd": "0c03e5624f90ecf1b64a74724160dda5aa8b3452e4f9d2a17159fd545dab2be7",
+    "godot/scripts/voice_library.gd": "b2f519ff35c9cc4f24d8c824b26b6f8f4dda120788ddc790b587bb8e7051f54b",
+    "godot/scripts/weapon_presentation.gd": "68ad0a0238d5124d4a7fd84e343bffc6d310d2df618d11162aa48bb01c1a998c",
+    "godot/tests/adversary_stage_test.gd": "64d195a6a9bef058da2ad59b30a583274aca0ed7d5008874d916b3847908de94",
+    "godot/tests/camera_hold_test.gd": "022d8a6dc2b3f2ff07a799ad58b048e69684260e9d0f21e866ac85022dad33a0",
+    "godot/tests/chapter_route_test.gd": "3b5de7c730ec3756168c4abe3cdb9d0f1dea777b783dd7678740f422a021e479",
+    "godot/tests/combat_frontend_test.gd": "caebeccaea07d3fb79e2b3699274e0f23b186e9d984d41eeead3c7e7c5c488d8",
+    "godot/tests/combat_pacing_test.gd": "4e5fe1fb61ceeaf6513bf4b15019e888ec81dde660c85a21fc935cb1a6c54a7f",
+    "godot/tests/command_controls_test.gd": "227658f8fce62744979d9ae693ee9185968095fc45da5d4c22c2e2f8c19da7ad",
+    "godot/tests/command_equipment_test.gd": "243c199e47c6f676407323233081d0f4046b16fb022535d7e8fc781059b39b6f",
+    "godot/tests/command_ledger_test.gd": "5b68d3cb9372e4898cab8ccb90c7088d46feec65d0b412d34ca1a6428fea3f2b",
+    "godot/tests/command_space_test.gd": "7baa5c1bfa4adc2fbf4f2e41d401358bfa682a98bad59d1a1d56094a52325227",
+    "godot/tests/command_targeting_test.gd": "edaf3c3f14fa200046efece83d422d51cc347d83f2fba5ed6843be759544e15a",
+    "godot/tests/command_trial_test.gd": "5b56139ee4557c8c53dcd4a7c9cebd32dee61c5284c93117178baf1525a1dbc6",
+    "godot/tests/companion_focus_test.gd": "863d0ad1b7fbab1db5e9ecf2aff19eecf739d87990caeb1ee844faef8fa28405",
+    "godot/tests/continuity_receipt.gd": "42b0d5a647425173c420865fb3ee6b9d32e13598ea7c82f1aa624e5160b01d2b",
+    "godot/tests/dialogue_response_test.gd": "695167670e5ef5f08a58f0cde252699bc0a8ed7159bc49aa2283c4f113a8a125",
+    "godot/tests/equipment_mount_test.gd": "c1649a4a320c3f91d0aa0ae6f800e0eb5381c0b3a0785e62bafe5790928ec706",
+    "godot/tests/flow_input_test.gd": "1478c356541eb7d9cee2b370bbf399ce1ba7c991bb36515883b453b8b4ed57f5",
+    "godot/tests/flow_trial_test.gd": "027f4458a9fe1fc5f781c408f56fed34c9b2be6ecb4507378b48bb88add9b4bb",
+    "godot/tests/garden_confrontation_test.gd": "a70189e991a6beacc0226b1676288ad9d23f067c9c96fcf168f719537919fe65",
+    "godot/tests/garden_mesh_test.gd": "834a1841ae51e964421936bce3fb3d3a981e9ebd86fe1341aa25be4dfdaf39a8",
+    "godot/tests/generated_voice_test.gd": "dda6d40dc827c617b31eaaa04988c82ee2feeff0790999de8de7932bc54c9180",
+    "godot/tests/headless_test.gd": "22bd19b1a5e8d77635a7319784cdbf4e18d0341d556eeae8839129d8e421ce8f",
+    "godot/tests/map_widget_test.gd": "96cec25ecdf67d9323661cdf5b9babf083794d6cac30850bd90655e53a1253f7",
+    "godot/tests/playable_profiles_test.gd": "51c0ac1925c0ee90286bf5a8a6c5c2991c0f94dde3256fea9911d33f48705f37",
+    "godot/tests/player_voice_test.gd": "032a10fefd9acceff05ffbfd4bef7f29ec82859253aa253b1663bebe20b094fa",
+    "godot/tests/playtest_continuity_test.gd": "80acce324dfe2da5f341373556a0ec7da003611fa79d53e21ffdb109e33ef02e",
+    "godot/tests/quay_opening_test.gd": "16b9f709c350f529d5e1553d49716bf64285e5fefae4c0315a4425c090c547ed",
+    "godot/tests/records_office_test.gd": "6ac8054427ec04a0b6a47ca56b1c6096631321b58050bac2dbf0a2cb196a9bff",
+    "godot/tests/rig_slot_test.gd": "a1402afa50480d6acc20a38e7531497346878620d0be9197893b268f5df30ec0",
+    "godot/tests/route_integration_test.gd": "1e72e90beff7a9d43b2284655e62fe3b6649e7d4b5b394b9d33aad038b7fcdc9",
+    "godot/tests/tower_lighting_test.gd": "af3508a9609e757a50c976bcc9d01b19d124e5485a7c95884c53e45bdc02b775",
+    "godot/tests/vanguard_trial_test.gd": "b15f7feac512934edb7acd823f9d6cf10b4671f4f602a88e32ef79e85da25208",
+    "scripts/build-host.sh": "8f2de3b1565232a819e1b98c81b00376effee6cb8609bee96ccd1db118d719f4",
+    "scripts/check-continuity.py": "81433ddee34c823808ebd66c919f6570f4bfbe194fd559afc52bb12a22045d8b"
+  },
+  "godot": "4.3.stable.official.77dcf97d8",
+  "status": "passed"
+}

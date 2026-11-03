@@ -1,0 +1,21 @@
+{
+  "schema": "command.garden/v1",
+  "revision": "garden-1",
+  "units": "meters",
+  "source_origin": [41.3, 0.54, -2.0],
+  "source_scale": 1.7,
+  "actor_radius": 0.35,
+  "walkable": [
+    {"id": "terrace", "min": [-4.59, -8.84], "max": [13.77, 8.84], "height": 0.0},
+    {"id": "ramp", "min": [-8.33, -1.7], "max": [-4.59, 2.72], "height": -0.578}
+  ],
+  "obstacles": [
+    {"id": "west_north_bed", "center": [-3.91, -5.61], "size": [5.27, 4.59], "height": 1.53},
+    {"id": "west_south_bed", "center": [-3.91, 5.44], "size": [5.27, 4.59], "height": 1.53},
+    {"id": "east_north_bed", "center": [5.78, -5.61], "size": [5.27, 4.59], "height": 1.53},
+    {"id": "east_south_bed", "center": [5.78, 5.44], "size": [5.27, 4.59], "height": 1.53}
+  ],
+  "spawns": {"player": [0.0, 0.0], "mara": [-2.0, 0.0], "clerk": [-2.0, 2.0], "hound": [2.0, 0.0], "sentinel": [6.0, 2.0], "corsair_raider": [4.0, -2.0]},
+  "anchors": {"garden_camp": [-3.6, 0.0], "exit": [-6.5, 0.0], "workbench": [-3.5, -1.0], "charter": [-3.5, 1.0]},
+  "portals": [[-4.2, -1.2], [-4.2, 2.2], [-4.95, -1.2], [-4.95, 2.2]]
+}

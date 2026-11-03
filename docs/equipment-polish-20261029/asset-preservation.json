@@ -1,0 +1,17 @@
+{
+  "player": {
+    "textures_unchanged": true,
+    "joints": 72,
+    "triangles": 10258
+  },
+  "ivo": {
+    "textures_unchanged": true,
+    "joints": 19,
+    "triangles": 15801
+  },
+  "mara": {
+    "textures_unchanged": true,
+    "joints": 19,
+    "triangles": 15176
+  }
+}

@@ -1,0 +1,810 @@
+{
+  "schema": 1,
+  "status": "script_only",
+  "cast": {
+    "Corsair": "Adult woman; warm, grounded, direct. The player character.",
+    "Mara": "Adult woman; practical dockworker, warm with a rough edge.",
+    "Crimson Raider": "Adult raider; curt, defensive, no theatrical villain voice.",
+    "Ivo": "Adult watchkeeper; calm, low register, deliberate without theatrical gravity.",
+    "Clerk": "Older woman; precise, dry, confident, conversational pace.",
+    "Vendor": "Adult merchant; bright and lightly amused, never a caricature.",
+    "Filing Cabinet": "Neutral narrator; quiet observation, no character impersonation.",
+    "Narrator": "Neutral narrator; shares the filing cabinet voice."
+  },
+  "lines": [
+    {
+      "key": "02e297e02d910c647de323e2ecac427ee194b2ae2523ebf65aee45c4b140ed01",
+      "speaker": "Mara",
+      "lookup_text": "The tower's gone dark. I heard glass breaking in the clerk's office just now. Would you check on her? The door is beside the tower.",
+      "spoken_text": "The tower's gone dark. I heard glass breaking in the clerk's office just now. Would you check on her? The door is beside the tower.",
+      "sources": [
+        "node:mara_greeting"
+      ],
+      "path": "res://assets/audio/generated/4ad0df52bccb68d2f24be4fbc53b00d9ee15ec89f3a77a48ed28ed8d3bedec46.wav"
+    },
+    {
+      "key": "f0c2ccff4482b178f7e7d36ac9941b234733f87a4ea795447d383bcd2b2d941a",
+      "speaker": "Mara",
+      "lookup_text": "We've been paid, and the tower's burning again. I can see right across the quay from here.",
+      "spoken_text": "We've been paid, and the tower's burning again. I can see right across the quay from here.",
+      "sources": [
+        "node:mara_greeting/variant:0"
+      ],
+      "path": "res://assets/audio/generated/bd7f61c5a628be98d97bba7d8fad18b8aa6d475960e4de4324ff5790ef6c53e2.wav"
+    },
+    {
+      "key": "7920aa53411f1be95b4210d2668d2de06861f32093f16fc5adf47ad2872a2bfd",
+      "speaker": "Mara",
+      "lookup_text": "Let's get this back to the clerk. The others are still waiting to be paid.",
+      "spoken_text": "Let's get this back to the clerk. The others are still waiting to be paid.",
+      "sources": [
+        "node:mara_greeting/variant:1"
+      ],
+      "path": "res://assets/audio/generated/245776c8017e6917e9149df72f90ea481f00a81fd86dd4b7946fbd5035240e78.wav"
+    },
+    {
+      "key": "cb0bcc7aaef9af3cd86561d22c47a77716874350f3358c7caa09741e4ba813a3",
+      "speaker": "Mara",
+      "lookup_text": "Let's find that pouch. The clerk will need every coin back.",
+      "spoken_text": "Let's find that pouch. The clerk will need every coin back.",
+      "sources": [
+        "node:mara_greeting/variant:2"
+      ],
+      "path": "res://assets/audio/generated/5eee9850390b079a8c40d10b89d893c01d13809c943648b5122227fb9f2a3e0f.wav"
+    },
+    {
+      "key": "aaa655b4bc18d7e5250dd42cbe691d2198ba5a600285869a428de0189d593af7",
+      "speaker": "Mara",
+      "lookup_text": "Stay close. I'll watch for anyone who needs help.",
+      "spoken_text": "Stay close. I'll watch for anyone who needs help.",
+      "sources": [
+        "node:mara_greeting/variant:3"
+      ],
+      "path": "res://assets/audio/generated/204c5a23fcf5168a8edaff413b7790d4bf735117fd0fd5d51da375936771288d.wav"
+    },
+    {
+      "key": "a135381645446bfea647bcbca65943c8057f9c9d417da27282c51015e39c1ac1",
+      "speaker": "Mara",
+      "lookup_text": "I'll meet you at the garden gate. Ivo will know where the thief went.",
+      "spoken_text": "I'll meet you at the garden gate. Ivo will know where the thief went.",
+      "sources": [
+        "node:mara_greeting/variant:4"
+      ],
+      "path": "res://assets/audio/generated/270e0398c710dd856f5c94c5d0086118e81fa67b40bd3c62d9706cde990c3352.wav"
+    },
+    {
+      "key": "d83dbf96202234d211636a697a7b312de70671e9b29213e531eec45309ee8f0e",
+      "speaker": "Mara",
+      "lookup_text": "Is the clerk hurt?",
+      "spoken_text": "Is the clerk hurt?",
+      "sources": [
+        "node:mara_greeting/variant:5"
+      ],
+      "path": "res://assets/audio/generated/a98eee681f996aea3c1c6df6cf9b4b6e67681f57f63c205ff7c12f67722fdc39.wav"
+    },
+    {
+      "key": "4ac349d089b40ad4e5f23a93269d37a2f7d44ddecba1bc97bb0944abfb3ca829",
+      "speaker": "Mara",
+      "lookup_text": "The tower's burning again. Would you check on the clerk? I heard glass breaking in her office. The door is beside the tower.",
+      "spoken_text": "The tower's burning again. Would you check on the clerk? I heard glass breaking in her office. The door is beside the tower.",
+      "sources": [
+        "node:mara_greeting/variant:6"
+      ],
+      "path": "res://assets/audio/generated/05f088248358bb8919fa30192e6a472e346157f6fe30485e3c051eeb2679c188.wav"
+    },
+    {
+      "key": "bb70fa7190c6c1e23a9b3a84d41117b8c3aca34998fa24d2504e506b08ff98fb",
+      "speaker": "Corsair",
+      "lookup_text": "I'll check on the clerk.",
+      "spoken_text": "I'll check on the clerk.",
+      "sources": [
+        "choice:mara_greeting/check_office"
+      ],
+      "path": "res://assets/audio/generated/2dba23227529c890d98b7d91ee45167b50b9c9675c376b7327f99a27911c9c4a.wav"
+    },
+    {
+      "key": "e8134a41747db35e54579ccd7502b811d342649dd2136adecaae915e828643b7",
+      "speaker": "Corsair",
+      "lookup_text": "She's safe. He stole the payroll. Will you come with me?",
+      "spoken_text": "She's safe. He stole the payroll. Will you come with me?",
+      "sources": [
+        "choice:mara_greeting/accept_help"
+      ],
+      "path": "res://assets/audio/generated/786d53423a009012aa2d52884c17daf6e2ec0582163665bbf7160c6640554c86.wav"
+    },
+    {
+      "key": "373ec04adc0a8904f01f25c4879eb958f756c39beb2543ac6f20742ef4df84d4",
+      "speaker": "Corsair",
+      "lookup_text": "What happened?",
+      "spoken_text": "What happened?",
+      "sources": [
+        "choice:mara_greeting/ask_theft"
+      ],
+      "path": "res://assets/audio/generated/0e2b3a05a10397c1dc02e2bdf5d7ad54e2db7da45268d9396d634a61f9637a0b.wav"
+    },
+    {
+      "key": "e750019e0bd2e161b0c749caa61a0e457b7ef2755ca79cbd425350e1d5c9be03",
+      "speaker": "Corsair",
+      "lookup_text": "Do you work here?",
+      "spoken_text": "Do you work here?",
+      "sources": [
+        "choice:mara_greeting/ask_pay"
+      ],
+      "path": "res://assets/audio/generated/632c206dd3bf06757a04b29d0e8345ccd7383b89e8312b47fc6d6716da23ad8e.wav"
+    },
+    {
+      "key": "092d8bc83d07a51329194946009ce894b340eaa2f1f2f4d323bde64520116727",
+      "speaker": "Corsair",
+      "lookup_text": "Where is Ivo?",
+      "spoken_text": "Where is Ivo?",
+      "sources": [
+        "choice:mara_greeting/ask_for_favor"
+      ],
+      "path": "res://assets/audio/generated/fc9be84dc3f69069465e46d358a0cb0be0aa007e4b3dbe12feabf081ccd988ce.wav"
+    },
+    {
+      "key": "e64dc0d2aaa1f3b8f54589ab6489205495c84a9eb307bb289a6f2aadc4c67d84",
+      "speaker": "Corsair",
+      "lookup_text": "Why is the tower dark?",
+      "spoken_text": "Why is the tower dark?",
+      "sources": [
+        "choice:mara_greeting/ask_lamp"
+      ],
+      "path": "res://assets/audio/generated/5b8301121beaed40370686aeca23f8f7d712143a7f4b7146dec207fef94423e8.wav"
+    },
+    {
+      "key": "a86f9003b7f481784b8695d4833a10e1b3866c876f02ba7745c785df368233fd",
+      "speaker": "Corsair",
+      "lookup_text": "Share a flask of lantern oil.",
+      "spoken_text": "Here. This should get the tower burning again.",
+      "sources": [
+        "choice:mara_greeting/share_oil"
+      ],
+      "path": "res://assets/audio/generated/1b04255aebd3e2188edce122b5696a6feba3f447d1252fe0fc3310976df023db.wav"
+    },
+    {
+      "key": "37eefb048f77d1b534a9d7cd2532c89ee1d0edf30573de616ae3b11afc86793d",
+      "speaker": "Corsair",
+      "lookup_text": "Keep the oil for the road.",
+      "spoken_text": "I need to keep the oil for the road.",
+      "sources": [
+        "choice:mara_greeting/keep_oil"
+      ],
+      "path": "res://assets/audio/generated/29e5d966368186b267263ddf367539bb8cc0979a26838a546afdef0a0dec897a.wav"
+    },
+    {
+      "key": "aa1e03edcbedd3ae2cb412f411999fac0c6afafb87661c45a14a0d75d0163867",
+      "speaker": "Corsair",
+      "lookup_text": "Leave conversation.",
+      "spoken_text": "Until next time.",
+      "sources": [
+        "choice:mara_greeting/leave",
+        "choice:ivo_gate/leave",
+        "choice:clerk_greeting/leave",
+        "choice:vendor_greeting/leave"
+      ],
+      "path": "res://assets/audio/generated/9863822fc69739bb4b3aa57e3448a153038d7464a6a43f52f99ee1dc45526588.wav"
+    },
+    {
+      "key": "087208f40b8ec6287bfe5654909b8bcd7bb35399cec44454d413a593450db294",
+      "speaker": "Mara",
+      "lookup_text": "I'm coming. I mend dockhands as often as cargo nets. Tell Ivo we'll help him. If either of you gets hurt, stay close to me.",
+      "spoken_text": "I'm coming. I mend dockhands as often as cargo nets. Tell Ivo we'll help him. If either of you gets hurt, stay close to me.",
+      "sources": [
+        "node:mara_help"
+      ],
+      "path": "res://assets/audio/generated/1c08c50d994781df838b3ef00e9ace1fdd95bd3bb8ef1328ddcde7df17ebdfe4.wav"
+    },
+    {
+      "key": "02dee527eb5b08189ca464a4855f6d509792b29cdd9839f2d5f1c0df287fd093",
+      "speaker": "Mara",
+      "lookup_text": "A crash from the office, then someone running across the court. I couldn't see who it was. Ivo went after them.",
+      "spoken_text": "A crash from the office, then someone running across the court. I couldn't see who it was. Ivo went after them.",
+      "sources": [
+        "node:mara_theft"
+      ],
+      "path": "res://assets/audio/generated/b1dfdf1ddb71b5995e37e5f72abf6e0ca9a2d3175d2a79a12e8a5bbd9bf788e5.wav"
+    },
+    {
+      "key": "c3e7c1d1f75c0725506b60e34d3a79acf2b14cf15b3c3fdc311a29803ad79beb",
+      "speaker": "Mara",
+      "lookup_text": "I unload the boats and tend the tower lamp at night. The clerk pays us on Fridays. I was waiting for my wages when I heard the crash.",
+      "spoken_text": "I unload the boats and tend the tower lamp at night. The clerk pays us on Fridays. I was waiting for my wages when I heard the crash.",
+      "sources": [
+        "node:mara_pay"
+      ],
+      "path": "res://assets/audio/generated/153a5694125552caa7982f822470786d19adbc91bee031b1c5a25c7f253b8a35.wav"
+    },
+    {
+      "key": "0445a8b1996b71ab81d08782332d3293b9b356667637bff3e27b7e5cf60bbe18",
+      "speaker": "Mara",
+      "lookup_text": "Thank you. Give me a moment to fill the reservoir. We should be able to see anyone else crossing the quay.",
+      "spoken_text": "Thank you. Give me a moment to fill the reservoir. We should be able to see anyone else crossing the quay.",
+      "sources": [
+        "node:mara_thanks"
+      ],
+      "path": "res://assets/audio/generated/0ce50ce81ee712259bf786f57d92e15fdc785e4b208a98f440b35eeee7d19d93.wav"
+    },
+    {
+      "key": "fd85520b061dc2c68c2d162d6ff94ca479be88d45e700051e3e4f7a8ce77c192",
+      "speaker": "Mara",
+      "lookup_text": "All right. Watch your footing by the water. Those boards are hard to see without the tower.",
+      "spoken_text": "All right. Watch your footing by the water. Those boards are hard to see without the tower.",
+      "sources": [
+        "node:mara_farewell"
+      ],
+      "path": "res://assets/audio/generated/eb9b8e3f120271d899bb252ffd914e75a173eccf274112a64c902d3361b088e2.wav"
+    },
+    {
+      "key": "bb0ff75db39b3d349c3a6b1ea79ec8e2fc0f23e9f610764972076e5acd82ad0c",
+      "speaker": "Mara",
+      "lookup_text": "The reservoir ran dry. I was going to buy oil with tonight's pay. I should've fetched it before sunset.",
+      "spoken_text": "The reservoir ran dry. I was going to buy oil with tonight's pay. I should've fetched it before sunset.",
+      "sources": [
+        "node:mara_lamp"
+      ],
+      "path": "res://assets/audio/generated/c301a32c932145516d9501711e8420115788ac7abfe4dfe48de5801941996361.wav"
+    },
+    {
+      "key": "f302980f8ee86aad6e328b704ed1af99e4c70452c775da6cca29e937524a0b83",
+      "speaker": "Mara",
+      "lookup_text": "He ran east, towards the garden gate. It's the only way onto that terrace.",
+      "spoken_text": "He ran east, towards the garden gate. It's the only way onto that terrace.",
+      "sources": [
+        "node:tide_gate"
+      ],
+      "path": "res://assets/audio/generated/9e09bf858b4001f575e7005a9666d360846ebe0574fbf8bc5c3367e843e231fe.wav"
+    },
+    {
+      "key": "4780e3b8aeb9523075b6e88a34f86f9e487f72a9e0b126b793d41f15a6e82f8c",
+      "speaker": "Ivo",
+      "lookup_text": "The man in red ran from the office into the garden. I've shut the gate behind him. There's no other way out, but he's got two mechanical guards.",
+      "spoken_text": "The man in red ran from the office into the garden. I've shut the gate behind him. There's no other way out, but he's got two mechanical guards.",
+      "sources": [
+        "node:ivo_gate"
+      ],
+      "path": "res://assets/audio/generated/979ab3b6e39f36a35da30a57fe006518d1f69eb3c6cfd1a9fc4dabd304e16f90.wav"
+    },
+    {
+      "key": "c95914a633b69d388bc569b867643f4cc3259f51d134de339dfbab0eac89bb5e",
+      "speaker": "Ivo",
+      "lookup_text": "The tower's lit again. I'll stay with the prisoner until the watch arrives.",
+      "spoken_text": "The tower's lit again. I'll stay with the prisoner until the watch arrives.",
+      "sources": [
+        "node:ivo_gate/variant:0"
+      ],
+      "path": "res://assets/audio/generated/f0b2dd5621e54be76dc62268b9c00e4abef4529ebbff3aeae0540c6e64602811.wav"
+    },
+    {
+      "key": "e00c054930e84b70b97c8af72b217856f353c7dfc8c0ff6d7140d83b03f981ae",
+      "speaker": "Ivo",
+      "lookup_text": "Take the money back to the clerk. I'll stay with the prisoner until the watch arrives.",
+      "spoken_text": "Take the money back to the clerk. I'll stay with the prisoner until the watch arrives.",
+      "sources": [
+        "node:ivo_gate/variant:1"
+      ],
+      "path": "res://assets/audio/generated/76c707d206c752d66aee115fa1971a7b62e80e0439b5126119655f367c12975c.wav"
+    },
+    {
+      "key": "73b79c48451c9030edd8111a8718b024e90f0d96803cded90344f2fae5cfc3e8",
+      "speaker": "Ivo",
+      "lookup_text": "The guards are down. Check the raider for the payroll; I'll keep watch.",
+      "spoken_text": "The guards are down. Check the raider for the payroll; I'll keep watch.",
+      "sources": [
+        "node:ivo_gate/variant:2"
+      ],
+      "path": "res://assets/audio/generated/c57d28ff145aa5f1b9a041849952726d0b881dd58f45b19ea1455129bb1fc940.wav"
+    },
+    {
+      "key": "a24c5bb7079036b8f21b630264c81c355bbe618c33b134cb1e2a7e7b9675a608",
+      "speaker": "Ivo",
+      "lookup_text": "Mara stays behind us. Keep the guards busy while we close on the thief.",
+      "spoken_text": "Mara stays behind us. Keep the guards busy while we close on the thief.",
+      "sources": [
+        "node:ivo_gate/variant:3"
+      ],
+      "path": "res://assets/audio/generated/72789ffb94476e7f507e2abe0557d7a065eac5489c0537f078c9682e49045a71.wav"
+    },
+    {
+      "key": "d023d54367c2e83663a15940ce78f8f9b0dc8e0b25cd544d44bf12b323dbc875",
+      "speaker": "Corsair",
+      "lookup_text": "Mara's ready. Let's get the payroll back.",
+      "spoken_text": "Mara's ready. Let's get the payroll back.",
+      "sources": [
+        "choice:ivo_gate/open_gate"
+      ],
+      "path": "res://assets/audio/generated/a261d20c3674a0dfece24dea81dddc8d8c9d5918690d14abea3be286b10fb624.wav"
+    },
+    {
+      "key": "ccfbecfaa58e75b3bae4e2d6d77ad6a60ce3af3bb0e815f7968876fafaf4dfe5",
+      "speaker": "Corsair",
+      "lookup_text": "Why haven't you gone in?",
+      "spoken_text": "Why haven't you gone in?",
+      "sources": [
+        "choice:ivo_gate/ask_about_gate"
+      ],
+      "path": "res://assets/audio/generated/7376c9c1ce9504045e0eb9e76e79ee8b6f4374f2821e823f2b61f7603dbf8413.wav"
+    },
+    {
+      "key": "167a4ed0e27811f579c2a792c471f6d466cac33b4f08a8e1ce6a953d1c5ce20b",
+      "speaker": "Corsair",
+      "lookup_text": "What are those machines?",
+      "spoken_text": "What are those machines?",
+      "sources": [
+        "choice:ivo_gate/ask_sentries"
+      ],
+      "path": "res://assets/audio/generated/4f923ba8505e0b691e6192d4b6e5767aeecdc9843f32a82787a8f602ed0ef0c4.wav"
+    },
+    {
+      "key": "f97b7f8f25ea6f40477bbb416cef4ccb79314144b84c52160ca53fff5fc9d8b6",
+      "speaker": "Ivo",
+      "lookup_text": "I'll lift the chain. Stay together. Those guards hit hard, and Mara needs room to work.",
+      "spoken_text": "I'll lift the chain. Stay together. Those guards hit hard, and Mara needs room to work.",
+      "sources": [
+        "node:ivo_gate_opened"
+      ],
+      "path": "res://assets/audio/generated/b4c5eb74d14960b0473b3875a1d40085071a8ab7f87c144655111fc3a59ca2b9.wav"
+    },
+    {
+      "key": "05fec800845496b19f32cdbb318635750d631aa5f4e34a867725d201736f1f29",
+      "speaker": "Ivo",
+      "lookup_text": "One of his guards nearly took my head off. I couldn't fight both at once. Get Mara.\n\nWe'll need someone who can tend a wound.",
+      "spoken_text": "One of his guards nearly took my head off. I couldn't fight both at once. Get Mara.\n\nWe'll need someone who can tend a wound.",
+      "sources": [
+        "node:ivo_gate_history"
+      ],
+      "path": "res://assets/audio/generated/c71e86211343915d7a4b95fe560b19bca8c89cbf20ccbde7bc39c9e8d0681857.wav"
+    },
+    {
+      "key": "8af3e37584850780526050ac18754cc4a135050be81a7407beee210fbd0fae95",
+      "speaker": "Ivo",
+      "lookup_text": "They're the raider's guards. He gives the orders; they do the fighting. Don't let them surround us.",
+      "spoken_text": "They're the raider's guards. He gives the orders; they do the fighting. Don't let them surround us.",
+      "sources": [
+        "node:ivo_sentries"
+      ],
+      "path": "res://assets/audio/generated/0f54a2e5379fc3a8a53856b8ef3c225cfced83ac89f2bb4694b08dc0173bc090.wav"
+    },
+    {
+      "key": "6ef9ea3bd0319464d98a2fe428031ffda76dd3595099e948eea8b5bf2bfba88c",
+      "speaker": "Clerk",
+      "lookup_text": "I'm all right. He shoved past me and smashed the lock off the payroll chest. I couldn't even see his face until he was through the door.",
+      "spoken_text": "I'm all right. He shoved past me and smashed the lock off the payroll chest. I couldn't even see his face until he was through the door.",
+      "sources": [
+        "node:clerk_greeting"
+      ],
+      "path": "res://assets/audio/generated/7f1ffe55ceb3742687bbc9ebb64973ebb4d35b35ec97ca011e64a147778cdbd0.wav"
+    },
+    {
+      "key": "4984a303ff1c09699cb87c1ae92b61f72e01d3b6f603c54fa35d671e65f4ced7",
+      "speaker": "Clerk",
+      "lookup_text": "I've counted it twice. Nobody will lose their wages. We'll have that lock replaced in the morning.",
+      "spoken_text": "I've counted it twice. Nobody will lose their wages. We'll have that lock replaced in the morning.",
+      "sources": [
+        "node:clerk_greeting/variant:0"
+      ],
+      "path": "res://assets/audio/generated/0c0e59309403ef491ea7826b5141bfd536b841eb368abef5d4aec02713ef9936.wav"
+    },
+    {
+      "key": "7189b8ed268e0d44afbf441f5e708c8e3253ade4e1ae69c57796d862aff75783",
+      "speaker": "Clerk",
+      "lookup_text": "That pouch has the quay stamp on it. You found him! Let me count the money.",
+      "spoken_text": "That pouch has the quay stamp on it. You found him! Let me count the money.",
+      "sources": [
+        "node:clerk_greeting/variant:1"
+      ],
+      "path": "res://assets/audio/generated/ddc3dd759eb44ab03711526ba13a55592ca1e0fe8a7cccddeef4c2c5b04e408a.wav"
+    },
+    {
+      "key": "741fa6ab76a44f3caa1a7bac0c981be08b667e7188d953fa77d164d8e694fbc7",
+      "speaker": "Clerk",
+      "lookup_text": "Did you find the money? We can't pay anyone until it comes back.",
+      "spoken_text": "Did you find the money? We can't pay anyone until it comes back.",
+      "sources": [
+        "node:clerk_greeting/variant:2"
+      ],
+      "path": "res://assets/audio/generated/51dd64d4f8ea73ea2ac83b9d71481d52058b2c4f0c8d2e4122bc76959b298f8c.wav"
+    },
+    {
+      "key": "1a20e35840b7283530e83a21d08b178219837a40645d801ab1016775e04a4e84",
+      "speaker": "Clerk",
+      "lookup_text": "Keep each other safe. I'll stay here in case the watch comes.",
+      "spoken_text": "Keep each other safe. I'll stay here in case the watch comes.",
+      "sources": [
+        "node:clerk_greeting/variant:3"
+      ],
+      "path": "res://assets/audio/generated/3824af2694d3775aaba7b3b14f5c1d75ff8b28332eb03fb530b85de09eeea36b.wav"
+    },
+    {
+      "key": "98fe35222fbf91da67a3a231d273ed2b447332a1513589cc8cfec4be352df76a",
+      "speaker": "Clerk",
+      "lookup_text": "Mara was waiting for her pay outside. Tell her I'm safe. Ivo chased the thief east, towards the garden.",
+      "spoken_text": "Mara was waiting for her pay outside. Tell her I'm safe. Ivo chased the thief east, towards the garden.",
+      "sources": [
+        "node:clerk_greeting/variant:4"
+      ],
+      "path": "res://assets/audio/generated/d6730f3256393a3463f0e62afcd85d7f5be6c00aecaca8ed421a8b8d060f1f52.wav"
+    },
+    {
+      "key": "24aa195bbcca6a977ca0b53c53f31c8766de999f339c973180e14bccde2cfc81",
+      "speaker": "Corsair",
+      "lookup_text": "Who was he? What did he take?",
+      "spoken_text": "Who was he? What did he take?",
+      "sources": [
+        "choice:clerk_greeting/ask_robbery"
+      ],
+      "path": "res://assets/audio/generated/dd873ace95234acc37d72b2c5b24fc2770b20d99c51500b8f87f18836cc2adb6.wav"
+    },
+    {
+      "key": "8cc8623a4ab5eec34dcb148eceb25e6c35a45fbfe459e0c9e5d06d447a4e71f9",
+      "speaker": "Corsair",
+      "lookup_text": "Return the stolen payroll.",
+      "spoken_text": "Here is the stolen payroll.",
+      "sources": [
+        "choice:clerk_greeting/return_pay"
+      ],
+      "path": "res://assets/audio/generated/11b0763e95f09b53c19a997ae71ced8ee70f47486ea8bf754a2a7792049fcbd2.wav"
+    },
+    {
+      "key": "e7e397ece69fc99e3b45a718688fdaf8d0999514278bceaeae3b57bdf9a66039",
+      "speaker": "Corsair",
+      "lookup_text": "Could I use the market side passage?",
+      "spoken_text": "Could I use the market side passage?",
+      "sources": [
+        "choice:clerk_greeting/open_shortcut"
+      ],
+      "path": "res://assets/audio/generated/a6b6d2e948f0f7c7a8af30c187449f825478c6c9067154f8282a9dc9802f43d7.wav"
+    },
+    {
+      "key": "d308abc8c723512dcb8b49f028cda039548fddd90c3eca651cbaf18c0185f298",
+      "speaker": "Corsair",
+      "lookup_text": "May I look through the harbor archive?",
+      "spoken_text": "May I look through the harbor archive?",
+      "sources": [
+        "choice:clerk_greeting/ask_about_records"
+      ],
+      "path": "res://assets/audio/generated/4e041ff154edd2180561a22768f1792c7f85cca34e36c7cae8032a89fe38b6af.wav"
+    },
+    {
+      "key": "16994cd95602df1e7fa38597fac88e994088a724cf394a79d917f9299b0c61eb",
+      "speaker": "Corsair",
+      "lookup_text": "Do robberies happen often here?",
+      "spoken_text": "Do robberies happen often here?",
+      "sources": [
+        "choice:clerk_greeting/ask_town"
+      ],
+      "path": "res://assets/audio/generated/d1e92efadc23761fefa35d39186dec019c313ccdc4c63678237d50ddc529c443.wav"
+    },
+    {
+      "key": "f6cc00377f6e8690d2da20b1295a745fcc6ec5718203826e0d35ac467fe6b8fd",
+      "speaker": "Clerk",
+      "lookup_text": "I'll leave the side door unlatched. It cuts from this court to the market.",
+      "spoken_text": "I'll leave the side door unlatched. It cuts from this court to the market.",
+      "sources": [
+        "node:clerk_shortcut_opened"
+      ],
+      "path": "res://assets/audio/generated/b0b5bc65665461c5d775b9f8837f45d366d9ee51f1daea30cec458bd2ab0a302.wav"
+    },
+    {
+      "key": "ca202fbf5bdb319999361be674f7f21edc31ddb6493490671d4dbd1430fd5ef7",
+      "speaker": "Clerk",
+      "lookup_text": "The cabinet over there holds the harbor history. You can take the visitor's copy. Thankfully the thief wasn't interested in books.",
+      "spoken_text": "The cabinet over there holds the harbor history. You can take the visitor's copy. Thankfully the thief wasn't interested in books.",
+      "sources": [
+        "node:clerk_records"
+      ],
+      "path": "res://assets/audio/generated/52aeba8abf656c561fe48a94fe459b57e86e6fa9843225a6d021068b385261cd.wav"
+    },
+    {
+      "key": "d64c8fb0cd1c33d38ea4bc2bd52b999997cab19cf01889159559479aa622419d",
+      "speaker": "Clerk",
+      "lookup_text": "Pickpockets, sometimes. Armed robbery in my office? Never. With the tower out he got across the court before I saw him coming.",
+      "spoken_text": "Pickpockets, sometimes. Armed robbery in my office? Never. With the tower out he got across the court before I saw him coming.",
+      "sources": [
+        "node:clerk_town"
+      ],
+      "path": "res://assets/audio/generated/c580868f51b58d8c3591bf79d36164bf448fac9e2af5117bac507c06d419f45d.wav"
+    },
+    {
+      "key": "8cff68386ef1c3d90c9000427b147e9261ecded0723f2103859e56c512cc6b9a",
+      "speaker": "Filing Cabinet",
+      "lookup_text": "A visitor's copy of the harbor history lies in the bottom drawer.",
+      "spoken_text": "A visitor's copy of the harbor history lies in the bottom drawer.",
+      "sources": [
+        "node:cabinet_greeting"
+      ],
+      "path": "res://assets/audio/generated/f971152930639fcb6c16bfdd306d6e46b8c82443f0e8a57173780fd2a7fd9b7a.wav"
+    },
+    {
+      "key": "c49d9c98ee7afcd12d42e22ea3cd52355120b2b53cd58352872fe8f250152932",
+      "speaker": "Filing Cabinet",
+      "lookup_text": "You already have the visitor's copy. The remaining volumes belong in the archive.",
+      "spoken_text": "You already have the visitor's copy. The remaining volumes belong in the archive.",
+      "sources": [
+        "node:cabinet_greeting/variant:0"
+      ],
+      "path": "res://assets/audio/generated/6b686598b61c1f87272761c82bebcac269e7ee0196842e79620e8569b8b708b8.wav"
+    },
+    {
+      "key": "40445ffbf8dc6ce49bddb5a99f3a3963d116c7a81263f36df090fd3f10316c27",
+      "speaker": "Corsair",
+      "lookup_text": "Take the harbor history.",
+      "spoken_text": "A history of the harbor. I'll take a look.",
+      "sources": [
+        "choice:cabinet_greeting/take_records"
+      ],
+      "path": "res://assets/audio/generated/0b7d3334b969b487853f59393bcefdac390f3ca4ac34e0d6c65daea706914f1b.wav"
+    },
+    {
+      "key": "a048c868b67b7acfb7fa628cfe9e876798adc09c3b356c14da123537accf2427",
+      "speaker": "Narrator",
+      "lookup_text": "The booklet describes the building of Lantern Quay and the little garden planted above its eastern sea wall.",
+      "spoken_text": "The booklet describes the building of Lantern Quay and the little garden planted above its eastern sea wall.",
+      "sources": [
+        "node:cabinet_taken"
+      ],
+      "path": "res://assets/audio/generated/716678d61e74695da227527c8fe767a8e7cedb856b076f83203120da04818d2c.wav"
+    },
+    {
+      "key": "98131c1b4426f7f36b2aa2b640e5957eb2afaca047f5edf5e9f4dc059fd06699",
+      "speaker": "Narrator",
+      "lookup_text": "You close the drawer.",
+      "spoken_text": "You close the drawer.",
+      "sources": [
+        "node:cabinet_left"
+      ],
+      "path": "res://assets/audio/generated/ddbcc4ad59fd47841a4ae88f3ea3b56231fa9e77c170151c74ef96391ea2e4bb.wav"
+    },
+    {
+      "key": "c4d4b1cdd4e46ca51fdc4e833cf44f4e3d14da2a82a0165b7fe62ba5230f2b3d",
+      "speaker": "Narrator",
+      "lookup_text": "Silver coins and folded wage slips fill the pouch. The clerk can account for them.",
+      "spoken_text": "Silver coins and folded wage slips fill the pouch. The clerk can account for them.",
+      "sources": [
+        "node:pay_taken"
+      ],
+      "path": "res://assets/audio/generated/c68412a8c430ca5c7b44a9375afc04e60372abad3a63ede34e5fa4989499e106.wav"
+    },
+    {
+      "key": "8ced70baaf80f4d57168b400d0f940e2bdd29e1bcbbc829fd0c6fb0d0ee9d6c8",
+      "speaker": "Vendor",
+      "lookup_text": "Fresh rope, dry matches, and a map that has never met the tide.",
+      "spoken_text": "Fresh rope, dry matches, and a map that has never met the tide.",
+      "sources": [
+        "node:vendor_greeting"
+      ],
+      "path": "res://assets/audio/generated/598d956df765621bad522a9d7482360991445ac7941ba6e68021ad1354cbadd3.wav"
+    },
+    {
+      "key": "ce3b5e849427524a6477ee6e35fcfb187da03f7b459038aa2c7643aa1101aa28",
+      "speaker": "Vendor",
+      "lookup_text": "Good to see the tower burning again. Mind your step on the bridge.",
+      "spoken_text": "Good to see the tower burning again. Mind your step on the bridge.",
+      "sources": [
+        "node:vendor_greeting/variant:0"
+      ],
+      "path": "res://assets/audio/generated/404d82c9655dcfc6523c53e9eb9ccf4b043012f8464e36ce1b45bbee090fd697.wav"
+    },
+    {
+      "key": "aa8512bff41fa61e9588a7c8b0040cb19e00ba3a59caaecb14069ae75d89f9f1",
+      "speaker": "Corsair",
+      "lookup_text": "Ask for directions through town.",
+      "spoken_text": "Can you point me through town?",
+      "sources": [
+        "choice:vendor_greeting/ask_directions"
+      ],
+      "path": "res://assets/audio/generated/962f075ca35507d480a2615f68ce6c43c44f0ca0b279fc6e824bca7e64361ab1.wav"
+    },
+    {
+      "key": "0b8dcb9d58188644cfd7e632dc749561643c261866488be571dc935af8062155",
+      "speaker": "Corsair",
+      "lookup_text": "Ask about the lantern tower.",
+      "spoken_text": "What can you tell me about the lantern tower?",
+      "sources": [
+        "choice:vendor_greeting/ask_about_tower"
+      ],
+      "path": "res://assets/audio/generated/2eb80f0702749c96a216e25d8d5059e531e0951702669cccc46faa4b26e0fde3.wav"
+    },
+    {
+      "key": "565d1e18b5e146a0c1e4a54c022219e295ef31df0740ad23c5c3f211b178aa3e",
+      "speaker": "Vendor",
+      "lookup_text": "The market is west, the clerk's office is by the northern tower, and the garden is east.",
+      "spoken_text": "The market is west, the clerk's office is by the northern tower, and the garden is east.",
+      "sources": [
+        "node:vendor_directions"
+      ],
+      "path": "res://assets/audio/generated/a0e33f4eaba41c2db39111d1d840779b94093db8aebdc44cd7303acd46c4ddba.wav"
+    },
+    {
+      "key": "bcbeda469de5303d2c89a20654c1c7143432ce49e447b89eb55bcd5db110d1aa",
+      "speaker": "Vendor",
+      "lookup_text": "Mara tends it after the last boat unloads. When it burns, you can see clear from my stall to the garden gate.",
+      "spoken_text": "Mara tends it after the last boat unloads. When it burns, you can see clear from my stall to the garden gate.",
+      "sources": [
+        "node:vendor_tower"
+      ],
+      "path": "res://assets/audio/generated/7520042355578817d0a9a08ca64f8f9057000fb098187bad3726a7ab454fda28.wav"
+    },
+    {
+      "key": "20a8c1a1c5732ec382f75bf853aea24ca007471498f4aea54d875e95574e4ddb",
+      "speaker": "Mara",
+      "lookup_text": "Thank you. I'll stay here in case someone else needs help. Call if she's hurt.",
+      "spoken_text": "Thank you. I'll stay here in case someone else needs help. Call if she's hurt.",
+      "sources": [
+        "node:mara_office"
+      ],
+      "path": "res://assets/audio/generated/14c9b7cb1858995e09dc0d49f7168e2aa205e5af6b5756f51c912ac6b9391451.wav"
+    },
+    {
+      "key": "650c1c4999dc47bfa2bc4333c1745f7020b10787f139027b1f0ed540ea46e739",
+      "speaker": "Clerk",
+      "lookup_text": "A man in a red coat, with two iron guards behind him. He emptied the chest into a pouch and ran east. That's the dockworkers' pay. Tell Mara what happened, then find Ivo. He went after the thief.",
+      "spoken_text": "A man in a red coat, with two iron guards behind him. He emptied the chest into a pouch and ran east. That's the dockworkers' pay. Tell Mara what happened, then find Ivo. He went after the thief.",
+      "sources": [
+        "node:clerk_robbery"
+      ],
+      "path": "res://assets/audio/generated/3efe2fe99e611b757d8d60f1246718a82106d966f3460d77c6fd11e121fe88c5.wav"
+    },
+    {
+      "key": "8829fc7e9081dc9e2d043adbb142929ba077911c026bb684c524ceb36bafba65",
+      "speaker": "Clerk",
+      "lookup_text": "The whole payroll. Thank you. Mara, here's your week's wages. Buy the tower oil before anything else; I don't want another night like this.",
+      "spoken_text": "The whole payroll. Thank you. Mara, here's your week's wages. Buy the tower oil before anything else; I don't want another night like this.",
+      "sources": [
+        "node:clerk_paid"
+      ],
+      "path": "res://assets/audio/generated/0c4ebbe1745b12cc7b229d26c3e5709e4e63e6f53d2573121818220f1889f477.wav"
+    },
+    {
+      "key": "3f64ce78b4b6c060bb518adae151238e8583c4fd9dd46bf71281f22f5cb9262b",
+      "speaker": "Narrator",
+      "lookup_text": "The raider is down. A heavy pouch hangs from his belt, stamped with the quay's mark.",
+      "spoken_text": "The raider is down. A heavy pouch hangs from his belt, stamped with the quay's mark.",
+      "sources": [
+        "node:pay_loot"
+      ],
+      "path": "res://assets/audio/generated/4292b21e830800d2a7434fe787a88b33b83257ad45ab0357b07db92797ce0de8.wav"
+    },
+    {
+      "key": "69b0489a89c5aeb7676b00c25b0abb21cb41568d61f6333c17d965a44be68318",
+      "speaker": "Narrator",
+      "lookup_text": "The chest has been forced open. Its broken lock lies on the floor. Scraps of wage envelopes are all that's left inside.",
+      "spoken_text": "The chest has been forced open. Its broken lock lies on the floor. Scraps of wage envelopes are all that's left inside.",
+      "sources": [
+        "node:office_chest"
+      ],
+      "path": "res://assets/audio/generated/a99b238b753fdbdd3d929a3084121636f750a965b06b3aebdf96ec010caef6cc.wav"
+    },
+    {
+      "key": "c312d52c4dc6965f5b131fc55fd7a4c4d633d22c86beda36a8e84ea268adfe71",
+      "speaker": "Narrator",
+      "lookup_text": "The recovered payroll is back in the chest. The broken lock still needs replacing.",
+      "spoken_text": "The recovered payroll is back in the chest. The broken lock still needs replacing.",
+      "sources": [
+        "node:office_chest/variant:0"
+      ],
+      "path": "res://assets/audio/generated/2960e9c52c580e5542721d31598b59241cecffcd975b5ca0078a0ea844ead857.wav"
+    },
+    {
+      "key": "9538f4f6babe447b90c3abc369dbe46ff197670ae77ecda920ef4a0b3631bf05",
+      "speaker": "Ivo",
+      "lookup_text": "There he is. The payroll pouch is on his belt.",
+      "spoken_text": "There he is. The payroll pouch is on his belt.",
+      "sources": [
+        "chapter:dockside_robbery/briefing:0"
+      ],
+      "path": "res://assets/audio/generated/a664c61e70ca2d77ffc653efae986cdaf145c6268773e26e764fa076e403641d.wav"
+    },
+    {
+      "key": "d7faf35a8f0484d242042f2bbe1ae1ed685c737458b2d60a2fdd2bd5ccf5664c",
+      "speaker": "Corsair",
+      "lookup_text": "Give us the money. You have nowhere to go.",
+      "spoken_text": "Give us the money. You have nowhere to go.",
+      "sources": [
+        "chapter:dockside_robbery/briefing:1"
+      ],
+      "path": "res://assets/audio/generated/a71b827efe2d6a9f0709b83e53bd6e2ab9b473223ec0e4e0eb010592cefa0ac1.wav"
+    },
+    {
+      "key": "249fcf1bd4f88634e9a3d2bb88ffc7b1189ced3ff90e8bc82703275f9446a290",
+      "speaker": "Crimson Raider",
+      "lookup_text": "Then you should have stayed outside. Guards!",
+      "spoken_text": "Then you should have stayed outside. Guards!",
+      "sources": [
+        "chapter:dockside_robbery/briefing:2"
+      ],
+      "path": "res://assets/audio/generated/2a54ef2f21d7ca56f9c5c9ce33ce781b3be48e4c64a09b4837651e00d41284e5.wav"
+    },
+    {
+      "key": "36d29f9a9844ec3425b631578ac2f265b87ba8afe98f79aa48c873c135b89878",
+      "speaker": "Ivo",
+      "lookup_text": "I'll hold him here. Take the payroll back to the clerk.",
+      "spoken_text": "I'll hold him here. Take the payroll back to the clerk.",
+      "sources": [
+        "chapter:dockside_robbery/resolution:0"
+      ],
+      "path": "res://assets/audio/generated/d751673cfbce1b03063c9df691f5840d4eb8c73fd3cc3711107a26d83fb715bf.wav"
+    },
+    {
+      "key": "d7ebe63abaaf402b7e4a90dde96299388c7a225328bc3b86a4b3c397073c996a",
+      "speaker": "Mara",
+      "lookup_text": "Let's get everyone paid.",
+      "spoken_text": "Let's get everyone paid.",
+      "sources": [
+        "chapter:dockside_robbery/resolution:1"
+      ],
+      "path": "res://assets/audio/generated/fcbede0f46fc727805816210efd14cb51c18149339190e1d9bff2a7201bf6ab4.wav"
+    },
+    {
+      "key": "394017946f7bb054fe4e51b2057478a95f1bef6ca30000170ec5e33526f32ba6",
+      "speaker": "Crimson Raider",
+      "lookup_text": "I surrender! Take the payroll pouch. Just call them off.",
+      "spoken_text": "I surrender! Take the payroll pouch. Just call them off.",
+      "sources": [
+        "chapter:dockside_robbery/surrender:0"
+      ],
+      "path": "res://assets/audio/generated/37bedbf97f1dcd9237d7d1efaccb23da32cebf297445f488095672718e33cf76.wav"
+    },
+    {
+      "key": "73c82c57194b9bbbe87acacca11fbe5c2b87026dc188a22f3385f889b6bb5e8c",
+      "speaker": "Mara",
+      "lookup_text": "The tower's gone out. I was waiting for my pay to buy more oil.",
+      "spoken_text": "The tower's gone out. I was waiting for my pay to buy more oil.",
+      "sources": [
+        "chapter:opening:0"
+      ],
+      "path": "res://assets/audio/generated/6cf153d1538c56461ccd188857074d3d1ddc083d70aad70b34b087271b2ba5c6.wav"
+    },
+    {
+      "key": "da3ce26b39a3448ac600eae58b79d0b5fd0ec27b1bdbdaa21dd4abccda9323b8",
+      "speaker": "Mara",
+      "lookup_text": "Did you hear that? Glass breaking, over at the clerk's office.",
+      "spoken_text": "Did you hear that? Glass breaking, over at the clerk's office.",
+      "sources": [
+        "chapter:opening:1"
+      ],
+      "path": "res://assets/audio/generated/488a5c4e8fdd228b7b76a22a808e1949bc96e467b65a3318f3d72b6ed5fde213.wav"
+    },
+    {
+      "key": "d0a2ad3c52a7300a1aa7fd584f6b4945191c9fe3a13370e582fedb59700c1a23",
+      "speaker": "Corsair",
+      "lookup_text": "I'll check on her. Stay here.",
+      "spoken_text": "I'll check on her. Stay here.",
+      "sources": [
+        "chapter:opening:2"
+      ],
+      "path": "res://assets/audio/generated/f03d55e30499258206df782ba7ef78ff88e93253f125e50a8a9e7d5583a5b31a.wav"
+    },
+    {
+      "key": "b25afe58a6e3f682f0e23e019b17fa904f58852169f3741eb5dc3810b2f24d24",
+      "speaker": "Mara",
+      "lookup_text": "There's enough oil now to keep the tower burning till morning.",
+      "spoken_text": "There's enough oil now to keep the tower burning till morning.",
+      "sources": [
+        "chapter:ending:0"
+      ],
+      "path": "res://assets/audio/generated/b446d67f9170482fe91d1f3e4ac45220c7bf9c14e668b1f03a46665d760acd54.wav"
+    },
+    {
+      "key": "c6705fc21003a533a7d1a792983a3fd6e1eb259c14cb32176573da2128815109",
+      "speaker": "Mara",
+      "lookup_text": "I can see every plank again. Thank you for coming back with me.",
+      "spoken_text": "I can see every plank again. Thank you for coming back with me.",
+      "sources": [
+        "chapter:ending:1",
+        "chapter:ending_early:1"
+      ],
+      "path": "res://assets/audio/generated/c51b21bc703cf245141ecd3f06829d55bfd68b0668b907c809a6391a90ad6bdb.wav"
+    },
+    {
+      "key": "7cd798a40a479374b717f38da89aecab5f9431542ddfe5b01b6c87af23b30561",
+      "speaker": "Mara",
+      "lookup_text": "Your oil kept the tower burning while we were gone. I've bought enough for the rest of the night.",
+      "spoken_text": "Your oil kept the tower burning while we were gone. I've bought enough for the rest of the night.",
+      "sources": [
+        "chapter:ending_early:0"
+      ],
+      "path": "res://assets/audio/generated/d3c696e4fd0112db9a61ad5d7edb60d6d787c6b8ecab7f4fd2e5139d655d56d7.wav"
+    }
+  ]
+}

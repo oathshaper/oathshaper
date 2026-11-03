@@ -1,0 +1,5 @@
+player: 17531 weighted vertices, 19 joints, clips Idle, Walk
+clerk: 11727 weighted vertices, 19 joints, clips Idle, Talk
+vendor: 11959 weighted vertices, 19 joints, clips Idle, Talk
+mara: 17154 weighted vertices, 19 joints, clips Idle, Talk, Walk
+ivo: 11232 weighted vertices, 19 joints, clips Idle, Talk, Walk

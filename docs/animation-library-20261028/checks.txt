@@ -1,0 +1,5 @@
+PARTY_ASSETS: 33 checks, 0 failures
+COMMAND_TRIAL_TEST: 47 checks, 0 failures
+verify-rigged-glbs.py: all five rigs passed; player has 72 joints and Idle, Run, Walk.
+Blender verify_party_gait.py: all three player clips passed (121 samples each).
+Godot 4.3 native OpenGL Command run: no script or rendering errors.

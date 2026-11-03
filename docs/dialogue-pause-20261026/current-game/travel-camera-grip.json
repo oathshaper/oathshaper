@@ -1,0 +1,137 @@
+{
+  "checks": 309,
+  "context": {},
+  "failures": 0,
+  "observations": [
+    {
+      "description": "Exploration manual orbit turns the actor toward the view",
+      "failures": 0,
+      "id": "0c88f1c58cee",
+      "samples": 1
+    },
+    {
+      "description": "Manual exploration heading persists beyond the old grace period",
+      "failures": 0,
+      "id": "60697d685d5e",
+      "samples": 1
+    },
+    {
+      "description": "No floating environment labels outside",
+      "failures": 0,
+      "id": "cec4b28f6d2a",
+      "samples": 1
+    },
+    {
+      "description": "No floating environment labels in the office",
+      "failures": 0,
+      "id": "967b5389afd9",
+      "samples": 1
+    },
+    {
+      "description": "Mara has a real weighted walk clip",
+      "failures": 0,
+      "id": "e37d69d13f41",
+      "samples": 1
+    },
+    {
+      "description": "Ivo has a real weighted walk clip",
+      "failures": 0,
+      "id": "78d003e734cb",
+      "samples": 1
+    },
+    {
+      "description": "Mara moves toward her visible front",
+      "failures": 0,
+      "id": "e319fed82765",
+      "samples": 91
+    },
+    {
+      "description": "Mara and Ivo complete the walking rendezvous",
+      "failures": 0,
+      "id": "6182afaac034",
+      "samples": 1
+    },
+    {
+      "description": "Ordinary follower travel has no discontinuities",
+      "failures": 0,
+      "id": "1c3b7389f23d",
+      "samples": 199
+    },
+    {
+      "description": "Travel snapshot validates",
+      "failures": 0,
+      "id": "dc67b82dc7fa",
+      "samples": 1
+    },
+    {
+      "description": "Save/load preserves companion position and pending trail",
+      "failures": 0,
+      "id": "b3c28987b377",
+      "samples": 1
+    },
+    {
+      "description": "Mara does not teleport into the office when the player enters",
+      "failures": 0,
+      "id": "3554a5fe754b",
+      "samples": 1
+    },
+    {
+      "description": "Mara reaches the doorway then enters behind the player",
+      "failures": 0,
+      "id": "6483aa652203",
+      "samples": 1
+    },
+    {
+      "description": "Office entry lands behind the player at the shared doorway",
+      "failures": 0,
+      "id": "422b86afcd1e",
+      "samples": 1
+    },
+    {
+      "description": "Loading a pre-recruitment legacy save clears the later escort route",
+      "failures": 0,
+      "id": "3ecf6b618197",
+      "samples": 1
+    },
+    {
+      "description": "No gamepad glyphs without a connected device",
+      "failures": 0,
+      "id": "6496d2f3c8fc",
+      "samples": 1
+    },
+    {
+      "description": "Combat manual yaw is not overwritten by target framing",
+      "failures": 0,
+      "id": "b88bb40e8071",
+      "samples": 1
+    },
+    {
+      "description": "Camera uses imported garden geometry",
+      "failures": 0,
+      "id": "d73691cff6a9",
+      "samples": 1
+    },
+    {
+      "description": "Orbit samples keep controlled actor and target clear of garden geometry",
+      "failures": 0,
+      "id": "437a27ba6e0a",
+      "samples": 1
+    },
+    {
+      "description": "Paused Mara hand pose remains stable",
+      "failures": 0,
+      "id": "cd5bb04d90f4",
+      "samples": 1
+    },
+    {
+      "description": "Readied staff support hand meets its grip within six centimetres (0.000 m)",
+      "failures": 0,
+      "id": "e2acacee7831",
+      "samples": 1
+    }
+  ],
+  "schema": 1,
+  "scope": "Authored route samples, real rigs and camera queries. Fixture story setup; no exhaustive navigation or visual-quality proof.",
+  "status": "passed",
+  "suite": "travel-camera-grip"
+}

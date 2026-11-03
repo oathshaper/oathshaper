@@ -1,0 +1,235 @@
+{
+  "checks": 37,
+  "context": {
+    "natural_playback": false
+  },
+  "failures": 0,
+  "observations": [
+    {
+      "description": "Confrontation owns exploration controls",
+      "failures": 0,
+      "id": "4ffde166ffc4",
+      "samples": 1
+    },
+    {
+      "description": "Confrontation replaces exploration HUD and camera",
+      "failures": 0,
+      "id": "2c8c0aa5dbc2",
+      "samples": 1
+    },
+    {
+      "description": "Cutscene has only a skip control and no dialogue choices",
+      "failures": 0,
+      "id": "467979ad420f",
+      "samples": 1
+    },
+    {
+      "description": "Confrontation uses all three existing story lines",
+      "failures": 0,
+      "id": "5dae364a0bc4",
+      "samples": 1
+    },
+    {
+      "description": "Shots advance in story order: -1",
+      "failures": 0,
+      "id": "520fe6359115",
+      "samples": 1
+    },
+    {
+      "description": "Shots advance in story order: 0",
+      "failures": 0,
+      "id": "6a2cf85d40ff",
+      "samples": 1
+    },
+    {
+      "description": "Exact voice clip exists for shot 0",
+      "failures": 0,
+      "id": "9d4a3cbc578e",
+      "samples": 1
+    },
+    {
+      "description": "Shot 0 permits complete speech",
+      "failures": 0,
+      "id": "49a870bf2ab6",
+      "samples": 1
+    },
+    {
+      "description": "Shots advance in story order: 1",
+      "failures": 0,
+      "id": "e04b15dcf229",
+      "samples": 1
+    },
+    {
+      "description": "Exact voice clip exists for shot 1",
+      "failures": 0,
+      "id": "7d473d3e97c5",
+      "samples": 1
+    },
+    {
+      "description": "Shot 1 permits complete speech",
+      "failures": 0,
+      "id": "10c71afe2374",
+      "samples": 1
+    },
+    {
+      "description": "Player's cinematic subtitle uses Tessa Ward",
+      "failures": 0,
+      "id": "3270384bc264",
+      "samples": 1
+    },
+    {
+      "description": "Shots advance in story order: 2",
+      "failures": 0,
+      "id": "0c5b7a3319a2",
+      "samples": 1
+    },
+    {
+      "description": "Exact voice clip exists for shot 2",
+      "failures": 0,
+      "id": "a6143292cd5c",
+      "samples": 1
+    },
+    {
+      "description": "Shot 2 permits complete speech",
+      "failures": 0,
+      "id": "81dba2d7a387",
+      "samples": 1
+    },
+    {
+      "description": "Final voiced line automatically releases controls",
+      "failures": 0,
+      "id": "26ef72f9fd53",
+      "samples": 1
+    },
+    {
+      "description": "Natural completion restores the HUD and exploration camera",
+      "failures": 0,
+      "id": "e1f66f4b29c5",
+      "samples": 1
+    },
+    {
+      "description": "Watching the cutscene has no narrative side effects",
+      "failures": 0,
+      "id": "a0b47e638122",
+      "samples": 1
+    },
+    {
+      "description": "Staging restores actor transform: Player",
+      "failures": 0,
+      "id": "170dab953bc5",
+      "samples": 1
+    },
+    {
+      "description": "Staging restores actor transform: Mara",
+      "failures": 0,
+      "id": "76a2a8cc1f10",
+      "samples": 1
+    },
+    {
+      "description": "Staging restores actor transform: Ivo",
+      "failures": 0,
+      "id": "60e00ba8f6e6",
+      "samples": 1
+    },
+    {
+      "description": "Staging restores actor transform: GardenWatch/corsair_raider",
+      "failures": 0,
+      "id": "309d58ab8edf",
+      "samples": 1
+    },
+    {
+      "description": "Skip is idempotent and restores exploration: false",
+      "failures": 0,
+      "id": "ed34f78bd08c",
+      "samples": 1
+    },
+    {
+      "description": "Skipping leaves story facts untouched: false",
+      "failures": 0,
+      "id": "3f666a713644",
+      "samples": 1
+    },
+    {
+      "description": "Skip is idempotent and restores exploration: true",
+      "failures": 0,
+      "id": "4fac93d24f18",
+      "samples": 1
+    },
+    {
+      "description": "Skipping leaves story facts untouched: true",
+      "failures": 0,
+      "id": "25dff665d6d5",
+      "samples": 1
+    },
+    {
+      "description": "command stages the confrontation before creating combat",
+      "failures": 0,
+      "id": "08624bbce7f4",
+      "samples": 1
+    },
+    {
+      "description": "command enters combat without a briefing modal",
+      "failures": 0,
+      "id": "2eb1efe90244",
+      "samples": 1
+    },
+    {
+      "description": "Command starts paused for initial orders",
+      "failures": 0,
+      "id": "8a1783a150a8",
+      "samples": 1
+    },
+    {
+      "description": "Command combat uses the new player name",
+      "failures": 0,
+      "id": "c6ec3254eff4",
+      "samples": 1
+    },
+    {
+      "description": "flow stages the confrontation before creating combat",
+      "failures": 0,
+      "id": "8863905fa873",
+      "samples": 1
+    },
+    {
+      "description": "flow enters combat without a briefing modal",
+      "failures": 0,
+      "id": "114b7768fbbf",
+      "samples": 1
+    },
+    {
+      "description": "Flow starts its live encounter after the cutscene",
+      "failures": 0,
+      "id": "1b769ac9cf23",
+      "samples": 1
+    },
+    {
+      "description": "vanguard stages the confrontation before creating combat",
+      "failures": 0,
+      "id": "ed294fac50ad",
+      "samples": 1
+    },
+    {
+      "description": "vanguard enters combat without a briefing modal",
+      "failures": 0,
+      "id": "e8fcfa52f792",
+      "samples": 1
+    },
+    {
+      "description": "Vanguard starts its live encounter after the cutscene",
+      "failures": 0,
+      "id": "08858c350ef7",
+      "samples": 1
+    },
+    {
+      "description": "Cinematic and combat entry never autosave the fixtures",
+      "failures": 0,
+      "id": "c3cac84aad75",
+      "samples": 1
+    }
+  ],
+  "schema": 1,
+  "scope": "Actual voiced scene, automatic timed handoff, native skip, actor restoration, current player name, and campaign startup for all three playable styles.",
+  "status": "passed",
+  "suite": "garden-confrontation"
+}

@@ -1,0 +1,4 @@
+Initialize godot-rust (API v4.3.stable.official, runtime v4.3.stable.official)
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+EQUIPMENT_MOUNTS: 12 checks, 0 failures

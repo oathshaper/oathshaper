@@ -1,0 +1,16 @@
+Public evidence copy: workstation paths normalized; test output otherwise unchanged.
+
+    Checking itoa v1.0.18
+    Checking memchr v2.8.3
+    Checking serde_core v1.0.229
+    Checking zmij v1.0.23
+    Checking glam v0.28.0
+    Checking godot-cell v0.2.4
+    Checking godot-ffi v0.2.4
+    Checking serde_json v1.0.154
+    Checking serde v1.0.229
+    Checking oathshaper-core v0.1.0 (<project>/crates/oathshaper-core)
+    Checking godot-core v0.2.4
+    Checking godot v0.2.4
+    Checking oathshaper-godot v0.1.0 (<project>/crates/oathshaper-godot)
+    Finished `dev` profile [optimized + debuginfo] target(s) in 18.66s

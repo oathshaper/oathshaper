@@ -1,0 +1,299 @@
+{
+  "date": "2026-10-22",
+  "scope": "design structure and Git isolation only",
+  "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+  "profiles": [
+    {
+      "profile": "command",
+      "branch": "design/combat-command",
+      "commit": "f1087a169bbe256bc7afcbeb7c20c99128198bc2",
+      "cases": 19,
+      "categories": [
+        "ability",
+        "economy",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/command/design.md",
+        "docs/combat-design/profiles/command/evaluation.md",
+        "docs/combat-design/profiles/command/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "flow_design",
+        "accepted_repair": "29c9563",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/command/evaluation.md"
+      }
+    },
+    {
+      "profile": "flow",
+      "branch": "design/combat-flow",
+      "commit": "1aba92f282e52c82279c775faa8c55c13ccbcac2",
+      "cases": 19,
+      "categories": [
+        "ability",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/flow/design.md",
+        "docs/combat-design/profiles/flow/evaluation.md",
+        "docs/combat-design/profiles/flow/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "root",
+        "accepted_repair": "ee3576d",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/flow/evaluation.md"
+      }
+    },
+    {
+      "profile": "vanguard",
+      "branch": "design/combat-vanguard",
+      "commit": "a7bb9e2a0ca4c8fa39fe1541e376e620a5775da2",
+      "cases": 20,
+      "categories": [
+        "ability",
+        "archetypes",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/vanguard/design.md",
+        "docs/combat-design/profiles/vanguard/evaluation.md",
+        "docs/combat-design/profiles/vanguard/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "root",
+        "accepted_repair": "32bd59f",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/vanguard/evaluation.md"
+      }
+    },
+    {
+      "profile": "oathbound",
+      "branch": "design/combat-oathbound",
+      "commit": "4ee1d0652afe886430129492efa87697a51955c3",
+      "cases": 21,
+      "categories": [
+        "ability",
+        "economy",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/oathbound/design.md",
+        "docs/combat-design/profiles/oathbound/evaluation.md",
+        "docs/combat-design/profiles/oathbound/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "lcd_review",
+        "accepted_repair": "afa953d",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/oathbound/evaluation.md"
+      }
+    },
+    {
+      "profile": "tactics",
+      "branch": "design/combat-tactics",
+      "commit": "8794807800251358fc3a7196020da5d7af4610c7",
+      "cases": 22,
+      "categories": [
+        "ability",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/tactics/design.md",
+        "docs/combat-design/profiles/tactics/evaluation.md",
+        "docs/combat-design/profiles/tactics/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "command_design",
+        "accepted_repair": "25c81cd",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/tactics/evaluation.md"
+      }
+    },
+    {
+      "profile": "momentum",
+      "branch": "design/combat-momentum",
+      "commit": "9991b3af13f578927d02989fbbe0939777d415d7",
+      "cases": 21,
+      "categories": [
+        "ability",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/momentum/design.md",
+        "docs/combat-design/profiles/momentum/evaluation.md",
+        "docs/combat-design/profiles/momentum/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "root",
+        "accepted_repair": "bcbd0b6",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/momentum/evaluation.md"
+      }
+    },
+    {
+      "profile": "confluence",
+      "branch": "design/combat-confluence",
+      "commit": "beac718ad86e1f7eb8d191aed32d49fb3ac7faeb",
+      "cases": 17,
+      "categories": [
+        "ability",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/confluence/design.md",
+        "docs/combat-design/profiles/confluence/evaluation.md",
+        "docs/combat-design/profiles/confluence/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "flow_design",
+        "accepted_repair": "22f710e",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/confluence/evaluation.md"
+      }
+    },
+    {
+      "profile": "cadence",
+      "branch": "design/combat-cadence",
+      "commit": "648dbe1cc0b242d262f65ddd2090012796fd0008",
+      "cases": 18,
+      "categories": [
+        "ability",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/cadence/design.md",
+        "docs/combat-design/profiles/cadence/evaluation.md",
+        "docs/combat-design/profiles/cadence/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "lcd_review",
+        "accepted_repair": "c1b4abd",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/cadence/evaluation.md"
+      }
+    },
+    {
+      "profile": "orders",
+      "branch": "design/combat-orders",
+      "commit": "79021413e4c2b228803548e4e8187e553b691ff4",
+      "cases": 16,
+      "categories": [
+        "ability",
+        "equipment",
+        "failure",
+        "party",
+        "persistence",
+        "progression",
+        "timing",
+        "ui"
+      ],
+      "clean": true,
+      "base": "57b252d82d3b5905bb6a27a90e91c9da952d901d",
+      "owned_files": [
+        "docs/combat-design/profiles/orders/design.md",
+        "docs/combat-design/profiles/orders/evaluation.md",
+        "docs/combat-design/profiles/orders/scenarios.json"
+      ],
+      "structure_check": "DESIGN_STRUCTURE_OK: 1 packets; no behavioral/runtime claim",
+      "committed_whitespace_check": "passed",
+      "runtime_validation": "not_applicable",
+      "independent_review": {
+        "reviewer": "command_design",
+        "accepted_repair": "4ec2d54",
+        "status": "design_contract_passed",
+        "record": "docs/combat-design/profiles/orders/evaluation.md"
+      }
+    }
+  ],
+  "total_cases": 173
+}

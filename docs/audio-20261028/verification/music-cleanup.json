@@ -1,0 +1,41 @@
+{
+  "source_name": "f72e2bd2-51e5-6b3a-b8f7-ddb06fca0bd6.wav",
+  "source_sha256": "69010ab42741d45b34f45bbbea8db595c8749ac7a9ce70ee50bae3d2b3ac29fd",
+  "eq": "highpass=f=30:p=2:r=f64,equalizer=f=240:t=q:w=0.7:g=-2.5:r=f64,equalizer=f=1900:t=q:w=0.7:g=2:r=f64,highshelf=f=5000:t=q:w=0.707:g=2.5:r=f64",
+  "target_lufs": -20.0,
+  "input": {
+    "lufs": -16.23,
+    "true_peak_db": -1.0,
+    "loudness_range_lu": 8.6
+  },
+  "outputs": [
+    {
+      "name": "01-original-matched.wav",
+      "sha256": "5305d4383608fdc399337e27e0d3f855ede7f5fcef790ec30366b7fb3577af65",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "lufs": -20.0,
+      "true_peak_db": -4.77,
+      "loudness_range_lu": 8.5
+    },
+    {
+      "name": "02-clarity.wav",
+      "sha256": "55da217a356812c87da66124f0d2b4f1f581f70fdf24c35e44820c9a9d72a03e",
+      "seconds": 30.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "lufs": -20.01,
+      "true_peak_db": -5.36,
+      "loudness_range_lu": 8.2
+    }
+  ],
+  "processing": "Fixed EQ and gain only; no denoising, compression, exciter or model generation.",
+  "listening_status": "Awaiting user comparison; EQ cannot reconstruct missing detail or undo all generated distortion.",
+  "comparison": {
+    "file": "03-original-then-clarity.wav",
+    "order": "Original 10 s, silence 1 s, clarity 10 s"
+  }
+}

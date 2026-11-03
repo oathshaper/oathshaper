@@ -1,0 +1,535 @@
+{
+  "checks": 87,
+  "context": {
+    "clips": 73
+  },
+  "failures": 0,
+  "observations": [
+    {
+      "description": "Full chapter and quay voice script is present",
+      "failures": 0,
+      "id": "06647aae1543",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / The tower's gone dark. I heard glass breaking in the clerk's office just now. Would you check on her? The door is beside the tower.",
+      "failures": 0,
+      "id": "a5978e1e4b19",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / We've been paid, and the tower's burning again. I can see right across the quay from here.",
+      "failures": 0,
+      "id": "35902b7cfe75",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / The clerk needs that pouch back. Come on, I'll go to the office with you.",
+      "failures": 0,
+      "id": "8a925de6a8da",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / I'll meet you at the garden gate. Ivo will know where the thief went.",
+      "failures": 0,
+      "id": "7e1fa4e49142",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / The payroll? That's our whole week's wages. Is the clerk hurt?",
+      "failures": 0,
+      "id": "221edc8775b5",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / The tower's burning again. Would you check on the clerk? I heard glass breaking in her office. The door is beside the tower.",
+      "failures": 0,
+      "id": "516e6d0f8e21",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / I'll check on the clerk.",
+      "failures": 0,
+      "id": "9abbb1fb553d",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / She's safe. He stole the payroll. Will you come with me?",
+      "failures": 0,
+      "id": "11f7269cb96f",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / What happened?",
+      "failures": 0,
+      "id": "c025a0f5daf3",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Do you work here?",
+      "failures": 0,
+      "id": "8c97fa0c3d80",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Where is Ivo?",
+      "failures": 0,
+      "id": "54840a5e2829",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Why is the tower dark?",
+      "failures": 0,
+      "id": "72fdc235cd01",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Share a flask of lantern oil.",
+      "failures": 0,
+      "id": "73126f2ca118",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Keep the oil for the road.",
+      "failures": 0,
+      "id": "fab6786dc2c6",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Leave conversation.",
+      "failures": 0,
+      "id": "8bd2bd36359a",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / I'm coming. I mend dockhands as often as cargo nets. Tell Ivo we'll help him, and keep those machines off me while I tend your wounds.",
+      "failures": 0,
+      "id": "acb5c2e2d922",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / A crash from the office, then someone running across the court. I couldn't see who it was. Ivo went after them.",
+      "failures": 0,
+      "id": "60cf95b3a92d",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / I unload the boats and tend the tower lamp at night. The clerk pays us on Fridays. I was waiting for my wages when I heard the crash.",
+      "failures": 0,
+      "id": "1bd472ceb8d9",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / That's enough to get the tower burning again. Give me a moment to fill the reservoir. We should be able to see anyone else crossing the quay.",
+      "failures": 0,
+      "id": "7f4b404c2494",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / All right. Watch your footing by the water. Those boards are hard to see without the tower.",
+      "failures": 0,
+      "id": "831e6459ffb3",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / The reservoir ran dry. I was going to buy oil with tonight's pay. I should've fetched it before sunset.",
+      "failures": 0,
+      "id": "7b872d80e6a7",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / He ran east, towards the garden gate. It's the only way onto that terrace.",
+      "failures": 0,
+      "id": "044e56a2ef86",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / The man in red ran from the office into the garden. I've shut the gate behind him. There's no other way out, but he's got two mechanical guards.",
+      "failures": 0,
+      "id": "b10081eafb3d",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / The clerk has the payroll and the quay has its light back. I'll keep watch here.",
+      "failures": 0,
+      "id": "b9bc1bb08014",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / Take the money back to the clerk. I'll stay with the prisoner until the watch arrives.",
+      "failures": 0,
+      "id": "5de8a66e866b",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / Mara stays behind us. Keep the guards busy while we close on the thief.",
+      "failures": 0,
+      "id": "c9b53e108718",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Mara's ready. Let's get the payroll back.",
+      "failures": 0,
+      "id": "082c5a97dba8",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Why haven't you gone in?",
+      "failures": 0,
+      "id": "cf3f8529fc0a",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / What are those machines?",
+      "failures": 0,
+      "id": "e1c8b2d6542d",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / I'll lift the chain. Stay together. Those guards hit hard, and Mara needs room to work.",
+      "failures": 0,
+      "id": "50747fe4dfe8",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / One of his guards nearly took my head off. I shut the gate and held my ground. Get Mara.\n\nWe'll need someone who can tend a wound.",
+      "failures": 0,
+      "id": "d28527a4f7f5",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / They're the raider's guards. One nearly took my head off when I tried to stop him. Keep clear of their weapons.",
+      "failures": 0,
+      "id": "8e9a73c7372a",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / I'm all right. He shoved past me and smashed the lock off the payroll chest. I couldn't even see his face until he was through the door.",
+      "failures": 0,
+      "id": "794adc5111d3",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / I've counted it twice. Nobody will lose their wages. We'll have that lock replaced in the morning.",
+      "failures": 0,
+      "id": "738e21c53fbd",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / That pouch has the quay stamp on it. You found him! Let me count the money.",
+      "failures": 0,
+      "id": "9bb189695e5c",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / Mara was waiting for her pay outside. Tell her I'm safe. Ivo chased the thief east, towards the garden.",
+      "failures": 0,
+      "id": "505f6b0667f9",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Who was he? What did he take?",
+      "failures": 0,
+      "id": "1973655764a4",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Return the stolen payroll.",
+      "failures": 0,
+      "id": "e5fa22c313d5",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Could I use the market side passage?",
+      "failures": 0,
+      "id": "b33856a3829e",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / May I look through the harbor archive?",
+      "failures": 0,
+      "id": "96292cbf6245",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Do robberies happen often here?",
+      "failures": 0,
+      "id": "a5c105d73b12",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / I'll leave the side door unlatched. It cuts from this court to the market.",
+      "failures": 0,
+      "id": "9f009102ac44",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / The cabinet over there holds the harbor history. You can take the visitor's copy. Thankfully the thief wasn't interested in books.",
+      "failures": 0,
+      "id": "b4cf80126022",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / Pickpockets, sometimes. Armed robbery in my office? Never. With the tower out he got across the court before I saw him coming.",
+      "failures": 0,
+      "id": "4ce33a72bdd8",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Filing Cabinet / A visitor's copy of the harbor history lies in the bottom drawer.",
+      "failures": 0,
+      "id": "9a245b5deae5",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Filing Cabinet / You already have the visitor's copy. The remaining volumes belong in the archive.",
+      "failures": 0,
+      "id": "849a4625ed69",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Take the harbor history.",
+      "failures": 0,
+      "id": "ca669c523178",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Narrator / The booklet describes the building of Lantern Quay and the little garden planted above its eastern sea wall.",
+      "failures": 0,
+      "id": "eea6a521672b",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Narrator / You close the drawer.",
+      "failures": 0,
+      "id": "b84879c4a566",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Narrator / Silver coins and folded wage slips fill the pouch. The clerk can account for them.",
+      "failures": 0,
+      "id": "b1b0772a7959",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Vendor / Fresh rope, dry matches, and a map that has never met the tide.",
+      "failures": 0,
+      "id": "920df606efcf",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Vendor / Mara has her money back? Good. Tell her the matches are on me.",
+      "failures": 0,
+      "id": "56263eb92061",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Ask for directions through town.",
+      "failures": 0,
+      "id": "434cb21f51aa",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Ask about the lantern tower.",
+      "failures": 0,
+      "id": "7f4bd8a1b7d1",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Vendor / The market is west, the clerk's office is by the northern tower, and the garden is east. Ivo is at its gate.",
+      "failures": 0,
+      "id": "a62e79bce5d7",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Vendor / Mara tends it after the last boat unloads. When it burns, you can see clear from my stall to the garden gate.",
+      "failures": 0,
+      "id": "9e702f87e86f",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / Thank you. I'll stay here in case someone else needs help. Call if she's hurt.",
+      "failures": 0,
+      "id": "d9d758404180",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / A red coat, with two iron guards behind him. He emptied the chest into a pouch and ran east. That's the dockworkers' pay. Tell Mara what happened, then find Ivo. He went after the thief.",
+      "failures": 0,
+      "id": "39fce658c034",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Clerk / The whole payroll. Thank you. Mara, here's your week's wages. Buy the tower oil before anything else; I don't want another night like this.",
+      "failures": 0,
+      "id": "be7c7f3e06b6",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Narrator / The raider is down. A heavy pouch hangs from his belt, stamped with the quay's mark.",
+      "failures": 0,
+      "id": "2993910db856",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Narrator / The chest has been forced open. Its broken lock lies on the floor. Scraps of wage envelopes are all that's left inside.",
+      "failures": 0,
+      "id": "5fe3b738870a",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Narrator / The recovered payroll is back in the chest. The broken lock still needs replacing.",
+      "failures": 0,
+      "id": "a523def6f753",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / There he is. The payroll pouch is on his belt.",
+      "failures": 0,
+      "id": "be42d49e45b0",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / Give us the money. You have nowhere to go.",
+      "failures": 0,
+      "id": "75a865be4e83",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Crimson Raider / Then you should have stayed outside. Guards!",
+      "failures": 0,
+      "id": "49b83301ede5",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Ivo / I'll hold him here. Take the payroll back to the clerk.",
+      "failures": 0,
+      "id": "0081f3f8776e",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / Let's get everyone paid.",
+      "failures": 0,
+      "id": "e6247551b936",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / The tower's gone out. I was waiting for my pay to buy more oil.",
+      "failures": 0,
+      "id": "797ff70e63d6",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / Did you hear that? Glass breaking, over at the clerk's office.",
+      "failures": 0,
+      "id": "4583c6663f31",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Corsair / I'll check on her. Stay here.",
+      "failures": 0,
+      "id": "ebd0e2c1691a",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / There's enough oil now to keep the tower burning till morning.",
+      "failures": 0,
+      "id": "31e0ea37b23c",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / I can see every plank again. Thank you for coming back with me.",
+      "failures": 0,
+      "id": "fb9e432d6393",
+      "samples": 1
+    },
+    {
+      "description": "Imported audio loads: Mara / Your oil kept the tower burning while we were gone. I've bought enough for the rest of the night.",
+      "failures": 0,
+      "id": "0fb7a8a7a1ce",
+      "samples": 1
+    },
+    {
+      "description": "Unrecorded variants cannot borrow another clip",
+      "failures": 0,
+      "id": "dc06b0db2180",
+      "samples": 1
+    },
+    {
+      "description": "Actual Mara greeting starts playback",
+      "failures": 0,
+      "id": "2c14317f9af2",
+      "samples": 1
+    },
+    {
+      "description": "Accepted choice starts the recorded player reply",
+      "failures": 0,
+      "id": "60c6ae6c16aa",
+      "samples": 1
+    },
+    {
+      "description": "Actual player recording pauses with presentation",
+      "failures": 0,
+      "id": "3f344f446caf",
+      "samples": 1
+    },
+    {
+      "description": "Natural playback completion presents the NPC response",
+      "failures": 0,
+      "id": "f58f13350c9b",
+      "samples": 1
+    },
+    {
+      "description": "The exact NPC response recording is playing",
+      "failures": 0,
+      "id": "29867a60d7c9",
+      "samples": 1
+    },
+    {
+      "description": "Playback completion does not repeat the accepted choice",
+      "failures": 0,
+      "id": "2a87c8cbe71d",
+      "samples": 1
+    },
+    {
+      "description": "Response skip returns silently to its menu",
+      "failures": 0,
+      "id": "a317ddbc3115",
+      "samples": 1
+    },
+    {
+      "description": "Voice playback never creates campaign saves",
+      "failures": 0,
+      "id": "998b5819f251",
+      "samples": 1
+    },
+    {
+      "description": "Chapter modal owns one speech player",
+      "failures": 0,
+      "id": "098f2a052ccf",
+      "samples": 1
+    },
+    {
+      "description": "Chapter briefing starts its first recorded speaker",
+      "failures": 0,
+      "id": "465abb9be59b",
+      "samples": 1
+    },
+    {
+      "description": "Audio-finished advances to the next chapter speaker",
+      "failures": 0,
+      "id": "f343d476d236",
+      "samples": 1
+    },
+    {
+      "description": "Closing the modal destroys its speech player",
+      "failures": 0,
+      "id": "0a044cf589aa",
+      "samples": 1
+    }
+  ],
+  "schema": 1,
+  "scope": "Current imported clips and real dialogue players: identity, duration, pause, cancellation and no duplicated choice effect. Not acting-quality assessment.",
+  "status": "passed",
+  "suite": "voice-playback"
+}

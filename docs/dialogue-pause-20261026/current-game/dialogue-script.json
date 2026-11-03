@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "story_id": "lantern_quay",
+  "complete_within_scope": true,
+  "scope": "All enabled dialogue branches in Boolean entry contexts; production effects, variants and choice history; repetition against every earlier spoken line on a path. Equivalent state/history/heard-utterance sets merge; silent response-menu returns add no speech.",
+  "explored_states": 11804,
+  "conditional_entries": 363,
+  "transitions": 12040,
+  "sequence_groups": 5,
+  "frontier_remaining": 0,
+  "budget_omissions": 0,
+  "findings": [
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "node:mara_greeting",
+        "speaker": "Mara",
+        "text": "The tower's burning again. Would you check on the clerk? I heard glass breaking in her office. The door is beside the tower."
+      },
+      "later": {
+        "source": "choice:mara_greeting/check_office",
+        "speaker": "Corsair",
+        "text": "I'll check on the clerk."
+      },
+      "repeated_phrase": "check on the clerk",
+      "intervening_lines": 0,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": true,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "raiders_defeated": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:mara_greeting",
+        "choice:mara_greeting/check_office"
+      ]
+    }
+  ],
+  "limitations": [
+    "Entry contexts are logical candidates, including impossible world states; witness flags are assumptions, not physical reachability proof.",
+    "Numeric scores start at authored defaults. Numeric-gated conversations mark the report incomplete.",
+    "Phrase matches are review warnings, not semantic equivalence or automatic rewrite decisions. Short acknowledgements and intentional replays of the same authored line are excluded.",
+    "Coverage is within conversations and authored cutscene sequences, not arbitrary ordering of separate world interactions. All earlier lines within each conversation or sequence are compared."
+  ]
+}

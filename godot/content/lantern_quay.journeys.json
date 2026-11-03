@@ -1,0 +1,332 @@
+{
+  "schema": 1,
+  "story_id": "lantern_quay",
+  "journeys": [
+    {
+      "id": "oil-shared",
+      "purpose": "Reach the gate with oil shared; no combat outcome or world flags injected.",
+      "steps": [
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "share_oil"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "clerk_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "ask_robbery"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "accept_help"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "ivo_gate"
+        },
+        {
+          "action": "choose",
+          "choice": "open_gate"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        }
+      ],
+      "expected": [
+        {
+          "kind": "flag",
+          "id": "gate_open",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "mara_recruited",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "robbery_known",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "oil_shared",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "oil_decided",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "pay_recovered",
+          "value": false
+        },
+        {
+          "kind": "flag",
+          "id": "records_collected",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "oil-kept",
+      "purpose": "Reach the gate with oil kept; no combat outcome or world flags injected.",
+      "steps": [
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "keep_oil"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "clerk_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "ask_robbery"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "accept_help"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "ivo_gate"
+        },
+        {
+          "action": "choose",
+          "choice": "open_gate"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        }
+      ],
+      "expected": [
+        {
+          "kind": "flag",
+          "id": "gate_open",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "mara_recruited",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "robbery_known",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "oil_shared",
+          "value": false
+        },
+        {
+          "kind": "flag",
+          "id": "oil_decided",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "pay_recovered",
+          "value": false
+        },
+        {
+          "kind": "flag",
+          "id": "records_collected",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "oil-undecided",
+      "purpose": "Reach the gate with oil undecided; no combat outcome or world flags injected.",
+      "steps": [
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "clerk_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "ask_robbery"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        },
+        {
+          "action": "choose",
+          "choice": "accept_help"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "ivo_gate"
+        },
+        {
+          "action": "choose",
+          "choice": "open_gate"
+        },
+        {
+          "action": "finish_response"
+        },
+        {
+          "action": "save_reload"
+        },
+        {
+          "action": "leave"
+        },
+        {
+          "action": "enter",
+          "node": "mara_greeting"
+        }
+      ],
+      "expected": [
+        {
+          "kind": "flag",
+          "id": "gate_open",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "mara_recruited",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "robbery_known",
+          "value": true
+        },
+        {
+          "kind": "flag",
+          "id": "oil_shared",
+          "value": false
+        },
+        {
+          "kind": "flag",
+          "id": "oil_decided",
+          "value": false
+        },
+        {
+          "kind": "flag",
+          "id": "pay_recovered",
+          "value": false
+        },
+        {
+          "kind": "flag",
+          "id": "records_collected",
+          "value": false
+        }
+      ]
+    }
+  ]
+}

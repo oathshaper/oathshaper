@@ -1,0 +1,31 @@
+{
+  "schema": "obelus/rule-pack/v1",
+  "id": "oathshaper/menu-copy",
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "menu.fourth-wall-slogan",
+      "reason": "The player asked to remove slogans comparing the garden across combat styles.",
+      "direction": "Remove the slogan; retain the chapter's concrete objective.",
+      "patterns": ["the same garden", "a different approach", "one party\\.\\s*(?:your way|six ways)"]
+    },
+    {
+      "id": "menu.ambiguous-preview-action",
+      "reason": "A kit-only label conceals the full tabbed menu preview.",
+      "direction": "Label the actual destination Preview menus.",
+      "patterns": ["\\binspect kit\\b", "\\bexplore style\\b", "\\bstyle preview\\b"]
+    },
+    {
+      "id": "menu.inconsistent-card-category",
+      "reason": "Style cards use plain numbers, with only availability pills.",
+      "direction": "Remove ATB, command-variant and additional suffixes from card numbers.",
+      "patterns": ["\\b0[1-9]\\s*[·:—-]\\s*(?:ATB|Command variant|Additional)\\b", "\\bBuild ATB, command\\b"]
+    },
+    {
+      "id": "menu.development-filler",
+      "reason": "Development positioning and redundant encouragement do not help the player choose.",
+      "direction": "Keep concrete story, controls and save consequences.",
+      "patterns": ["a playable RPG foundation", "explore the menus, then take this style into the quay", "preview the kit, then take it into the quay"]
+    }
+  ]
+}

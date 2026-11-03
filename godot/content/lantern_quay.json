@@ -1,0 +1,1183 @@
+{
+  "schema": 1,
+  "id": "lantern_quay",
+  "revision": 7,
+  "start": "mara_greeting",
+  "moral": {
+    "id": "mercy",
+    "label": "Mercy",
+    "min": -5,
+    "max": 5,
+    "initial": 0
+  },
+  "flags": [
+    "oil_shared",
+    "oil_decided",
+    "ivo_where_asked",
+    "gate_open",
+    "shortcut_open",
+    "records_clue",
+    "records_collected",
+    "robbery_known",
+    "pay_recovered",
+    "pay_returned",
+    "mara_recruited",
+    "raiders_defeated"
+  ],
+  "companions": [
+    "ivo"
+  ],
+  "nodes": [
+    {
+      "id": "mara_greeting",
+      "speaker": "Mara",
+      "text": "The tower's gone dark. I heard glass breaking in the clerk's office just now. Would you check on her? The door is beside the tower.",
+      "choices": [
+        {
+          "id": "check_office",
+          "text": "I'll check on the clerk.",
+          "next": "mara_office",
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "robbery_known",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "accept_help",
+          "text": "She's safe. He stole the payroll. Will you come with me?",
+          "next": "mara_help",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "mara_recruited",
+              "value": false
+            },
+            {
+              "kind": "flag",
+              "id": "robbery_known",
+              "value": true
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "mara_recruited",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "robbery_known",
+                "value": false
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "mara_recruited",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "ask_theft",
+          "text": "What happened?",
+          "next": "mara_theft",
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "mara_recruited",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ask_pay",
+          "text": "Do you work here?",
+          "next": "mara_pay",
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "mara_recruited",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ask_for_favor",
+          "text": "Where is Ivo?",
+          "next": "tide_gate",
+          "effects": [
+            {
+              "id": "ivo_where_asked",
+              "value": true,
+              "kind": "set_flag"
+            }
+          ],
+          "disable_when": [
+            {
+              "when": [
+                {
+                  "kind": "flag",
+                  "id": "ivo_where_asked",
+                  "value": true
+                }
+              ],
+              "reason": "Already asked",
+              "completed": true
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "mara_recruited",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "gate_open",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ask_lamp",
+          "text": "Why is the tower dark?",
+          "next": "mara_lamp",
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "oil_shared",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "share_oil",
+          "text": "Share a flask of lantern oil.",
+          "next": "mara_thanks",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "oil_decided",
+              "value": false
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "oil_decided",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "oil_shared",
+              "value": true
+            },
+            {
+              "kind": "set_flag",
+              "id": "oil_decided",
+              "value": true
+            },
+            {
+              "kind": "add_moral",
+              "amount": 2
+            },
+            {
+              "kind": "add_affinity",
+              "companion": "ivo",
+              "amount": 1
+            }
+          ]
+        },
+        {
+          "id": "keep_oil",
+          "text": "Keep the oil for the road.",
+          "next": "mara_farewell",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "oil_decided",
+              "value": false
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "oil_decided",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "oil_decided",
+              "value": true
+            },
+            {
+              "kind": "add_moral",
+              "amount": -1
+            }
+          ]
+        },
+        {
+          "id": "leave",
+          "text": "Leave conversation.",
+          "next": "$exit"
+        }
+      ],
+      "variants": [
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_returned",
+              "value": true
+            }
+          ],
+          "text": "We've been paid, and the tower's burning again. I can see right across the quay from here."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_recovered",
+              "value": true
+            }
+          ],
+          "text": "Let's get this back to the clerk. The others are still waiting to be paid."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "raiders_defeated",
+              "value": true
+            }
+          ],
+          "text": "Let's find that pouch. The clerk will need every coin back."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "gate_open",
+              "value": true
+            }
+          ],
+          "text": "Stay close. I'll watch for anyone who needs help."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "mara_recruited",
+              "value": true
+            }
+          ],
+          "text": "I'll meet you at the garden gate. Ivo will know where the thief went."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "robbery_known",
+              "value": true
+            }
+          ],
+          "text": "Is the clerk hurt?"
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "oil_shared",
+              "value": true
+            }
+          ],
+          "text": "The tower's burning again. Would you check on the clerk? I heard glass breaking in her office. The door is beside the tower."
+        }
+      ]
+    },
+    {
+      "id": "mara_help",
+      "speaker": "Mara",
+      "text": "I'm coming. I mend dockhands as often as cargo nets. Tell Ivo we'll help him. If either of you gets hurt, stay close to me.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "mara_theft",
+      "speaker": "Mara",
+      "text": "A crash from the office, then someone running across the court. I couldn't see who it was. Ivo went after them.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "mara_pay",
+      "speaker": "Mara",
+      "text": "I unload the boats and tend the tower lamp at night. The clerk pays us on Fridays. I was waiting for my wages when I heard the crash.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "mara_thanks",
+      "speaker": "Mara",
+      "text": "Thank you. Give me a moment to fill the reservoir. We should be able to see anyone else crossing the quay.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "mara_farewell",
+      "speaker": "Mara",
+      "text": "All right. Watch your footing by the water. Those boards are hard to see without the tower.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "mara_lamp",
+      "speaker": "Mara",
+      "text": "The reservoir ran dry. I was going to buy oil with tonight's pay. I should've fetched it before sunset.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "tide_gate",
+      "speaker": "Mara",
+      "text": "He ran east, towards the garden gate. It's the only way onto that terrace.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "ivo_gate",
+      "speaker": "Ivo",
+      "text": "The man in red ran from the office into the garden. I've shut the gate behind him. There's no other way out, but he's got two mechanical guards.",
+      "choices": [
+        {
+          "id": "open_gate",
+          "text": "Mara's ready. Let's get the payroll back.",
+          "next": "ivo_gate_opened",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "gate_open",
+              "value": false
+            },
+            {
+              "kind": "flag",
+              "id": "mara_recruited",
+              "value": true
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "gate_open",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "gate_open",
+              "value": true
+            }
+          ],
+          "locked_reason": "Ask Mara to join you first."
+        },
+        {
+          "id": "ask_about_gate",
+          "text": "Why haven't you gone in?",
+          "next": "ivo_gate_history",
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "gate_open",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "mara_recruited",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "ask_sentries",
+          "text": "What are those machines?",
+          "next": "ivo_sentries",
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "leave",
+          "text": "Leave conversation.",
+          "next": "$exit"
+        }
+      ],
+      "variants": [
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_returned",
+              "value": true
+            }
+          ],
+          "text": "The tower's lit again. I'll stay with the prisoner until the watch arrives."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_recovered",
+              "value": true
+            }
+          ],
+          "text": "Take the money back to the clerk. I'll stay with the prisoner until the watch arrives."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "raiders_defeated",
+              "value": true
+            }
+          ],
+          "text": "The guards are down. Check the raider for the payroll; I'll keep watch."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "gate_open",
+              "value": true
+            }
+          ],
+          "text": "Mara stays behind us. Keep the guards busy while we close on the thief."
+        }
+      ]
+    },
+    {
+      "id": "ivo_gate_opened",
+      "speaker": "Ivo",
+      "text": "I'll lift the chain. Stay together. Those guards hit hard, and Mara needs room to work.",
+      "return_to": "ivo_gate"
+    },
+    {
+      "id": "ivo_gate_history",
+      "speaker": "Ivo",
+      "text": "One of his guards nearly took my head off. I couldn't fight both at once. Get Mara.\n\nWe'll need someone who can tend a wound.",
+      "return_to": "ivo_gate"
+    },
+    {
+      "id": "ivo_sentries",
+      "speaker": "Ivo",
+      "text": "They're the raider's guards. He gives the orders; they do the fighting. Don't let them surround us.",
+      "return_to": "ivo_gate"
+    },
+    {
+      "id": "clerk_greeting",
+      "speaker": "Clerk",
+      "text": "I'm all right. He shoved past me and smashed the lock off the payroll chest. I couldn't even see his face until he was through the door.",
+      "choices": [
+        {
+          "id": "ask_robbery",
+          "text": "Who was he? What did he take?",
+          "next": "clerk_robbery",
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "robbery_known",
+              "value": true
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "raiders_defeated",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "robbery_known",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "mara_recruited",
+                "value": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "return_pay",
+          "text": "Return the stolen payroll.",
+          "next": "clerk_paid",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_returned",
+              "value": false
+            },
+            {
+              "kind": "flag",
+              "id": "pay_recovered",
+              "value": true
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "pay_returned",
+                "value": true
+              }
+            ],
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": false
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "pay_returned",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "open_shortcut",
+          "text": "Could I use the market side passage?",
+          "next": "clerk_shortcut_opened",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "shortcut_open",
+              "value": false
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "shortcut_open",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "shortcut_open",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "ask_about_records",
+          "text": "May I look through the harbor archive?",
+          "next": "clerk_records",
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "records_clue",
+              "value": true
+            }
+          ],
+          "disable_when": [
+            {
+              "when": [
+                {
+                  "kind": "flag",
+                  "id": "records_clue",
+                  "value": true
+                }
+              ],
+              "reason": "Already asked",
+              "completed": true
+            }
+          ]
+        },
+        {
+          "id": "ask_town",
+          "text": "Do robberies happen often here?",
+          "next": "clerk_town"
+        },
+        {
+          "id": "leave",
+          "text": "Leave conversation.",
+          "next": "$exit"
+        }
+      ],
+      "variants": [
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_returned",
+              "value": true
+            }
+          ],
+          "text": "I've counted it twice. Nobody will lose their wages. We'll have that lock replaced in the morning."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_recovered",
+              "value": true
+            }
+          ],
+          "text": "That pouch has the quay stamp on it. You found him! Let me count the money."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "raiders_defeated",
+              "value": true
+            }
+          ],
+          "text": "Did you find the money? We can't pay anyone until it comes back."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "mara_recruited",
+              "value": true
+            }
+          ],
+          "text": "Keep each other safe. I'll stay here in case the watch comes."
+        },
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "robbery_known",
+              "value": true
+            }
+          ],
+          "text": "Mara was waiting for her pay outside. Tell her I'm safe. Ivo chased the thief east, towards the garden."
+        }
+      ]
+    },
+    {
+      "id": "clerk_shortcut_opened",
+      "speaker": "Clerk",
+      "text": "I'll leave the side door unlatched. It cuts from this court to the market.",
+      "return_to": "clerk_greeting"
+    },
+    {
+      "id": "clerk_records",
+      "speaker": "Clerk",
+      "text": "The cabinet over there holds the harbor history. You can take the visitor's copy. Thankfully the thief wasn't interested in books.",
+      "return_to": "clerk_greeting"
+    },
+    {
+      "id": "clerk_town",
+      "speaker": "Clerk",
+      "text": "Pickpockets, sometimes. Armed robbery in my office? Never. With the tower out he got across the court before I saw him coming.",
+      "return_to": "clerk_greeting"
+    },
+    {
+      "id": "cabinet_greeting",
+      "speaker": "Filing Cabinet",
+      "text": "A visitor's copy of the harbor history lies in the bottom drawer.",
+      "choices": [
+        {
+          "id": "take_records",
+          "text": "Take the harbor history.",
+          "next": "cabinet_taken",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "records_collected",
+              "value": false
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "records_collected",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "records_collected",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "leave_records",
+          "text": "Close the drawer.",
+          "next": "cabinet_left"
+        },
+        {
+          "id": "leave",
+          "text": "Leave cabinet.",
+          "next": "$exit"
+        }
+      ],
+      "variants": [
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "records_collected",
+              "value": true
+            }
+          ],
+          "text": "You already have the visitor's copy. The remaining volumes belong in the archive."
+        }
+      ]
+    },
+    {
+      "id": "cabinet_taken",
+      "speaker": "Narrator",
+      "text": "The booklet describes the building of Lantern Quay and the little garden planted above its eastern sea wall.",
+      "return_to": "cabinet_greeting"
+    },
+    {
+      "id": "cabinet_left",
+      "speaker": "Narrator",
+      "text": "You close the drawer.",
+      "choices": [
+        {
+          "id": "look_again",
+          "text": "Open the drawer again.",
+          "next": "cabinet_greeting"
+        },
+        {
+          "id": "leave",
+          "text": "Leave cabinet.",
+          "next": "$exit"
+        }
+      ]
+    },
+    {
+      "id": "pay_taken",
+      "speaker": "Narrator",
+      "text": "Silver coins and folded wage slips fill the pouch. The clerk can account for them.",
+      "choices": [
+        {
+          "id": "leave",
+          "text": "Return to the clerk.",
+          "next": "$exit"
+        }
+      ]
+    },
+    {
+      "id": "vendor_greeting",
+      "speaker": "Vendor",
+      "text": "Fresh rope, dry matches, and a map that has never met the tide.",
+      "choices": [
+        {
+          "id": "ask_directions",
+          "text": "Ask for directions through town.",
+          "next": "vendor_directions"
+        },
+        {
+          "id": "ask_about_tower",
+          "text": "Ask about the lantern tower.",
+          "next": "vendor_tower"
+        },
+        {
+          "id": "leave",
+          "text": "Leave conversation.",
+          "next": "$exit"
+        }
+      ],
+      "variants": [
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_returned",
+              "value": true
+            }
+          ],
+          "text": "Good to see the tower burning again. Mind your step on the bridge."
+        }
+      ]
+    },
+    {
+      "id": "vendor_directions",
+      "speaker": "Vendor",
+      "text": "The market is west, the clerk's office is by the northern tower, and the garden is east.",
+      "return_to": "vendor_greeting"
+    },
+    {
+      "id": "vendor_tower",
+      "speaker": "Vendor",
+      "text": "Mara tends it after the last boat unloads. When it burns, you can see clear from my stall to the garden gate.",
+      "return_to": "vendor_greeting"
+    },
+    {
+      "id": "mara_office",
+      "speaker": "Mara",
+      "text": "Thank you. I'll stay here in case someone else needs help. Call if she's hurt.",
+      "return_to": "mara_greeting"
+    },
+    {
+      "id": "clerk_robbery",
+      "speaker": "Clerk",
+      "text": "A man in a red coat, with two iron guards behind him. He emptied the chest into a pouch and ran east. That's the dockworkers' pay. Tell Mara what happened, then find Ivo. He went after the thief.",
+      "return_to": "clerk_greeting"
+    },
+    {
+      "id": "clerk_paid",
+      "speaker": "Clerk",
+      "text": "The whole payroll. Thank you. Mara, here's your week's wages. Buy the tower oil before anything else; I don't want another night like this.",
+      "return_to": "clerk_greeting"
+    },
+    {
+      "id": "pay_loot",
+      "speaker": "Narrator",
+      "text": "The raider is down. A heavy pouch hangs from his belt, stamped with the quay's mark.",
+      "choices": [
+        {
+          "id": "take_pay",
+          "text": "Take the stolen payroll.",
+          "next": "pay_taken",
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_recovered",
+              "value": false
+            }
+          ],
+          "hide_when": [
+            [
+              {
+                "kind": "flag",
+                "id": "pay_recovered",
+                "value": true
+              }
+            ]
+          ],
+          "effects": [
+            {
+              "kind": "set_flag",
+              "id": "pay_recovered",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "leave",
+          "text": "Leave it for now.",
+          "next": "$exit"
+        }
+      ]
+    },
+    {
+      "id": "office_chest",
+      "speaker": "Narrator",
+      "text": "The chest has been forced open. Its broken lock lies on the floor. Scraps of wage envelopes are all that's left inside.",
+      "choices": [
+        {
+          "id": "leave",
+          "text": "Leave the chest.",
+          "next": "$exit"
+        }
+      ],
+      "variants": [
+        {
+          "when": [
+            {
+              "kind": "flag",
+              "id": "pay_returned",
+              "value": true
+            }
+          ],
+          "text": "The recovered payroll is back in the chest. The broken lock still needs replacing."
+        }
+      ]
+    }
+  ]
+}

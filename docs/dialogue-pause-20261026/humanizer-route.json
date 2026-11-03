@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "disclaimer": "Routing scores choose an editorial workflow; they are not AI-authorship probabilities.",
+  "route": {
+    "mode": {
+      "selected": "review",
+      "reason": "default safe mode; request does not explicitly authorize rewriting"
+    },
+    "profile": {
+      "selected": "fiction",
+      "confidence": "medium",
+      "scores": {
+        "fiction": 1,
+        "nonfiction": 0.6,
+        "technical": 0,
+        "founder": 0.3,
+        "social": 0.2,
+        "generic": 0.1
+      },
+      "reasons": [
+        {
+          "weight": 3.5,
+          "reason": "scene and narrative vocabulary"
+        },
+        {
+          "weight": 1.5,
+          "reason": "sustained past-tense narration"
+        }
+      ]
+    },
+    "platform": {
+      "selected": "generic",
+      "confidence": "low",
+      "reason": "no platform named"
+    },
+    "specialists": [
+      {
+        "skill": "fiction-writing",
+        "role": "genre-critic",
+        "focus": "scene function, character agency, thematic over-explanation, causality, and resolution"
+      }
+    ],
+    "forkPlan": [
+      {
+        "id": "critic-1",
+        "skill": "fiction-writing",
+        "role": "genre-critic",
+        "focus": "scene function, character agency, thematic over-explanation, causality, and resolution",
+        "contract": "Review only. Cite exact spans. Return at most five material issues. Reject unsupported audit findings. Do not rewrite."
+      }
+    ],
+    "revisionPassLimit": 0
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "profile": "fiction",
+    "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+    "summary": {
+      "findingCount": 5,
+      "bySeverity": {
+        "high": 0,
+        "medium": 5,
+        "low": 0
+      },
+      "revisionPriority": 25,
+      "band": "focused",
+      "wordCount": 1166,
+      "sentenceCount": 171,
+      "paragraphCount": 30
+    },
+    "metrics": {
+      "sentenceWords": {
+        "mean": 6.68,
+        "sd": 3.64,
+        "cv": 0.545,
+        "p10": 2,
+        "p50": 6,
+        "p90": 12
+      },
+      "paragraphWords": {
+        "mean": 37.5,
+        "sd": 44.59,
+        "cv": 1.189,
+        "p10": 12.5,
+        "p50": 24,
+        "p90": 69
+      },
+      "properNounCount": 58,
+      "valueCount": 18,
+      "parentheticalCount": 23,
+      "ellipsisCount": 0,
+      "emDashCount": 0,
+      "featureVector": {
+        "lexical": {
+          "uniqueWords": 383,
+          "typeTokenRatio": 0.328,
+          "rootTypeTokenRatio": 11.216,
+          "mattr50": 0.783,
+          "hapaxShare": 0.493,
+          "averageWordLength": 4.372,
+          "longWordShare": 0.057,
+          "wordUnigramEntropyBits": 7.651,
+          "characterTrigramEntropyBits": 9.703,
+          "uniqueBigramShare": 0.809,
+          "gzipCompressionRatio": 0.406,
+          "stopWordShare": 0.267,
+          "digitTokenShare": 0.012,
+          "contractionPer100Words": 4.288
+        },
+        "readability": {
+          "estimatedSyllablesPerWord": 1.336,
+          "fleschReadingEase": 86.87
+        },
+        "syntax": {
+          "posShares": {
+            "adjective": 0.046,
+            "adverb": 0.018,
+            "conjunction": 0.026,
+            "determiner": 0.117,
+            "noun": 0.479,
+            "preposition": 0.063,
+            "pronoun": 0.095,
+            "verb": 0.201
+          },
+          "passiveSentenceShare": 0.012,
+          "firstPersonPer100Words": 3.259,
+          "secondPersonPer100Words": 1.63,
+          "sentenceStartEntropyBits": 6.818,
+          "sentenceStartUniqueShare": 0.784,
+          "posSignatureEntropyBits": 6.268,
+          "posSignatureUniqueShare": 0.661,
+          "properNounPer100Words": 4.974,
+          "valuePer100Words": 1.544
+        },
+        "structure": {
+          "questionSentenceShare": 0.117,
+          "exclamationSentenceShare": 0.006,
+          "singleSentenceParagraphShare": 0.067,
+          "meanSentenceWords": 6.678,
+          "sentenceLengthCv": 0.545,
+          "meanParagraphWords": 37.5,
+          "paragraphLengthCv": 1.189,
+          "quotationSpansPer1000Words": 0
+        },
+        "punctuationPer1000Words": {
+          "colon": 55.746,
+          "semicolon": 0.858,
+          "emDash": 0,
+          "parenthetical": 19.726,
+          "ellipsis": 0
+        },
+        "discourse": {
+          "explicitTransitionSentenceShare": 0,
+          "sequenceOpenerSentenceShare": 0,
+          "retextMessageCounts": {
+            "retext-intensify": 73,
+            "retext-passive": 1,
+            "retext-readability": 9,
+            "retext-repeated-words": 0
+          }
+        },
+        "flat": {
+          "lexical.uniqueWords": 383,
+          "lexical.typeTokenRatio": 0.328,
+          "lexical.rootTypeTokenRatio": 11.216,
+          "lexical.mattr50": 0.783,
+          "lexical.hapaxShare": 0.493,
+          "lexical.averageWordLength": 4.372,
+          "lexical.longWordShare": 0.057,
+          "lexical.wordUnigramEntropyBits": 7.651,
+          "lexical.characterTrigramEntropyBits": 9.703,
+          "lexical.uniqueBigramShare": 0.809,
+          "lexical.gzipCompressionRatio": 0.406,
+          "lexical.stopWordShare": 0.267,
+          "lexical.digitTokenShare": 0.012,
+          "lexical.contractionPer100Words": 4.288,
+          "readability.estimatedSyllablesPerWord": 1.336,
+          "readability.fleschReadingEase": 86.87,
+          "syntax.posShares.adjective": 0.046,
+          "syntax.posShares.adverb": 0.018,
+          "syntax.posShares.conjunction": 0.026,
+          "syntax.posShares.determiner": 0.117,
+          "syntax.posShares.noun": 0.479,
+          "syntax.posShares.preposition": 0.063,
+          "syntax.posShares.pronoun": 0.095,
+          "syntax.posShares.verb": 0.201,
+          "syntax.passiveSentenceShare": 0.012,
+          "syntax.firstPersonPer100Words": 3.259,
+          "syntax.secondPersonPer100Words": 1.63,
+          "syntax.sentenceStartEntropyBits": 6.818,
+          "syntax.sentenceStartUniqueShare": 0.784,
+          "syntax.posSignatureEntropyBits": 6.268,
+          "syntax.posSignatureUniqueShare": 0.661,
+          "syntax.properNounPer100Words": 4.974,
+          "syntax.valuePer100Words": 1.544,
+          "structure.questionSentenceShare": 0.117,
+          "structure.exclamationSentenceShare": 0.006,
+          "structure.singleSentenceParagraphShare": 0.067,
+          "structure.meanSentenceWords": 6.678,
+          "structure.sentenceLengthCv": 0.545,
+          "structure.meanParagraphWords": 37.5,
+          "structure.paragraphLengthCv": 1.189,
+          "structure.quotationSpansPer1000Words": 0,
+          "punctuationPer1000Words.colon": 55.746,
+          "punctuationPer1000Words.semicolon": 0.858,
+          "punctuationPer1000Words.emDash": 0,
+          "punctuationPer1000Words.parenthetical": 19.726,
+          "punctuationPer1000Words.ellipsis": 0,
+          "discourse.explicitTransitionSentenceShare": 0,
+          "discourse.sequenceOpenerSentenceShare": 0,
+          "discourse.retextMessageCounts.retext-intensify": 73,
+          "discourse.retextMessageCounts.retext-passive": 1,
+          "discourse.retextMessageCounts.retext-readability": 9,
+          "discourse.retextMessageCounts.retext-repeated-words": 0
+        }
+      }
+    },
+    "findings": [
+      {
+        "category": "repetition",
+        "confidence": "high",
+        "id": "repeated-multiword-phrase",
+        "label": "A multiword phrase repeats verbatim",
+        "severity": "medium",
+        "measurement": {
+          "phrase": "corsair leave exit until next",
+          "count": 4,
+          "ngramWords": 5
+        },
+        "evidence": [
+          {
+            "line": 20,
+            "paragraph": 3,
+            "text": "Corsair (leave → $exit): Until next"
+          },
+          {
+            "line": 51,
+            "paragraph": 11,
+            "text": "Corsair (leave → $exit): Until next"
+          },
+          {
+            "line": 74,
+            "paragraph": 16,
+            "text": "Corsair (leave → $exit): Until next"
+          }
+        ],
+        "why": "A five-word sequence recurs at least three times outside masked code and URLs, suggesting formula reuse or avoidable recap.",
+        "direction": "Keep repetition that establishes terminology or deliberate rhythm. Otherwise consolidate the repeated thought rather than paraphrasing each occurrence cosmetically."
+      },
+      {
+        "category": "rhythm",
+        "confidence": "high",
+        "id": "repeated-sentence-start",
+        "label": "Repeated sentence openings",
+        "severity": "medium",
+        "measurement": {
+          "consecutive": 4,
+          "opening": "corsair ask"
+        },
+        "evidence": [
+          {
+            "line": 14,
+            "paragraph": 3,
+            "text": "Corsair (ask_theft → mara_theft): What happened?"
+          },
+          {
+            "line": 15,
+            "paragraph": 3,
+            "text": "Corsair (ask_pay → mara_pay): Do you work here?"
+          },
+          {
+            "line": 16,
+            "paragraph": 3,
+            "text": "Corsair (ask_for_favor → tide_gate): Where is Ivo?"
+          }
+        ],
+        "why": "Consecutive identical openings make the prose sound generated from a template.",
+        "direction": "Change the logical or grammatical relationship between these sentences; do not merely swap the first word."
+      },
+      {
+        "category": "lexical",
+        "confidence": "medium",
+        "id": "lexical-confidence-fog",
+        "label": "Hedges, fillers, or weasel words accumulate",
+        "severity": "medium",
+        "measurement": {
+          "count": 73,
+          "per100Words": 6.261,
+          "filler": 3,
+          "hedge": 27,
+          "weasel": 43,
+          "library": "retext-intensify"
+        },
+        "evidence": [
+          {
+            "line": 6,
+            "paragraph": 3,
+            "text": "heard"
+          },
+          {
+            "line": 6,
+            "paragraph": 3,
+            "text": "just"
+          },
+          {
+            "line": 6,
+            "paragraph": 3,
+            "text": "Would"
+          }
+        ],
+        "why": "Repeated qualification and intensification can make confidence sound manufactured while leaving the claim imprecise.",
+        "direction": "For each term, state the actual uncertainty, degree, comparison, or evidence. Keep hedges that express real epistemic limits."
+      },
+      {
+        "category": "repetition",
+        "confidence": "medium",
+        "id": "lexical-restatement-cluster",
+        "label": "Several sentences restate the same content vocabulary",
+        "severity": "medium",
+        "measurement": {
+          "pairs": 6,
+          "strongestJaccard": 1
+        },
+        "evidence": [
+          {
+            "line": 20,
+            "paragraph": 3,
+            "text": "Corsair (leave → $exit): Until next time."
+          },
+          {
+            "line": 51,
+            "paragraph": 11,
+            "text": "Corsair (leave → $exit): Until next time."
+          },
+          {
+            "line": 20,
+            "paragraph": 3,
+            "text": "Corsair (leave → $exit): Until next time."
+          },
+          {
+            "line": 74,
+            "paragraph": 16,
+            "text": "Corsair (leave → $exit): Until next time."
+          }
+        ],
+        "why": "Multiple non-adjacent sentence pairs share most of their content words, a transparent proxy for paraphrastic recap.",
+        "direction": "Decide which occurrence advances the argument. Merge repetitions or make later occurrences add evidence, consequence, or contradiction."
+      },
+      {
+        "category": "discourse-proxy",
+        "confidence": "medium",
+        "id": "repeated-conclusion",
+        "label": "Ending restates an earlier sentence",
+        "severity": "medium",
+        "measurement": {
+          "jaccard": 1
+        },
+        "evidence": [
+          {
+            "line": 20,
+            "paragraph": 3,
+            "text": "Corsair (leave → $exit): Until next time."
+          },
+          {
+            "line": 104,
+            "paragraph": 24,
+            "text": "Corsair (leave → $exit): Until next time."
+          }
+        ],
+        "why": "The closing reuses most of an earlier sentence’s content words, which can turn the ending into a recap.",
+        "direction": "Keep the clearer version once, or make the ending add a consequence, image, decision, or unresolved implication."
+      }
+    ],
+    "semanticQuestions": [
+      {
+        "id": "thematic-overdetermination",
+        "question": "Does narration or dialogue state the theme or moral instead of leaving the reader room to infer it?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "causal-streamlining",
+        "question": "Is the plot one continuous chain with too few independent pressures, subplots, reversals, or loose ends for this story?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "tidy-resolution",
+        "question": "Does the protagonist control the resolution and arrive at a complete internal lesson too neatly?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "embodied-performativity",
+        "question": "Do bodily sensation, sensory detail, or setting repeatedly perform emotions that the scene already establishes?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "temporal-recontextualization",
+        "question": "Do revelation and time structure ever change how earlier events are understood, or only disclose the next fact?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "moral-ambiguity",
+        "question": "Does the narrative allow consequential choices to remain morally mixed?",
+        "requiresCitedSpan": true
+      }
+    ]
+  }
+}

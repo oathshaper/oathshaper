@@ -1,0 +1,51 @@
+{
+  "source": "tools/rigging/sources/quaternius/UAL1_Standard.glb",
+  "source_sha256": "69591853d817488edaa8fd9bf8fc1d821eaeaf789f8627b3cd23b41c4ed67997",
+  "license": "CC0-1.0",
+  "map": {
+    "pelvis": "Hips",
+    "spine_01": "Spine",
+    "spine_03": "Chest",
+    "neck_01": "Neck",
+    "Head": "Head",
+    "clavicle_l": "LClavicle",
+    "upperarm_l": "LUpperArm",
+    "lowerarm_l": "LForearm",
+    "hand_l": "LHand",
+    "thigh_l": "LUpperLeg",
+    "calf_l": "LLowerLeg",
+    "foot_l": "LFoot",
+    "clavicle_r": "RClavicle",
+    "upperarm_r": "RUpperArm",
+    "lowerarm_r": "RForearm",
+    "hand_r": "RHand",
+    "thigh_r": "RUpperLeg",
+    "calf_r": "RLowerLeg",
+    "foot_r": "RFoot"
+  },
+  "clips": {
+    "Walk": {
+      "donor": "Walk_Loop",
+      "seconds": 1.3333333333333333,
+      "sole_correction_metres": [
+        -0.056077420711517334,
+        0.06375741958618164
+      ],
+      "cycle_distance_metres": 0.863
+    },
+    "Run": {
+      "donor": "Jog_Fwd_Loop",
+      "seconds": 0.9333333333333333,
+      "sole_correction_metres": [
+        -0.052846914672204925,
+        0.1377946635848415
+      ],
+      "cycle_distance_metres": 3.845
+    }
+  },
+  "run_walk_phase": {
+    "run_offset": 0.8571428571428571,
+    "normalized_leg_gap_mse_before": 0.4123229577683822,
+    "normalized_leg_gap_mse_after": 0.020539438726188415
+  }
+}

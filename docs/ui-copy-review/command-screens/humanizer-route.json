@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "disclaimer": "Routing scores choose an editorial workflow; they are not AI-authorship probabilities.",
+  "route": {
+    "mode": {
+      "selected": "review",
+      "reason": "default safe mode; request does not explicitly authorize rewriting"
+    },
+    "profile": {
+      "selected": "social",
+      "confidence": "medium",
+      "scores": {
+        "fiction": 0,
+        "nonfiction": 0,
+        "technical": 0,
+        "founder": 0,
+        "social": 1,
+        "generic": 0.2
+      },
+      "reasons": [
+        {
+          "weight": 2.5,
+          "reason": "short-form length (98 words)"
+        }
+      ]
+    },
+    "platform": {
+      "selected": "generic",
+      "confidence": "low",
+      "reason": "no platform named"
+    },
+    "specialists": [
+      {
+        "skill": "social-media-marketer",
+        "role": "platform-critic",
+        "focus": "platform-native fit, reader value, affiliation disclosure, and non-generic voice"
+      }
+    ],
+    "forkPlan": [
+      {
+        "id": "critic-1",
+        "skill": "social-media-marketer",
+        "role": "platform-critic",
+        "focus": "platform-native fit, reader value, affiliation disclosure, and non-generic voice",
+        "contract": "Review only. Cite exact spans. Return at most five material issues. Reject unsupported audit findings. Do not rewrite."
+      }
+    ],
+    "revisionPassLimit": 0
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "profile": "social",
+    "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+    "summary": {
+      "findingCount": 1,
+      "bySeverity": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "revisionPriority": 4,
+      "band": "light",
+      "wordCount": 98,
+      "sentenceCount": 40,
+      "paragraphCount": 3
+    },
+    "metrics": {
+      "sentenceWords": {
+        "mean": 2.98,
+        "sd": 3.17,
+        "cv": 1.067,
+        "p10": 1,
+        "p50": 2,
+        "p90": 4
+      },
+      "paragraphWords": {
+        "mean": 12,
+        "sd": 9.9,
+        "cv": 0.825,
+        "p10": 5,
+        "p50": 5,
+        "p90": 21.8
+      },
+      "properNounCount": 16,
+      "valueCount": 20,
+      "parentheticalCount": 0,
+      "ellipsisCount": 0,
+      "emDashCount": 0,
+      "featureVector": {
+        "lexical": {
+          "uniqueWords": 66,
+          "typeTokenRatio": 0.673,
+          "rootTypeTokenRatio": 6.667,
+          "mattr50": 0.739,
+          "hapaxShare": 0.682,
+          "averageWordLength": 4.306,
+          "longWordShare": 0.071,
+          "wordUnigramEntropyBits": 5.853,
+          "characterTrigramEntropyBits": 8.201,
+          "uniqueBigramShare": 0.938,
+          "gzipCompressionRatio": 0.67,
+          "stopWordShare": 0.061,
+          "digitTokenShare": 0.214,
+          "contractionPer100Words": 0
+        },
+        "readability": {
+          "estimatedSyllablesPerWord": 1.337,
+          "fleschReadingEase": 91.26
+        },
+        "syntax": {
+          "posShares": {
+            "adjective": 0.074,
+            "adverb": 0,
+            "conjunction": 0,
+            "determiner": 0.025,
+            "noun": 0.623,
+            "preposition": 0.008,
+            "pronoun": 0.016,
+            "verb": 0.107
+          },
+          "passiveSentenceShare": 0,
+          "firstPersonPer100Words": 2.041,
+          "secondPersonPer100Words": 0,
+          "sentenceStartEntropyBits": 5.172,
+          "sentenceStartUniqueShare": 0.925,
+          "posSignatureEntropyBits": 4.175,
+          "posSignatureUniqueShare": 0.55,
+          "properNounPer100Words": 15.306,
+          "valuePer100Words": 20.408
+        },
+        "structure": {
+          "questionSentenceShare": 0,
+          "exclamationSentenceShare": 0,
+          "singleSentenceParagraphShare": 0,
+          "meanSentenceWords": 2.975,
+          "sentenceLengthCv": 1.067,
+          "meanParagraphWords": 12,
+          "paragraphLengthCv": 0.825,
+          "quotationSpansPer1000Words": 0
+        },
+        "punctuationPer1000Words": {
+          "colon": 0,
+          "semicolon": 0,
+          "emDash": 0,
+          "parenthetical": 0,
+          "ellipsis": 0
+        },
+        "discourse": {
+          "explicitTransitionSentenceShare": 0,
+          "sequenceOpenerSentenceShare": 0,
+          "retextMessageCounts": {
+            "retext-intensify": 1,
+            "retext-passive": 0,
+            "retext-readability": 2,
+            "retext-repeated-words": 0
+          }
+        },
+        "flat": {
+          "lexical.uniqueWords": 66,
+          "lexical.typeTokenRatio": 0.673,
+          "lexical.rootTypeTokenRatio": 6.667,
+          "lexical.mattr50": 0.739,
+          "lexical.hapaxShare": 0.682,
+          "lexical.averageWordLength": 4.306,
+          "lexical.longWordShare": 0.071,
+          "lexical.wordUnigramEntropyBits": 5.853,
+          "lexical.characterTrigramEntropyBits": 8.201,
+          "lexical.uniqueBigramShare": 0.938,
+          "lexical.gzipCompressionRatio": 0.67,
+          "lexical.stopWordShare": 0.061,
+          "lexical.digitTokenShare": 0.214,
+          "lexical.contractionPer100Words": 0,
+          "readability.estimatedSyllablesPerWord": 1.337,
+          "readability.fleschReadingEase": 91.26,
+          "syntax.posShares.adjective": 0.074,
+          "syntax.posShares.adverb": 0,
+          "syntax.posShares.conjunction": 0,
+          "syntax.posShares.determiner": 0.025,
+          "syntax.posShares.noun": 0.623,
+          "syntax.posShares.preposition": 0.008,
+          "syntax.posShares.pronoun": 0.016,
+          "syntax.posShares.verb": 0.107,
+          "syntax.passiveSentenceShare": 0,
+          "syntax.firstPersonPer100Words": 2.041,
+          "syntax.secondPersonPer100Words": 0,
+          "syntax.sentenceStartEntropyBits": 5.172,
+          "syntax.sentenceStartUniqueShare": 0.925,
+          "syntax.posSignatureEntropyBits": 4.175,
+          "syntax.posSignatureUniqueShare": 0.55,
+          "syntax.properNounPer100Words": 15.306,
+          "syntax.valuePer100Words": 20.408,
+          "structure.questionSentenceShare": 0,
+          "structure.exclamationSentenceShare": 0,
+          "structure.singleSentenceParagraphShare": 0,
+          "structure.meanSentenceWords": 2.975,
+          "structure.sentenceLengthCv": 1.067,
+          "structure.meanParagraphWords": 12,
+          "structure.paragraphLengthCv": 0.825,
+          "structure.quotationSpansPer1000Words": 0,
+          "punctuationPer1000Words.colon": 0,
+          "punctuationPer1000Words.semicolon": 0,
+          "punctuationPer1000Words.emDash": 0,
+          "punctuationPer1000Words.parenthetical": 0,
+          "punctuationPer1000Words.ellipsis": 0,
+          "discourse.explicitTransitionSentenceShare": 0,
+          "discourse.sequenceOpenerSentenceShare": 0,
+          "discourse.retextMessageCounts.retext-intensify": 1,
+          "discourse.retextMessageCounts.retext-passive": 0,
+          "discourse.retextMessageCounts.retext-readability": 2,
+          "discourse.retextMessageCounts.retext-repeated-words": 0
+        }
+      }
+    },
+    "findings": [
+      {
+        "category": "rhythm",
+        "confidence": "medium",
+        "id": "repeated-syntax-template",
+        "label": "Repeated grammatical template",
+        "severity": "medium",
+        "measurement": {
+          "consecutive": 3,
+          "signature": "Noun"
+        },
+        "evidence": [
+          {
+            "line": 27,
+            "paragraph": null,
+            "text": "Devices"
+          },
+          {
+            "line": 28,
+            "paragraph": null,
+            "text": "Items"
+          },
+          {
+            "line": 29,
+            "paragraph": null,
+            "text": "Movement"
+          }
+        ],
+        "why": "The first five part-of-speech tags repeat across consecutive sentences, a useful but fallible proxy for parallel construction.",
+        "direction": "Combine one sentence, subordinate another, or make the actual relationship conditional or causal."
+      }
+    ],
+    "semanticQuestions": [
+      {
+        "id": "template-shape",
+        "question": "Does the post follow a reusable hook, three beats, lesson, and CTA shape more than the idea requires?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "earned-hook",
+        "question": "Does the hook make a claim the body actually supports without manufactured suspense?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "platform-voice",
+        "question": "Would this phrasing still sound like this author if the formatting and topic nouns were removed?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "author-only-detail",
+        "question": "What real opinion, observation, result, or uncertainty is missing and cannot be invented?",
+        "requiresCitedSpan": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+[gd_scene load_steps=28 format=3]
+
+[ext_resource type="Script" path="res://scripts/demo.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/dialogue_panel.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/hub_environment.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/character_model_slot.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/grounded_idle_character.gd" id="7"]
+[ext_resource type="Script" path="res://scripts/records_office.gd" id="8"]
+[ext_resource type="Script" path="res://scripts/map_widget.gd" id="9"]
+[ext_resource type="Script" path="res://scripts/objective_tracker.gd" id="10"]
+[ext_resource type="Script" path="res://scripts/journal_menu.gd" id="11"]
+[ext_resource type="Shader" path="res://shaders/coastal_sky.gdshader" id="12"]
+[sub_resource type="SphereMesh" id="person"]
+radius = 0.45
+height = 1.7
+[sub_resource type="SphereMesh" id="lamp_globe"]
+radius = 0.24
+height = 0.48
+[sub_resource type="BoxMesh" id="guard_mantle"]
+size = Vector3(1.05, 0.24, 0.55)
+[sub_resource type="BoxMesh" id="merchant_pack"]
+size = Vector3(0.75, 0.6, 0.48)
+[sub_resource type="BoxMesh" id="clerk_ledger"]
+size = Vector3(0.65, 0.46, 0.1)
+[sub_resource type="CapsuleShape3D" id="player_collision"]
+radius = 0.42
+height = 1.7
+[sub_resource type="StandardMaterial3D" id="player_mat"]
+albedo_color = Color(0.35, 0.67, 0.7, 1)
+[sub_resource type="StandardMaterial3D" id="mara_mat"]
+albedo_color = Color(0.68, 0.35, 0.23, 1)
+[sub_resource type="StandardMaterial3D" id="ivo_mat"]
+albedo_color = Color(0.28, 0.47, 0.58, 1)
+[sub_resource type="StandardMaterial3D" id="clerk_mat"]
+albedo_color = Color(0.68, 0.61, 0.46, 1)
+[sub_resource type="StandardMaterial3D" id="vendor_mat"]
+albedo_color = Color(0.47, 0.35, 0.62, 1)
+[sub_resource type="StandardMaterial3D" id="lamp_mat"]
+albedo_color = Color(0.54, 0.33, 0.21, 1)
+emission_enabled = true
+emission = Color(0.9, 0.42, 0.12, 1)
+[sub_resource type="ShaderMaterial" id="coastal_sky_material"]
+shader = ExtResource("12")
+[sub_resource type="Sky" id="coastal_sky"]
+process_mode = 1
+radiance_size = 2
+sky_material = SubResource("coastal_sky_material")
+[sub_resource type="Environment" id="quay_environment"]
+background_mode = 2
+sky = SubResource("coastal_sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.47, 0.54, 0.59, 1)
+ambient_light_energy = 0.30
+
+[node name="LanternQuay" type="Node3D"]
+script = ExtResource("1")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("quay_environment")
+[node name="HubEnvironment" type="Node3D" parent="."]
+script = ExtResource("5")
+[node name="RecordsOffice" type="Node3D" parent="."]
+position = Vector3(160, 0, -24)
+script = ExtResource("8")
+[node name="CabinetFocus" type="Node3D" parent="RecordsOffice"]
+position = Vector3(-3.2, 0.9, -3.5)
+[node name="Player" type="CharacterBody3D" parent="."]
+position = Vector3(0, 1.05, 5)
+script = ExtResource("2")
+[node name="Body" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("person")
+material_override = SubResource("player_mat")
+[node name="ModelSlot" type="Node3D" parent="Player"]
+rotation_degrees = Vector3(0, 180, 0)
+script = ExtResource("6")
+model_path = "res://assets/meshes/player.glb"
+rigged_model_path = "res://assets/meshes/rigged/player_rigged.glb"
+require_rigged_walk = true
+reverse_walk_on_backpedal = true
+randomize_standing_motion = false
+placeholder_names = PackedStringArray("Body")
+model_offset = Vector3(0, 0.1, 0)
+model_scale = Vector3(2, 2, 2)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("player_collision")
+[node name="Mara" type="Node3D" parent="."]
+position = Vector3(0, 1, -1)
+script = ExtResource("7")
+[node name="Body" type="MeshInstance3D" parent="Mara"]
+mesh = SubResource("person")
+material_override = SubResource("mara_mat")
+[node name="ModelSlot" type="Node3D" parent="Mara"]
+script = ExtResource("6")
+model_path = "res://assets/meshes/mara.glb"
+rigged_model_path = "res://assets/meshes/rigged/mara_rigged.glb"
+placeholder_names = PackedStringArray("Body")
+model_offset = Vector3(0, 0.1, 0)
+model_scale = Vector3(2, 2, 2)
+procedural_motion = false
+[node name="Lamp" type="OmniLight3D" parent="Mara"]
+position = Vector3(0, 1.2, 0)
+light_color = Color(1, 0.55, 0.2, 1)
+light_energy = 0.0
+[node name="LampShade" type="MeshInstance3D" parent="Mara"]
+position = Vector3(0, 1.2, 0)
+mesh = SubResource("lamp_globe")
+material_override = SubResource("lamp_mat")
+[node name="Collider" type="StaticBody3D" parent="Mara"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mara/Collider"]
+shape = SubResource("player_collision")
+[node name="Name" type="Label3D" parent="Mara"]
+position = Vector3(0, 1.55, 0)
+billboard = 1
+text = "MARA"
+font_size = 48
+pixel_size = 0.004
+outline_size = 8
+[node name="Ivo" type="Node3D" parent="."]
+position = Vector3(25, 1.05, -2)
+script = ExtResource("7")
+[node name="Body" type="MeshInstance3D" parent="Ivo"]
+mesh = SubResource("person")
+material_override = SubResource("ivo_mat")
+[node name="Mantle" type="MeshInstance3D" parent="Ivo"]
+position = Vector3(0, 0.45, 0)
+mesh = SubResource("guard_mantle")
+material_override = SubResource("ivo_mat")
+[node name="ModelSlot" type="Node3D" parent="Ivo"]
+script = ExtResource("6")
+model_path = "res://assets/meshes/ivo.glb"
+rigged_model_path = "res://assets/meshes/rigged/ivo_rigged.glb"
+placeholder_names = PackedStringArray("Body", "Mantle")
+model_offset = Vector3(0, 0.1, 0)
+model_scale = Vector3(2, 2, 2)
+untextured_color = Color(0.31, 0.49, 0.58, 1)
+procedural_motion = false
+[node name="Collider" type="StaticBody3D" parent="Ivo"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ivo/Collider"]
+shape = SubResource("player_collision")
+[node name="Name" type="Label3D" parent="Ivo"]
+position = Vector3(0, 1.55, 0)
+billboard = 1
+text = "IVO"
+font_size = 48
+pixel_size = 0.004
+outline_size = 8
+[node name="CivicClerk" type="Node3D" parent="."]
+position = Vector3(0, 1, -18)
+script = ExtResource("7")
+[node name="Body" type="MeshInstance3D" parent="CivicClerk"]
+mesh = SubResource("person")
+material_override = SubResource("clerk_mat")
+[node name="Ledger" type="MeshInstance3D" parent="CivicClerk"]
+position = Vector3(0.45, 0, -0.15)
+mesh = SubResource("clerk_ledger")
+material_override = SubResource("mara_mat")
+[node name="ModelSlot" type="Node3D" parent="CivicClerk"]
+script = ExtResource("6")
+model_path = "res://assets/meshes/clerk.glb"
+rigged_model_path = "res://assets/meshes/rigged/clerk_rigged.glb"
+placeholder_names = PackedStringArray("Body", "Ledger")
+model_offset = Vector3(0, 0.1, 0)
+model_scale = Vector3(2, 2, 2)
+procedural_motion = false
+[node name="Collider" type="StaticBody3D" parent="CivicClerk"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CivicClerk/Collider"]
+shape = SubResource("player_collision")
+[node name="Name" type="Label3D" parent="CivicClerk"]
+position = Vector3(0, 1.55, 0)
+billboard = 1
+text = "CIVIC CLERK"
+font_size = 48
+pixel_size = 0.004
+outline_size = 8
+[node name="Vendor" type="Node3D" parent="."]
+position = Vector3(-20, 1, 2)
+script = ExtResource("7")
+[node name="Body" type="MeshInstance3D" parent="Vendor"]
+mesh = SubResource("person")
+material_override = SubResource("vendor_mat")
+[node name="Pack" type="MeshInstance3D" parent="Vendor"]
+position = Vector3(0, 0.02, 0.36)
+mesh = SubResource("merchant_pack")
+material_override = SubResource("mara_mat")
+[node name="ModelSlot" type="Node3D" parent="Vendor"]
+script = ExtResource("6")
+model_path = "res://assets/meshes/vendor.glb"
+rigged_model_path = "res://assets/meshes/rigged/vendor_rigged.glb"
+placeholder_names = PackedStringArray("Body", "Pack")
+model_offset = Vector3(0, 0.1, 0)
+model_scale = Vector3(2, 2, 2)
+procedural_motion = false
+[node name="Collider" type="StaticBody3D" parent="Vendor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vendor/Collider"]
+shape = SubResource("player_collision")
+[node name="Name" type="Label3D" parent="Vendor"]
+position = Vector3(0, 1.55, 0)
+billboard = 1
+text = "VENDOR"
+font_size = 48
+pixel_size = 0.004
+outline_size = 8
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("3")
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+current = true
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-47, -27, 0)
+light_color = Color(0.545, 0.659, 0.827, 1)
+light_energy = 0.25
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Prompt" type="Label" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -75.0
+offset_right = 580.0
+offset_bottom = -32.0
+theme_override_font_sizes/font_size = 23
+[node name="ControlsHint" type="Label" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -760.0
+offset_top = -67.0
+offset_right = -32.0
+offset_bottom = -17.0
+theme_override_colors/font_color = Color(0.66, 0.7, 0.72, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.05, 0.06, 0.85)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 2
+vertical_alignment = 1
+[node name="Status" type="Label" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -112.0
+offset_right = 760.0
+offset_bottom = -78.0
+theme_override_font_sizes/font_size = 19
+[node name="Location" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -470.0
+offset_top = 30.0
+offset_right = -32.0
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 21
+text = "CENTRAL QUAY\nTower north · Market west · Gate east"
+[node name="MapWidget" type="Control" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -292.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 222.0
+script = ExtResource("9")
+[node name="ObjectiveTracker" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -292.0
+offset_top = 238.0
+offset_right = -32.0
+offset_bottom = 394.0
+script = ExtResource("10")
+[node name="DialoguePanel" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4")
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="CanvasLayer/DialoguePanel"]
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/DialoguePanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 0.55
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+[node name="Margin" type="MarginContainer" parent="CanvasLayer/DialoguePanel/Panel"]
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 24
+[node name="VBox" type="Control" parent="CanvasLayer/DialoguePanel/Panel/Margin"]
+[node name="Speaker" type="Label" parent="CanvasLayer/DialoguePanel/Panel/Margin/VBox"]
+theme_override_font_sizes/font_size = 30
+[node name="Subtitle" type="Label" parent="CanvasLayer/DialoguePanel/Panel/Margin/VBox"]
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 26
+[node name="Choices" type="VBoxContainer" parent="CanvasLayer/DialoguePanel/Panel/Margin/VBox"]
+[node name="BackHint" type="Label" parent="CanvasLayer/DialoguePanel/Panel/Margin/VBox"]
+theme_override_font_sizes/font_size = 20
+text = "↑/↓: Choose · Enter: Confirm · Esc: Back"
+[node name="JournalMenu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11")

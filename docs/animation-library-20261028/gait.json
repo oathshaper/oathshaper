@@ -1,0 +1,53 @@
+{
+  "Idle": {
+    "seconds": 8.0,
+    "samples": 121,
+    "lowest_sole_range_metres": [
+      -4.768371586472142e-08,
+      -4.768371586472142e-08
+    ],
+    "ankle_separation_metres": [
+      0.31313715875148773,
+      0.31313715875148773
+    ],
+    "flat_contact_median_heading_degrees": {
+      "L": 1.321169960650501,
+      "R": -0.46177739566242026
+    },
+    "loop_ankle_error_metres": 0.0
+  },
+  "Run": {
+    "seconds": 0.6333333333333333,
+    "samples": 121,
+    "lowest_sole_range_metres": [
+      -0.013449358940124556,
+      0.17498089075088497
+    ],
+    "ankle_separation_metres": [
+      0.1445768103003502,
+      0.2011144757270813
+    ],
+    "flat_contact_median_heading_degrees": {
+      "L": 4.939913193538166,
+      "R": 2.643020525316649
+    },
+    "loop_ankle_error_metres": 3.303767563077958e-07
+  },
+  "Walk": {
+    "seconds": 1.3333333333333333,
+    "samples": 121,
+    "lowest_sole_range_metres": [
+      -0.0014534473419189897,
+      0.0021215796470641646
+    ],
+    "ankle_separation_metres": [
+      0.22936179488897324,
+      0.23639803379774094
+    ],
+    "flat_contact_median_heading_degrees": {
+      "L": 1.0187128613012835,
+      "R": 2.2522771990969996
+    },
+    "loop_ankle_error_metres": 0.0
+  }
+}

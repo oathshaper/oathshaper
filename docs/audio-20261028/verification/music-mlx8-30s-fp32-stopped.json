@@ -1,0 +1,64 @@
+{
+  "guard": {
+    "started": "2026-10-28T23:04:20-0400",
+    "preflight": {
+      "available_bytes": 9371189248,
+      "swap_used_bytes": 11799887872,
+      "system_disk_free_bytes": 36776644608,
+      "pressure": 1
+    },
+    "reasons": [
+      "Total swap exceeded limit",
+      "Critical or unknown system memory pressure"
+    ],
+    "status": "stopped",
+    "peak_rss_bytes": 6364381184,
+    "quantized_mlx": true,
+    "limits": {
+      "process_rss_gib": 12,
+      "available_floor_gib": 1,
+      "swap_growth_gib": 4,
+      "swap_total_gib": 12,
+      "disk_reserve_gib": 25,
+      "warning_grace_seconds": null,
+      "timeout_seconds": 600,
+      "sample_interval_seconds": 0.5
+    },
+    "output": "${DATA}/outputs/20261028-230420-9de7e4",
+    "command": [
+      "${DATA}/.venv/bin/python",
+      "-u",
+      "${PROJECT}/tools/audio/ace_step_trial.py",
+      "--repo",
+      "${MLX_REPO}",
+      "--data",
+      "${DATA}",
+      "--seconds",
+      "30.0",
+      "--output",
+      "${DATA}/outputs/20261028-230420-9de7e4",
+      "--quantized-mlx",
+      "--checkpoint-dir",
+      "${DATA}/models-mlx8"
+    ],
+    "exit_code": -15,
+    "elapsed_seconds": 25.43728429099974,
+    "final": {
+      "available_bytes": 14467973120,
+      "swap_used_bytes": 13293846528,
+      "system_disk_free_bytes": 35498782720,
+      "pressure": 1
+    }
+  },
+  "sample_summary": {
+    "count": 49,
+    "min_available_bytes": 2163130368,
+    "max_swap_bytes": 12915441664,
+    "min_disk_free_bytes": 35498790912,
+    "pressure_levels": [
+      1,
+      2,
+      4
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "checks": 38,
+  "context": {},
+  "failures": 0,
+  "observations": [
+    {
+      "description": "Gate offers real Party tab",
+      "failures": 0,
+      "id": "4b6b861d07d0",
+      "samples": 1
+    },
+    {
+      "description": "Preview does not replace companion",
+      "failures": 0,
+      "id": "2e38fabd9cc1",
+      "samples": 1
+    },
+    {
+      "description": "Confirm actually deploys Ivo",
+      "failures": 0,
+      "id": "68547ce7d4bf",
+      "samples": 1
+    },
+    {
+      "description": "Scene shows selected companion and hides reserve",
+      "failures": 0,
+      "id": "853e251012d0",
+      "samples": 1
+    },
+    {
+      "description": "Encounter pauses before the first orders",
+      "failures": 0,
+      "id": "97e7fca624b2",
+      "samples": 1
+    },
+    {
+      "description": "All three adversaries are observable while paused after deployment",
+      "failures": 0,
+      "id": "47754e31b175",
+      "samples": 1
+    },
+    {
+      "description": "Target control selects an actual visible enemy",
+      "failures": 0,
+      "id": "1d5b38f8bce7",
+      "samples": 1
+    },
+    {
+      "description": "Enemy name and health come from the selected actor",
+      "failures": 0,
+      "id": "ed1bdbe69883",
+      "samples": 1
+    },
+    {
+      "description": "Context action queues against selected enemy",
+      "failures": 0,
+      "id": "d5d3519bd9a8",
+      "samples": 1
+    },
+    {
+      "description": "Context order needs no second modal and preserves pause",
+      "failures": 0,
+      "id": "edf25b2fa4d0",
+      "samples": 1
+    },
+    {
+      "description": "Portrait takes control of Mara",
+      "failures": 0,
+      "id": "e360b9982053",
+      "samples": 1
+    },
+    {
+      "description": "Mara's contextual power reserves her own focus",
+      "failures": 0,
+      "id": "1b1f09fcae2a",
+      "samples": 1
+    },
+    {
+      "description": "Area power uses selected enemy position",
+      "failures": 0,
+      "id": "9cb2a2690953",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: actor:player",
+      "failures": 0,
+      "id": "08aab7a2779f",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: actor:mara",
+      "failures": 0,
+      "id": "741f2c0d1229",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: actor:ivo",
+      "failures": 0,
+      "id": "daef00f81938",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: pause",
+      "failures": 0,
+      "id": "dbb466a270c3",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: ledger",
+      "failures": 0,
+      "id": "720964e45bf7",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: next_target",
+      "failures": 0,
+      "id": "d8f5157d2b8a",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: context:basic",
+      "failures": 0,
+      "id": "588946c5e234",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: action:binding_current",
+      "failures": 0,
+      "id": "31919cff2ce6",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: clear",
+      "failures": 0,
+      "id": "505dc9ad94bc",
+      "samples": 1
+    },
+    {
+      "description": "Visible combat control fits Steam Deck: stop",
+      "failures": 0,
+      "id": "336458936909",
+      "samples": 1
+    },
+    {
+      "description": "Live party inventory contains field dressings",
+      "failures": 0,
+      "id": "e75158671157",
+      "samples": 1
+    },
+    {
+      "description": "Real dressing has an enabled Use control",
+      "failures": 0,
+      "id": "15ccd6c0bdd1",
+      "samples": 1
+    },
+    {
+      "description": "Item targeting exposes the world instead of a dialog",
+      "failures": 0,
+      "id": "9aac39ac2948",
+      "samples": 1
+    },
+    {
+      "description": "Inventory Use queues an actual dressing order",
+      "failures": 0,
+      "id": "8dff7b787239",
+      "samples": 1
+    },
+    {
+      "description": "Dressing reservation appears in real shared inventory",
+      "failures": 0,
+      "id": "f6104e9cdaeb",
+      "samples": 1
+    },
+    {
+      "description": "Uncontrolled Ivo chooses an actual AI order",
+      "failures": 0,
+      "id": "74353cd9094b",
+      "samples": 1
+    },
+    {
+      "description": "Current AI order can be cleared from HUD",
+      "failures": 0,
+      "id": "d22fd7ab8cf4",
+      "samples": 1
+    },
+    {
+      "description": "Clear cancels the AI order after taking control",
+      "failures": 0,
+      "id": "c32ebc9731cd",
+      "samples": 1
+    },
+    {
+      "description": "Cleared controlled queue pauses for orders",
+      "failures": 0,
+      "id": "b5bceb0de105",
+      "samples": 1
+    },
+    {
+      "description": "HUD explains the automatic pause",
+      "failures": 0,
+      "id": "afe5a1f1ed39",
+      "samples": 1
+    },
+    {
+      "description": "Player supplies an override through the action bar",
+      "failures": 0,
+      "id": "9fc1a544776e",
+      "samples": 1
+    },
+    {
+      "description": "One Resume releases manual and empty-order pauses together",
+      "failures": 0,
+      "id": "a858b5e5ba79",
+      "samples": 1
+    },
+    {
+      "description": "Focused pause button plus native Space pauses exactly once",
+      "failures": 0,
+      "id": "0dfc15457256",
+      "samples": 1
+    },
+    {
+      "description": "Held Space repeat does not toggle or submit again",
+      "failures": 0,
+      "id": "05feaccb0806",
+      "samples": 1
+    },
+    {
+      "description": "One fresh Space press resumes without a second GUI toggle",
+      "failures": 0,
+      "id": "34e2c69b6dc1",
+      "samples": 1
+    }
+  ],
+  "schema": 1,
+  "scope": "Actual Command HUD and viewport events; scripted keyboard input, no physical controller verification.",
+  "status": "passed",
+  "suite": "command-controls"
+}

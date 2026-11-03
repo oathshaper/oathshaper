@@ -1,0 +1,78 @@
+[
+  {
+    "test": "command_targeting",
+    "exit_code": 0,
+    "status": "passed",
+    "log": "command_targeting.txt",
+    "diagnostics": {
+      "known_count": 68,
+      "unexpected_count": 0,
+      "known": [
+        {
+          "message": "ERROR: Parameter \"m\" is null.",
+          "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+        }
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "test": "command_trial",
+    "exit_code": 0,
+    "status": "passed",
+    "log": "command_trial.txt",
+    "diagnostics": {
+      "known_count": 70,
+      "unexpected_count": 0,
+      "known": [
+        {
+          "message": "ERROR: Parameter \"m\" is null.",
+          "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+        },
+        {
+          "message": "ERROR: 2 resources still in use at exit (run with --verbose for details).",
+          "location": "at: clear (core/io/resource.cpp:604)"
+        }
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "test": "flow_trial",
+    "exit_code": 0,
+    "status": "passed",
+    "log": "flow_trial.txt",
+    "diagnostics": {
+      "known_count": 27,
+      "unexpected_count": 0,
+      "known": [
+        {
+          "message": "ERROR: Parameter \"m\" is null.",
+          "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+        },
+        {
+          "message": "ERROR: 1 resources still in use at exit (run with --verbose for details).",
+          "location": "at: clear (core/io/resource.cpp:604)"
+        }
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "test": "vanguard_trial",
+    "exit_code": 0,
+    "status": "passed",
+    "log": "vanguard_trial.txt",
+    "diagnostics": {
+      "known_count": 272,
+      "unexpected_count": 0,
+      "known": [
+        {
+          "message": "ERROR: Parameter \"m\" is null.",
+          "location": "at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)"
+        }
+      ],
+      "unexpected": []
+    }
+  }
+]

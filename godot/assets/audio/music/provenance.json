@@ -1,0 +1,22 @@
+{
+  "asset": "lantern_quay.ogg",
+  "type": "AI-generated instrumental music",
+  "generator": "ACE-Step 1.5 Turbo with Audante 8-bit MLX decoder",
+  "upstream_code_revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+  "conversion_revision": "7a59458c6a193af37a107fc2c0f6e7c03333b118",
+  "seed": 20261028,
+  "language_model_enabled": false,
+  "reference_audio": null,
+  "caption": "Instrumental acoustic fantasy harbor exploration music at dusk. Gentle wooden flute melody, warm bowed cello, delicate plucked lute and sparse hand percussion. Small intimate ensemble, quiet reflective mood with a hopeful resolution, restrained dynamics, clear space for dialogue, no vocals, no choir, no electronic drums.",
+  "source_generation_sha256": "69010ab42741d45b34f45bbbea8db595c8749ac7a9ce70ee50bae3d2b3ac29fd",
+  "approved_clarity_source_sha256": "55da217a356812c87da66124f0d2b4f1f581f70fdf24c35e44820c9a9d72a03e",
+  "processing": "User-selected clarity EQ; -20.01 LUFS source; 1.5 s complementary raised-cosine wrap crossfade; 48 kHz stereo Vorbis quality 7",
+  "duration_seconds": 28.5,
+  "sample_rate": 48000,
+  "channels": 2,
+  "sha256": "f52ce8b470974038d9037096831ac1decfe42781208596d7decbb1a837ed2116",
+  "sources": [
+    "https://github.com/ace-step/ACE-Step-1.5",
+    "https://huggingface.co/Audante/ACE-Step-1.5-mlx-8bit"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "model": "kyutai/tts-1.6b-en_fr",
+  "model_revision": "f65439609986c392cb12df63938abcc550c3fb15",
+  "model_license": "CC-BY-4.0",
+  "voice_revision": "323332d33f997de8394f24a193e1a76df720e01a",
+  "voice_license_source": "https://huggingface.co/kyutai/tts-voices/blob/323332d33f997de8394f24a193e1a76df720e01a/README.md",
+  "cast_label_source": "https://kyutai.org/tts/",
+  "cast": {
+    "Corsair": {
+      "voice": "vctk/p228_023.wav",
+      "label": "Anna (f, conversation)",
+      "license": "CC-BY-4.0"
+    },
+    "Mara": {
+      "voice": "vctk/p339_023.wav",
+      "label": "Jane (f, conversation)",
+      "license": "CC-BY-4.0"
+    },
+    "Clerk": {
+      "voice": "vctk/p231_023.wav",
+      "label": "VCTK 231 (UK, f)",
+      "license": "CC-BY-4.0"
+    },
+    "Ivo": {
+      "voice": "vctk/p226_023.wav",
+      "label": "VCTK 226 (UK, m)",
+      "license": "CC-BY-4.0"
+    },
+    "Vendor": {
+      "voice": "voice-donations/dwp_enhanced.wav",
+      "label": "Voice donation - dwp (AU, m)",
+      "license": "CC0-1.0"
+    },
+    "Filing Cabinet": {
+      "voice": "vctk/p255_023.wav",
+      "label": "VCTK 255 (UK, m)",
+      "license": "CC-BY-4.0"
+    },
+    "Narrator": {
+      "voice": "vctk/p255_023.wav",
+      "label": "VCTK 255 (UK, m)",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "runtime": "moshi-mlx 0.2.12; MLX 0.26.5",
+  "quantization_bits": 8,
+  "seed": 299792458,
+  "worker_sha256": "abcb7eea87ef9740b76c20f502ef37c30611b093e80fc703cb0105978cbf7938",
+  "voice_script_sha256": "4d2a658a94b3cbed4b0272b609b20f7e7a1d4f14d28090aa9cc3b4fddf6ce852",
+  "created_utc": "2026-10-22T16:25:43.249209+00:00",
+  "assessment": "Objective PCM checks only; human listening and performance acceptance not performed.",
+  "model_files_sha256": {
+    "config.json": "fa750c09900257f65350444bc6ff4ddbdfe8a7023f4c6428b99567e1618ffdb1",
+    "dsm_tts_1e68beda@240.safetensors": "726ddadd90a080c89cbc6b217745296ef32d8e25666d30f81a09e8ae5c9e0f0c",
+    "tokenizer-e351c8d8-checkpoint125.safetensors": "09b782f0629851a271227fb9d36db65c041790365f11bbe5d3d59369cf863f50",
+    "tokenizer_spm_8k_en_fr_audio.model": "cd87dd5d17169151782ac700280ec057e5d658a9afbe238a048ea5ff318cce69"
+  },
+  "voice_embeddings_sha256": {
+    "vctk/p226_023.wav": "3d94933b1fbf1b0a5a48e74101cb575278f1f9169e56c6ea3c42f950c5ab9b22",
+    "vctk/p228_023.wav": "28047905965c8e678aaf186ffd7443cdd654ea368b689dbddad7b8af2bceddc8",
+    "vctk/p231_023.wav": "92b3b566602c2d84077aef94031f7fc51fc9f1edc87c543d37729d9c2aa21a7d",
+    "vctk/p255_023.wav": "73e26d90db447e89e249b831137d249ff5b795c32829f52487f8a96f5e62b6ae",
+    "vctk/p339_023.wav": "76a0aba6f73d8eac5a2557a1773206bde542368dd2792aca6d62bd16e1af91f2",
+    "voice-donations/dwp_enhanced.wav": "59e049fba470fe68bebadb2f082c2547bf70f70e23dcaf4cedb0e1ac8ac9384b"
+  },
+  "clips": {
+    "audition-corsair": {
+      "key": "audition-corsair",
+      "speaker": "Corsair",
+      "spoken_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "path": "res://assets/audio/generated/auditions/corsair.wav",
+      "voice": "vctk/p228_023.wav",
+      "voice_license": "CC-BY-4.0",
+      "sha256": "0190afcb3591f928e806cf3568dc0cd5b62a7525a40cf6056ebb80a02c1fdcfb",
+      "chunks": [
+        "The harbor lights will hold until morning. I'll meet you by the garden gate."
+      ],
+      "generation_seconds": 70.135,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "duration_seconds": 5.28,
+      "raw_duration_seconds": 5.28,
+      "raw_sha256": "1d7c7e703e53b3d14575230bf5fd54e3047101cd9dcd5ab656fb7909e09dfd55",
+      "raw_peak": 12225,
+      "raw_clipped_fraction": 0.0,
+      "gain": 2.27828,
+      "trim_start_samples": 0,
+      "trim_end_samples": 0,
+      "active_20ms_frames": 226,
+      "raw_20ms_frames": 264,
+      "objective_qc": "passed",
+      "human_listening": "not_performed"
+    },
+    "audition-mara": {
+      "key": "audition-mara",
+      "speaker": "Mara",
+      "spoken_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "path": "res://assets/audio/generated/auditions/mara.wav",
+      "voice": "vctk/p339_023.wav",
+      "voice_license": "CC-BY-4.0",
+      "sha256": "1a8f22efb7eb170f79705faa9a2edf48fba11f25de61cdb4637eeb2faa95c4fe",
+      "chunks": [
+        "The harbor lights will hold until morning. I'll meet you by the garden gate."
+      ],
+      "generation_seconds": 39.805,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "duration_seconds": 4.08,
+      "raw_duration_seconds": 4.24,
+      "raw_sha256": "8829e48384c8a2c2fe30c333f7573c09a90033456c32cdcd8efe1cb9d8423e3f",
+      "raw_peak": 25837,
+      "raw_clipped_fraction": 0.0,
+      "gain": 1.07799,
+      "trim_start_samples": 2400,
+      "trim_end_samples": 1440,
+      "active_20ms_frames": 162,
+      "raw_20ms_frames": 212,
+      "objective_qc": "passed",
+      "human_listening": "not_performed"
+    },
+    "audition-clerk": {
+      "key": "audition-clerk",
+      "speaker": "Clerk",
+      "spoken_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "path": "res://assets/audio/generated/auditions/clerk.wav",
+      "voice": "vctk/p231_023.wav",
+      "voice_license": "CC-BY-4.0",
+      "sha256": "e8ba4e15e2fc9239073c43dbaa1dd4878c1e09cf8e180aa9f1fa0046103cb814",
+      "chunks": [
+        "The harbor lights will hold until morning. I'll meet you by the garden gate."
+      ],
+      "generation_seconds": 20.336,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "duration_seconds": 3.68,
+      "raw_duration_seconds": 3.68,
+      "raw_sha256": "225b77be5ca3e4fa45ec6d672562f3ca063745340c11dc4154ee745be54485f0",
+      "raw_peak": 24304,
+      "raw_clipped_fraction": 0.0,
+      "gain": 1.14598,
+      "trim_start_samples": 0,
+      "trim_end_samples": 0,
+      "active_20ms_frames": 156,
+      "raw_20ms_frames": 184,
+      "objective_qc": "passed",
+      "human_listening": "not_performed"
+    },
+    "audition-ivo": {
+      "key": "audition-ivo",
+      "speaker": "Ivo",
+      "spoken_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "path": "res://assets/audio/generated/auditions/ivo.wav",
+      "voice": "vctk/p226_023.wav",
+      "voice_license": "CC-BY-4.0",
+      "sha256": "245599f270fd574427a972739a57fa5b7d7404f63f1166a9d27bcfc611ed1d31",
+      "chunks": [
+        "The harbor lights will hold until morning. I'll meet you by the garden gate."
+      ],
+      "generation_seconds": 42.397,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "duration_seconds": 4.5,
+      "raw_duration_seconds": 5.12,
+      "raw_sha256": "a7b1a6329a39a34c992d8a85dff868f85f4e39680121cd764aa461590fc7b8f1",
+      "raw_peak": 15951,
+      "raw_clipped_fraction": 0.0,
+      "gain": 1.74609,
+      "trim_start_samples": 11520,
+      "trim_end_samples": 3360,
+      "active_20ms_frames": 177,
+      "raw_20ms_frames": 256,
+      "objective_qc": "passed",
+      "human_listening": "not_performed"
+    },
+    "audition-vendor": {
+      "key": "audition-vendor",
+      "speaker": "Vendor",
+      "spoken_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "path": "res://assets/audio/generated/auditions/vendor.wav",
+      "voice": "voice-donations/dwp_enhanced.wav",
+      "voice_license": "CC0-1.0",
+      "sha256": "46d9f1b37db0ef103d839c64ae6c55b9599d408e31348be0ad3ec81742ab6b38",
+      "chunks": [
+        "The harbor lights will hold until morning. I'll meet you by the garden gate."
+      ],
+      "generation_seconds": 158.614,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "duration_seconds": 3.74,
+      "raw_duration_seconds": 3.84,
+      "raw_sha256": "50e0bd64d8bd2b9dea9b38d62bf9724db862351893aaa48bfb55adaf416a868f",
+      "raw_peak": 18628,
+      "raw_clipped_fraction": 0.0,
+      "gain": 1.49517,
+      "trim_start_samples": 960,
+      "trim_end_samples": 1440,
+      "active_20ms_frames": 152,
+      "raw_20ms_frames": 192,
+      "objective_qc": "passed",
+      "human_listening": "not_performed"
+    },
+    "audition-filing-cabinet": {
+      "key": "audition-filing-cabinet",
+      "speaker": "Filing Cabinet",
+      "spoken_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "path": "res://assets/audio/generated/auditions/filing-cabinet.wav",
+      "voice": "vctk/p255_023.wav",
+      "voice_license": "CC-BY-4.0",
+      "sha256": "e8b193943cd00a38abece3caf57a7a344fdda1d5f738fa82cf2c27d3d153329d",
+      "chunks": [
+        "The harbor lights will hold until morning. I'll meet you by the garden gate."
+      ],
+      "generation_seconds": 8.137,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "duration_seconds": 4.14,
+      "raw_duration_seconds": 4.24,
+      "raw_sha256": "eca22ee972b4a9bcac80b9ae574ae1a0042cafd8e2ea0454b10838d4089e6993",
+      "raw_peak": 18660,
+      "raw_clipped_fraction": 0.0,
+      "gain": 1.4926,
+      "trim_start_samples": 2400,
+      "trim_end_samples": 0,
+      "active_20ms_frames": 160,
+      "raw_20ms_frames": 212,
+      "objective_qc": "passed",
+      "human_listening": "not_performed"
+    }
+  }
+}

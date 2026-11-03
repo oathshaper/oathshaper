@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "profile": "fiction",
+  "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+  "summary": {
+    "findingCount": 2,
+    "bySeverity": {
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "revisionPriority": 8,
+    "band": "light",
+    "wordCount": 1228,
+    "sentenceCount": 204,
+    "paragraphCount": 101
+  },
+  "metrics": {
+    "sentenceWords": {
+      "mean": 5.98,
+      "sd": 3.6,
+      "cv": 0.602,
+      "p10": 2,
+      "p50": 5,
+      "p90": 11
+    },
+    "paragraphWords": {
+      "mean": 12.16,
+      "sd": 9.72,
+      "cv": 0.799,
+      "p10": 2,
+      "p50": 12,
+      "p90": 25
+    },
+    "properNounCount": 47,
+    "valueCount": 4,
+    "parentheticalCount": 1,
+    "ellipsisCount": 0,
+    "emDashCount": 1,
+    "featureVector": {
+      "lexical": {
+        "uniqueWords": 401,
+        "typeTokenRatio": 0.327,
+        "rootTypeTokenRatio": 11.443,
+        "mattr50": 0.808,
+        "hapaxShare": 0.511,
+        "averageWordLength": 4.372,
+        "longWordShare": 0.064,
+        "wordUnigramEntropyBits": 7.665,
+        "characterTrigramEntropyBits": 9.644,
+        "uniqueBigramShare": 0.822,
+        "gzipCompressionRatio": 0.411,
+        "stopWordShare": 0.292,
+        "digitTokenShare": 0.001,
+        "contractionPer100Words": 4.479
+      },
+      "readability": {
+        "estimatedSyllablesPerWord": 1.34,
+        "fleschReadingEase": 87.33
+      },
+      "syntax": {
+        "posShares": {
+          "adjective": 0.046,
+          "adverb": 0.02,
+          "conjunction": 0.03,
+          "determiner": 0.124,
+          "noun": 0.418,
+          "preposition": 0.073,
+          "pronoun": 0.102,
+          "verb": 0.231
+        },
+        "passiveSentenceShare": 0.02,
+        "firstPersonPer100Words": 3.257,
+        "secondPersonPer100Words": 1.792,
+        "sentenceStartEntropyBits": 7.254,
+        "sentenceStartUniqueShare": 0.833,
+        "posSignatureEntropyBits": 6.65,
+        "posSignatureUniqueShare": 0.706,
+        "properNounPer100Words": 4.072,
+        "valuePer100Words": 0.326
+      },
+      "structure": {
+        "questionSentenceShare": 0.088,
+        "exclamationSentenceShare": 0.005,
+        "singleSentenceParagraphShare": 0.436,
+        "meanSentenceWords": 5.975,
+        "sentenceLengthCv": 0.602,
+        "meanParagraphWords": 12.158,
+        "paragraphLengthCv": 0.799,
+        "quotationSpansPer1000Words": 4.072
+      },
+      "punctuationPer1000Words": {
+        "colon": 43.16,
+        "semicolon": 1.629,
+        "emDash": 0.814,
+        "parenthetical": 0.814,
+        "ellipsis": 0
+      },
+      "discourse": {
+        "explicitTransitionSentenceShare": 0,
+        "sequenceOpenerSentenceShare": 0,
+        "retextMessageCounts": {
+          "retext-intensify": 80,
+          "retext-passive": 3,
+          "retext-readability": 1,
+          "retext-repeated-words": 0
+        }
+      },
+      "flat": {
+        "lexical.uniqueWords": 401,
+        "lexical.typeTokenRatio": 0.327,
+        "lexical.rootTypeTokenRatio": 11.443,
+        "lexical.mattr50": 0.808,
+        "lexical.hapaxShare": 0.511,
+        "lexical.averageWordLength": 4.372,
+        "lexical.longWordShare": 0.064,
+        "lexical.wordUnigramEntropyBits": 7.665,
+        "lexical.characterTrigramEntropyBits": 9.644,
+        "lexical.uniqueBigramShare": 0.822,
+        "lexical.gzipCompressionRatio": 0.411,
+        "lexical.stopWordShare": 0.292,
+        "lexical.digitTokenShare": 0.001,
+        "lexical.contractionPer100Words": 4.479,
+        "readability.estimatedSyllablesPerWord": 1.34,
+        "readability.fleschReadingEase": 87.33,
+        "syntax.posShares.adjective": 0.046,
+        "syntax.posShares.adverb": 0.02,
+        "syntax.posShares.conjunction": 0.03,
+        "syntax.posShares.determiner": 0.124,
+        "syntax.posShares.noun": 0.418,
+        "syntax.posShares.preposition": 0.073,
+        "syntax.posShares.pronoun": 0.102,
+        "syntax.posShares.verb": 0.231,
+        "syntax.passiveSentenceShare": 0.02,
+        "syntax.firstPersonPer100Words": 3.257,
+        "syntax.secondPersonPer100Words": 1.792,
+        "syntax.sentenceStartEntropyBits": 7.254,
+        "syntax.sentenceStartUniqueShare": 0.833,
+        "syntax.posSignatureEntropyBits": 6.65,
+        "syntax.posSignatureUniqueShare": 0.706,
+        "syntax.properNounPer100Words": 4.072,
+        "syntax.valuePer100Words": 0.326,
+        "structure.questionSentenceShare": 0.088,
+        "structure.exclamationSentenceShare": 0.005,
+        "structure.singleSentenceParagraphShare": 0.436,
+        "structure.meanSentenceWords": 5.975,
+        "structure.sentenceLengthCv": 0.602,
+        "structure.meanParagraphWords": 12.158,
+        "structure.paragraphLengthCv": 0.799,
+        "structure.quotationSpansPer1000Words": 4.072,
+        "punctuationPer1000Words.colon": 43.16,
+        "punctuationPer1000Words.semicolon": 1.629,
+        "punctuationPer1000Words.emDash": 0.814,
+        "punctuationPer1000Words.parenthetical": 0.814,
+        "punctuationPer1000Words.ellipsis": 0,
+        "discourse.explicitTransitionSentenceShare": 0,
+        "discourse.sequenceOpenerSentenceShare": 0,
+        "discourse.retextMessageCounts.retext-intensify": 80,
+        "discourse.retextMessageCounts.retext-passive": 3,
+        "discourse.retextMessageCounts.retext-readability": 1,
+        "discourse.retextMessageCounts.retext-repeated-words": 0
+      }
+    },
+    "semantic": {
+      "model": "Xenova/all-MiniLM-L6-v2",
+      "revision": "5f8986ea538762fd82a43a768d583a5a9d71d1ec",
+      "sentenceThreshold": 0.84,
+      "paragraphThreshold": 0.88,
+      "sentenceComparisons": 3321,
+      "paragraphComparisons": 55,
+      "semanticSentencePairs": 2,
+      "semanticParagraphPairs": 0,
+      "truncated": false
+    }
+  },
+  "findings": [
+    {
+      "category": "lexical",
+      "confidence": "medium",
+      "id": "lexical-confidence-fog",
+      "label": "Hedges, fillers, or weasel words accumulate",
+      "severity": "medium",
+      "measurement": {
+        "count": 80,
+        "per100Words": 6.515,
+        "filler": 3,
+        "hedge": 24,
+        "weasel": 53,
+        "library": "retext-intensify"
+      },
+      "evidence": [
+        {
+          "line": 9,
+          "paragraph": 5,
+          "text": "that"
+        },
+        {
+          "line": 9,
+          "paragraph": 5,
+          "text": "over"
+        },
+        {
+          "line": 15,
+          "paragraph": 8,
+          "text": "enough"
+        }
+      ],
+      "why": "Repeated qualification and intensification can make confidence sound manufactured while leaving the claim imprecise.",
+      "direction": "For each term, state the actual uncertainty, degree, comparison, or evidence. Keep hedges that express real epistemic limits."
+    },
+    {
+      "id": "semantic-restatement",
+      "label": "Non-adjacent sentences make nearly the same semantic move",
+      "category": "semantic-repetition",
+      "severity": "medium",
+      "confidence": "medium",
+      "measurement": {
+        "pairs": 2,
+        "strongestCosine": 0.8918,
+        "lexicalOverlap": 0.5,
+        "model": "Xenova/all-MiniLM-L6-v2@5f8986ea538762fd82a43a768d583a5a9d71d1ec"
+      },
+      "evidence": [
+        {
+          "line": 9,
+          "paragraph": 5,
+          "text": "Glass breaking, over at the clerk's office."
+        },
+        {
+          "line": 27,
+          "paragraph": 14,
+          "text": "I heard glass breaking in the clerk's office just now."
+        },
+        {
+          "line": 15,
+          "paragraph": 8,
+          "text": "Mara: There's enough oil now to keep the tower burning till morning."
+        },
+        {
+          "line": 21,
+          "paragraph": 11,
+          "text": "Mara: Your oil kept the tower burning while we were gone."
+        }
+      ],
+      "why": "A pinned local sentence-embedding model found high semantic similarity despite lower word overlap. This is evidence of possible paraphrastic recap, not authorship.",
+      "direction": "Check whether the later sentence changes the claim, evidence, consequence, or audience decision. Merge it if it only rephrases the earlier move."
+    }
+  ],
+  "semanticQuestions": [
+    {
+      "id": "thematic-overdetermination",
+      "question": "Does narration or dialogue state the theme or moral instead of leaving the reader room to infer it?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "causal-streamlining",
+      "question": "Is the plot one continuous chain with too few independent pressures, subplots, reversals, or loose ends for this story?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "tidy-resolution",
+      "question": "Does the protagonist control the resolution and arrive at a complete internal lesson too neatly?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "embodied-performativity",
+      "question": "Do bodily sensation, sensory detail, or setting repeatedly perform emotions that the scene already establishes?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "temporal-recontextualization",
+      "question": "Do revelation and time structure ever change how earlier events are understood, or only disclose the next fact?",
+      "requiresCitedSpan": true
+    },
+    {
+      "id": "moral-ambiguity",
+      "question": "Does the narrative allow consequential choices to remain morally mixed?",
+      "requiresCitedSpan": true
+    }
+  ]
+}

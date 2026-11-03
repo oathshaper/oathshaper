@@ -1,0 +1,11 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = "4.3"
+
+[libraries]
+macos.debug = "res://bin/liboathshaper_godot.dylib"
+macos.release = "res://bin/liboathshaper_godot.dylib"
+linux.debug.x86_64 = "res://bin/liboathshaper_godot.so"
+linux.release.x86_64 = "res://bin/liboathshaper_godot.so"
+windows.debug.x86_64 = "res://bin/oathshaper_godot.dll"
+windows.release.x86_64 = "res://bin/oathshaper_godot.dll"

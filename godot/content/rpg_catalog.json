@@ -1,0 +1,2694 @@
+{
+  "schema": 1,
+  "status": "design_preview",
+  "actors": [
+    {
+      "id": "player",
+      "name": "Tessa Ward",
+      "short": "Tessa",
+      "portrait": "player"
+    },
+    {
+      "id": "mara",
+      "name": "Mara",
+      "short": "Mara",
+      "portrait": "mara"
+    },
+    {
+      "id": "ivo",
+      "name": "Ivo",
+      "short": "Ivo",
+      "portrait": "ivo"
+    },
+    {
+      "id": "clerk",
+      "name": "Civic clerk",
+      "short": "Clerk",
+      "portrait": "clerk"
+    }
+  ],
+  "profiles": {
+    "command": {
+      "name": "Command",
+      "inventory": "Shared categorized list · no weight penalty; proficiency and armor restrictions still apply.",
+      "coverage": "Weapon specialist, scout, infiltrator, melee mystic, power specialist, balanced investigator. Four builds shown.",
+      "hud": "Three portraits · actor action bar · current action and future queue · manual / contact pause",
+      "builds": {
+        "player": {
+          "role": "Duelist",
+          "resources": {
+            "Health": 120,
+            "Focus": 30
+          },
+          "skills": [
+            "Blades III",
+            "Evasion II",
+            "Diplomacy I"
+          ],
+          "loop": "Hold a target, bait a strike, then commit a riposte.",
+          "weakness": "Limited area control; exposed while committing a lunge.",
+          "progression": "Weapon feats or broader investigation skills.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Harbor sabre",
+              "detail": "One hand · melee training"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Buckler",
+              "detail": "Enables shield response"
+            },
+            {
+              "slot": "Armor",
+              "name": "Corsair coat",
+              "detail": "Light · compatible with minor powers"
+            },
+            {
+              "slot": "Focus",
+              "name": "Storm lens",
+              "detail": "Grants Gust while equipped"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Navigator seal",
+              "detail": "Awareness bonus"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Field dressing ×3",
+              "detail": "Shared consumable"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Lunge",
+              "cost": "1 queued order",
+              "source": "Learned · Blades",
+              "effect": "Close distance and attack one target."
+            },
+            {
+              "name": "Riposte",
+              "cost": "1 queued order · after guard",
+              "source": "Learned · Evasion",
+              "effect": "Exploit a blocked strike."
+            },
+            {
+              "name": "Gust",
+              "cost": "1 queued order + 12 focus",
+              "source": "Equipped · Storm lens",
+              "effect": "Push a nearby target."
+            },
+            {
+              "name": "Brace",
+              "cost": "1 queued order",
+              "source": "Equipped · Buckler",
+              "effect": "Reduce the next frontal hit."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Storm mystic",
+          "resources": {
+            "Health": 85,
+            "Focus": 90
+          },
+          "skills": [
+            "Power control III",
+            "Medicine II",
+            "Insight II"
+          ],
+          "loop": "Bind a group, create distance, then choose recovery or damage.",
+          "weakness": "Fragile armor; healing competes with control for Focus.",
+          "progression": "Invest in control duration or recovery efficiency.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Reed staff",
+              "detail": "Two hands · channeling"
+            },
+            {
+              "slot": "Armor",
+              "name": "Tideweave robe",
+              "detail": "Casting compatible"
+            },
+            {
+              "slot": "Focus",
+              "name": "Stormglass focus",
+              "detail": "Improves learned power reach"
+            },
+            {
+              "slot": "Head",
+              "name": "Sage circlet",
+              "detail": "Concentration"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Scholar seal",
+              "detail": "Insight"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Focus draught ×2",
+              "detail": "Limited recovery"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Gale lance",
+              "cost": "1 order + 10 focus",
+              "source": "Learned · Power",
+              "effect": "Ranged single-target force."
+            },
+            {
+              "name": "Binding current",
+              "cost": "1 order + 18 focus",
+              "source": "Learned · Control",
+              "effect": "Hold a small group in place."
+            },
+            {
+              "name": "Mending mist",
+              "cost": "1 order + 16 focus",
+              "source": "Learned · Medicine",
+              "effect": "Restore one ally."
+            },
+            {
+              "name": "Storm veil",
+              "cost": "1 order + 20 focus",
+              "source": "Learned · Defense",
+              "effect": "Protect allies from ranged pressure."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Bulwark",
+          "resources": {
+            "Health": 170,
+            "Focus": 0
+          },
+          "skills": [
+            "Shields III",
+            "Armor III",
+            "Survival I"
+          ],
+          "loop": "Hold a lane and protect the ally the enemy is pressuring.",
+          "weakness": "Low mobility and no supernatural powers.",
+          "progression": "Shield feats, heavy armor or ranged suppression.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Watch mace",
+              "detail": "One hand · impact"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Tower shield",
+              "detail": "Interpose coverage"
+            },
+            {
+              "slot": "Armor",
+              "name": "Harbor mail",
+              "detail": "Heavy; restricts some powers"
+            },
+            {
+              "slot": "Head",
+              "name": "Watch helm",
+              "detail": "Physical defense"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Watch badge",
+              "detail": "Resolve"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Trauma kit ×2",
+              "detail": "Shared recovery"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Shield drive",
+              "cost": "1 order",
+              "source": "Learned · Shields",
+              "effect": "Push a nearby attacker."
+            },
+            {
+              "name": "Interpose",
+              "cost": "1 order + shield",
+              "source": "Learned · Defense",
+              "effect": "Guard an adjacent ally."
+            },
+            {
+              "name": "Rally",
+              "cost": "1 order",
+              "source": "Learned · Leadership",
+              "effect": "Help allies resist disruption."
+            },
+            {
+              "name": "Anchor stance",
+              "cost": "1 order · stance",
+              "source": "Learned · Armor",
+              "effect": "Trade movement for stability."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Pathfinder",
+          "resources": {
+            "Health": 95,
+            "Focus": 0
+          },
+          "skills": [
+            "Devices III",
+            "Marksmanship II",
+            "Lore III"
+          ],
+          "loop": "Expose a weakness and disable a device before a precision shot.",
+          "weakness": "Poor sustained defense; utility needs valid targets.",
+          "progression": "Device access, ranged feats or investigation.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Light crossbow",
+              "detail": "Two hands · precision"
+            },
+            {
+              "slot": "Armor",
+              "name": "Scout leathers",
+              "detail": "Light"
+            },
+            {
+              "slot": "Head",
+              "name": "Survey visor",
+              "detail": "Device detection"
+            },
+            {
+              "slot": "Tool",
+              "name": "Survey tool",
+              "detail": "Device interaction"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Trail signet",
+              "detail": "Awareness"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Smoke vial ×2",
+              "detail": "Consumable escape"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Pinning bolt",
+              "cost": "1 order",
+              "source": "Learned · Marksmanship",
+              "effect": "Slow one target."
+            },
+            {
+              "name": "Disrupt device",
+              "cost": "1 order · valid device",
+              "source": "Tool · Survey tool",
+              "effect": "Temporarily disable a device."
+            },
+            {
+              "name": "Expose weakness",
+              "cost": "1 order",
+              "source": "Learned · Lore",
+              "effect": "Mark a vulnerability for allies."
+            },
+            {
+              "name": "Smoke retreat",
+              "cost": "1 order + smoke vial",
+              "source": "Consumable",
+              "effect": "Break sight and reposition."
+            }
+          ]
+        }
+      }
+    },
+    "flow": {
+      "name": "Flow",
+      "inventory": "Styles library + amulet and gems · learned styles are not bag items; no generic armor grid.",
+      "coverage": "Martial, magic, weapon, support and transformation styles. Build emphasis never locks out cross-training.",
+      "hud": "Four-slot style diamond on left · Health / Chi / Focus · block / heal · follower Attack / Support",
+      "builds": {
+        "player": {
+          "role": "Stone disciple · Martial",
+          "resources": {
+            "Health": 160,
+            "Chi": 45,
+            "Focus": 55
+          },
+          "skills": [
+            "Martial III",
+            "Support I",
+            "Intimidation II"
+          ],
+          "loop": "Read a guard, interrupt, then use a martial finisher.",
+          "weakness": "Must close distance; Chi enhancement competes with healing.",
+          "progression": "Style points into speed, damage or efficiency; cross-train freely.",
+          "gear": [
+            {
+              "slot": "Martial style",
+              "name": "Stone palm",
+              "detail": "Training · no basic resource cost"
+            },
+            {
+              "slot": "Weapon style",
+              "name": "Harbor blade",
+              "detail": "Attacks spend Focus"
+            },
+            {
+              "slot": "Magic style",
+              "name": "Gale hand",
+              "detail": "Attacks spend Chi"
+            },
+            {
+              "slot": "Support style",
+              "name": "Still water",
+              "detail": "Setup and control"
+            },
+            {
+              "slot": "Amulet",
+              "name": "Tideglass amulet",
+              "detail": "Two gem sockets"
+            },
+            {
+              "slot": "Gem",
+              "name": "Stone charm",
+              "detail": "Passive attribute effect"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Palm chain",
+              "cost": "Basic attack",
+              "source": "Martial · Stone palm",
+              "effect": "Fast close strikes."
+            },
+            {
+              "name": "Guard breaker",
+              "cost": "Power attack · wind-up",
+              "source": "Martial · Stone palm",
+              "effect": "Break a block; vulnerable to interruption."
+            },
+            {
+              "name": "Still water",
+              "cost": "Support setup",
+              "source": "Support style",
+              "effect": "Create a brief finisher opening."
+            },
+            {
+              "name": "Counter palm",
+              "cost": "Valid setup window",
+              "source": "Martial finisher",
+              "effect": "Exploit the support opening."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Gale sage · Magic",
+          "resources": {
+            "Health": 95,
+            "Chi": 110,
+            "Focus": 40
+          },
+          "skills": [
+            "Magic III",
+            "Medicine II",
+            "Intuition II"
+          ],
+          "loop": "Control space with Chi, then return to martial attacks to conserve it.",
+          "weakness": "Chi exhaustion removes both casting and healing options.",
+          "progression": "Develop elemental styles, control duration or Chi economy.",
+          "gear": [
+            {
+              "slot": "Martial style",
+              "name": "Reed palm",
+              "detail": "Training · no basic resource cost"
+            },
+            {
+              "slot": "Weapon style",
+              "name": "Willow staff",
+              "detail": "Attacks spend Focus"
+            },
+            {
+              "slot": "Magic style",
+              "name": "Gale hand",
+              "detail": "Attacks spend Chi"
+            },
+            {
+              "slot": "Support style",
+              "name": "River stillness",
+              "detail": "Setup and control"
+            },
+            {
+              "slot": "Amulet",
+              "name": "Tideglass amulet",
+              "detail": "Two gem sockets"
+            },
+            {
+              "slot": "Gem",
+              "name": "Rain charm",
+              "detail": "Passive attribute effect"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Gale spiral",
+              "cost": "12 Chi",
+              "source": "Magic style",
+              "effect": "Area displacement."
+            },
+            {
+              "name": "Spirit lance",
+              "cost": "8 Chi",
+              "source": "Magic style",
+              "effect": "Focused ranged attack."
+            },
+            {
+              "name": "River stillness",
+              "cost": "Support setup",
+              "source": "Support style",
+              "effect": "Slow a target for a finisher."
+            },
+            {
+              "name": "Reed palm",
+              "cost": "Basic attack",
+              "source": "Martial style",
+              "effect": "Resource-free close fallback."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Blade dancer · Focus",
+          "resources": {
+            "Health": 120,
+            "Chi": 45,
+            "Focus": 110
+          },
+          "skills": [
+            "Weapon styles III",
+            "Acrobatics II",
+            "Charm I"
+          ],
+          "loop": "Use weapon reach, then switch back before Focus runs dry.",
+          "weakness": "Weapon attacks and time-slowing Focus mode share a reserve.",
+          "progression": "Weapon efficiency, reach or martial backup.",
+          "gear": [
+            {
+              "slot": "Martial style",
+              "name": "Crane palm",
+              "detail": "Training · no basic resource cost"
+            },
+            {
+              "slot": "Weapon style",
+              "name": "Whirling staff",
+              "detail": "Attacks spend Focus"
+            },
+            {
+              "slot": "Magic style",
+              "name": "Spark hand",
+              "detail": "Attacks spend Chi"
+            },
+            {
+              "slot": "Support style",
+              "name": "Feather step",
+              "detail": "Setup and control"
+            },
+            {
+              "slot": "Amulet",
+              "name": "Tideglass amulet",
+              "detail": "Two gem sockets"
+            },
+            {
+              "slot": "Gem",
+              "name": "Hawk charm",
+              "detail": "Passive attribute effect"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Staff sweep",
+              "cost": "6 Focus",
+              "source": "Weapon style",
+              "effect": "Reach across a nearby group."
+            },
+            {
+              "name": "Vaulting cut",
+              "cost": "10 Focus",
+              "source": "Weapon style",
+              "effect": "Commit to a strong overhead attack."
+            },
+            {
+              "name": "Feather step",
+              "cost": "Support setup",
+              "source": "Support style",
+              "effect": "Create space for a weapon follow-up."
+            },
+            {
+              "name": "Crane palm",
+              "cost": "Basic attack",
+              "source": "Martial style",
+              "effect": "Keep fighting without Focus."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Storm adept · Hybrid",
+          "resources": {
+            "Health": 120,
+            "Chi": 75,
+            "Focus": 75
+          },
+          "skills": [
+            "Martial II",
+            "Magic II",
+            "Support II",
+            "Intuition II"
+          ],
+          "loop": "Apply a support setup, finish in melee, then cast only when needed.",
+          "weakness": "Less early specialization; more style switching to manage.",
+          "progression": "Broaden combinations or specialize one trained style.",
+          "gear": [
+            {
+              "slot": "Martial style",
+              "name": "Thunder palm",
+              "detail": "Training · no basic resource cost"
+            },
+            {
+              "slot": "Weapon style",
+              "name": "Signal staff",
+              "detail": "Attacks spend Focus"
+            },
+            {
+              "slot": "Magic style",
+              "name": "Gale hand",
+              "detail": "Attacks spend Chi"
+            },
+            {
+              "slot": "Support style",
+              "name": "Quiet current",
+              "detail": "Setup and control"
+            },
+            {
+              "slot": "Amulet",
+              "name": "Tideglass amulet",
+              "detail": "Two gem sockets"
+            },
+            {
+              "slot": "Gem",
+              "name": "Duality charm",
+              "detail": "Passive attribute effect"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Quiet current",
+              "cost": "Support setup",
+              "source": "Support style",
+              "effect": "Open a controlled finisher window."
+            },
+            {
+              "name": "Thunder palm",
+              "cost": "Valid setup window",
+              "source": "Martial finisher",
+              "effect": "Convert control into damage."
+            },
+            {
+              "name": "Gale hand",
+              "cost": "10 Chi",
+              "source": "Magic style",
+              "effect": "Reach a distant target."
+            },
+            {
+              "name": "Staff ward",
+              "cost": "5 Focus",
+              "source": "Weapon style",
+              "effect": "Deflect while closing distance."
+            }
+          ]
+        }
+      },
+      "common_actions": [
+        {
+          "name": "Block / evade",
+          "cost": "Direct input",
+          "source": "Common",
+          "effect": "Respond to attacks."
+        },
+        {
+          "name": "Chi heal",
+          "cost": "Chi over time",
+          "source": "Common",
+          "effect": "Trade casting resource for health."
+        },
+        {
+          "name": "Focus mode",
+          "cost": "Focus drain",
+          "source": "Common",
+          "effect": "Slow opponents; competes with weapon use."
+        },
+        {
+          "name": "Chi enhancement",
+          "cost": "Chi per enhanced strike",
+          "source": "Common",
+          "effect": "Toggle additional martial power."
+        }
+      ]
+    },
+    "vanguard": {
+      "name": "Vanguard",
+      "inventory": "Squad equipment lists · weapon / armor / tool / amplifier eligibility; heat preset, no weight penalty.",
+      "coverage": "Combat, Tech, Biotic; Combat+Tech Saboteur and Combat+Biotic Stormbreaker still need builds; Tech+Biotic shown.",
+      "hud": "Aim and cover · health / shields · heat · squad power wheel · cooldowns",
+      "builds": {
+        "player": {
+          "role": "Breacher · Combat",
+          "resources": {
+            "Health": 160,
+            "Shields": 150,
+            "Weapon heat": 0
+          },
+          "skills": [
+            "Firearms III",
+            "Close quarters III",
+            "Armor III"
+          ],
+          "loop": "Use the right firearm, close safely, then apply a melee response.",
+          "weakness": "Limited battlefield control; depends on squad powers.",
+          "progression": "Firearm training, resilience and close-range talents.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Arc shotgun",
+              "detail": "Heat-based close-range firearm"
+            },
+            {
+              "slot": "Secondary",
+              "name": "Service carbine",
+              "detail": "Heat-based ranged alternative"
+            },
+            {
+              "slot": "Armor",
+              "name": "Assault harness",
+              "detail": "Heavy combat training"
+            },
+            {
+              "slot": "Defense",
+              "name": "Aegis cell",
+              "detail": "Shield capacity"
+            },
+            {
+              "slot": "Module",
+              "name": "Heat sink",
+              "detail": "Cooling versus burst tradeoff"
+            },
+            {
+              "slot": "Supply",
+              "name": "Trauma gel ×3",
+              "detail": "Shared healing"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Breach strike",
+              "cost": "Melee · recovery",
+              "source": "Combat training",
+              "effect": "Close-range impact response."
+            },
+            {
+              "name": "Concussive shot",
+              "cost": "8 s cooldown",
+              "source": "Combat talent",
+              "effect": "Disrupt a vulnerable target."
+            },
+            {
+              "name": "Fortify",
+              "cost": "16 s cooldown",
+              "source": "Combat talent",
+              "effect": "Temporary damage resistance."
+            },
+            {
+              "name": "Suppress",
+              "cost": "Weapon heat",
+              "source": "Firearm",
+              "effect": "Keep pressure on a lane."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Field engineer · Tech",
+          "resources": {
+            "Health": 95,
+            "Shields": 110,
+            "Weapon heat": 0
+          },
+          "skills": [
+            "Engineering III",
+            "Electronics III",
+            "Medicine II"
+          ],
+          "loop": "Strip a shield or disable a weapon, then support a squadmate.",
+          "weakness": "Light protection and limited weapon training.",
+          "progression": "Tech disruption, medical recovery or tool efficiency.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Signal pistol",
+              "detail": "Heat-based sidearm"
+            },
+            {
+              "slot": "Armor",
+              "name": "Engineer harness",
+              "detail": "Light tech armor"
+            },
+            {
+              "slot": "Tool",
+              "name": "Pulse tool",
+              "detail": "Tech power eligibility"
+            },
+            {
+              "slot": "Defense",
+              "name": "Recovery cell",
+              "detail": "Faster shield recovery"
+            },
+            {
+              "slot": "Module",
+              "name": "Pulse coil",
+              "detail": "Disruption potency"
+            },
+            {
+              "slot": "Supply",
+              "name": "Repair gel ×3",
+              "detail": "Finite support supply"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Sabotage",
+              "cost": "10 s cooldown",
+              "source": "Learned · Tech",
+              "effect": "Disable enemy weapon operation."
+            },
+            {
+              "name": "Arc overload",
+              "cost": "8 s cooldown",
+              "source": "Learned · Tech",
+              "effect": "Damage a shield layer."
+            },
+            {
+              "name": "Shield repair",
+              "cost": "14 s cooldown",
+              "source": "Learned · Engineering",
+              "effect": "Restore an ally's shielding."
+            },
+            {
+              "name": "Device bypass",
+              "cost": "Valid device · utility",
+              "source": "Tool · Pulse tool",
+              "effect": "Open a technical interaction."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Gravitic adept · Biotic",
+          "resources": {
+            "Health": 90,
+            "Shields": 85,
+            "Weapon heat": 0
+          },
+          "skills": [
+            "Biotic control III",
+            "Amplification III",
+            "Resolve II"
+          ],
+          "loop": "Suspend or displace enemies so the squad can exploit the opening.",
+          "weakness": "Low durability; some defended targets resist control.",
+          "progression": "Control duration, area coverage or protective barriers.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Light pistol",
+              "detail": "Basic firearm"
+            },
+            {
+              "slot": "Armor",
+              "name": "Adept harness",
+              "detail": "Light amplifier-compatible armor"
+            },
+            {
+              "slot": "Amplifier",
+              "name": "Mass lens",
+              "detail": "Biotic power scaling"
+            },
+            {
+              "slot": "Defense",
+              "name": "Ward emitter",
+              "detail": "Barrier support"
+            },
+            {
+              "slot": "Module",
+              "name": "Focusing ring",
+              "detail": "Control precision"
+            },
+            {
+              "slot": "Supply",
+              "name": "Trauma gel ×2",
+              "detail": "Shared recovery"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Lift",
+              "cost": "10 s cooldown",
+              "source": "Learned · Biotic",
+              "effect": "Suspend a valid target."
+            },
+            {
+              "name": "Gravity well",
+              "cost": "18 s cooldown",
+              "source": "Learned · Biotic",
+              "effect": "Pull a small group together."
+            },
+            {
+              "name": "Kinetic barrier",
+              "cost": "14 s cooldown",
+              "source": "Learned · Biotic",
+              "effect": "Protect against incoming fire."
+            },
+            {
+              "name": "Warp lance",
+              "cost": "12 s cooldown",
+              "source": "Learned · Biotic",
+              "effect": "Apply persistent disruptive damage."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Storm sentinel · Tech + Biotic",
+          "resources": {
+            "Health": 110,
+            "Shields": 130,
+            "Weapon heat": 0
+          },
+          "skills": [
+            "Engineering II",
+            "Biotics II",
+            "Medicine II"
+          ],
+          "loop": "Alternate shield disruption and barrier support around ally cooldowns.",
+          "weakness": "Narrow weapon training and less specialist power depth.",
+          "progression": "Choose a tech or biotic branch without gaining every specialist talent.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Field pistol",
+              "detail": "Limited firearm training"
+            },
+            {
+              "slot": "Armor",
+              "name": "Sentinel harness",
+              "detail": "Hybrid compatibility"
+            },
+            {
+              "slot": "Tool",
+              "name": "Concord processor",
+              "detail": "Tech eligibility"
+            },
+            {
+              "slot": "Amplifier",
+              "name": "Ward lens",
+              "detail": "Biotic eligibility"
+            },
+            {
+              "slot": "Defense",
+              "name": "Reactive capacitor",
+              "detail": "Defensive recovery"
+            },
+            {
+              "slot": "Supply",
+              "name": "Recovery gel ×2",
+              "detail": "Shared recovery"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Disrupt",
+              "cost": "10 s cooldown",
+              "source": "Learned · Tech",
+              "effect": "Weaken a defense layer."
+            },
+            {
+              "name": "Barrier pulse",
+              "cost": "14 s cooldown",
+              "source": "Learned · Biotic",
+              "effect": "Shield an ally."
+            },
+            {
+              "name": "Kinetic throw",
+              "cost": "12 s cooldown",
+              "source": "Learned · Biotic",
+              "effect": "Displace a valid target."
+            },
+            {
+              "name": "Triage",
+              "cost": "18 s cooldown + gel",
+              "source": "Learned · Medicine",
+              "effect": "Recover a threatened ally."
+            }
+          ]
+        }
+      }
+    },
+    "tactics": {
+      "name": "Tactics",
+      "inventory": "Actor grid/list view · PF2-inspired Bulk, held / worn / stowed access; no kilogram substitution.",
+      "coverage": "Fighter, prepared caster, skill specialist and divine warden shown; additional class families and SF2 pack pending.",
+      "hud": "Initiative · inspectable party · three actions / reaction · path cost · End Turn",
+      "builds": {
+        "player": {
+          "role": "Shield fighter",
+          "resources": {
+            "Health": 42,
+            "Actions": 3,
+            "Reaction": 1
+          },
+          "skills": [
+            "Weapons: expert",
+            "Athletics: trained",
+            "Armor: trained"
+          ],
+          "loop": "Stride into a lane, strike, and decide whether to raise the shield.",
+          "weakness": "Action costs prevent attacking, moving and defending without tradeoffs.",
+          "progression": "Class feats, weapon proficiency and defensive reactions.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Harbor sword",
+              "detail": "One-handed Strike"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Training shield",
+              "detail": "Raise Shield and block eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Ring mail",
+              "detail": "Armor proficiency required"
+            },
+            {
+              "slot": "Worn",
+              "name": "Strength belt",
+              "detail": "Attribute effect"
+            },
+            {
+              "slot": "Stowed",
+              "name": "Travel kit",
+              "detail": "Retrieval cost"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Field dressing",
+              "detail": "Draw/use follow adapter rules"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Stride",
+              "cost": "1 action",
+              "source": "Basic action",
+              "effect": "Move up to allowed distance."
+            },
+            {
+              "name": "Strike",
+              "cost": "1 action · attack penalty applies",
+              "source": "Weapon",
+              "effect": "Attack one target."
+            },
+            {
+              "name": "Raise shield",
+              "cost": "1 action",
+              "source": "Shield",
+              "effect": "Gain shield defense."
+            },
+            {
+              "name": "Shield block",
+              "cost": "Reaction · shield raised",
+              "source": "Learned feat",
+              "effect": "Reduce a qualifying hit."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Prepared elementalist",
+          "resources": {
+            "Health": 26,
+            "Actions": 3,
+            "Reaction": 1,
+            "Rank 1 slots": 3
+          },
+          "skills": [
+            "Arcana: trained",
+            "Spellcasting: trained",
+            "Lore: trained"
+          ],
+          "loop": "Prepare a limited spell selection; use cantrips when conserving slots.",
+          "weakness": "Low armor; preparation limits today's options.",
+          "progression": "Spell ranks, prepared choices and school feats.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Ash staff",
+              "detail": "Two hands"
+            },
+            {
+              "slot": "Armor",
+              "name": "Linen robes",
+              "detail": "Unarmored defense"
+            },
+            {
+              "slot": "Book",
+              "name": "Runic tome",
+              "detail": "Preparation record; not a held shield"
+            },
+            {
+              "slot": "Prepared",
+              "name": "Gust line",
+              "detail": "Rank 1 slot"
+            },
+            {
+              "slot": "Prepared",
+              "name": "Flame ward",
+              "detail": "Rank 1 slot"
+            },
+            {
+              "slot": "Worn",
+              "name": "Component pouch",
+              "detail": "Casting requirements"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Cinder cantrip",
+              "cost": "2 actions",
+              "source": "Prepared cantrip",
+              "effect": "Repeatable ranged magic."
+            },
+            {
+              "name": "Gust line",
+              "cost": "2 actions + rank 1 slot",
+              "source": "Prepared spell",
+              "effect": "Affect targets in a line."
+            },
+            {
+              "name": "Flame ward",
+              "cost": "2 actions + rank 1 slot",
+              "source": "Prepared spell",
+              "effect": "Protect one ally."
+            },
+            {
+              "name": "Recall knowledge",
+              "cost": "1 action",
+              "source": "Arcana / Lore",
+              "effect": "Inspect an unfamiliar threat."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Skirmisher",
+          "resources": {
+            "Health": 32,
+            "Actions": 3,
+            "Reaction": 1
+          },
+          "skills": [
+            "Stealth: expert",
+            "Thievery: trained",
+            "Finesse weapons: trained"
+          ],
+          "loop": "Create an opening, strike precisely, then reposition.",
+          "weakness": "Precision needs a valid opening; cannot absorb sustained hits.",
+          "progression": "Skill feats, evasive reactions and precision progression.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Dueling knife",
+              "detail": "Finesse"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Throwing knife",
+              "detail": "Thrown alternative"
+            },
+            {
+              "slot": "Armor",
+              "name": "Soft leathers",
+              "detail": "Light"
+            },
+            {
+              "slot": "Worn",
+              "name": "Thieves' tools",
+              "detail": "Device access"
+            },
+            {
+              "slot": "Worn",
+              "name": "Lucky charm",
+              "detail": "Situational bonus"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Antidote",
+              "detail": "Consumable"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Feint",
+              "cost": "1 action",
+              "source": "Skill · Deception",
+              "effect": "Create a precision opening."
+            },
+            {
+              "name": "Precise strike",
+              "cost": "1 action · qualifying target",
+              "source": "Weapon + class feature",
+              "effect": "Apply precision when eligible."
+            },
+            {
+              "name": "Step",
+              "cost": "1 action",
+              "source": "Basic action",
+              "effect": "Careful short reposition."
+            },
+            {
+              "name": "Disable device",
+              "cost": "Actions depend on device",
+              "source": "Skill + tools",
+              "effect": "Attempt a technical obstacle."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Divine warden",
+          "resources": {
+            "Health": 36,
+            "Actions": 3,
+            "Reaction": 1,
+            "Rank 1 slots": 3,
+            "Focus uses": 1
+          },
+          "skills": [
+            "Religion: trained",
+            "Medicine: expert",
+            "Armor: trained"
+          ],
+          "loop": "Choose between recovery, a ward and direct contribution.",
+          "weakness": "Limited slots and action economy; cannot heal everyone every turn.",
+          "progression": "Divine preparation, medicine feats and protective reactions.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Oak mace",
+              "detail": "One hand"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Ward shield",
+              "detail": "Raise Shield"
+            },
+            {
+              "slot": "Armor",
+              "name": "Warden mail",
+              "detail": "Training required"
+            },
+            {
+              "slot": "Focus",
+              "name": "Oath emblem",
+              "detail": "Divine casting"
+            },
+            {
+              "slot": "Worn",
+              "name": "Healer's tools",
+              "detail": "Medicine"
+            },
+            {
+              "slot": "Prepared",
+              "name": "Restoration",
+              "detail": "Limited spell slots"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Mend",
+              "cost": "2 actions + rank 1 slot",
+              "source": "Prepared divine spell",
+              "effect": "Restore one ally."
+            },
+            {
+              "name": "Protect",
+              "cost": "1 action + focus use",
+              "source": "Learned focus power",
+              "effect": "Brief protective ward."
+            },
+            {
+              "name": "Battle medicine",
+              "cost": "1 action · target immunity applies",
+              "source": "Medicine feat",
+              "effect": "Emergency recovery with a per-target limit."
+            },
+            {
+              "name": "Raise shield",
+              "cost": "1 action",
+              "source": "Shield",
+              "effect": "Improve personal defense."
+            }
+          ]
+        }
+      }
+    },
+    "oathbound": {
+      "name": "Oathbound",
+      "inventory": "Shared filtered list · expandable stack capacity; armor fatigue and two weapon sets.",
+      "coverage": "Warrior / Rogue / Mage plus specializations; Spellwarden is a mage specialization, not a fourth class.",
+      "hud": "Four portraits · pause · quickbar / two-layer shortcuts · ordered tactics · hold / follow",
+      "builds": {
+        "player": {
+          "role": "Warrior · Ashguard",
+          "resources": {
+            "Health": 180,
+            "Stamina": 100
+          },
+          "skills": [
+            "Shield talents III",
+            "Combat training III",
+            "Coercion I"
+          ],
+          "loop": "Hold a choke and keep attention off the caster.",
+          "weakness": "Heavy armor increases effective ability costs.",
+          "progression": "Warrior talents → protective or aggressive specialization.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Ashguard sword",
+              "detail": "Weapon set A"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Kite shield",
+              "detail": "Shield talents"
+            },
+            {
+              "slot": "Armor",
+              "name": "Worn mail",
+              "detail": "Protection with fatigue"
+            },
+            {
+              "slot": "Alternate",
+              "name": "Watch crossbow",
+              "detail": "Weapon set B · two hands"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Iron ring",
+              "detail": "Constitution"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Groundleaf salve ×3",
+              "detail": "Party supply"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Shield bash",
+              "cost": "20 stamina · cooldown",
+              "source": "Learned talent",
+              "effect": "Interrupt a nearby foe."
+            },
+            {
+              "name": "Threatening call",
+              "cost": "25 stamina · cooldown",
+              "source": "Learned talent",
+              "effect": "Draw nearby attention."
+            },
+            {
+              "name": "Fortify",
+              "cost": "Reserve 20 stamina",
+              "source": "Sustained talent",
+              "effect": "Defense while reducing usable stamina."
+            },
+            {
+              "name": "Pommel strike",
+              "cost": "15 stamina · cooldown",
+              "source": "Learned weapon talent",
+              "effect": "Disorient one target."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Mage · Cinder scholar",
+          "resources": {
+            "Health": 95,
+            "Mana": 140
+          },
+          "skills": [
+            "Elemental III",
+            "Healing I",
+            "Herbalism II"
+          ],
+          "loop": "Place control areas carefully, then choose offense or healing.",
+          "weakness": "Low physical protection; area spells may threaten allies.",
+          "progression": "Spell chains → control, healing or risky-resource specialization.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Cinder staff",
+              "detail": "Two hands · basic projectile"
+            },
+            {
+              "slot": "Armor",
+              "name": "Ember robes",
+              "detail": "Low fatigue"
+            },
+            {
+              "slot": "Head",
+              "name": "Scholar hood",
+              "detail": "Spell potency"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Mana band",
+              "detail": "Resource capacity"
+            },
+            {
+              "slot": "Neck",
+              "name": "Ash catalyst",
+              "detail": "Elemental affinity"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Mana tonic ×2",
+              "detail": "Finite recovery"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Staff bolt",
+              "cost": "Basic attack",
+              "source": "Equipped staff",
+              "effect": "Attack without spending mana."
+            },
+            {
+              "name": "Mend",
+              "cost": "20 mana · cooldown",
+              "source": "Learned spell",
+              "effect": "Restore one ally."
+            },
+            {
+              "name": "Cinder storm",
+              "cost": "35 mana · cooldown",
+              "source": "Learned spell",
+              "effect": "Area damage with preview."
+            },
+            {
+              "name": "Barrier",
+              "cost": "Reserve 30 mana",
+              "source": "Sustained spell",
+              "effect": "Protect while reducing casting reserve."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Rogue · Shadow scout",
+          "resources": {
+            "Health": 120,
+            "Stamina": 110
+          },
+          "skills": [
+            "Dual weapons III",
+            "Devices III",
+            "Stealth II"
+          ],
+          "loop": "Reach a flank, exploit it, then escape retaliation.",
+          "weakness": "Positional requirements and weaker frontal defense.",
+          "progression": "Rogue talents → assassin, duelist, support or companion specialization.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Needle dagger",
+              "detail": "Precision"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Parrying dagger",
+              "detail": "Dual-weapon training"
+            },
+            {
+              "slot": "Armor",
+              "name": "Shadow leathers",
+              "detail": "Low fatigue"
+            },
+            {
+              "slot": "Alternate",
+              "name": "Scout bow",
+              "detail": "Weapon set B"
+            },
+            {
+              "slot": "Tool",
+              "name": "Lockpick roll",
+              "detail": "Device skill"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Smoke flask ×2",
+              "detail": "Limited escape"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Backstab",
+              "cost": "Basic attack · valid flank",
+              "source": "Class feature",
+              "effect": "Positional precision damage."
+            },
+            {
+              "name": "Expose armor",
+              "cost": "20 stamina · cooldown",
+              "source": "Learned talent",
+              "effect": "Help the party damage a target."
+            },
+            {
+              "name": "Stealth",
+              "cost": "Sustained · detection rules",
+              "source": "Learned talent",
+              "effect": "Approach without immediate notice."
+            },
+            {
+              "name": "Trap line",
+              "cost": "Trap item + setup time",
+              "source": "Skill + consumable",
+              "effect": "Prepare a chokepoint."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Mage · Spellwarden specialization",
+          "resources": {
+            "Health": 135,
+            "Mana": 110,
+            "Reserved mana": 30
+          },
+          "skills": [
+            "Spellcraft II",
+            "Warding III",
+            "Martial specialization I"
+          ],
+          "loop": "Maintain a ward, hold a position, and reserve enough mana to recover an ally.",
+          "weakness": "Sustained defense and armor fatigue reduce casting freedom.",
+          "progression": "Mage progression with martial specialization requirements.",
+          "gear": [
+            {
+              "slot": "Main hand",
+              "name": "Runed sword",
+              "detail": "Specialization eligibility"
+            },
+            {
+              "slot": "Offhand",
+              "name": "Ward shield",
+              "detail": "Martial specialization"
+            },
+            {
+              "slot": "Armor",
+              "name": "Spellwarden mail",
+              "detail": "Fatigue applies"
+            },
+            {
+              "slot": "Alternate",
+              "name": "Lumen staff",
+              "detail": "Weapon set B"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Aegis ring",
+              "detail": "Ward efficiency"
+            },
+            {
+              "slot": "Quick item",
+              "name": "Recovery salve ×2",
+              "detail": "Party supply"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Arc slash",
+              "cost": "15 mana · cooldown",
+              "source": "Specialization talent",
+              "effect": "Magically empowered melee."
+            },
+            {
+              "name": "Guardian pulse",
+              "cost": "25 mana · cooldown",
+              "source": "Learned spell",
+              "effect": "Protect nearby allies."
+            },
+            {
+              "name": "Spell shield",
+              "cost": "Reserve 30 mana",
+              "source": "Sustained specialization",
+              "effect": "Maintain personal protection."
+            },
+            {
+              "name": "Renewal",
+              "cost": "22 mana · cooldown",
+              "source": "Learned spell",
+              "effect": "Recover a single ally."
+            }
+          ]
+        }
+      }
+    },
+    "momentum": {
+      "name": "Momentum",
+      "inventory": "Item list + linked socket editor · transferable grants and persistent weapon mastery; no weight penalty.",
+      "coverage": "Unique stance, casting zone, pressure combo and charged-shot identities; flexible socket builds across them.",
+      "hud": "Direct action · three party strips · two ATB segments · tactical slowdown · pressure / stagger",
+      "builds": {
+        "player": {
+          "role": "Stance striker",
+          "resources": {
+            "Health": 520,
+            "MP": 35,
+            "ATB": 2
+          },
+          "skills": [
+            "Blade mastery II",
+            "Guard timing II",
+            "Gale socket I"
+          ],
+          "loop": "Build ATB in mobile stance, commit to a heavy art during stagger.",
+          "weakness": "Committed stance reduces mobility.",
+          "progression": "Master weapon arts; improve or replace linked sockets.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Resonant sabre",
+              "detail": "Weapon art has mastery progress"
+            },
+            {
+              "slot": "Armor",
+              "name": "Corsair coat",
+              "detail": "Socket-bearing armor"
+            },
+            {
+              "slot": "Socket A",
+              "name": "Gale shard",
+              "detail": "Grants its spell while equipped"
+            },
+            {
+              "slot": "Linked socket",
+              "name": "Echo shard",
+              "detail": "Support modifier; compatibility required"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Tempo ring",
+              "detail": "Passive build effect"
+            },
+            {
+              "slot": "Supply",
+              "name": "Field dressing ×3",
+              "detail": "1 ATB segment + one item"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Stance shift",
+              "cost": "Unique action",
+              "source": "Actor identity",
+              "effect": "Switch mobility and committed blade behavior."
+            },
+            {
+              "name": "Driving cut",
+              "cost": "1 ATB",
+              "source": "Weapon art · mastery 60%",
+              "effect": "Strong focused strike."
+            },
+            {
+              "name": "Gust",
+              "cost": "1 ATB + 8 MP",
+              "source": "Socket · Gale shard",
+              "effect": "Ranged elemental control."
+            },
+            {
+              "name": "Breakwater",
+              "cost": "2 ATB",
+              "source": "Mastered weapon art",
+              "effect": "Heavy finisher; remains learned after weapon swap."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Arc caster",
+          "resources": {
+            "Health": 350,
+            "MP": 90,
+            "ATB": 2
+          },
+          "skills": [
+            "Magic mastery III",
+            "Zone craft II",
+            "Cinder socket II"
+          ],
+          "loop": "Place a casting zone, build ATB, then exploit elemental weakness.",
+          "weakness": "Fragile and vulnerable when pressured out of the zone.",
+          "progression": "Master staff arts and improve magic sockets.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Resonant staff",
+              "detail": "Weapon art has mastery progress"
+            },
+            {
+              "slot": "Armor",
+              "name": "Channeler coat",
+              "detail": "Socket-bearing armor"
+            },
+            {
+              "slot": "Socket A",
+              "name": "Cinder shard",
+              "detail": "Grants its spell while equipped"
+            },
+            {
+              "slot": "Linked socket",
+              "name": "Echo shard",
+              "detail": "Support modifier; compatibility required"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Echo ring",
+              "detail": "Passive build effect"
+            },
+            {
+              "slot": "Supply",
+              "name": "Field dressing ×3",
+              "detail": "1 ATB segment + one item"
+            },
+            {
+              "slot": "Socket B",
+              "name": "Renewal shard",
+              "detail": "Grants Mend while equipped"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Channel zone",
+              "cost": "Unique action",
+              "source": "Actor identity",
+              "effect": "Establish a favored casting position."
+            },
+            {
+              "name": "Arc lance",
+              "cost": "1 ATB",
+              "source": "Weapon art · mastery 40%",
+              "effect": "Focused magical attack."
+            },
+            {
+              "name": "Flare",
+              "cost": "1 ATB + 12 MP",
+              "source": "Socket · Cinder shard",
+              "effect": "Exploit a fire weakness."
+            },
+            {
+              "name": "Mend",
+              "cost": "1 ATB + 10 MP",
+              "source": "Socket · Renewal shard",
+              "effect": "Restore one ally."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Pressure specialist",
+          "resources": {
+            "Health": 470,
+            "MP": 30,
+            "ATB": 2
+          },
+          "skills": [
+            "Brawling III",
+            "Combo discipline II",
+            "Fracture socket I"
+          ],
+          "loop": "Build a combo tier, pressure a target, then cash out during stagger.",
+          "weakness": "Short reach and a fragile combo state.",
+          "progression": "Improve unique combo tiers and master gauntlet arts.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Impact gauntlets",
+              "detail": "Weapon art has mastery progress"
+            },
+            {
+              "slot": "Armor",
+              "name": "Breaker harness",
+              "detail": "Socket-bearing armor"
+            },
+            {
+              "slot": "Socket A",
+              "name": "Fracture shard",
+              "detail": "Grants its spell while equipped"
+            },
+            {
+              "slot": "Linked socket",
+              "name": "Echo shard",
+              "detail": "Support modifier; compatibility required"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Stagger band",
+              "detail": "Passive build effect"
+            },
+            {
+              "slot": "Supply",
+              "name": "Field dressing ×3",
+              "detail": "1 ATB segment + one item"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Combo rise",
+              "cost": "Unique action · combo state",
+              "source": "Actor identity",
+              "effect": "Change the next unique finisher."
+            },
+            {
+              "name": "Rising blow",
+              "cost": "1 ATB",
+              "source": "Weapon art · mastery 70%",
+              "effect": "Build pressure."
+            },
+            {
+              "name": "Shatter",
+              "cost": "1 ATB + 6 MP",
+              "source": "Socket · Fracture shard",
+              "effect": "Increase vulnerability."
+            },
+            {
+              "name": "Pressure wave",
+              "cost": "2 ATB",
+              "source": "Mastered weapon art",
+              "effect": "Cash out on a staggered enemy."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Ranged support",
+          "resources": {
+            "Health": 600,
+            "MP": 45,
+            "ATB": 2
+          },
+          "skills": [
+            "Marksmanship II",
+            "Support II",
+            "Renewal socket II"
+          ],
+          "loop": "Build charge at range and support the ally spending ATB.",
+          "weakness": "Slower movement and weak close-range response.",
+          "progression": "Master ranged arts and supportive socket combinations.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Light repeater",
+              "detail": "Weapon art has mastery progress"
+            },
+            {
+              "slot": "Armor",
+              "name": "Support harness",
+              "detail": "Socket-bearing armor"
+            },
+            {
+              "slot": "Socket A",
+              "name": "Renewal shard",
+              "detail": "Grants its spell while equipped"
+            },
+            {
+              "slot": "Linked socket",
+              "name": "Echo shard",
+              "detail": "Support modifier; compatibility required"
+            },
+            {
+              "slot": "Accessory",
+              "name": "Concord ring",
+              "detail": "Passive build effect"
+            },
+            {
+              "slot": "Supply",
+              "name": "Field dressing ×3",
+              "detail": "1 ATB segment + one item"
+            },
+            {
+              "slot": "Socket B",
+              "name": "Tempo shard",
+              "detail": "Grants Haste field while equipped"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Charged shot",
+              "cost": "Unique action · charge state",
+              "source": "Actor identity",
+              "effect": "Release a ranged burst."
+            },
+            {
+              "name": "Rally shot",
+              "cost": "1 ATB",
+              "source": "Weapon art · mastery 30%",
+              "effect": "Attack and help an ally build momentum."
+            },
+            {
+              "name": "Renewal",
+              "cost": "1 ATB + 10 MP",
+              "source": "Socket · Renewal shard",
+              "effect": "Restore one ally."
+            },
+            {
+              "name": "Haste field",
+              "cost": "2 ATB + 14 MP",
+              "source": "Socket · Tempo shard",
+              "effect": "Temporarily improve party readiness gain."
+            }
+          ]
+        }
+      }
+    },
+    "confluence": {
+      "name": "Confluence",
+      "inventory": "Item list + personal-technique and link library · links belong to participants, not equipment.",
+      "coverage": "Personal blade, elemental, physical-support and precision techniques; dual/triple links have explicit prerequisites.",
+      "hud": "Three readiness gauges · Attack / Tech / Item · moving-target geometry · participant link browser",
+      "builds": {
+        "player": {
+          "role": "Tideblade",
+          "resources": {
+            "Health": 280,
+            "MP": 45,
+            "Readiness": 1
+          },
+          "skills": [
+            "Blade techniques III",
+            "Line targeting II"
+          ],
+          "loop": "Hold readiness for Mara, then line up a two-person sweep.",
+          "weakness": "Waiting for a partner delays solo pressure.",
+          "progression": "Learn personal techniques; links unlock from participant prerequisites.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Tidecut sabre",
+              "detail": "Character weapon eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Wayfarer vest",
+              "detail": "Physical / magical defense"
+            },
+            {
+              "slot": "Head",
+              "name": "Harbor circlet",
+              "detail": "Status resistance"
+            },
+            {
+              "slot": "Charm",
+              "name": "Confluence knot",
+              "detail": "Passive technique modifier"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Sweep",
+              "cost": "Full readiness",
+              "source": "Personal technique",
+              "effect": "A nearby arc."
+            },
+            {
+              "name": "Gale arc",
+              "cost": "Full readiness + 6 MP",
+              "source": "Personal technique",
+              "effect": "Attack a line."
+            },
+            {
+              "name": "Crosscurrent",
+              "cost": "Tessa + Mara ready · 6 MP each",
+              "source": "Linked technique",
+              "effect": "Combine a sweep and a gale."
+            },
+            {
+              "name": "Harbor concord",
+              "cost": "Tessa + Mara + Ivo ready · 10 MP each",
+              "source": "Linked technique",
+              "effect": "A three-person field attack."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Stormweaver",
+          "resources": {
+            "Health": 210,
+            "MP": 80,
+            "Readiness": 1
+          },
+          "skills": [
+            "Elemental techniques III",
+            "Recovery II"
+          ],
+          "loop": "Choose a solo heal now or reserve readiness for a link.",
+          "weakness": "Low durability; links tie up the party's recovery actor.",
+          "progression": "Personal recovery and elemental techniques unlock different links.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Storm staff",
+              "detail": "Character weapon eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Rain robes",
+              "detail": "Physical / magical defense"
+            },
+            {
+              "slot": "Head",
+              "name": "Harbor circlet",
+              "detail": "Status resistance"
+            },
+            {
+              "slot": "Charm",
+              "name": "Tide knot",
+              "detail": "Passive technique modifier"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Rain lance",
+              "cost": "Full readiness + 5 MP",
+              "source": "Personal technique",
+              "effect": "Ranged elemental attack."
+            },
+            {
+              "name": "Mending rain",
+              "cost": "Full readiness + 8 MP",
+              "source": "Personal technique",
+              "effect": "Recover one ally."
+            },
+            {
+              "name": "Crosscurrent",
+              "cost": "Mara + Tessa ready · 6 MP each",
+              "source": "Linked technique",
+              "effect": "Sweep and gale combination."
+            },
+            {
+              "name": "Harbor concord",
+              "cost": "Mara + Tessa + Ivo ready · 10 MP each",
+              "source": "Linked technique",
+              "effect": "Three-person field attack."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Ironroot",
+          "resources": {
+            "Health": 360,
+            "MP": 35,
+            "Readiness": 1
+          },
+          "skills": [
+            "Impact techniques III",
+            "Protection II"
+          ],
+          "loop": "Hold a lane and choose between a solo guard or coordinated impact.",
+          "weakness": "Slow recovery; missed timing delays links.",
+          "progression": "Physical support techniques and impact combinations.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Root hammer",
+              "detail": "Character weapon eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Bastion coat",
+              "detail": "Physical / magical defense"
+            },
+            {
+              "slot": "Head",
+              "name": "Harbor circlet",
+              "detail": "Status resistance"
+            },
+            {
+              "slot": "Charm",
+              "name": "Root knot",
+              "detail": "Passive technique modifier"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Anchor smash",
+              "cost": "Full readiness",
+              "source": "Personal technique",
+              "effect": "Heavy close impact."
+            },
+            {
+              "name": "Root guard",
+              "cost": "Full readiness + 4 MP",
+              "source": "Personal technique",
+              "effect": "Protect an ally."
+            },
+            {
+              "name": "Stormbreak",
+              "cost": "Ivo + clerk ready · 7 MP each",
+              "source": "Linked technique",
+              "effect": "Precision mark plus impact."
+            },
+            {
+              "name": "Harbor concord",
+              "cost": "Ivo + Tessa + Mara ready · 10 MP each",
+              "source": "Linked technique",
+              "effect": "Three-person field attack."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Lumen tactician",
+          "resources": {
+            "Health": 245,
+            "MP": 65,
+            "Readiness": 1
+          },
+          "skills": [
+            "Precision techniques III",
+            "Warding II"
+          ],
+          "loop": "Mark a target for Ivo or protect an exposed ally.",
+          "weakness": "Requires deployment; reserve actors cannot contribute to links.",
+          "progression": "Precision and ward progression; alternate party combinations.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Lumen rod",
+              "detail": "Character weapon eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Lumen robes",
+              "detail": "Physical / magical defense"
+            },
+            {
+              "slot": "Head",
+              "name": "Harbor circlet",
+              "detail": "Status resistance"
+            },
+            {
+              "slot": "Charm",
+              "name": "Light knot",
+              "detail": "Passive technique modifier"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Light ray",
+              "cost": "Full readiness + 4 MP",
+              "source": "Personal technique",
+              "effect": "Precise ranged beam."
+            },
+            {
+              "name": "Prism mend",
+              "cost": "Full readiness + 7 MP",
+              "source": "Personal technique",
+              "effect": "Recover and protect an ally."
+            },
+            {
+              "name": "Stormbreak",
+              "cost": "Clerk + Ivo ready · 7 MP each",
+              "source": "Linked technique",
+              "effect": "Mark plus heavy impact."
+            },
+            {
+              "name": "Prism shelter",
+              "cost": "Clerk + Mara ready · 8 MP each",
+              "source": "Linked technique",
+              "effect": "Combined protective technique."
+            }
+          ]
+        }
+      }
+    },
+    "cadence": {
+      "name": "Cadence",
+      "inventory": "Categorized item list · equipment eligibility, two relic slots and teaching focus; learned spells persist.",
+      "coverage": "Blade arts, magic amplification, tools and martial sequences shown; theft, enemy skills, mimicry and chance commands pending.",
+      "hud": "Four stable HP / MP / ATB rows · signature command · Active / Wait · formation rows",
+      "builds": {
+        "player": {
+          "role": "Runeblade",
+          "resources": {
+            "Health": 420,
+            "MP": 35,
+            "Readiness": 1
+          },
+          "skills": [
+            "Blade arts III",
+            "Magic learning I"
+          ],
+          "loop": "Wait for readiness, choose a committed blade art, and time a guard.",
+          "weakness": "Front-row risk; a long art delays the next decision.",
+          "progression": "Personal blade arts plus learned magic from teaching focuses.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Runed cutlass",
+              "detail": "Actor eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Warden coat",
+              "detail": "Defense and row tradeoffs"
+            },
+            {
+              "slot": "Relic 1",
+              "name": "Echo sigil",
+              "detail": "Command / passive modifier"
+            },
+            {
+              "slot": "Relic 2",
+              "name": "Guard seal",
+              "detail": "Independent relic slot"
+            },
+            {
+              "slot": "Teaching focus",
+              "name": "Ember rune",
+              "detail": "Spell learning persists after removal"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Attack",
+              "cost": "Full readiness",
+              "source": "Weapon",
+              "effect": "Row-sensitive physical attack."
+            },
+            {
+              "name": "Art: Tide cleave",
+              "cost": "Full readiness · art selector",
+              "source": "Personal command",
+              "effect": "Choose strength and commitment."
+            },
+            {
+              "name": "Cinder",
+              "cost": "Full readiness + 6 MP",
+              "source": "Learned magic",
+              "effect": "Remains learned without Ember rune."
+            },
+            {
+              "name": "Runic guard",
+              "cost": "Full readiness",
+              "source": "Relic · Guard seal",
+              "effect": "Prepare a magical defense."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Arcanist",
+          "resources": {
+            "Health": 290,
+            "MP": 100,
+            "Readiness": 1
+          },
+          "skills": [
+            "Magic III",
+            "Amplification II"
+          ],
+          "loop": "Amplify at the right moment and spend MP on a weakness or recovery.",
+          "weakness": "Low health and a limited amplification state.",
+          "progression": "Personal amplification and learned spell progress.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Ash rod",
+              "detail": "Actor eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Arcanist robe",
+              "detail": "Defense and row tradeoffs"
+            },
+            {
+              "slot": "Relic 1",
+              "name": "Sage sigil",
+              "detail": "Command / passive modifier"
+            },
+            {
+              "slot": "Relic 2",
+              "name": "Renewal seal",
+              "detail": "Independent relic slot"
+            },
+            {
+              "slot": "Teaching focus",
+              "name": "Gale rune",
+              "detail": "Spell learning persists after removal"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Attack",
+              "cost": "Full readiness",
+              "source": "Weapon",
+              "effect": "Basic rod attack."
+            },
+            {
+              "name": "Art: Spell echo",
+              "cost": "Full readiness · amplification state",
+              "source": "Personal command",
+              "effect": "Enhance a future spell."
+            },
+            {
+              "name": "Gust",
+              "cost": "Full readiness + 8 MP",
+              "source": "Learned magic",
+              "effect": "Elemental attack."
+            },
+            {
+              "name": "Mending light",
+              "cost": "Full readiness + 10 MP",
+              "source": "Learned magic",
+              "effect": "Recover an ally."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Machinist",
+          "resources": {
+            "Health": 460,
+            "MP": 25,
+            "Readiness": 1
+          },
+          "skills": [
+            "Tools III",
+            "Marksmanship II"
+          ],
+          "loop": "Choose the acquired tool suited to the target formation.",
+          "weakness": "Tool access depends on collection; limited early magic.",
+          "progression": "Acquire tools; learn compatible magic separately.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Bolt repeater",
+              "detail": "Actor eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Mechanic coat",
+              "detail": "Defense and row tradeoffs"
+            },
+            {
+              "slot": "Relic 1",
+              "name": "Torque sigil",
+              "detail": "Command / passive modifier"
+            },
+            {
+              "slot": "Relic 2",
+              "name": "Sight seal",
+              "detail": "Independent relic slot"
+            },
+            {
+              "slot": "Teaching focus",
+              "name": "Spark rune",
+              "detail": "Spell learning persists after removal"
+            },
+            {
+              "slot": "Tool collection",
+              "name": "Tide drill / Flash charge",
+              "detail": "Owned tools available to the Tools command"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Attack",
+              "cost": "Full readiness",
+              "source": "Weapon",
+              "effect": "Basic ranged shot."
+            },
+            {
+              "name": "Tools: Tide drill",
+              "cost": "Full readiness · tool owned",
+              "source": "Personal command + tool collection",
+              "effect": "Pierce a tough target."
+            },
+            {
+              "name": "Tools: Flash charge",
+              "cost": "Full readiness · tool owned",
+              "source": "Personal command + tool collection",
+              "effect": "Disrupt a group."
+            },
+            {
+              "name": "Spark",
+              "cost": "Full readiness + 6 MP",
+              "source": "Learned magic",
+              "effect": "Independent of tool ownership."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Pugilist",
+          "resources": {
+            "Health": 390,
+            "MP": 40,
+            "Readiness": 1
+          },
+          "skills": [
+            "Martial sequences III",
+            "Recovery I"
+          ],
+          "loop": "Choose a martial sequence, then confirm its inputs or accessible list option.",
+          "weakness": "Short reach; sequence execution needs clear feedback.",
+          "progression": "Learn new sequences and improve recovery magic.",
+          "gear": [
+            {
+              "slot": "Weapon",
+              "name": "Iron knuckles",
+              "detail": "Actor eligibility"
+            },
+            {
+              "slot": "Armor",
+              "name": "Monk tunic",
+              "detail": "Defense and row tradeoffs"
+            },
+            {
+              "slot": "Relic 1",
+              "name": "Resolve sigil",
+              "detail": "Command / passive modifier"
+            },
+            {
+              "slot": "Relic 2",
+              "name": "Breath seal",
+              "detail": "Independent relic slot"
+            },
+            {
+              "slot": "Teaching focus",
+              "name": "Renewal rune",
+              "detail": "Spell learning persists after removal"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Attack",
+              "cost": "Full readiness",
+              "source": "Weapon",
+              "effect": "Basic close strike."
+            },
+            {
+              "name": "Art: Palm sequence",
+              "cost": "Full readiness · sequence input",
+              "source": "Personal command",
+              "effect": "Execute a martial combination."
+            },
+            {
+              "name": "Art: Rising wave",
+              "cost": "Full readiness · sequence input",
+              "source": "Personal command",
+              "effect": "A different sequence and area."
+            },
+            {
+              "name": "Aura mend",
+              "cost": "Full readiness + 8 MP",
+              "source": "Learned magic",
+              "effect": "Recover an ally."
+            }
+          ]
+        }
+      }
+    },
+    "orders": {
+      "name": "Orders",
+      "inventory": "Kit list or optional packing grid · load / space are separate policies; ammo and charges persist.",
+      "coverage": "Assault, recon, engineering and medical roles.",
+      "hud": "Per-actor timelines · paths and facing · forecast uncertainty · team Commit / replay",
+      "builds": {
+        "player": {
+          "role": "Assault lead",
+          "resources": {
+            "Health": 120,
+            "Ammo": 24,
+            "Breach charges": 2
+          },
+          "skills": [
+            "Ballistics III",
+            "Assault II"
+          ],
+          "loop": "Synchronize a crossing with suppression or breach a position.",
+          "weakness": "Exposed while moving; ammo limits repeated suppression.",
+          "progression": "Weapon proficiency and plan efficiency.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Harbor repeater",
+              "detail": "Ammo and aim time"
+            },
+            {
+              "slot": "Kit",
+              "name": "Assault kit",
+              "detail": "Load affects authored movement"
+            },
+            {
+              "slot": "Gadget",
+              "name": "Breach charge ×2",
+              "detail": "Limited charges"
+            },
+            {
+              "slot": "Supply",
+              "name": "Field dressing ×2",
+              "detail": "Persists across plans"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Cover fire",
+              "cost": "1.0 s + 3 ammo",
+              "source": "Weapon",
+              "effect": "Cover a known lane."
+            },
+            {
+              "name": "Advance",
+              "cost": "Path time",
+              "source": "Movement",
+              "effect": "Move to the planned position."
+            },
+            {
+              "name": "Breach",
+              "cost": "0.8 s + 1 charge",
+              "source": "Gadget",
+              "effect": "Break an authored obstacle."
+            },
+            {
+              "name": "Suppress",
+              "cost": "1.2 s + 6 ammo",
+              "source": "Weapon",
+              "effect": "Pressure a firing lane."
+            }
+          ]
+        },
+        "mara": {
+          "role": "Recon specialist",
+          "resources": {
+            "Health": 85,
+            "Ammo": 12,
+            "Sensor darts": 2
+          },
+          "skills": [
+            "Observation III",
+            "Stealth III"
+          ],
+          "loop": "Observe a lane before committing the team's crossing.",
+          "weakness": "Fragile; stale information cannot guarantee a forecast.",
+          "progression": "Observation range, concealment and precision.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Scout rifle",
+              "detail": "Ammo and aim time"
+            },
+            {
+              "slot": "Kit",
+              "name": "Scout harness",
+              "detail": "Load affects authored movement"
+            },
+            {
+              "slot": "Gadget",
+              "name": "Sensor dart ×2",
+              "detail": "Limited charges"
+            },
+            {
+              "slot": "Supply",
+              "name": "Smoke canister ×2",
+              "detail": "Persists across plans"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Observe",
+              "cost": "0.8 s",
+              "source": "Recon skill",
+              "effect": "Gather visible information."
+            },
+            {
+              "name": "Mark target",
+              "cost": "0.4 s · sight required",
+              "source": "Recon skill",
+              "effect": "Share a known target."
+            },
+            {
+              "name": "Conceal",
+              "cost": "0.8 s + smoke charge",
+              "source": "Consumable",
+              "effect": "Break sight in an area."
+            },
+            {
+              "name": "Precision shot",
+              "cost": "1.4 s + 1 ammo",
+              "source": "Weapon",
+              "effect": "Slow aimed shot."
+            }
+          ]
+        },
+        "ivo": {
+          "role": "Combat engineer",
+          "resources": {
+            "Health": 130,
+            "Ammo": 18,
+            "Tool charges": 3
+          },
+          "skills": [
+            "Engineering III",
+            "Devices III"
+          ],
+          "loop": "Create cover and smoke before allies cross.",
+          "weakness": "Setup takes time; tools have finite charges.",
+          "progression": "Construction, disruption or repair efficiency.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Utility carbine",
+              "detail": "Ammo and aim time"
+            },
+            {
+              "slot": "Kit",
+              "name": "Engineer kit",
+              "detail": "Load affects authored movement"
+            },
+            {
+              "slot": "Gadget",
+              "name": "Smoke projector",
+              "detail": "Limited charges"
+            },
+            {
+              "slot": "Supply",
+              "name": "Repair pack ×3",
+              "detail": "Persists across plans"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Deploy cover",
+              "cost": "1.2 s + kit charge",
+              "source": "Gadget",
+              "effect": "Place temporary cover."
+            },
+            {
+              "name": "Repair",
+              "cost": "1.0 s + repair charge",
+              "source": "Engineering",
+              "effect": "Restore an eligible object."
+            },
+            {
+              "name": "Smoke field",
+              "cost": "0.8 s + projector charge",
+              "source": "Gadget",
+              "effect": "Obscure a lane."
+            },
+            {
+              "name": "Disrupt",
+              "cost": "1.0 s · valid device",
+              "source": "Engineering",
+              "effect": "Disable a technical obstacle."
+            }
+          ]
+        },
+        "clerk": {
+          "role": "Field medic",
+          "resources": {
+            "Health": 100,
+            "Ammo": 15,
+            "Medical charges": 4
+          },
+          "skills": [
+            "Medicine III",
+            "Rescue II"
+          ],
+          "loop": "Reach an ally at the planned time, stabilize, then extract.",
+          "weakness": "A moving target can invalidate treatment; finite supplies.",
+          "progression": "Triage, evacuation and medical efficiency.",
+          "gear": [
+            {
+              "slot": "Primary",
+              "name": "Medic carbine",
+              "detail": "Ammo and aim time"
+            },
+            {
+              "slot": "Kit",
+              "name": "Rescue harness",
+              "detail": "Load affects authored movement"
+            },
+            {
+              "slot": "Gadget",
+              "name": "Healing injector ×4",
+              "detail": "Limited charges"
+            },
+            {
+              "slot": "Supply",
+              "name": "Trauma pack",
+              "detail": "Persists across plans"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Stabilize",
+              "cost": "1.0 s + medical charge",
+              "source": "Medicine",
+              "effect": "Treat an adjacent downed ally."
+            },
+            {
+              "name": "Extract ally",
+              "cost": "Path time · eligible ally",
+              "source": "Rescue skill",
+              "effect": "Move an incapacitated ally."
+            },
+            {
+              "name": "Field treatment",
+              "cost": "1.2 s + medical charge",
+              "source": "Medicine",
+              "effect": "Recover an adjacent ally."
+            },
+            {
+              "name": "Cover retreat",
+              "cost": "0.8 s + 2 ammo",
+              "source": "Weapon",
+              "effect": "Support an extraction."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

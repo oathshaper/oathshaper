@@ -1,0 +1,22 @@
+{
+  "started": "2026-10-28T22:24:29-0400",
+  "preflight": {
+    "available_bytes": 5235752960,
+    "swap_used_bytes": 2628976640,
+    "system_disk_free_bytes": 53173223424,
+    "pressure": 2
+  },
+  "reasons": [
+    "Less than 14 GiB available memory for model loading plus system reserve",
+    "macOS reports elevated memory pressure"
+  ],
+  "status": "refused",
+  "peak_rss_bytes": 0,
+  "limits": {
+    "process_rss_gib": 10,
+    "available_floor_gib": 3,
+    "swap_growth_gib": 1,
+    "timeout_seconds": 600,
+    "sample_interval_seconds": 0.5
+  }
+}

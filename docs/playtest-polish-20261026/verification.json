@@ -1,0 +1,334 @@
+{
+  "date": "2026-10-26",
+  "base_commit": "9b6f6a6",
+  "godot": "4.3.stable.official.77dcf97d8",
+  "platform": "macOS arm64",
+  "godot_suites": [
+    {
+      "test": "headless_test",
+      "command": "godot --headless --path godot --script res://tests/headless_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "Oathshaper native bridge, four controller NPC entries, adaptive input hints, guarded hub routes, collision, recorded greeting and save/load checks passed"
+      ],
+      "log_sha256": "ff63e021787d6d35e330e250932b1a2edee4270598fc4a382ada0fb859216f4f"
+    },
+    {
+      "test": "rig_slot_test",
+      "command": "godot --headless --path godot --script res://tests/rig_slot_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "WARNING: Character model has no visible mesh; using primitive art: user://oathshaper_empty_slot_fixture.tscn",
+        "ERROR: Parameter \"m\" is null.",
+        "Oathshaper rig slot Idle/Walk, procedural foot-anchored motion, opt-out and empty fallback checks passed"
+      ],
+      "log_sha256": "61c37b99ccb92153f0161468702736e5f78a5d302b9ab191311dfd9ce44df01c"
+    },
+    {
+      "test": "dialogue_response_test",
+      "command": "godot --headless --path godot --script res://tests/dialogue_response_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null."
+      ],
+      "log_sha256": "600d6434b906a0d47c6f37769314eede2dcecf63b6ca96d7b39a3ce3ab71c877"
+    },
+    {
+      "test": "map_widget_test",
+      "command": "godot --headless --path godot --script res://tests/map_widget_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "map_widget_test passed"
+      ],
+      "log_sha256": "58c2ce268220c813326182965c1c834113ef375a80bd5171b59b6edddba9771c"
+    },
+    {
+      "test": "garden_mesh_test",
+      "command": "godot --headless --path godot --script res://tests/garden_mesh_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "garden_mesh_test passed: actual mesh fit, three lanes both ways, floor heights, planter, rails and closed gate"
+      ],
+      "log_sha256": "c2b93f89786e0799bb244348de52554beefe81dc5011a708c6ab6996b3d0d74c"
+    },
+    {
+      "test": "records_office_test",
+      "command": "godot --headless --path godot --script res://tests/records_office_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "Records office collision, cutaway, entry/exit, drawer open/close and collection checks passed",
+        "ERROR: Parameter \"m\" is null."
+      ],
+      "log_sha256": "91a31b713249fffd834f473881dd7404bf5b2427cdd24af4e96abf1f062d6cd7"
+    },
+    {
+      "test": "route_integration_test",
+      "command": "godot --headless --path godot --script res://tests/route_integration_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "Records route integration passed: open office, clerk conversation, controller map and journal, cabinet, records, and save/load"
+      ],
+      "log_sha256": "41401b933d26de4699c510e0aacac80d0271911904f7f6292a723c51cf6d7a5f"
+    },
+    {
+      "test": "combat_frontend_test",
+      "command": "godot --headless --path godot --script res://tests/combat_frontend_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "COMBAT_FRONTEND_OK: 10734 checks"
+      ],
+      "log_sha256": "3f52cb6c66f5b14aeaf59166110cc0d6bf85ef5a4d082823e287fda1ce922292"
+    },
+    {
+      "test": "playable_profiles_test",
+      "command": "godot --headless --path godot --script res://tests/playable_profiles_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "PLAYABLE_PROFILES: 16 checks, 0 failures"
+      ],
+      "log_sha256": "9d5e0109ad48651e75b6383ed2bc22d763f50f76fd6e9c1a61e93f423fcaafc5"
+    },
+    {
+      "test": "command_trial_test",
+      "command": "godot --headless --path godot --script res://tests/command_trial_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "COMMAND_TRIAL_TEST: 45 checks, 0 failures",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+        "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "d9adcbb83835f7d55e9bb341dd21cb9690314f62a9787ce99d31fdebd489cf39"
+    },
+    {
+      "test": "command_controls_test",
+      "command": "godot --headless --path godot --script res://tests/command_controls_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+        "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "8ddefb74b0a48e4e4d326e7743aa1056f781b427dd75a22117ba7649da817921"
+    },
+    {
+      "test": "command_targeting_test",
+      "command": "godot --headless --path godot --script res://tests/command_targeting_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null."
+      ],
+      "log_sha256": "f07aba814db37f5dbade393ca41b17ffb9326993c65a70be1322762c713cf3b5"
+    },
+    {
+      "test": "command_ledger_test",
+      "command": "godot --headless --path godot --script res://tests/command_ledger_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "COMMAND_LEDGER_TEST: 275 assertions, 0 failures (UI projection only)"
+      ],
+      "log_sha256": "d1e276b4ede7c3dba935a642fa186010b25a92c1f12d8b53bfb7748499ff9d38"
+    },
+    {
+      "test": "command_equipment_test",
+      "command": "godot --headless --path godot --script res://tests/command_equipment_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "COMMAND_EQUIPMENT_TEST: 273 checks, 0 failures"
+      ],
+      "log_sha256": "4a4ed95417d4c0a523fa05979a5be92dc1e9258901e518107145c15a829d2a6c"
+    },
+    {
+      "test": "equipment_mount_test",
+      "command": "godot --headless --path godot --script res://tests/equipment_mount_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "EQUIPMENT_MOUNTS: 12 checks, 0 failures"
+      ],
+      "log_sha256": "2f4917c8571cc3a236de5eba7aa888d6db2cb820291c62052896214623a3dd37"
+    },
+    {
+      "test": "flow_input_test",
+      "command": "godot --headless --path godot --script res://tests/flow_input_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "FLOW_INPUT_CHECKS 7 FAILURES []",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+        "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "efbd7a33b20e4e562bef7bd63b23895b3b4b70c1a8d10cbaa383ffe0cb0db94c"
+    },
+    {
+      "test": "flow_trial_test",
+      "command": "godot --headless --path godot --script res://tests/flow_trial_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "FLOW_NATIVE_CHECKS 294 FAILURES []"
+      ],
+      "log_sha256": "55479490d67f5ae7b66bdc72060963cbfa00a16ddcfc3cb51c4d6a6fd9498c00"
+    },
+    {
+      "test": "vanguard_trial_test",
+      "command": "godot --headless --path godot --script res://tests/vanguard_trial_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+        "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "e71fbf7e3c497ce9f48bfa87df5d0e3635130dad79e8129bd1c66fb055eaf810"
+    },
+    {
+      "test": "chapter_route_test",
+      "command": "godot --headless --path godot --script res://tests/chapter_route_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+        "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "3d21094bd7c1025db75471eceff15b6d9bab08601cec42f391a2a025d1958cea"
+    },
+    {
+      "test": "playtest_continuity_test",
+      "command": "godot --headless --path godot --script res://tests/playtest_continuity_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "PLAYTEST_CONTINUITY: 309 checks, 0 failures"
+      ],
+      "log_sha256": "dff1ec687bc464973092a55f5be9336beab1f19a8029a035e5c952633a28a034"
+    },
+    {
+      "test": "player_voice_test",
+      "command": "godot --headless --path godot --script res://tests/player_voice_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "d4ed640d8e3de07f0fd568f25f21d1b0d3c880b6981484ddd6d65c028e7e0faa"
+    },
+    {
+      "test": "generated_voice_test",
+      "command": "godot --headless --path godot --script res://tests/generated_voice_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "GENERATED_VOICE: 87 checks, 0 failures",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+        "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+      ],
+      "log_sha256": "886430efda69c3261ef13ea323102fff012ea467df6b21ebe1ad9dbe780c1333"
+    },
+    {
+      "test": "quay_opening_test",
+      "command": "godot --headless --path godot --script res://tests/quay_opening_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null."
+      ],
+      "log_sha256": "c7fd8ce1c620172e94732eaf11039d7249395055a67ab4f6f470d92fc99eee65"
+    },
+    {
+      "test": "tower_lighting_test",
+      "command": "godot --headless --path godot --script res://tests/tower_lighting_test.gd",
+      "exit_code": 0,
+      "script_error": false,
+      "result_lines": [
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null.",
+        "ERROR: Parameter \"m\" is null."
+      ],
+      "log_sha256": "9fcece1613f43c48c5cb462babe006673aece06fa8dfc2b745ffdb44fa50abc5"
+    }
+  ],
+  "rust_tests": 124,
+  "clippy": "passed --workspace --all-targets --locked -- -D warnings",
+  "native_render": {
+    "command": "godot --path godot --script res://tests/playtest_continuity_test.gd -- --capture",
+    "checks": 308,
+    "failures": 0,
+    "renderer": "OpenGL 4.1 Metal Compatibility, Apple M4 Pro",
+    "screenshot": "command-native.png"
+  },
+  "rigs": "rigs.txt",
+  "voice_batch": {
+    "current_clips": 73,
+    "objective_qc": "passed",
+    "human_listening": "not performed this pass"
+  },
+  "limits": [
+    "Initial full check stopped on assertions for the previous camera behavior; all 24 Godot suites then passed individually after fixes.",
+    "Final headless continuity suite includes one extra legacy-save regression: 309 checks.",
+    "Headless dummy renderer emits pre-existing null-mesh cleanup diagnostics. No script errors in final suites.",
+    "Input events were simulated; no physical controller or Steam Deck acceptance.",
+    "Validation used pre-existing local project.godot edits, excluded from this change.",
+    "Screenshot is the standalone Command fixture; the full robbery-route suite separately uses Mara and Ivo.",
+    "60-70 percent labor-saving target is unmeasured.",
+    "Some headless suites also report leaked-resource cleanup diagnostics; passing assertions do not mean clean engine logs. The native rendered run has no such diagnostics."
+  ]
+}

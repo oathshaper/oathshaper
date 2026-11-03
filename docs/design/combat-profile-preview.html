@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oathshaper · Combat & party interface study</title>
+<style>
+*{box-sizing:border-box} :root{--accent:#d8bd80;--soft:#403b2e;--bg:#121c21;--panel:#1c292e;--ink:#f1eee5;--muted:#b5bdbb;--line:#3b494b}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.4 system-ui,-apple-system,sans-serif} button{font:inherit;color:inherit;cursor:pointer} button:focus-visible{outline:3px solid #fff;outline-offset:3px} button{border:1px solid var(--line);background:var(--panel);border-radius:4px} button:hover{border-color:var(--accent)} [hidden]{display:none!important}
+.shell{max-width:1440px;margin:auto;padding:22px 32px 16px;min-height:800px} header{height:60px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);margin-bottom:18px} .brand{font:25px Georgia,serif;letter-spacing:.15em} .eyebrow{font-size:14px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}.study{font-size:14px;color:var(--muted);text-align:right} h1,h2,h3,p{margin:0} h1{font:38px/1.1 Georgia,serif;margin:8px 0 12px} h2{font:29px/1.2 Georgia,serif} h3{font-size:19px;font-weight:600} .muted{color:var(--muted)} .small{font-size:16px} .accent{color:var(--accent)}
+.main-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.intro{margin-bottom:22px}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.profile-card{text-align:left;min-height:128px;padding:15px 17px;position:relative}.profile-card[aria-pressed=true]{background:var(--soft);border-color:var(--accent);box-shadow:inset 3px 0 var(--accent)}.profile-card .number{font-size:14px;letter-spacing:.12em;color:var(--accent)}.profile-card strong{display:block;font:25px Georgia,serif;margin:4px 0}.profile-card span:last-child{font-size:16px;color:var(--muted)}.main-art{height:330px;border:1px solid var(--line);background:linear-gradient(0deg,rgba(14,24,27,.95),transparent 70%),url('../images/garden-imported-overview-1280x800.png') center/cover;display:flex;flex-direction:column;justify-content:end;padding:25px}.art-label{font-size:14px;color:#e6e9e7;margin-bottom:8px}.main-detail{padding:22px 0}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}.detail-grid b{display:block;font-size:16px;color:var(--accent);margin-bottom:3px}.detail-grid span{font-size:17px}.primary{background:var(--accent);color:#101a1f;border-color:var(--accent);font-weight:650;min-height:48px;padding:9px 22px}.quiet{min-height:44px;padding:8px 17px}.main-actions{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-top:20px}
+.sheet-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);padding-bottom:10px}.tabs button{padding:9px 16px;min-height:44px;font-size:16px;background:none;border-color:transparent}.tabs button[aria-current=page]{color:var(--accent);border-bottom:2px solid var(--accent);background:var(--soft)}.roster{display:flex;gap:10px;margin:14px 0}.roster button{display:flex;gap:10px;align-items:center;padding:5px 12px 5px 5px;min-width:180px;text-align:left;font-size:16px}.roster button[aria-pressed=true]{border-color:var(--accent);background:var(--soft)}.roster img{width:39px;height:47px;object-fit:cover;object-position:50% 13%;border-radius:3px}.roster small{display:block;font-size:13px;color:var(--muted)}.ledger{display:grid;grid-template-columns:270px 1fr;gap:24px}.avatar-panel{border:1px solid var(--line);background:#111a1e}.portrait{height:292px;position:relative;overflow:hidden}.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}.portrait:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#111a1e,transparent 32%)}.identity{padding:0 18px 12px;margin-top:-22px;position:relative;z-index:1}.identity h2{font-size:25px}.identity p{font-size:16px;color:var(--muted);margin-top:3px}.morality{margin:0 18px;padding:12px 0;border-top:1px solid var(--line)}.meter-title{display:flex;justify-content:space-between;font-size:17px}.meter{height:9px;background:#354342;position:relative;margin:10px 0 7px;border-radius:2px}.meter:before{content:'';width:2px;height:15px;top:-3px;left:50%;position:absolute;background:#a4adab}.meter span{position:absolute;left:70%;height:15px;width:6px;top:-3px;background:var(--accent);box-shadow:0 0 9px #d8bd8055}.ends{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}.relationship{font-size:15px;padding:12px 18px;border-top:1px solid var(--line);color:var(--muted)}.relationship b{color:var(--ink)}.content{min-width:0}.content-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.tag{font-size:14px;color:var(--accent);border:1px solid var(--line);padding:4px 8px;border-radius:3px}.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.box{border:1px solid var(--line);padding:18px;background:var(--panel)}.box p{color:var(--muted);font-size:17px;margin-top:7px}.stat-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:17px}.stat-row:last-child{border-bottom:0}.stat-row strong{font-size:21px;font-weight:550;color:var(--accent)}.resource{height:5px;background:#364044;margin-top:9px}.resource i{display:block;height:100%;background:var(--accent);width:75%}.wide{grid-column:1/-1}.action-list{list-style:none;margin:12px 0 0;padding:0}.action-list li{padding:10px 0;border-top:1px solid var(--line);font-size:17px}.action-list .cost{float:right;color:var(--accent);font-size:15px}.equipment-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.gear{padding:15px 18px;min-height:110px;border:1px solid var(--line);background:var(--panel)}.gear .slot{font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}.gear strong{display:block;font:23px Georgia,serif;margin:4px 0}.gear small{font-size:15px;color:var(--muted)}.note{font-size:16px;color:var(--muted);padding-top:14px}.map-photo{width:100%;height:290px;object-fit:cover;border:1px solid var(--line)}.save-row{border:1px solid var(--line);padding:16px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:12px}.save-row small{display:block;font-size:15px;color:var(--muted)}
+footer{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:14px;color:var(--muted);padding-top:16px;margin-top:18px;border-top:1px solid var(--line)} kbd{font:inherit;border:1px solid #596467;padding:1px 5px;border-radius:3px;color:#e1e6e4}.status{color:var(--accent)}.page-copy{font-size:17px;color:var(--muted);margin-bottom:14px}
+/* Keep the full ledger, morality and navigation visible at 1280 x 800. */
+.shell{padding-top:20px} header{height:54px;margin-bottom:14px}.roster{margin:12px 0}.portrait{height:244px}.portrait img{object-position:50% 0}.stat-row{padding:8px 0}.box{padding:16px}.gear{min-height:100px;padding:12px 16px}.map-photo{height:244px}footer{padding-top:12px;margin-top:14px}
+@media(max-width:1000px){.shell{padding:18px}.main-grid{gap:20px}.ledger{grid-template-columns:230px 1fr;gap:16px}.tabs{flex-wrap:wrap}.roster{flex-wrap:wrap}.roster button{min-width:150px}.main-art{height:300px}.profile-card{padding:12px}}
+@media(max-width:720px){.main-grid,.ledger,.two-cols{grid-template-columns:1fr}.avatar-panel{max-width:360px}.study{max-width:170px}.main-art{margin-top:20px}.tabs button{padding:8px}.equipment-grid{grid-template-columns:1fr}footer{flex-wrap:wrap}.brand{font-size:20px}}
+/* Keep navigation visible; lengthy build details scroll independently. */
+@media(min-width:1001px){
+.shell{height:100vh;min-height:0;display:flex;flex-direction:column}
+header,footer,.shell>p{flex-shrink:0}
+main{flex:1;min-height:0;overflow:auto}
+#party-sheet{height:100%;display:flex;flex-direction:column}
+.sheet-title,.tabs,.roster{flex-shrink:0}
+.ledger{flex:1;min-height:0}
+.avatar-panel,.content{min-height:0;overflow-y:auto}
+.content{padding-right:8px}
+.portrait{height:210px}
+.main-grid{height:100%}.main-grid>div:first-child{display:flex;flex-direction:column;min-height:0}
+.profile-grid{overflow-y:auto;min-height:0}.profile-card{min-height:100px}
+.main-art{height:235px}.intro{margin-bottom:12px}.main-detail{padding-top:12px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><div class="brand">OATHSHAPER</div><div class="study">INTERFACE STUDY · SAMPLE DATA<br>Combat is proposed, not implemented.</div></header>
+<main>
+<section id="main-menu" aria-label="Combat profile selection">
+<div class="main-grid">
+<div><div class="intro"><div class="eyebrow">Lantern Garden · Combat profiles</div><h1>Choose how you fight.</h1><p class="muted"></p></div><div class="profile-grid" id="profiles"></div><p class="note">Choose controls, party commands and equipment rules. </p></div>
+<div><div class="main-art"><div class="art-label">LANTERN GARDEN</div><h2>The disputed charter</h2><p>Recover the seal closing the public passage.</p></div><div class="main-detail"><div class="eyebrow" id="profile-reference"></div><h2 id="profile-title" style="margin-top:7px"></h2><p class="muted" id="profile-description" style="margin-top:10px"></p><div class="detail-grid"><div><b>PARTY</b><span id="party-detail"></span></div><div><b>EQUIPMENT</b><span id="gear-detail"></span></div></div><div class="main-actions"><span class="small muted">Preview the matching party sheet</span><button id="inspect" class="primary">Inspect party →</button></div></div></div>
+</div>
+</section>
+<section id="party-sheet" hidden aria-label="Party sheet preview">
+<div class="sheet-title"><div><span class="eyebrow" id="sheet-profile"></span><h2>Party ledger</h2></div><button id="back" class="quiet">← Combat profiles</button></div>
+<nav class="tabs" id="tabs" aria-label="Ledger pages"></nav>
+<nav class="roster" id="roster" aria-label="Select a party member"></nav>
+<div class="ledger">
+<aside class="avatar-panel" aria-label="Selected character and morality"><div class="portrait"><img id="portrait" alt=""></div><div class="identity"><h2 id="actor-name"></h2><p id="actor-role"></p></div><div class="morality" id="morality"></div><div class="relationship" id="relationship"></div></aside>
+<div class="content" id="page-content" tabindex="0" aria-label="Build details; scroll for more" aria-live="polite"></div>
+</div>
+</section>
+</main>
+<footer><span id="footer-controls"><kbd>Tab</kbd> Move focus · <kbd>Enter</kbd> Select · <kbd>Esc</kbd> Back</span><span id="status" class="status" role="status">Design preview only · No game saves changed</span></footer><p class="small muted" style="margin-top:14px">Independent comparative UX research · No affiliation or endorsement. <a style="color:var(--accent)" href="../research/NOTICE.md">Research and third-party rights notice</a></p>
+</div>
+<script src="party-catalog.js"></script>
+<script>
+'use strict';
+const profiles = [
+ {
+  "id": "command",
+  "name": "Command",
+  "short": "Pause, queue, act",
+  "ref": "KOTOR-inspired · Real time with pause",
+  "accent": "#d8bd80",
+  "soft": "#403b2e",
+  "party": 3,
+  "partyText": "You + 2 companions",
+  "gearText": "Weapons, armor & powers",
+  "desc": "Pause on contact. Set each companion’s next actions, then watch your plan unfold.",
+  "page": "Powers & queues"
+ },
+ {
+  "id": "flow",
+  "name": "Flow",
+  "short": "Melee, magic, styles",
+  "ref": "Jade-inspired · Direct action",
+  "accent": "#acd1a3",
+  "soft": "#2a3e32",
+  "party": 2,
+  "partyText": "You + 1 follower",
+  "gearText": "Styles, amulet & charms",
+  "desc": "Read the attack. Guard, evade and change styles while your follower attacks or supports.",
+  "page": "Styles & training"
+ },
+ {
+  "id": "vanguard",
+  "name": "Vanguard",
+  "short": "Aim, cover, command",
+  "ref": "Mass Effect-inspired · Squad shooter",
+  "accent": "#9dcfdf",
+  "soft": "#263e4a",
+  "party": 3,
+  "partyText": "You + 2 squadmates",
+  "gearText": "Firearms, shields & modules",
+  "desc": "Manage heat, aim from cover and direct combat, tech and biotic squad powers.",
+  "page": "Powers & modules"
+ },
+ {
+  "id": "tactics",
+  "name": "Tactics",
+  "short": "Initiative, actions, reactions",
+  "ref": "BG3-like interface · PF/SF2-style rules",
+  "accent": "#e2bc88",
+  "soft": "#44392c",
+  "party": 4,
+  "partyText": "You + 3 companions",
+  "gearText": "Gear, feats & prepared spells",
+  "desc": "Inspect your options, spend three actions and keep a reaction ready. Every roll has an explanation.",
+  "page": "Actions & preparation"
+ },
+ {
+  "id": "momentum",
+  "name": "Momentum",
+  "short": "Action builds commands",
+  "ref": "Additional style · Action / ATB hybrid",
+  "accent": "#c7b6ed",
+  "soft": "#393249",
+  "party": 3,
+  "partyText": "You + 2 companions",
+  "gearText": "Weapons, sockets & commands",
+  "desc": "Build momentum through basic action. Slow time to spend it on a coordinated party command.",
+  "page": "Commands & sockets"
+ },
+ {
+  "id": "confluence",
+  "name": "Confluence",
+  "short": "Live time, linked techniques",
+  "ref": "Chrono-inspired · Live ATB",
+  "accent": "#91d4c3",
+  "soft": "#253f3a",
+  "party": 3,
+  "partyText": "You + 2 companions",
+  "gearText": "Personal techniques & links",
+  "desc": "Hold readiness, watch enemy positions and coordinate two or three allies.",
+  "page": "Techniques & links"
+ },
+ {
+  "id": "cadence",
+  "name": "Cadence",
+  "short": "Ready, choose, resolve",
+  "ref": "FFVI-inspired · Classic ATB",
+  "accent": "#a9bde8",
+  "soft": "#30394c",
+  "party": 4,
+  "partyText": "You + 3 companions",
+  "gearText": "Commands, relics & learned magic",
+  "desc": "Four distinct roles, signature commands, formation rows and Active / Wait timing.",
+  "page": "Commands & relics"
+ },
+ {
+  "id": "orders",
+  "name": "Orders",
+  "short": "Plan together, resolve together",
+  "ref": "Additional style · Simultaneous planning",
+  "accent": "#d2cf9d",
+  "soft": "#3b3e2c",
+  "party": 4,
+  "partyText": "You + 3 companions",
+  "gearText": "Tactical kits & gadgets",
+  "desc": "Commit a short plan for the whole party. Both sides execute together, with uncertainty made visible.",
+  "page": "Plans & reserves"
+ },
+ {
+  "id": "oathbound",
+  "name": "Oathbound",
+  "short": "Party tactics, steel & spells",
+  "ref": "Origins-inspired · Real time with pause",
+  "accent": "#cc9d96",
+  "soft": "#443330",
+  "party": 4,
+  "partyText": "You + 3 companions",
+  "gearText": "Talents, armor & tactics",
+  "desc": "Direct a four-person party and author ordered companion tactics.",
+  "page": "Talents & tactics"
+ }
+];
+const actors=[
+ {id:'player',name:'Tessa Ward',short:'Tessa',role:'Player · Skirmisher',img:'player-meshy-reference.png'},
+ {id:'mara',name:'Mara',short:'Mara',role:'Companion · Support',img:'mara-meshy-reference.png'},
+ {id:'ivo',name:'Ivo',short:'Ivo',role:'Companion · Protector',img:'ivo-meshy-reference.png'},
+ {id:'clerk',name:'Civic clerk',short:'Civic clerk',role:'Training guest · Controller',img:'civic-clerk-meshy-reference.png'}
+];
+const pages=['Character','Equipment','Abilities','Party','Inventory','Map','Journal','Saves'];
+let selected=profiles[0], actor=actors[0], page='Character', inSheet=false, snapshot=null;
+const $=id=>document.getElementById(id);
+const escapeText=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function say(t){$('status').textContent=t;}
+function selectProfile(id){
+ selected=profiles.find(p=>p.id===id)||profiles[0];
+ document.documentElement.style.setProperty('--accent',selected.accent); document.documentElement.style.setProperty('--soft',selected.soft);
+ $('profiles').innerHTML=profiles.map((p,i)=>`<button class="profile-card" data-profile="${p.id}" aria-pressed="${p===selected}"><span class="number">0${i+1}${i>3?' · ADDITIONAL':''}</span><strong>${p.name}</strong><span>${p.short}</span></button>`).join('');
+ $('profiles').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{selectProfile(b.dataset.profile);$('profiles').querySelector(`[data-profile="${b.dataset.profile}"]`).focus();}));
+ $('profile-reference').textContent=selected.ref; $('profile-title').textContent=selected.name; $('profile-description').textContent=selected.desc;$('party-detail').textContent=selected.partyText;$('gear-detail').textContent=selected.gearText;
+ if(inSheet)renderSheet();
+}
+function renderSheet(){
+ $('sheet-profile').textContent=`${selected.name} · ${selected.partyText}`;
+ $('tabs').innerHTML=pages.map(p=>`<button data-page="${p}" ${p===page?'aria-current="page"':''}>${p}</button>`).join('');
+ $('tabs').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{page=b.dataset.page;renderSheet();$('tabs').querySelector(`[data-page="${page}"]`).focus();}));
+ $('roster').innerHTML=actors.map((a,i)=>`<button data-actor="${a.id}" aria-pressed="${a===actor}"><img alt="" src="../../art/concepts/${a.img}"><span>${a.short}<small>${i<selected.party?'Build preview':'Reserve preview'}</small></span></button>`).join('');
+ $('roster').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{actor=actors.find(a=>a.id===b.dataset.actor);renderSheet();$('roster').querySelector(`[data-actor="${actor.id}"]`).focus();}));
+ $('portrait').src=`../../art/concepts/${actor.img}`; $('portrait').alt=`${actor.name} concept portrait`;$('actor-name').textContent=actor.name;$('actor-role').textContent=build().role;
+ $('morality').innerHTML=actor.id==='player'?'<div class="meter-title"><b>Mercy</b><span class="accent">+2 / +5</span></div><div class="meter" role="meter" aria-label="Mercy" aria-valuemin="-5" aria-valuemax="5" aria-valuenow="2"><span></span></div><div class="ends"><span>−5 · Ruthless</span><span>Merciful · +5</span></div>':'<div class="meter-title"><b>Outlook</b></div><p class="small muted" style="margin-top:8px">Unknown</p>';
+ $('relationship').innerHTML=actor.id==='player'?'Relationship · <b>Ivo +1</b>':actor.id==='ivo'?'Affinity toward you · <b>+1</b>':'Relationship · <b>Not yet established</b>';
+ renderContent();
+}
+function heading(title,tag){return `<div class="content-heading"><h2>${title}</h2><span class="tag">${tag}</span></div>`;}
+function build(){return PARTY_CATALOG.profiles[selected.id].builds[actor.id];}
+function profileStudy(){return PARTY_CATALOG.profiles[selected.id];}
+function abilityList(){return '<ul class="action-list">'+[...build().abilities,...(profileStudy().common_actions||[])].map(a=>`<li><strong>${escapeText(a.name)}</strong><span class="cost">${escapeText(a.cost)}</span><small class="muted" style="display:block">${escapeText(a.source)} · ${escapeText(a.effect)}</small></li>`).join('')+'</ul>';}
+function renderContent(){
+ const stats=Object.entries(build().resources).map(([k,v])=>`<div class="stat-row"><span>${k}</span><strong>${v}</strong></div>`).join('');
+ const sampleNote='<p class="page-copy">'+escapeText(build().role)+' · Build preview.</p>';
+ let html='';
+ if(page==='Character') html=heading(selected.page,'SAMPLE BUILD')+sampleNote+`<div class="two-cols"><div class="box"><h3>Prototype resources</h3>${stats}<p class="small muted">${escapeText(build().skills.join(' · '))}</p></div><div class="box"><h3>Available actions</h3>${abilityList()}</div><div class="box wide"><div class="eyebrow">BUILD DECISIONS</div><h3 style="margin:7px 0">${escapeText(build().loop)}</h3><p>${escapeText(build().weakness)}</p><p style="margin-top:12px">Progression: ${escapeText(build().progression)}</p></div></div>`;
+ if(page==='Equipment')html=heading(selected.gearText,'LOADOUT')+sampleNote+`<div class="equipment-grid">${build().gear.map(({slot:s,name:n,detail:d})=>`<div class="gear"><div class="slot">${s}</div><strong>${n}</strong><small>${d}</small></div>`).join('')}</div><p class="note">${escapeText(profileStudy().inventory)}<br>Kit inspection only; this preview cannot equip or transfer items.</p>`;
+ if(page==='Abilities')html=heading(selected.page,'ABILITIES')+sampleNote+`<div class="two-cols"><div class="box"><h3>Abilities</h3>${abilityList()}</div><div class="box"><h3>How this profile works</h3><p>${escapeText(profileStudy().hud)}</p><p style="margin-top:20px">${escapeText(build().loop)}</p></div><div class="box wide"><h3>Archetype coverage</h3><p>${escapeText(profileStudy().coverage)}</p></div></div>`;
+ if(page==='Party')html=heading('Companion orders',`${selected.party} PARTY MEMBERS`)+`<div class="box"><h3>${escapeText(profileStudy().hud)}</h3><p>Explicit orders take priority. Failed orders explain why.</p></div><div class="equipment-grid" style="margin-top:14px">${actors.map((a,i)=>`<div class="gear"><div class="slot">${i<selected.party?'Build preview':'Reserve preview'}</div><strong>${a.name}</strong><small>${escapeText(profileStudy().builds[a.id].role)}${a.id==='clerk'?' · training guest':''}</small></div>`).join('')}</div>`;
+ if(page==='Inventory')html=heading('Inventory design',selected.name.toUpperCase())+`<div class="box"><h3>${escapeText(profileStudy().inventory)}</h3><p style="margin-top:14px">Layout, carrying capacity, stacking and equipment eligibility are separate policies. The kit shown on Equipment is proposed, not owned inventory.</p></div><div class="box" style="margin-top:14px"><h3>Selected build</h3><p>${escapeText(build().weakness)}</p><p style="margin-top:12px">Progression: ${escapeText(build().progression)}</p></div><p class="note">No inventory mutations or game saves occur in this study. Quest objects belong to the campaign, not every preview actor.</p>`;
+ if(page==='Map')html=heading('Lantern Garden','EXISTING GAME CAPTURE')+`<img class="map-photo" src="../images/garden-imported-overview-1280x800.png" alt="The actual imported garden and its bridge in Godot"><div class="box" style="margin-top:14px"><h3>${selected.name} trial</h3><p>Enter by the west bridge. Planters form cover and short lanes. Combat overlays will use the same measured layout as the minimap.</p></div>`;
+ if(page==='Journal')html=heading('The disputed charter','PROPOSED ENCOUNTER')+`<div class="box"><h3>Recover the harbor charter</h3><p>The flood ledger grants public passage through Lantern Garden. Recover the replacement seal from the sentries so the civic clerk can contest the closure.</p><ul class="action-list"><li>Explore the garden</li><li>Recover the gate seal</li><li>Return the seal to the civic clerk</li></ul></div><div class="box" style="margin-top:14px"><h3>The flood ledger</h3><p>The raised garden walk remains a public passage when the lower road floods.</p></div>`;
+ if(page==='Saves')html=heading('Campaign & trial saves','LOCAL UI STUDY')+`<div class="box"><h3>Your story carries across profiles</h3><p>Builds and encounter checkpoints belong to their own combat profiles. Changing profiles never converts weapons or overwrites an active encounter.</p></div><div class="save-row"><div><b>Preview bookmark</b><small>${snapshot?escapeText(snapshot.profile+' · '+snapshot.actor):'No bookmark in this preview session'}</small></div><button class="quiet" id="bookmark">Save preview</button></div><div class="save-row"><div><b>Restore preview selection</b><small>Restores only this page’s sample profile and actor.</small></div><button class="quiet" id="restore" ${snapshot?'':'disabled'}>Load preview</button></div><p class="note">These buttons do not read or write Oathshaper saves. Reloading this HTML clears the bookmark.</p>`;
+ $('page-content').innerHTML=html;
+ if(page==='Saves'){
+ $('bookmark').addEventListener('click',()=>{snapshot={id:selected.id,actorId:actor.id,profile:selected.name,actor:actor.name};renderContent();$('bookmark').focus();say('Preview selection bookmarked · Game saves untouched');});
+ $('restore').addEventListener('click',()=>{if(!snapshot)return;actor=actors.find(a=>a.id===snapshot.actorId);selectProfile(snapshot.id);$('restore').focus();say('Preview selection restored · Game saves untouched');});
+ }
+}
+function openSheet(){inSheet=true;$('main-menu').hidden=true;$('party-sheet').hidden=false;page='Character';renderSheet();$('tabs').querySelector('button').focus();say('Sample party sheet · Select a member or page');}
+function closeSheet(){inSheet=false;$('party-sheet').hidden=true;$('main-menu').hidden=false;$('inspect').focus();say('Design preview only · No game saves changed');}
+$('inspect').addEventListener('click',openSheet);$('back').addEventListener('click',closeSheet);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&inSheet){e.preventDefault();closeSheet();}});
+selectProfile(new URLSearchParams(location.search).get('profile'));
+if(new URLSearchParams(location.search).get('view')==='party')openSheet();
+</script>
+</body>
+</html>

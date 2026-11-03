@@ -1,0 +1,59 @@
+16:18:03 | INFO: Data are loaded, start creating Blender stuff
+16:18:03 | INFO: Blender create Mesh node output_unwrapped
+16:18:03 | INFO: glTF import finished in 0.75s
+PARTY_GAIT {
+  "Idle": {
+    "seconds": 8.0,
+    "samples": 121,
+    "lowest_sole_range_metres": [
+      1.1920928910669204e-08,
+      1.1920928910669204e-08
+    ],
+    "ankle_separation_metres": [
+      0.3131377696990967,
+      0.3131377696990967
+    ],
+    "flat_contact_median_heading_degrees": {
+      "L": 1.3212985687157903,
+      "R": -0.4619915645915396
+    },
+    "loop_ankle_error_metres": 0.0
+  },
+  "Run": {
+    "seconds": 0.6333333333333333,
+    "samples": 121,
+    "lowest_sole_range_metres": [
+      -0.013449001312255904,
+      0.17497820854187007
+    ],
+    "ankle_separation_metres": [
+      0.1445779874920845,
+      0.2011144459247589
+    ],
+    "flat_contact_median_heading_degrees": {
+      "L": 4.940035963896971,
+      "R": 2.6428224268669878
+    },
+    "loop_ankle_error_metres": 2.1129326391946126e-07
+  },
+  "Walk": {
+    "seconds": 1.0333333333333334,
+    "samples": 121,
+    "lowest_sole_range_metres": [
+      -0.0018259763717651811,
+      0.004359912872314409
+    ],
+    "ankle_separation_metres": [
+      0.20114842802286148,
+      0.2385784015059471
+    ],
+    "flat_contact_median_heading_degrees": {
+      "L": -0.41225205030181755,
+      "R": -0.7224667472340466
+    },
+    "loop_ankle_error_metres": 2.9950963321688443e-07
+  }
+}
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:51:40)
+
+Blender quit

@@ -1,0 +1,5 @@
+Public evidence copy: workstation paths normalized; test output otherwise unchanged.
+
+    Checking oathshaper-core v0.1.0 (<project>/crates/oathshaper-core)
+    Checking oathshaper-godot v0.1.0 (<project>/crates/oathshaper-godot)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.23s

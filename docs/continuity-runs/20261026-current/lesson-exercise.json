@@ -1,0 +1,28 @@
+{
+  "fault_exit": 1,
+  "repair_exit": 0,
+  "first_failure_step": 3,
+  "finding": [
+    {
+      "rule_id": "tower-light-invalidates-darkness",
+      "node": "mara_greeting",
+      "reason": "The tower is lit by shared oil or the returned payroll. Present-tense darkness topics are obsolete.",
+      "certainty": "contract_violation",
+      "observed": "obsolete choice still visible: ask_lamp",
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": true,
+        "oil_shared": true,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      }
+    }
+  ],
+  "seeded_defect": true
+}

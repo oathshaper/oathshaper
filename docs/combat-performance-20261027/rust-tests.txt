@@ -1,0 +1,214 @@
+Public evidence copy: workstation paths normalized; test output otherwise unchanged.
+
+   Compiling oathshaper-core v0.1.0 (<project>/crates/oathshaper-core)
+   Compiling oathshaper-godot v0.1.0 (<project>/crates/oathshaper-godot)
+    Finished `test` profile [optimized + debuginfo] target(s) in 26.73s
+     Running unittests src/lib.rs (target/debug/deps/oathshaper_core-373a007651ff36e0)
+
+running 46 tests
+test command::tests::ai_budget_uses_two_mobile_targets_and_unarmed_does_not_inherit_bow_range ... ok
+test command::tests::cmd19_helper_supplies_complete_check_without_changing_speaker ... ok
+test command::tests::ai_retargets_dead_targets_without_pausing_but_manual_failures_still_pause ... ok
+test command::tests::companion_rejected_preferred_power_falls_back_and_takeover_releases_ai_approach ... ok
+test command::tests::cmd08_explicit_order_replaces_ai_atomically_and_invalid_replacement_preserves_it ... ok
+test command::tests::gust_push_stops_at_garden_edge_and_never_deals_damage ... ok
+test command::tests::cmd06_level7_preserves_health_debt_and_rejects_99_credit_respec ... ok
+test command::tests::invalid_or_unsettled_party_changes_leave_the_roster_and_resources_untouched ... ok
+test command::tests::cmd17_capacity_shrink_revalidates_whole_claims_in_admission_order ... ok
+test command::tests::new_sentries_have_authored_models_roles_costs_and_counterplay ... ok
+test command::tests::obsolete_attacks_are_cleared_together_without_repeated_resume_pauses ... ok
+test command::tests::review_heavy_trained_mend_accepts_gale_and_silenced_mend_reject ... ok
+test command::tests::paused_deployed_party_can_refresh_geometry_and_queue_without_advancing_combat ... ok
+test command::tests::cmd04_lens_removal_preserves_hidden_depletion_and_ghost ... ok
+test command::tests::inventory_use_offer_uses_inspected_actor_and_real_queue_availability ... ok
+test command::tests::review_self_dressing_consumes_final_unit_and_restores_paid_windup ... ok
+test command::tests::stale_two_enemy_saves_and_missing_new_roster_fail_atomically_before_projection ... ok
+test command::tests::review_self_mend_pays_and_heals_but_silence_still_rejects ... ok
+test command::tests::transient_stun_does_not_retire_valid_queued_orders ... ok
+test command::tests::support_ai_uses_last_heal_before_crowd_control_and_restores_health ... ok
+test continuity::tests::budget_exhaustion_is_not_a_pass ... ok
+test command::tests::veil_is_party_area_ward_and_physical_damage_does_not_consume_it ... ok
+test continuity::tests::current_chapter_meets_authored_applicability ... ok
+test continuity::tests::typo_in_contract_fails_instead_of_silently_skipping ... ok
+test continuity_replay::tests::bad_action_fails_with_its_index_and_never_completes ... ok
+test continuity_replay::tests::budget_exhaustion_is_incomplete ... ok
+test continuity_replay::tests::stale_topic_has_an_action_prefix_and_consistent_oil_facts ... ok
+test continuity_replay::tests::three_oil_routes_reach_the_gate_without_injected_flags ... ok
+test dialogue_script::tests::actual_player_speech_is_compared_instead_of_menu_label ... ok
+test dialogue_script::tests::budget_exhaustion_is_never_complete ... ok
+test dialogue_script::tests::echo_heuristic_ignores_short_acknowledgement_and_catches_example ... ok
+test dialogue_script::tests::effects_return_menus_and_history_produce_a_reproducible_echo ... ok
+test dialogue_script::tests::incompatible_branches_are_not_compared_as_one_conversation ... ok
+test dialogue_script::tests::repeatable_loops_merge_and_numeric_gates_do_not_claim_coverage ... ok
+test dialogue_script::tests::repeats_are_found_across_a_long_conversation_path ... ok
+test continuity::tests::detects_playtest_dark_tower_regression_and_reports_witness ... ok
+test command::tests::separation_is_bounded_geometry_checked_and_does_not_move_rooted_actor ... ok
+test command::tests::cmd15_six_serial_builds_have_distinct_rules_and_no_respec_refill ... ok
+test command::tests::party_deployment_previews_commits_and_preserves_identity_across_start_and_restore ... ok
+test command::tests::cmd16_rest_is_pending_work_and_exit_preview_is_read_only ... ok
+test command::tests::controlled_last_order_pauses_once_and_companions_act_without_player_orders ... ok
+test command::tests::review_in_range_occluded_order_follows_valid_path_to_firing_position ... ok
+test command::tests::cmd14_blocked_approach_expires_once_and_releases_reservation ... ok
+test command::tests::cmd11_defeat_retry_restores_complete_checkpoint_and_fences_callbacks ... ok
+test command::tests::cmd03_three_sentry_garden_reconciles_deterministic_damage_and_rewards ... ok
+test command::tests::default_ai_shoots_surviving_sentinel_after_hound_dies ... ok
+
+test result: ok. 46 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.84s
+
+     Running unittests src/bin/check_continuity.rs (target/debug/deps/check_continuity-5b41c1fb9a5ab82c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/check_dialogue_script.rs (target/debug/deps/check_dialogue_script-cbfbb944be975104)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/replay_continuity.rs (target/debug/deps/replay_continuity-714351c440f922a0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/validate_dialogue.rs (target/debug/deps/validate_dialogue-9233c4ff65c57b74)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/command.rs (target/debug/deps/command-f105c85af406ef14)
+
+running 16 tests
+test native_space_frame_rejects_stale_and_duplicate_observations ... ok
+test preview_has_no_mutation_and_rejects_unknown_action_fields ... ok
+test cmd07_source_and_biological_target_rules ... ok
+test review_restore_rejects_extreme_coordinates_without_panicking ... ok
+test cmd13_shared_consumable_claims_reject_overreservation ... ok
+test review_start_replay_preserves_original_checkpoint ... ok
+test review_restore_requires_complete_item_and_equipment_claims ... ok
+test cmd05_equipment_is_atomic_and_projection_authors_occupancy ... ok
+test review_restore_ack_is_atomic_and_identical_retry_is_durable ... ok
+test cmd12_crafting_and_currency_are_one_transaction ... ok
+test cmd08_selection_possession_and_reserve_are_separate ... ok
+test cmd01_reservations_nested_pause_and_durable_rejection ... ok
+test staged_geometry_cursor_survives_ai_invalidation_and_restore ... ok
+test restore_prompt_retires_manual_and_nested_ui_pause_ownership ... ok
+test cmd10_paid_windup_restore_is_atomic_and_fences_old_inputs ... ok
+test cmd02_paid_stop_keeps_cost_and_readiness ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+
+     Running tests/flow.rs (target/debug/deps/flow-daa31922dae45bf8)
+
+running 14 tests
+test speaker_gem_changes_only_its_authored_skill_scores ... ok
+test four_presets_and_atomic_gem_requirements ... ok
+test duplicate_paid_action_does_not_spend_twice ... ok
+test startup_cancel_keeps_weapon_payment_and_restore_rejects_bad_pose ... ok
+test focus_pause_exit_and_support_budget_persist ... ok
+test harbor_sweep_respects_front_arc ... ok
+test missing_verb_is_not_a_cross_style_attack ... ok
+test projectile_impact_uses_committed_pose_los_and_blocked_sweep_fallback ... ok
+test support_to_martial_power_has_real_bonus_and_paid_cancel ... ok
+test turning_palm_cooldown_only_blocks_area_and_still_remains_shared ... ok
+test melee_impact_uses_committed_pose_los_and_blocked_sweep_fallback ... ok
+test turning_palm_push_uses_sweep_from_the_committed_endpoint_pair ... ok
+test projectile_restore_validates_complete_snapshot_atomically ... ok
+test follower_mode_toggle_requires_full_new_support_interval ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/narrative.rs (target/debug/deps/narrative-dd3d32fbe60c992a)
+
+running 29 tests
+test asked_ivo_choice_is_disabled_as_completed_and_survives_save ... ok
+test authored_leave_choices_end_dialogue_from_every_menu ... ok
+test committed_choices_emit_stable_events_only_after_success ... ok
+test corrupted_keys_do_not_replace_state ... ok
+test explicitly_repeatable_spoken_topic_remains_available ... ok
+test identical_inputs_produce_identical_saves ... ok
+test begin_at_selects_an_entry_and_rejects_unknown_nodes_atomically ... ok
+test invalid_choice_history_does_not_replace_a_live_session ... ok
+test every_response_returns_to_its_authored_menu_without_effects ... ok
+test duplicate_ids_and_unknown_variables_are_reported ... ok
+test choice_changes_later_line_and_cannot_repeat ... ok
+test choice_history_is_scoped_to_menu_and_navigation_remains_repeatable ... ok
+test clerk_lead_marks_records_and_cabinet_pickup_survives_save ... ok
+test invalid_ranges_and_unknown_json_fields_are_rejected ... ok
+test keeping_oil_cannot_farm_moral ... ok
+test locked_choice_is_atomic ... ok
+test malformed_and_incompatible_saves_preserve_live_session ... ok
+test multi_effect_failure_is_atomic ... ok
+test oil_dependent_choice_remains_locked_if_other_requirements_can_change ... ok
+test validation_rejects_broken_link ... ok
+test world_outcome_changes_only_declared_fact_and_expires_preparation ... ok
+test old_saves_keep_authored_completion_and_do_not_invent_unrecorded_conversations ... ok
+test pay_chest_collection_and_return_are_distinct_persistent_choices ... ok
+test responses_validate_return_links_and_reject_automatic_cycles ... ok
+test save_round_trip ... ok
+test saved_response_resumes_and_returns_without_repeating_its_choice ... ok
+test spoken_topics_stay_completed_after_return_reentry_and_save_without_custom_flags ... ok
+test spent_and_closed_branch_choices_disappear_from_views ... ok
+test robbery_requires_clerk_and_companion_but_not_oil_or_optional_history ... ok
+
+test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/runtime_kernel.rs (target/debug/deps/runtime_kernel-a6986bfb233efb95)
+
+running 20 tests
+test invalid_claims_cannot_be_consumed_into_credit_or_erased_before_validation ... ok
+test grants_follow_the_recipient_or_an_explicit_remote_emitter_and_report_all_removals ... ok
+test quantity_claims_consume_only_their_share_and_overflow_is_atomic ... ok
+test custom_providers_replace_or_omit_services_without_mandatory_health_clock_or_inventory ... ok
+test old_slots_old_items_and_shared_readers_block_exclusive_gear_edits ... ok
+test npc_decisions_use_normal_authority_and_identical_streams_produce_identical_saves ... ok
+test ownership_cycles_protected_items_and_split_merge_are_checked ... ok
+test interruption_and_source_loss_preserve_paid_cost_and_original_recovery_with_learned_grants ... ok
+test pending_noncombat_claim_blocks_transition_and_failed_destination_keeps_source_session ... ok
+test joint_resources_and_every_controlled_participant_are_atomic_but_targets_need_no_lease ... ok
+test continuous_paid_action_observation_rollback_and_duplicate_impact_are_deterministic ... ok
+test malformed_fingerprints_and_ledger_corruption_never_replace_the_live_session ... ok
+test rejected_candidates_roll_back_entropy_observations_occurrences_and_retry_is_terminal ... ok
+test replacement_resource_and_custom_time_operators_execute_in_the_registered_profile ... ok
+test restore_acknowledgement_admission_and_pause_commit_atomically ... ok
+test restore_rotates_authority_cached_retry_survives_and_closed_epochs_cannot_reexecute ... ok
+test revoking_a_group_lease_before_commit_rejects_without_any_participant_spend ... ok
+test source_read_claims_conflict_with_exclusive_claims_in_either_admission_order ... ok
+test turn_activity_pays_before_reaction_and_hybrid_interval_has_an_explicit_barrier ... ok
+test recipe_and_dependency_respec_failures_preserve_the_complete_service_state ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/vanguard.rs (target/debug/deps/vanguard-7d9e125b5162406a)
+
+running 12 tests
+test modules_change_real_emission_cost_and_combat_edits_reject ... ok
+test channel_claim_prevents_duplicate_power_and_cancel_retains_activated_cost ... ok
+test stale_and_teleport_observations_are_atomic ... ok
+test powered_shot_interruption_retains_cooldown_but_emits_no_heat ... ok
+test extreme_observed_coordinates_reject_without_advancing_authority ... ok
+test preactivation_invalidation_costs_nothing_but_effect_miss_keeps_cooldown ... ok
+test holstered_fire_draws_before_emission_and_never_resets_heat ... ok
+test powered_shots_require_drawn_weapon_and_exposed_cover ... ok
+test shields_gate_biotics_and_overload_has_no_health_overflow ... ok
+test pause_owners_freeze_heat_cooldown_and_tick ... ok
+test overheat_latches_until_thirty_and_switch_does_not_reset ... ok
+test defeat_stops_the_clock_without_granting_victory ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running unittests src/lib.rs (target/debug/deps/oathshaper_godot-28c6482c8d78f451)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests oathshaper_core
+
+running 1 test
+test crates/oathshaper-core/src/runtime/mod.rs - runtime::Session (line 457) - compile ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s

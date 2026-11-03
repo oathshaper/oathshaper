@@ -1,0 +1,389 @@
+{
+  "schema": 1,
+  "tool": "Blender 5.0.1",
+  "assets": {
+    "tessa": {
+      "source": "Meshy_AI_Emerald_Pathfinder_All_Animations.glb",
+      "original": {
+        "sha256": "4416c5328425f1b0215ccbc1a7f93ef821abb54e7e1ea1eab547faf6155c955f",
+        "bytes": 97484112,
+        "triangles": 10258,
+        "joints": 72,
+        "animations": [
+          "Running",
+          "Walking"
+        ],
+        "image_sha256": [
+          "1aa62870a6bb5c1df6d1df87282c5e3112093e65cc2dd21dab92cbb8694ba6c2",
+          "5b229e65c58a2b527f25c10d51530b05d2473186c9681c4e09c28608e3716c17",
+          "bfcc6a055b560630dfcd08d200cd79e6e921f0f96cb13b6c480321e06b15096f"
+        ]
+      },
+      "game_mesh": {
+        "sha256": "8b63735f7594e3e0ce3e568eace20c63fb30fd340282e6476cd78ec102625cd2",
+        "bytes": 97397828,
+        "triangles": 10258,
+        "joints": 72,
+        "animations": [
+          "Idle",
+          "Walk",
+          "Run"
+        ],
+        "image_sha256": [
+          "1aa62870a6bb5c1df6d1df87282c5e3112093e65cc2dd21dab92cbb8694ba6c2",
+          "5b229e65c58a2b527f25c10d51530b05d2473186c9681c4e09c28608e3716c17",
+          "bfcc6a055b560630dfcd08d200cd79e6e921f0f96cb13b6c480321e06b15096f"
+        ]
+      },
+      "body_bone_aliases": {
+        "Hips": "Hips",
+        "Spine": "Spine",
+        "Spine1": "Torso",
+        "Spine2": "Chest",
+        "Neck": "Neck",
+        "Head": "Head",
+        "LeftShoulder": "LClavicle",
+        "LeftArm": "LUpperArm",
+        "LeftForeArm": "LForearm",
+        "LeftHand": "LHand",
+        "LeftUpLeg": "LUpperLeg",
+        "LeftLeg": "LLowerLeg",
+        "LeftFoot": "LFoot",
+        "RightShoulder": "RClavicle",
+        "RightArm": "RUpperArm",
+        "RightForeArm": "RForearm",
+        "RightHand": "RHand",
+        "RightUpLeg": "RUpperLeg",
+        "RightLeg": "RLowerLeg",
+        "RightFoot": "RFoot"
+      },
+      "gaits": {
+        "Running": {
+          "seconds": 0.6333333333333333,
+          "root_travel_metres": 2.2421455413005713e-08,
+          "adaptation": {
+            "sole_correction_metres": [
+              0,
+              0.014457631111145064
+            ],
+            "foot_yaw_degrees": {
+              "L": -10,
+              "R": 12
+            },
+            "preserve_flight": true
+          }
+        },
+        "Walking": {
+          "seconds": 1.0333333333333334,
+          "root_travel_metres": 1.827495651733291e-08,
+          "adaptation": {
+            "sole_correction_metres": [
+              -0.01078553199768062,
+              0.012361872196197554
+            ],
+            "foot_yaw_degrees": {
+              "L": -10,
+              "R": 12
+            },
+            "preserve_flight": false
+          }
+        }
+      },
+      "standing_clip": "Locally authored 8-second breathing/sway; no new facial performance",
+      "walk_retarget": {
+        "source": "tools/rigging/sources/quaternius/UAL1_Standard.glb",
+        "source_sha256": "69591853d817488edaa8fd9bf8fc1d821eaeaf789f8627b3cd23b41c4ed67997",
+        "license": "CC0-1.0",
+        "map": {
+          "pelvis": "Hips",
+          "spine_01": "Spine",
+          "spine_02": "Torso",
+          "spine_03": "Chest",
+          "neck_01": "Neck",
+          "Head": "Head",
+          "clavicle_l": "LClavicle",
+          "upperarm_l": "LUpperArm",
+          "lowerarm_l": "LForearm",
+          "hand_l": "LHand",
+          "thigh_l": "LUpperLeg",
+          "calf_l": "LLowerLeg",
+          "foot_l": "LFoot",
+          "clavicle_r": "RClavicle",
+          "upperarm_r": "RUpperArm",
+          "lowerarm_r": "RForearm",
+          "hand_r": "RHand",
+          "thigh_r": "RUpperLeg",
+          "calf_r": "RLowerLeg",
+          "foot_r": "RFoot"
+        },
+        "clips": {
+          "Walk": {
+            "donor": "Walk_Loop",
+            "seconds": 1.3333333333333333,
+            "sole_correction_metres": [
+              0.0012766003608704057,
+              0.038785803318023726
+            ],
+            "cycle_distance_metres": 1.138
+          },
+          "Run": {
+            "donor": "Jog_Fwd_Loop",
+            "seconds": 0.9333333333333333,
+            "sole_correction_metres": [
+              -0.058579844233542566,
+              0.10268381171164087
+            ],
+            "cycle_distance_metres": 3.537
+          }
+        },
+        "run_walk_phase": {
+          "run_offset": 0.8571428571428571,
+          "normalized_leg_gap_mse_before": 0.3699996296172957,
+          "normalized_leg_gap_mse_after": 0.03236575683320291
+        }
+      },
+      "run_retarget": {
+        "source": "tools/rigging/sources/quaternius/UAL1_Standard.glb",
+        "source_sha256": "69591853d817488edaa8fd9bf8fc1d821eaeaf789f8627b3cd23b41c4ed67997",
+        "license": "CC0-1.0",
+        "map": {
+          "pelvis": "Hips",
+          "spine_01": "Spine",
+          "spine_02": "Torso",
+          "spine_03": "Chest",
+          "neck_01": "Neck",
+          "Head": "Head",
+          "clavicle_l": "LClavicle",
+          "upperarm_l": "LUpperArm",
+          "lowerarm_l": "LForearm",
+          "hand_l": "LHand",
+          "thigh_l": "LUpperLeg",
+          "calf_l": "LLowerLeg",
+          "foot_l": "LFoot",
+          "clavicle_r": "RClavicle",
+          "upperarm_r": "RUpperArm",
+          "lowerarm_r": "RForearm",
+          "hand_r": "RHand",
+          "thigh_r": "RUpperLeg",
+          "calf_r": "RLowerLeg",
+          "foot_r": "RFoot"
+        },
+        "clips": {
+          "Walk": {
+            "donor": "Walk_Loop",
+            "seconds": 1.3333333333333333,
+            "sole_correction_metres": [
+              0.0012766003608704057,
+              0.038785803318023726
+            ],
+            "cycle_distance_metres": 1.138
+          },
+          "Run": {
+            "donor": "Jog_Fwd_Loop",
+            "seconds": 0.9333333333333333,
+            "sole_correction_metres": [
+              -0.058579844233542566,
+              0.10268381171164087
+            ],
+            "cycle_distance_metres": 3.537
+          }
+        },
+        "run_walk_phase": {
+          "run_offset": 0.8571428571428571,
+          "normalized_leg_gap_mse_before": 0.3699996296172957,
+          "normalized_leg_gap_mse_after": 0.03236575683320291
+        }
+      }
+    },
+    "sabre": {
+      "source": "Meshy_AI_Curved_Saber_1028144210_texture.glb",
+      "original": {
+        "sha256": "bbafb4ba36e46d1bc5d25cb891ab43db6e8e4aa262b79176f21e6795b8ba89eb",
+        "bytes": 12181796,
+        "triangles": 125450,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "4082342ea1795f5a87ac35b06f61c433c60133995d4489f5d9cf1400f686b7c0",
+          "b510c2d972836748be496363a9c59f02607aaba9145a12027a74c6f4ab3cffde",
+          "be8d7647b7031ba49bf630b627936f29c13e7936139524a51987ba344983c40c"
+        ]
+      },
+      "game_mesh": {
+        "sha256": "bf3427f0920bbdf0355fdbbc545aafc9e10ffc5942f356465fb51d0c8725b74b",
+        "bytes": 8694364,
+        "triangles": 8000,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "4082342ea1795f5a87ac35b06f61c433c60133995d4489f5d9cf1400f686b7c0",
+          "b510c2d972836748be496363a9c59f02607aaba9145a12027a74c6f4ab3cffde",
+          "be8d7647b7031ba49bf630b627936f29c13e7936139524a51987ba344983c40c"
+        ]
+      },
+      "size_metres": 0.9,
+      "source_grip_center": [
+        0.02734748087823391,
+        0.000476570101454854,
+        -0.3554331362247467
+      ],
+      "sockets_metres": {
+        "PrimaryGrip": [
+          0,
+          0,
+          0
+        ],
+        "ImpactTip": [
+          0,
+          0,
+          0.805
+        ],
+        "ImpactBase": [
+          0,
+          0,
+          0.08
+        ]
+      }
+    },
+    "buckler": {
+      "source": "Meshy_AI_Bronze_Guardian_Shiel_1028144226_texture.glb",
+      "original": {
+        "sha256": "7338841c5d08427ab50c1aa0a6b45d95d27af7bcfdb076deda807d455227bbac",
+        "bytes": 15143496,
+        "triangles": 195540,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "27037333ee9ae607be83f96f074ab959abfbf18f11e43440c5e3ef572a81bf50",
+          "52f5af65bfccbf93579d3039e6989a48ecaef36f7cdc3016b52d79cd00550568",
+          "8e1408f662c7c02903484d10a8a21a7547c2f8ef8c34aa663453635763f48543"
+        ]
+      },
+      "game_mesh": {
+        "sha256": "5eef51a87446603184edb1c035366ddfe8f3933d9d3b78b3fb5cc59ce9363f3b",
+        "bytes": 9622596,
+        "triangles": 10000,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "27037333ee9ae607be83f96f074ab959abfbf18f11e43440c5e3ef572a81bf50",
+          "52f5af65bfccbf93579d3039e6989a48ecaef36f7cdc3016b52d79cd00550568",
+          "8e1408f662c7c02903484d10a8a21a7547c2f8ef8c34aa663453635763f48543"
+        ]
+      },
+      "size_metres": 0.42,
+      "source_grip_center": [
+        -0.00017387265688739717,
+        0.05234668403863907,
+        -0.00017331991693936288
+      ],
+      "sockets_metres": {
+        "PrimaryGrip": [
+          0,
+          0,
+          0
+        ],
+        "GuardCenter": [
+          0,
+          0,
+          0.04
+        ]
+      }
+    },
+    "staff": {
+      "source": "Meshy_AI_Crystalwood_Staff_1028144234_texture.glb",
+      "original": {
+        "sha256": "31bc3b4f47df8b5556cc08aa6756f45bbb8a0ad74cd69348cdf755bcfa25027b",
+        "bytes": 11968024,
+        "triangles": 134954,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "07ee05d5946eab36e997ece5f9798c25671bce436e8d39f4736c387d00da8146",
+          "33d2b941e4324af95ec48530c95925b3017e767ade6f4a5320e1721ff88ed5fd",
+          "b9dc6f19acb4444c2f02ac3c9cdc6068cd958dfabaaf9cd1754c47197e37b77c"
+        ]
+      },
+      "game_mesh": {
+        "sha256": "093ceb414c8979a5bc93bb6b11dbafa939451640351f3eac0246569e6c1c4c70",
+        "bytes": 8100556,
+        "triangles": 6000,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "07ee05d5946eab36e997ece5f9798c25671bce436e8d39f4736c387d00da8146",
+          "33d2b941e4324af95ec48530c95925b3017e767ade6f4a5320e1721ff88ed5fd",
+          "b9dc6f19acb4444c2f02ac3c9cdc6068cd958dfabaaf9cd1754c47197e37b77c"
+        ]
+      },
+      "size_metres": 1.75,
+      "source_grip_center": [
+        -0.003491769777610898,
+        0.0013160124653950334,
+        -0.10515326261520386
+      ],
+      "sockets_metres": {
+        "PrimaryGrip": [
+          0,
+          0,
+          0
+        ],
+        "SupportGrip": [
+          0,
+          0,
+          0.26
+        ],
+        "ImpactTip": [
+          0,
+          0,
+          0.98
+        ]
+      }
+    },
+    "mace": {
+      "source": "Meshy_AI_Ironclad_Mace_1028144203_texture.glb",
+      "original": {
+        "sha256": "8987d3127932bbaaad6336a5ad4bad2f30ad6b4d65eabd4416148b072b78aad1",
+        "bytes": 14332248,
+        "triangles": 176806,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "09b2b9c4740f93dc4f5b1c2cb6f762573694ed2b6cfeeeda6f22cf148f25c186",
+          "6a4333071198fe32aafe03b98385df05f2b40925af83ff05f0c7871b418a3a51",
+          "e65511841f525139389589ada1f70ba34fc72327daa33d7af6a99b1eab96eb30"
+        ]
+      },
+      "game_mesh": {
+        "sha256": "1bd79843388763a792eddd2608e46f31e40b78790ba17f67460dcc5b22e70146",
+        "bytes": 9350392,
+        "triangles": 8000,
+        "joints": 0,
+        "animations": [],
+        "image_sha256": [
+          "09b2b9c4740f93dc4f5b1c2cb6f762573694ed2b6cfeeeda6f22cf148f25c186",
+          "6a4333071198fe32aafe03b98385df05f2b40925af83ff05f0c7871b418a3a51",
+          "e65511841f525139389589ada1f70ba34fc72327daa33d7af6a99b1eab96eb30"
+        ]
+      },
+      "size_metres": 0.65,
+      "source_grip_center": [
+        -0.0009802578715607524,
+        -0.0010480245109647512,
+        -0.21542903780937195
+      ],
+      "sockets_metres": {
+        "PrimaryGrip": [
+          0,
+          0,
+          0
+        ],
+        "ImpactTip": [
+          0,
+          0,
+          0.54
+        ]
+      }
+    }
+  }
+}

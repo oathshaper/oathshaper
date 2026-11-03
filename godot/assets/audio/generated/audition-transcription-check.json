@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "method": "local OpenAI Whisper base, CPU, temperature0; automated spot check only",
+  "model_sha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+  "human_listening": "not_performed",
+  "clips": [
+    {
+      "speaker": "Corsair",
+      "path": "res://assets/audio/generated/auditions/corsair.wav",
+      "sha256": "0190afcb3591f928e806cf3568dc0cd5b62a7525a40cf6056ebb80a02c1fdcfb",
+      "expected_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "transcribed_text": "The harbour lights will hold until morning. I'll meet you by the garden gate.",
+      "word_error_rate": 0.0714,
+      "word_errors": 1,
+      "reference_words": 14
+    },
+    {
+      "speaker": "Mara",
+      "path": "res://assets/audio/generated/auditions/mara.wav",
+      "sha256": "1a8f22efb7eb170f79705faa9a2edf48fba11f25de61cdb4637eeb2faa95c4fe",
+      "expected_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "transcribed_text": "The harbor lights will hold until morning. I'll meet you by the Garden Gate.",
+      "word_error_rate": 0.0,
+      "word_errors": 0,
+      "reference_words": 14
+    },
+    {
+      "speaker": "Clerk",
+      "path": "res://assets/audio/generated/auditions/clerk.wav",
+      "sha256": "e8ba4e15e2fc9239073c43dbaa1dd4878c1e09cf8e180aa9f1fa0046103cb814",
+      "expected_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "transcribed_text": "The harbour lights will hold until morning. I'll meet you by the garden gate.",
+      "word_error_rate": 0.0714,
+      "word_errors": 1,
+      "reference_words": 14
+    },
+    {
+      "speaker": "Ivo",
+      "path": "res://assets/audio/generated/auditions/ivo.wav",
+      "sha256": "245599f270fd574427a972739a57fa5b7d7404f63f1166a9d27bcfc611ed1d31",
+      "expected_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "transcribed_text": "The harbour lights will hold until morning. I'll meet you by the garden gate.",
+      "word_error_rate": 0.0714,
+      "word_errors": 1,
+      "reference_words": 14
+    },
+    {
+      "speaker": "Vendor",
+      "path": "res://assets/audio/generated/auditions/vendor.wav",
+      "sha256": "46d9f1b37db0ef103d839c64ae6c55b9599d408e31348be0ad3ec81742ab6b38",
+      "expected_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "transcribed_text": "The harbour lights will hold until morning. I'll meet you by the garden gate.",
+      "word_error_rate": 0.0714,
+      "word_errors": 1,
+      "reference_words": 14
+    },
+    {
+      "speaker": "Filing Cabinet",
+      "path": "res://assets/audio/generated/auditions/filing-cabinet.wav",
+      "sha256": "e8b193943cd00a38abece3caf57a7a344fdda1d5f738fa82cf2c27d3d153329d",
+      "expected_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "transcribed_text": "The harbor lights will hold until morning. I'll meet you by the garden gate.",
+      "word_error_rate": 0.0,
+      "word_errors": 0,
+      "reference_words": 14
+    }
+  ]
+}

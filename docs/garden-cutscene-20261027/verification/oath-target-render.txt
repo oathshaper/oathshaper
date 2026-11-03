@@ -1,0 +1,7 @@
+Initialize godot-rust (API v4.3.stable.official, runtime v4.3.stable.official)
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+OpenGL API 4.1 Metal - 89.3 - Compatibility - Using Device: Apple - Apple M4 Pro
+
+2026-10-27 11:43:08.281 Godot[97505:956159276] +[IMKClient subclass]: chose IMKClient_Modern
+2026-10-27 11:43:09.099 Godot[97505:956159276] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+COMMAND_TARGETING: 30 checks, 0 failures

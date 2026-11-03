@@ -1,0 +1,682 @@
+{
+  "engine": "Obelus",
+  "pack": "oathshaper/menu-copy",
+  "pack_version": "1.0.0",
+  "positive_controls": 4,
+  "rejected_copy_matches": 0,
+  "scope": "Five rendered menu text exports; embedded combat HUD uses a separate viewport and is not extracted here.",
+  "limitations": "Deterministic findings require editorial review; this is not semantic approval or a visual layout verdict.",
+  "reviews": [
+    {
+      "screen": "picker",
+      "source": "menu-picker.txt",
+      "sha256": "5fdb6d73e33f98791cddb83c65ecec1075f20151b5cd01a73e9840169fc086c4",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "source_mapping": "complete",
+        "incompletely_located_findings": [],
+        "semantic": "not-run",
+        "factual_verification": "not-run",
+        "grammar_verification": "partial-heuristics-only",
+        "voice_fit": "not-run",
+        "unit_count": 52,
+        "reviewable_units": 52,
+        "protected_units": 0,
+        "rule_applicability": [
+          {
+            "rule_id": "menu.fourth-wall-slogan",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.ambiguous-preview-action",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.inconsistent-card-category",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.development-filler",
+            "applicability": "applicable"
+          }
+        ],
+        "limitations": [
+          "No full Markdown specification or TeX/HTML parser.",
+          "No model calls, fact retrieval, generated edits or author-voice validation.",
+          "No finding is not a clean-document or approval verdict."
+        ]
+      },
+      "findings": [
+        {
+          "id": "d1",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "lexical-confidence-fog",
+          "reason": "Repeated qualification and intensification can make confidence sound manufactured while leaving the claim imprecise.",
+          "direction": "For each term, state the actual uncertainty, degree, comparison, or evidence. Keep hedges that express real epistemic limits.",
+          "applicability": "heuristic",
+          "severity": "medium",
+          "heuristic_confidence": "medium",
+          "locations": [
+            {
+              "byte_start": 410,
+              "byte_end": 414,
+              "line_start": 64,
+              "text": "then",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 64
+            },
+            {
+              "byte_start": 548,
+              "byte_end": 552,
+              "line_start": 78,
+              "text": "Back",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 78
+            },
+            {
+              "byte_start": 643,
+              "byte_end": 647,
+              "line_start": 88,
+              "text": "Read",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 88
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 64,
+              "paragraph": 32,
+              "text": "then"
+            },
+            {
+              "line": 78,
+              "paragraph": 39,
+              "text": "Back"
+            },
+            {
+              "line": 88,
+              "paragraph": 44,
+              "text": "Read"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        },
+        {
+          "id": "d2",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "imperative-density",
+          "reason": "Repeated command-shaped sentences can flatten hierarchy, although procedures legitimately use imperatives.",
+          "direction": "Keep true steps as commands. Turn explanation, conditions, and outcomes into their actual grammatical relationships.",
+          "applicability": "heuristic",
+          "severity": "low",
+          "heuristic_confidence": "low",
+          "locations": [
+            {
+              "byte_start": 51,
+              "byte_end": 64,
+              "line_start": 6,
+              "text": "COMBAT STYLES",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 6
+            },
+            {
+              "byte_start": 66,
+              "byte_end": 87,
+              "line_start": 8,
+              "text": "Choose how you fight.",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 8
+            },
+            {
+              "byte_start": 93,
+              "byte_end": 100,
+              "line_start": 12,
+              "text": "Command",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 12
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 6,
+              "paragraph": 3,
+              "text": "COMBAT STYLES"
+            },
+            {
+              "line": 8,
+              "paragraph": 4,
+              "text": "Choose how you fight."
+            },
+            {
+              "line": 12,
+              "paragraph": 6,
+              "text": "Command"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        }
+      ]
+    },
+    {
+      "screen": "confluence-picker",
+      "source": "menu-confluence-picker.txt",
+      "sha256": "f592e0dab6a0dc2a11232310b695c2f3af00c5dd9f8f8aaa1669c4c3c97cc44b",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "source_mapping": "complete",
+        "incompletely_located_findings": [],
+        "semantic": "not-run",
+        "factual_verification": "not-run",
+        "grammar_verification": "partial-heuristics-only",
+        "voice_fit": "not-run",
+        "unit_count": 52,
+        "reviewable_units": 52,
+        "protected_units": 0,
+        "rule_applicability": [
+          {
+            "rule_id": "menu.fourth-wall-slogan",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.ambiguous-preview-action",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.inconsistent-card-category",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.development-filler",
+            "applicability": "applicable"
+          }
+        ],
+        "limitations": [
+          "No full Markdown specification or TeX/HTML parser.",
+          "No model calls, fact retrieval, generated edits or author-voice validation.",
+          "No finding is not a clean-document or approval verdict."
+        ]
+      },
+      "findings": [
+        {
+          "id": "d1",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "lexical-confidence-fog",
+          "reason": "Repeated qualification and intensification can make confidence sound manufactured while leaving the claim imprecise.",
+          "direction": "For each term, state the actual uncertainty, degree, comparison, or evidence. Keep hedges that express real epistemic limits.",
+          "applicability": "heuristic",
+          "severity": "medium",
+          "heuristic_confidence": "medium",
+          "locations": [
+            {
+              "byte_start": 410,
+              "byte_end": 414,
+              "line_start": 64,
+              "text": "then",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 64
+            },
+            {
+              "byte_start": 548,
+              "byte_end": 552,
+              "line_start": 78,
+              "text": "Back",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 78
+            },
+            {
+              "byte_start": 855,
+              "byte_end": 858,
+              "line_start": 98,
+              "text": "can",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 98
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 64,
+              "paragraph": 32,
+              "text": "then"
+            },
+            {
+              "line": 78,
+              "paragraph": 39,
+              "text": "Back"
+            },
+            {
+              "line": 98,
+              "paragraph": 49,
+              "text": "can"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        },
+        {
+          "id": "d2",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "imperative-density",
+          "reason": "Repeated command-shaped sentences can flatten hierarchy, although procedures legitimately use imperatives.",
+          "direction": "Keep true steps as commands. Turn explanation, conditions, and outcomes into their actual grammatical relationships.",
+          "applicability": "heuristic",
+          "severity": "low",
+          "heuristic_confidence": "low",
+          "locations": [
+            {
+              "byte_start": 51,
+              "byte_end": 64,
+              "line_start": 6,
+              "text": "COMBAT STYLES",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 6
+            },
+            {
+              "byte_start": 66,
+              "byte_end": 87,
+              "line_start": 8,
+              "text": "Choose how you fight.",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 8
+            },
+            {
+              "byte_start": 93,
+              "byte_end": 100,
+              "line_start": 12,
+              "text": "Command",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 12
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 6,
+              "paragraph": 3,
+              "text": "COMBAT STYLES"
+            },
+            {
+              "line": 8,
+              "paragraph": 4,
+              "text": "Choose how you fight."
+            },
+            {
+              "line": 12,
+              "paragraph": 6,
+              "text": "Command"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        }
+      ]
+    },
+    {
+      "screen": "command-menu-overview",
+      "source": "menu-command-menu-overview.txt",
+      "sha256": "6968e0d0ad28c33b3786f2ad44658ea35d9a0bffd881ff432902e1fc2bf2a217",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "source_mapping": "complete",
+        "incompletely_located_findings": [],
+        "semantic": "not-run",
+        "factual_verification": "not-run",
+        "grammar_verification": "partial-heuristics-only",
+        "voice_fit": "not-run",
+        "unit_count": 26,
+        "reviewable_units": 26,
+        "protected_units": 0,
+        "rule_applicability": [
+          {
+            "rule_id": "menu.fourth-wall-slogan",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.ambiguous-preview-action",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.inconsistent-card-category",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.development-filler",
+            "applicability": "applicable"
+          }
+        ],
+        "limitations": [
+          "No full Markdown specification or TeX/HTML parser.",
+          "No model calls, fact retrieval, generated edits or author-voice validation.",
+          "No finding is not a clean-document or approval verdict."
+        ]
+      },
+      "findings": [
+        {
+          "id": "d1",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "repeated-syntax-template",
+          "reason": "The first five part-of-speech tags repeat across consecutive sentences, a useful but fallible proxy for parallel construction.",
+          "direction": "Combine one sentence, subordinate another, or make the actual relationship conditional or causal.",
+          "applicability": "heuristic",
+          "severity": "medium",
+          "heuristic_confidence": "medium",
+          "locations": [
+            {
+              "byte_start": 136,
+              "byte_end": 143,
+              "line_start": 25,
+              "text": "Corsair",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 25
+            },
+            {
+              "byte_start": 145,
+              "byte_end": 149,
+              "line_start": 27,
+              "text": "Mara",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 27
+            },
+            {
+              "byte_start": 151,
+              "byte_end": 154,
+              "line_start": 29,
+              "text": "Ivo",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 29
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 25,
+              "paragraph": 13,
+              "text": "Corsair"
+            },
+            {
+              "line": 27,
+              "paragraph": 14,
+              "text": "Mara"
+            },
+            {
+              "line": 29,
+              "paragraph": 15,
+              "text": "Ivo"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        },
+        {
+          "id": "d2",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "imperative-density",
+          "reason": "Repeated command-shaped sentences can flatten hierarchy, although procedures legitimately use imperatives.",
+          "direction": "Keep true steps as commands. Turn explanation, conditions, and outcomes into their actual grammatical relationships.",
+          "applicability": "heuristic",
+          "severity": "low",
+          "heuristic_confidence": "low",
+          "locations": [
+            {
+              "byte_start": 12,
+              "byte_end": 36,
+              "line_start": 3,
+              "text": "Command  /  Menu preview",
+              "evidence_match": "whitespace-normalized-text",
+              "upstream_line_hint": 3
+            },
+            {
+              "byte_start": 54,
+              "byte_end": 62,
+              "line_start": 7,
+              "text": "Overview",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 7
+            },
+            {
+              "byte_start": 97,
+              "byte_end": 102,
+              "line_start": 15,
+              "text": "Party",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 15
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 3,
+              "paragraph": 2,
+              "text": "Command / Menu preview"
+            },
+            {
+              "line": 7,
+              "paragraph": 4,
+              "text": "Overview"
+            },
+            {
+              "line": 15,
+              "paragraph": 8,
+              "text": "Party"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        }
+      ]
+    },
+    {
+      "screen": "command-menu-equipment",
+      "source": "menu-command-menu-equipment.txt",
+      "sha256": "2c72fc96cc9452930349bcfffe5a66940a735832cc47de644aa4eacff78d6c9b",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "source_mapping": "complete",
+        "incompletely_located_findings": [],
+        "semantic": "not-run",
+        "factual_verification": "not-run",
+        "grammar_verification": "partial-heuristics-only",
+        "voice_fit": "not-run",
+        "unit_count": 40,
+        "reviewable_units": 40,
+        "protected_units": 0,
+        "rule_applicability": [
+          {
+            "rule_id": "menu.fourth-wall-slogan",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.ambiguous-preview-action",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.inconsistent-card-category",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.development-filler",
+            "applicability": "applicable"
+          }
+        ],
+        "limitations": [
+          "No full Markdown specification or TeX/HTML parser.",
+          "No model calls, fact retrieval, generated edits or author-voice validation.",
+          "No finding is not a clean-document or approval verdict."
+        ]
+      },
+      "findings": [
+        {
+          "id": "d1",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "repeated-syntax-template",
+          "reason": "The first five part-of-speech tags repeat across consecutive sentences, a useful but fallible proxy for parallel construction.",
+          "direction": "Combine one sentence, subordinate another, or make the actual relationship conditional or causal.",
+          "applicability": "heuristic",
+          "severity": "medium",
+          "heuristic_confidence": "medium",
+          "locations": [
+            {
+              "byte_start": 136,
+              "byte_end": 143,
+              "line_start": 25,
+              "text": "Corsair",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 25
+            },
+            {
+              "byte_start": 145,
+              "byte_end": 149,
+              "line_start": 27,
+              "text": "Mara",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 27
+            },
+            {
+              "byte_start": 151,
+              "byte_end": 154,
+              "line_start": 29,
+              "text": "Ivo",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 29
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 25,
+              "paragraph": 13,
+              "text": "Corsair"
+            },
+            {
+              "line": 27,
+              "paragraph": 14,
+              "text": "Mara"
+            },
+            {
+              "line": 29,
+              "paragraph": 15,
+              "text": "Ivo"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        }
+      ]
+    },
+    {
+      "screen": "vanguard-menu-equipment",
+      "source": "menu-vanguard-menu-equipment.txt",
+      "sha256": "e28dc40c23ca77c5d64c5a544703d3925c8b874045931b1d0f9f6d5a93361051",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "source_mapping": "complete",
+        "incompletely_located_findings": [],
+        "semantic": "not-run",
+        "factual_verification": "not-run",
+        "grammar_verification": "partial-heuristics-only",
+        "voice_fit": "not-run",
+        "unit_count": 40,
+        "reviewable_units": 40,
+        "protected_units": 0,
+        "rule_applicability": [
+          {
+            "rule_id": "menu.fourth-wall-slogan",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.ambiguous-preview-action",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.inconsistent-card-category",
+            "applicability": "applicable"
+          },
+          {
+            "rule_id": "menu.development-filler",
+            "applicability": "applicable"
+          }
+        ],
+        "limitations": [
+          "No full Markdown specification or TeX/HTML parser.",
+          "No model calls, fact retrieval, generated edits or author-voice validation.",
+          "No finding is not a clean-document or approval verdict."
+        ]
+      },
+      "findings": [
+        {
+          "id": "d1",
+          "disposition": "review-required",
+          "producer": "writing-smell-audit",
+          "rule_id": "repeated-syntax-template",
+          "reason": "The first five part-of-speech tags repeat across consecutive sentences, a useful but fallible proxy for parallel construction.",
+          "direction": "Combine one sentence, subordinate another, or make the actual relationship conditional or causal.",
+          "applicability": "heuristic",
+          "severity": "medium",
+          "heuristic_confidence": "medium",
+          "locations": [
+            {
+              "byte_start": 137,
+              "byte_end": 144,
+              "line_start": 25,
+              "text": "Corsair",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 25
+            },
+            {
+              "byte_start": 146,
+              "byte_end": 150,
+              "line_start": 27,
+              "text": "Mara",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 27
+            },
+            {
+              "byte_start": 152,
+              "byte_end": 155,
+              "line_start": 29,
+              "text": "Ivo",
+              "evidence_match": "exact-text",
+              "upstream_line_hint": 29
+            }
+          ],
+          "source_mapping": "exact",
+          "original_evidence": [
+            {
+              "line": 25,
+              "paragraph": 13,
+              "text": "Corsair"
+            },
+            {
+              "line": 27,
+              "paragraph": 14,
+              "text": "Mara"
+            },
+            {
+              "line": 29,
+              "paragraph": 15,
+              "text": "Ivo"
+            }
+          ],
+          "semantic_status": "not-run",
+          "evidence_support": "unchecked"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "test": "camera-hold",
+    "unexpected_errors": 0,
+    "known_errors": 93,
+    "script_errors": false,
+    "log": "camera-hold.txt"
+  },
+  {
+    "test": "playtest-continuity",
+    "unexpected_errors": 0,
+    "known_errors": 162,
+    "script_errors": false,
+    "log": "playtest-continuity.txt"
+  },
+  {
+    "test": "command-targeting",
+    "unexpected_errors": 0,
+    "known_errors": 68,
+    "script_errors": false,
+    "log": "command-targeting.txt"
+  },
+  {
+    "test": "combat-pacing",
+    "unexpected_errors": 0,
+    "known_errors": 68,
+    "script_errors": false,
+    "log": "combat-pacing.txt"
+  },
+  {
+    "test": "flow-trial",
+    "unexpected_errors": 0,
+    "known_errors": 26,
+    "script_errors": false,
+    "log": "flow-trial.txt"
+  },
+  {
+    "test": "exploration",
+    "unexpected_errors": 0,
+    "known_errors": 479,
+    "script_errors": false,
+    "log": "exploration.txt"
+  }
+]

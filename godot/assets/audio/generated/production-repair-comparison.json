@@ -1,0 +1,404 @@
+{
+  "schema": 1,
+  "seed": 299792459,
+  "baseline_seed": 299792458,
+  "source_manifest_sha256": "5f79071d87323ef9f920df8c51bfe434e4081277c97376bb1fa8fa640107e08f",
+  "generator_sha256": "c7f10232c7d1cdb5a13654dad9a31d8129174123f8463e67d4825dd052f794b6",
+  "wrapper_sha256": "2c5017fea20ba0f0327cbf132a9843f0431625caa80acaa1ceef21135751b4a1",
+  "method": "One alternate-seed candidate per exact unchanged text, fresh worker per line, language and Mimi caches reset, same model/voice/quantization/PCM processing.",
+  "human_listening": "not_performed",
+  "clips": [
+    {
+      "baseline": {
+        "key": "0b8dcb9d58188644cfd7e632dc749561643c261866488be571dc935af8062155",
+        "speaker": "Corsair",
+        "lookup_text": "Ask about the lantern tower.",
+        "spoken_text": "What can you tell me about the lantern tower?",
+        "sources": [
+          "choice:vendor_greeting/ask_about_tower"
+        ],
+        "path": "res://assets/audio/generated/2eb80f0702749c96a216e25d8d5059e531e0951702669cccc46faa4b26e0fde3.wav",
+        "voice": "vctk/p228_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "db10da095cbbf68e6fc6cf83f409a2cf5138cd51cea4feab1a368b123b477cbf",
+        "chunks": [
+          "What can you tell me about the lantern tower?"
+        ],
+        "generation_seconds": 7.237,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 2.5,
+        "raw_duration_seconds": 2.96,
+        "raw_sha256": "8bba80f23b496dbe121062fbda3599ce3df872d6d0d807e4d47d59b5ad50901f",
+        "raw_peak": 12154,
+        "raw_clipped_fraction": 0.0,
+        "gain": 2.29159,
+        "trim_start_samples": 11040,
+        "trim_end_samples": 0,
+        "active_20ms_frames": 105,
+        "raw_20ms_frames": 148,
+        "objective_qc": "passed",
+        "human_listening": "not_performed"
+      },
+      "candidate": {
+        "key": "0b8dcb9d58188644cfd7e632dc749561643c261866488be571dc935af8062155",
+        "speaker": "Corsair",
+        "lookup_text": "Ask about the lantern tower.",
+        "spoken_text": "What can you tell me about the lantern tower?",
+        "sources": [
+          "choice:vendor_greeting/ask_about_tower"
+        ],
+        "path": "res://assets/audio/generated/2eb80f0702749c96a216e25d8d5059e531e0951702669cccc46faa4b26e0fde3.wav",
+        "voice": "vctk/p228_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "201438ab2cdec4dbb956be5b3319064c94faa98139c2364f277ca41add495918",
+        "chunks": [
+          "What can you tell me about the lantern tower?"
+        ],
+        "generation_seconds": 63.71,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 3.02,
+        "raw_duration_seconds": 3.04,
+        "raw_sha256": "c351080040f26c72bcd89541ba783d436223d2963a58340c0dfeaccf7ab80cbc",
+        "raw_peak": 20861,
+        "raw_clipped_fraction": 0.0,
+        "gain": 1.33512,
+        "trim_start_samples": 480,
+        "trim_end_samples": 0,
+        "active_20ms_frames": 139,
+        "raw_20ms_frames": 152,
+        "objective_qc": "passed",
+        "human_listening": "not_performed",
+        "seed": 299792459
+      },
+      "baseline_transcripts": [
+        "Can you tell me about the lantern tower?",
+        "Can you tell me about the lantern tower?"
+      ],
+      "candidate_transcripts": [
+        "What can you tell me about the lantern tower?",
+        "What can you tell me about the lantern tower?"
+      ],
+      "candidate_word_errors": [
+        0,
+        0
+      ],
+      "baseline_comparison_errors": [
+        1,
+        1
+      ],
+      "candidate_comparison_errors": [
+        0,
+        0
+      ],
+      "selection": "candidate",
+      "selection_basis": "Lower unprompted transcript edit count, neither method worsened, and at least one exact comparison after only Ivo/Evo and pier/peer spelling aliases.",
+      "baseline_word_errors": [
+        1,
+        1
+      ]
+    },
+    {
+      "baseline": {
+        "key": "f17152c21e9638f1df8b009cd44bd3843756fc1e9bf633b7a8fb04ff2b73586b",
+        "speaker": "Mara",
+        "lookup_text": "Ivo keeps watch by the east gate. Tell him you came from my pier.",
+        "spoken_text": "Ivo keeps watch by the east gate. Tell him you came from my pier.",
+        "sources": [
+          "node:tide_gate"
+        ],
+        "path": "res://assets/audio/generated/752da28d5119be37f30f950f06409d1b412870de509d0273a672f10f2eec1527.wav",
+        "voice": "vctk/p339_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "e732967dbe6b9c69d6f0631c342960160d52e839f272dae9f8feb1ef1d9c45d2",
+        "chunks": [
+          "Ivo keeps watch by the east gate. Tell him you came from my pier."
+        ],
+        "generation_seconds": 6.952,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 4.16,
+        "raw_duration_seconds": 4.16,
+        "raw_sha256": "fb8535234bf289359484bb519a19d131ff197764d2382fec3abdb7234ee57f0b",
+        "raw_peak": 22173,
+        "raw_clipped_fraction": 0.0,
+        "gain": 1.25612,
+        "trim_start_samples": 0,
+        "trim_end_samples": 0,
+        "active_20ms_frames": 149,
+        "raw_20ms_frames": 208,
+        "objective_qc": "passed",
+        "human_listening": "not_performed"
+      },
+      "candidate": {
+        "key": "f17152c21e9638f1df8b009cd44bd3843756fc1e9bf633b7a8fb04ff2b73586b",
+        "speaker": "Mara",
+        "lookup_text": "Ivo keeps watch by the east gate. Tell him you came from my pier.",
+        "spoken_text": "Ivo keeps watch by the east gate. Tell him you came from my pier.",
+        "sources": [
+          "node:tide_gate"
+        ],
+        "path": "res://assets/audio/generated/752da28d5119be37f30f950f06409d1b412870de509d0273a672f10f2eec1527.wav",
+        "voice": "vctk/p339_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "781a083412ea2a7472b603e9c8c679ec1b5b0febad3de17a0dc20f3d6d1ec0db",
+        "chunks": [
+          "Ivo keeps watch by the east gate. Tell him you came from my pier."
+        ],
+        "generation_seconds": 29.432,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 4.56,
+        "raw_duration_seconds": 4.56,
+        "raw_sha256": "0a5d01e334e203686d9a70d602f0478e9d91e931a114f0d9f4d2175781674ec1",
+        "raw_peak": 6998,
+        "raw_clipped_fraction": 0.0,
+        "gain": 3.97999,
+        "trim_start_samples": 0,
+        "trim_end_samples": 0,
+        "active_20ms_frames": 129,
+        "raw_20ms_frames": 228,
+        "objective_qc": "passed",
+        "human_listening": "not_performed",
+        "seed": 299792459
+      },
+      "baseline_transcripts": [
+        "The evo keeps watched by the esgate. Tell him you came from my pier.",
+        "The evo keeps watch by the esgate. Tell him you came from my pier."
+      ],
+      "candidate_transcripts": [
+        "Evo keeps watch by the esgate. Tell him you came from my pier.",
+        "Evo keeps watch by the East Gate. Tell him you came from my pier."
+      ],
+      "candidate_word_errors": [
+        3,
+        1
+      ],
+      "baseline_comparison_errors": [
+        4,
+        3
+      ],
+      "candidate_comparison_errors": [
+        2,
+        0
+      ],
+      "selection": "candidate",
+      "selection_basis": "Lower unprompted transcript edit count, neither method worsened, and at least one exact comparison after only Ivo/Evo and pier/peer spelling aliases.",
+      "baseline_word_errors": [
+        5,
+        4
+      ]
+    },
+    {
+      "baseline": {
+        "key": "d52494f69e37f30fc0ac6b69c4d1ef5d1fe7f6f843b2390f239d95624ee6e250",
+        "speaker": "Corsair",
+        "lookup_text": "Ask Ivo to unbar the east gate.",
+        "spoken_text": "Will you open the east gate?",
+        "sources": [
+          "choice:ivo_gate/open_gate"
+        ],
+        "path": "res://assets/audio/generated/25932e71ac960db9d5daa4365c09230b9d572a2b5a55383bad26835a477a6174.wav",
+        "voice": "vctk/p228_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "b58bf7f5081d7865f83e9fb296930775ab17cd9bae7f08dd83ee8aefb515e2af",
+        "chunks": [
+          "Will you open the east gate?"
+        ],
+        "generation_seconds": 7.666,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 1.52,
+        "raw_duration_seconds": 1.68,
+        "raw_sha256": "87c35f445d485902ba7a7b39730bcbf7e680dd5fffd04ddc13c2407b105c9a69",
+        "raw_peak": 8997,
+        "raw_clipped_fraction": 0.0,
+        "gain": 3.09569,
+        "trim_start_samples": 2400,
+        "trim_end_samples": 1440,
+        "active_20ms_frames": 51,
+        "raw_20ms_frames": 84,
+        "objective_qc": "passed",
+        "human_listening": "not_performed"
+      },
+      "candidate": {
+        "key": "d52494f69e37f30fc0ac6b69c4d1ef5d1fe7f6f843b2390f239d95624ee6e250",
+        "speaker": "Corsair",
+        "lookup_text": "Ask Ivo to unbar the east gate.",
+        "spoken_text": "Will you open the east gate?",
+        "sources": [
+          "choice:ivo_gate/open_gate"
+        ],
+        "path": "res://assets/audio/generated/25932e71ac960db9d5daa4365c09230b9d572a2b5a55383bad26835a477a6174.wav",
+        "voice": "vctk/p228_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "9023ade38b038c78038f224d805c66488013d32d65269e833c3a42d1a193a6f2",
+        "chunks": [
+          "Will you open the east gate?"
+        ],
+        "generation_seconds": 15.621,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 1.84,
+        "raw_duration_seconds": 1.84,
+        "raw_sha256": "75ba7bfa61384e49d421957dd562521fbeb5dc0c281830320e8ddcfc4edc56c2",
+        "raw_peak": 17780,
+        "raw_clipped_fraction": 0.0,
+        "gain": 1.56648,
+        "trim_start_samples": 0,
+        "trim_end_samples": 0,
+        "active_20ms_frames": 75,
+        "raw_20ms_frames": 92,
+        "objective_qc": "passed",
+        "human_listening": "not_performed",
+        "seed": 299792459
+      },
+      "baseline_transcripts": [
+        "Will you open the eskate?",
+        "Will you open the escape?"
+      ],
+      "candidate_transcripts": [
+        "We will open the escape.",
+        "We will open the escape."
+      ],
+      "candidate_word_errors": [
+        4,
+        4
+      ],
+      "baseline_comparison_errors": [
+        2,
+        2
+      ],
+      "candidate_comparison_errors": [
+        4,
+        4
+      ],
+      "selection": "retain_baseline",
+      "selection_basis": "Candidate did not meet the bounded objective improvement rule.",
+      "baseline_word_errors": [
+        2,
+        2
+      ]
+    },
+    {
+      "baseline": {
+        "key": "24c6ef816eeec31aa9aa78e7f87fbacf405470d0e8b9d02a41696f7d4e87059b",
+        "speaker": "Mara",
+        "lookup_text": "That should keep the pier lamp burning until morning. Thank you.",
+        "spoken_text": "That should keep the pier lamp burning until morning. Thank you.",
+        "sources": [
+          "node:mara_greeting/variant:0"
+        ],
+        "path": "res://assets/audio/generated/172e0b6ff31c11a848dc634ced2ad412542f6ca07f04a0905d081ece0fb5ce86.wav",
+        "voice": "vctk/p339_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "aac772d75301f016460efef926b26329fc22627fa362ddafea5d4e98fc5098b7",
+        "chunks": [
+          "That should keep the pier lamp burning until morning. Thank you."
+        ],
+        "generation_seconds": 7.044,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 3.64,
+        "raw_duration_seconds": 3.76,
+        "raw_sha256": "8edc5934c6fd233d991f0ee0b1796b29a440e50d8e7a0b5377a1ecd175a53cf4",
+        "raw_peak": 13894,
+        "raw_clipped_fraction": 0.0,
+        "gain": 2.0046,
+        "trim_start_samples": 2880,
+        "trim_end_samples": 0,
+        "active_20ms_frames": 118,
+        "raw_20ms_frames": 188,
+        "objective_qc": "passed",
+        "human_listening": "not_performed"
+      },
+      "candidate": {
+        "key": "24c6ef816eeec31aa9aa78e7f87fbacf405470d0e8b9d02a41696f7d4e87059b",
+        "speaker": "Mara",
+        "lookup_text": "That should keep the pier lamp burning until morning. Thank you.",
+        "spoken_text": "That should keep the pier lamp burning until morning. Thank you.",
+        "sources": [
+          "node:mara_greeting/variant:0"
+        ],
+        "path": "res://assets/audio/generated/172e0b6ff31c11a848dc634ced2ad412542f6ca07f04a0905d081ece0fb5ce86.wav",
+        "voice": "vctk/p339_023.wav",
+        "voice_license": "CC-BY-4.0",
+        "sha256": "baeebf6c92952b14dc622daa56888a2ea3ac9b32fbbd6b8406078c01a0d8f6d3",
+        "chunks": [
+          "That should keep the pier lamp burning until morning. Thank you."
+        ],
+        "generation_seconds": 44.089,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 3.5,
+        "raw_duration_seconds": 3.68,
+        "raw_sha256": "3afce6bfd72fe9f4ecfb72e7820751dfacdb5648b40409cf0f9bef7c4b1ebfcf",
+        "raw_peak": 29056,
+        "raw_clipped_fraction": 0.0,
+        "gain": 0.95856,
+        "trim_start_samples": 1440,
+        "trim_end_samples": 2880,
+        "active_20ms_frames": 125,
+        "raw_20ms_frames": 184,
+        "objective_qc": "passed",
+        "human_listening": "not_performed",
+        "seed": 299792459
+      },
+      "baseline_transcripts": [
+        "That should keep the PURL amp burning. Until morning. Thank you.",
+        "That should keep the PLM burning. Until morning. Thank you."
+      ],
+      "candidate_transcripts": [
+        "That should keep the Peerland burning until morning. Thank you.",
+        "That should keep the Peerland burning until morning. Thank you."
+      ],
+      "candidate_word_errors": [
+        2,
+        2
+      ],
+      "baseline_comparison_errors": [
+        2,
+        2
+      ],
+      "candidate_comparison_errors": [
+        2,
+        2
+      ],
+      "selection": "retain_baseline",
+      "selection_basis": "Candidate did not meet the bounded objective improvement rule.",
+      "baseline_word_errors": [
+        2,
+        2
+      ]
+    }
+  ],
+  "transcription_model_sha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+  "transcription_methods": [
+    "unprompted local Whisper base, temperature 0",
+    "same model, 0.5 s silence on both edges, beam_size 5, no text prompt"
+  ],
+  "comparison_aliases_only": {
+    "evo": "ivo",
+    "peer": "pier"
+  },
+  "baseline_production_provenance_sha256": "d2dcdb3796e93341a6cbe7fa2579d1879c1f5f74823a20b2ae4a368f848a370e",
+  "model": "kyutai/tts-1.6b-en_fr",
+  "model_revision": "f65439609986c392cb12df63938abcc550c3fb15",
+  "voice_revision": "323332d33f997de8394f24a193e1a76df720e01a",
+  "quantization_bits": 8,
+  "seed_override_recipe": "In the isolated worker process, save mlx.core.random.seed, then replace it with a function that calls the saved function with 299792459. Run the unchanged cache-reset generator worker. Local voice runtime source and environment remain unchanged.",
+  "selected_keys": [
+    "0b8dcb9d58188644cfd7e632dc749561643c261866488be571dc935af8062155",
+    "f17152c21e9638f1df8b009cd44bd3843756fc1e9bf633b7a8fb04ff2b73586b"
+  ],
+  "scope": "One candidate per each of four unchanged texts; two retained baseline recordings; no further attempts."
+}

@@ -1,0 +1,1806 @@
+{
+  "before": [
+    {
+      "batch": "before-01.obelus",
+      "source_sha256": "f7861ceb72fb46e5249128ce438c46ed65be8fa44a9a991752aec5dcc2377488",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 171
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/combat_frontend.gd",
+            "godot/scripts/combat_frontend.gd",
+            "godot/scripts/combat_frontend.gd"
+          ]
+        },
+        {
+          "rule": "lexical-confidence-fog",
+          "severity": "medium",
+          "evidence": [
+            "must",
+            "must",
+            "then"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/character_model_slot.gd:60",
+            "## godot/scripts/character_model_slot.gd:64",
+            "## godot/scripts/character_model_slot.gd:60"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/combat_frontend.gd:236",
+            "Load game",
+            "## godot/scripts/combat_frontend.gd:236"
+          ]
+        },
+        {
+          "rule": "rhetorical-triad-stack",
+          "severity": "low",
+          "evidence": [
+            "Let readiness build, watch enemy positions, and unite two or three allies in a linked technique.",
+            "Build warrior, rogue, and mage roles around companion tactics.",
+            "Read attacks, guard or evade, and change styles in motion."
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-02.obelus",
+      "source_sha256": "afe3a3547a473616ac71a3607d0d7e6f0b550a018d5502d3e5957480ef122074",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 167
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/combat_style_inspector",
+            "godot/scripts/combat_style_inspector",
+            "godot/scripts/combat_style_inspector"
+          ]
+        },
+        {
+          "rule": "universalizing-claims",
+          "severity": "medium",
+          "evidence": [
+            "All",
+            "never",
+            "all"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/combat_style_inspector.gd:77",
+            "## godot/scripts/combat_style_inspector.gd:79",
+            "## godot/scripts/combat_style_inspector.gd:220"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/combat_style_inspector.gd:256",
+            "PLAY PATTERN",
+            "## godot/scripts/combat_style_inspector.gd:267"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-03.obelus",
+      "source_sha256": "1304f01b707686ef7f782b8e6e8078c9288acd1b693576e74e7015bbf8ee511e",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 162
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/command_ledger.gd",
+            "godot/scripts/command_ledger.gd",
+            "godot/scripts/command_ledger.gd"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_hud.gd:392",
+            "## godot/scripts/command_hud.gd:392",
+            "## godot/scripts/command_hud.gd:392"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_ledger.gd:401",
+            "Weapon sets",
+            "## godot/scripts/command_ledger.gd:403"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-04.obelus",
+      "source_sha256": "87b56aebd0c4244554452216120d8bfe34fb75ac0089e7df280bd4287fa102e0",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 165
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/command_trial.gd",
+            "godot/scripts/command_trial.gd",
+            "godot/scripts/command_trial.gd"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_trial.gd:235",
+            "## godot/scripts/command_trial.gd:235",
+            "## godot/scripts/command_trial.gd:504"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_trial.gd:266",
+            "\u00b7 Unavailable",
+            "## godot/scripts/command_trial.gd:268"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-05.obelus",
+      "source_sha256": "117da5af265d09cf696a8b6591ce69f1fcfb61bf11c059c314cd2fa8cb83d402",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 178
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/journal_menu.gd",
+            "godot/scripts/journal_menu.gd",
+            "godot/scripts/journal_menu.gd"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/scripts/map_widget.gd:174",
+            "Also: godot/scripts/map_widget.gd:174",
+            "Also: godot/scripts/demo.gd:533"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/scripts/map_widget.gd:174",
+            "Also: godot/scripts/map_widget.gd:485"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/demo.gd:290",
+            "Weapon sheathed.",
+            "## godot/scripts/demo.gd:297"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-06.obelus",
+      "source_sha256": "ddd083e606963d571a0bec5584a90fedbd55a8736f02f5a09595b3a2caf08b8b",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 167
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/content/lantern_quay.json",
+            "godot/content/lantern_quay.json",
+            "godot/content/lantern_quay.json"
+          ]
+        },
+        {
+          "rule": "universalizing-claims",
+          "severity": "medium",
+          "evidence": [
+            "All",
+            "never",
+            "no one"
+          ]
+        },
+        {
+          "rule": "lexical-confidence-fog",
+          "severity": "medium",
+          "evidence": [
+            "about",
+            "Read",
+            "still"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/objective_tracker.gd:101",
+            "## godot/scripts/objective_tracker.gd:101",
+            "## godot/scripts/objective_tracker.gd:141"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/lantern_quay.json#/nodes/0/text",
+            "## godot/content/lantern_quay.json#/nodes/15/text"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/gear/4/name",
+            "Navigator seal",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/gear/4/detail"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-07.obelus",
+      "source_sha256": "6cd24074926c41c1535c854442c871facd7c30643606b913cec24b057734b0de",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 166
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/1/cost",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/2/cost",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/1/source"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/1/source",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/clerk/abilities/0/source"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/clerk/gear/1/name",
+            "Scout leathers",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/clerk/gear/2/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/1/cost",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/1/source",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/abilities/1/effect"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-08.obelus",
+      "source_sha256": "d303ed24b529fa811e56f6983daca04fba8ff08b6a2c286643588a8c1418d706",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 176
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/gear/0/slot",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/gear/3/slot",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/gear/0/detail",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/common_actions/3/name",
+            "Chi enhancement",
+            "## godot/content/rpg_catalog.json#/profiles/flow/common_actions/3/cost"
+          ]
+        },
+        {
+          "rule": "unsupported-evaluative-claim",
+          "severity": "medium",
+          "evidence": [
+            "Fast close strikes."
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/progression",
+            "Also: godot/content/rpg_catalog.json#/profiles/flow/builds/mara/gear/0/slot, godot/content/rpg_catalog.json#/profiles/flow/builds/mara/abilities/3/source, godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/gear/0/slot, godot/content/r"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-09.obelus",
+      "source_sha256": "a8ec33b705c5d6387fb08d9542ba679d499457ed017241096d19f8ff47087825",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 168
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/abilities/1/effect",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/abilities/2/effect",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/abilities/1/effect"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/abilities/0/cost, godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/abilities/0/cost",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/abilities/3/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/gear/2/name",
+            "Concord processor",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/gear/2/detail"
+          ]
+        },
+        {
+          "rule": "unsupported-evaluative-claim",
+          "severity": "medium",
+          "evidence": [
+            "Faster shield recovery"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/abilities/1/name",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/abilities/1/source",
+            "Also: godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/abilities/2/source"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-10.obelus",
+      "source_sha256": "09b1583836758f06e7f56689ee01ad6f386a377eea6332e5ae612565572b8be7",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 164
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "catalog.json#/profiles/tactics/builds",
+            "catalog.json#/profiles/tactics/builds",
+            "catalog.json#/profiles/tactics/builds"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/skills/0",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/skills/1",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/skills/0"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/skills/2",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/skills/0"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/role",
+            "Shield fighter",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/skills/0"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/role",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/loop",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/weakness"
+          ]
+        },
+        {
+          "rule": "uniform-paragraph-length",
+          "severity": "low",
+          "evidence": [
+            "# Oathshaper UI copy",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/role",
+            "Shield fighter"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-11.obelus",
+      "source_sha256": "01357df48574c40a37b912c8c1441cbae8e4b893fee35ec0dd647241350a9e2a",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 165
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/1/effect",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/2/effect",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/1/effect"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/oathbound/builds/ivo/abilities/1/cost",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/ivo/abilities/0/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/player/gear/0/name",
+            "Ashguard sword",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/player/gear/1/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/1/effect",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/2/name",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/2/cost"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-12.obelus",
+      "source_sha256": "cd4240919697cd4cf1a503ff7a10f27f05b583469291a2e7ba92553cf82422d3",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 174
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/clerk/gear/0/detail",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/clerk/gear/1/detail",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/clerk/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/abilities/3/source",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/abilities/1/source"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/gear/0/name",
+            "Impact gauntlets",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/gear/1/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/clerk/progression",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/clerk/abilities/0/cost",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/clerk/abilities/0/source"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-13.obelus",
+      "source_sha256": "89f8226472537102b511d8c913bb36cab5b4e48d555ab5a19b5416bfce89e14c",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 174
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/gear/0/name",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/gear/1/name",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/abilities/0/cost"
+          ]
+        },
+        {
+          "rule": "nominalization-density",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/progression",
+            "Also: godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/gear/0/detail, godot/content/rpg_catalog.json#/profiles/confluence/builds/ivo/gear/0/detail, godot/content/rpg_catalog.json#/profiles/confluence/builds/clerk/gear/0/detai"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/0/cost",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/ivo/abilities/2/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/gear/0/name",
+            "Tidecut sabre",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/skills/2",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/loop",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/clerk/weakness"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-14.obelus",
+      "source_sha256": "8aea625a0776bfa5a0a31322490f9a5708fe7d18d8a4c5a0f833fbd3b22d7684",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 177
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/skills/0",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/skills/1",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "nominalization-density",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/progression",
+            "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/gear/0/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/0/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/gear/0/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/0/detail, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/gear/0/detail",
+            "Also: godot/content/rpg_catalog.json#/profiles/orders/builds/mara/gear/0/detail, godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/gear/0/detail, godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/0/name",
+            "Bolt repeater",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/1/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/loop",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/player/progression"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "before-15.obelus",
+      "source_sha256": "585c06b6a4def5799bca65189dc2afcea4bf05a55e65afda8636d8e3bc4b4a54",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 101
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/abilities/2/effect",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/abilities/3/effect",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/gear/1/name"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/gear/1/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/2/name"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/gear/0/name",
+            "Utility carbine",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/gear/2/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/abilities/2/effect",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/abilities/3/cost",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/abilities/3/effect"
+          ]
+        },
+        {
+          "rule": "uniform-paragraph-length",
+          "severity": "low",
+          "evidence": [
+            "# Oathshaper UI copy",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/abilities/2/effect",
+            "Break an authored obstacle."
+          ]
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "batch": "after-01.obelus",
+      "source_sha256": "23ec928606fd4672c004c64cc67caa396f3b6072e10b1361e76d324b5f9b2a70",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 173
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/combat_frontend.gd",
+            "godot/scripts/combat_frontend.gd",
+            "godot/scripts/combat_frontend.gd"
+          ]
+        },
+        {
+          "rule": "lexical-confidence-fog",
+          "severity": "medium",
+          "evidence": [
+            "must",
+            "must",
+            "then"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/character_model_slot.gd:60",
+            "## godot/scripts/character_model_slot.gd:64",
+            "## godot/scripts/character_model_slot.gd:60"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/combat_frontend.gd:236",
+            "Load game",
+            "## godot/scripts/combat_frontend.gd:236"
+          ]
+        },
+        {
+          "rule": "rhetorical-triad-stack",
+          "severity": "low",
+          "evidence": [
+            "Let readiness build, watch enemy positions, and unite two or three allies in a linked technique.",
+            "Build warrior, rogue, and mage roles around companion tactics.",
+            "Read attacks, guard or evade, and change styles in motion."
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-02.obelus",
+      "source_sha256": "3645c521fdd6c6127ad32c1f20abba948efef6a2b261a0c1364ac5bf5c4713a6",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 170
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/command_hud.gd",
+            "godot/scripts/command_hud.gd",
+            "godot/scripts/command_hud.gd"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/combat_style_inspector.gd:78",
+            "## godot/scripts/combat_style_inspector.gd:80",
+            "Also: godot/scripts/command_hud.gd:80"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/combat_style_inspector.gd:258",
+            "PLAY PATTERN",
+            "## godot/scripts/combat_style_inspector.gd:276"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-03.obelus",
+      "source_sha256": "8d9703981fa4d56df36e01a27129ec876b4d2c0df09e578470bc44edc5c729ba",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 163
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/command_ledger.gd",
+            "godot/scripts/command_ledger.gd",
+            "godot/scripts/command_ledger.gd"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_ledger.gd:400",
+            "Weapon sets",
+            "## godot/scripts/command_ledger.gd:402"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-04.obelus",
+      "source_sha256": "bebfba55fec237b1b6271fa652d387ff95e45b278d472eb3dc8d3f0f65055d4e",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 178
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/command_trial.gd",
+            "godot/scripts/command_trial.gd",
+            "godot/scripts/command_trial.gd"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_trial.gd:236",
+            "## godot/scripts/command_trial.gd:236",
+            "## godot/scripts/command_trial.gd:505"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/command_trial.gd:267",
+            "\u00b7 Unavailable",
+            "## godot/scripts/command_trial.gd:269"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-05.obelus",
+      "source_sha256": "bd0b2ad6fe50f1bf3468d7307f30613a8f4850fd74fba5347fd17cf51b60895f",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 168
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/scripts/journal_menu.gd",
+            "godot/scripts/journal_menu.gd",
+            "godot/scripts/journal_menu.gd"
+          ]
+        },
+        {
+          "rule": "lexical-confidence-fog",
+          "severity": "medium",
+          "evidence": [
+            "Back",
+            "Back",
+            "Read"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/map_widget.gd:455",
+            "## godot/scripts/map_widget.gd:455",
+            "## godot/scripts/map_widget.gd:469"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/scripts/hub_environment.gd:707",
+            "WEST ARCHIVE",
+            "## godot/scripts/hub_environment.gd:911"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-06.obelus",
+      "source_sha256": "67cf22475e1ab963682949c0d517276c382b474fa4ce9daa2f3109ec0f377865",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 167
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "godot/content/rpg_catalog.json",
+            "godot/content/rpg_catalog.json",
+            "godot/content/rpg_catalog.json"
+          ]
+        },
+        {
+          "rule": "lexical-confidence-fog",
+          "severity": "medium",
+          "evidence": [
+            "could",
+            "that",
+            "Only"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/lantern_quay.json#/nodes/6/text",
+            "## godot/content/lantern_quay.json#/nodes/7/text",
+            "## godot/content/lantern_quay.json#/nodes/6/text"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/gear/0/detail",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/mara/gear/2/detail"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/gear/4/name",
+            "Navigator seal",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/player/gear/4/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "Also: godot/content/lantern_quay.json#/nodes/11/choices/1/text, godot/content/lantern_quay.json#/nodes/12/choices/1/text",
+            "Shared categorized list \u00b7 no weight penalty; proficiency and armor restrictions still apply.",
+            "Weapon specialist, scout, infiltrator, melee mystic, power specialist, balanced investigator."
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-07.obelus",
+      "source_sha256": "8daec956702a083c7112aa5e1857ff435189e37a4de4deddd15e21497d7c1537",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 177
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/ivo/gear/0/detail",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/ivo/gear/1/detail",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/ivo/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/player/role",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/mara/role"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/clerk/gear/1/name",
+            "Scout leathers",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/clerk/gear/2/detail"
+          ]
+        },
+        {
+          "rule": "unsupported-evaluative-claim",
+          "severity": "medium",
+          "evidence": [
+            "Fast close strikes."
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/gear/5/detail, godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/gear/5/detail",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/ivo/abilities/0/source",
+            "## godot/content/rpg_catalog.json#/profiles/command/builds/ivo/abilities/0/effect"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-08.obelus",
+      "source_sha256": "c174e9ff0f3a8bf7fa2da84d65c6117f2870a3041e5a8e6c4e4628b81266ca41",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 167
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/abilities/0/effect",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/abilities/1/effect",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/abilities/0/effect"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/player/gear/0/detail",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/mara/gear/3/detail"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/common_actions/3/name",
+            "Chi enhancement",
+            "## godot/content/rpg_catalog.json#/profiles/flow/common_actions/3/cost"
+          ]
+        },
+        {
+          "rule": "unsupported-evaluative-claim",
+          "severity": "medium",
+          "evidence": [
+            "Faster shield recovery"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/progression",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/abilities/0/effect",
+            "## godot/content/rpg_catalog.json#/profiles/flow/builds/ivo/abilities/1/effect"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-09.obelus",
+      "source_sha256": "412d9dfabb01abc9b9017b415b6d5e99189e1e69133e594018ff90c2692e3365",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 164
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/skills/0",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/skills/1",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/player/role",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/role"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/gear/2/name",
+            "Concord processor",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/clerk/gear/2/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/loop",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/vanguard/builds/ivo/progression"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-10.obelus",
+      "source_sha256": "fb7be6aeddb4f2efed466dc213770b71b0257c7deab035d32426c4a8ee030080",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 165
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/abilities/0/effect",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/abilities/1/effect",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/abilities/0/effect"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/ivo/abilities/1/cost",
+            "Also: godot/content/rpg_catalog.json#/profiles/oathbound/builds/ivo/abilities/1/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/ivo/gear/3/name",
+            "Thieves' tools",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/ivo/gear/3/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/abilities/0/effect",
+            "## godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/abilities/1/cost",
+            "Also: godot/content/rpg_catalog.json#/profiles/tactics/builds/mara/abilities/2/cost, godot/content/rpg_catalog.json#/profiles/tactics/builds/clerk/abilities/0/cost"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-11.obelus",
+      "source_sha256": "86c0ab2e5f872f1d72f15ff44761f36bbd421550b62f16233d5d057e0762519b",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 170
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/gear/0/detail",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/gear/2/detail",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/gear/5/name",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/gear/0/name"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/gear/2/detail",
+            "Spell potency",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/gear/3/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/loop",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/oathbound/builds/mara/progression"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-12.obelus",
+      "source_sha256": "2f3714f675e6a663cdad382cc3ea83487f6429190433c0ff6da11e9d28768774",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 175
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/abilities/0/source",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/abilities/1/source",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/abilities/0/source"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/abilities/0/cost",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/0/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/gear/0/name",
+            "Impact gauntlets",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/ivo/gear/1/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/abilities/0/cost",
+            "Also: godot/content/rpg_catalog.json#/profiles/momentum/builds/mara/abilities/0/cost",
+            "## godot/content/rpg_catalog.json#/profiles/momentum/builds/player/abilities/0/source"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-13.obelus",
+      "source_sha256": "7c1c4ce174f639376e2f1970307c7bf2d90a11e51cfc7312e4c5c0c17be18834",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 175
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/2/cost",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/3/cost",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/2/effect"
+          ]
+        },
+        {
+          "rule": "nominalization-density",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/3/source, godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/abilities/2/source, godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/",
+            "Also: godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/abilities/3/name, godot/content/rpg_catalog.json#/profiles/confluence/builds/ivo/abilities/3/name",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/weakness"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/abilities/2/cost, godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/abilities/3/cost",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/mara/abilities/1/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/clerk/role",
+            "Lumen tactician",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/clerk/skills/0"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/2/cost",
+            "## godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/2/source",
+            "Also: godot/content/rpg_catalog.json#/profiles/confluence/builds/player/abilities/3/source, godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/abilities/2/source, godot/content/rpg_catalog.json#/profiles/confluence/builds/mara/"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-14-part1.obelus",
+      "source_sha256": "a9071e4d06a3360c2429488bd3eb471e8f20517529dbd2ccba993bb295d635d4",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 64
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles",
+            "content/rpg_catalog.json#/profiles"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/0/name",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/1/name",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/0/name"
+          ]
+        },
+        {
+          "rule": "nominalization-density",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/progression",
+            "Choose a martial sequence, then confirm its inputs or accessible list option."
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/abilities/2/cost",
+            "Also: godot/content/rpg_catalog.json#/profiles/cadence/builds/clerk/abilities/2/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/0/name",
+            "Bolt repeater",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/gear/1/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/weakness",
+            "Tool access depends on collection; limited early magic.",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/progression"
+          ]
+        },
+        {
+          "rule": "uniform-paragraph-length",
+          "severity": "low",
+          "evidence": [
+            "# UI copy batch",
+            "## godot/content/rpg_catalog.json#/profiles/cadence/builds/ivo/weakness",
+            "Tool access depends on collection; limited early magic."
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-14-part2.obelus",
+      "source_sha256": "a75dc96bd9d3f7022dceef1489d3e790c8c01047c1d17d44f0631181e93c6609",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 65
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/gear/0/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/gear/2/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/gear/0/name"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/gear/0/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/gear/1/name"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/gear/0/name",
+            "Harbor repeater",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/gear/0/detail"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/loop",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/player/progression"
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-14-part3.obelus",
+      "source_sha256": "bde6f6481ca79c1f6dd9606a039e452c5867c98b2e392941d5acc7509d5691ed",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 41
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/abilities/2/effect",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/abilities/3/effect",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/gear/0/name"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/abilities/0/cost",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/abilities/2/cost"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/gear/0/name",
+            "Utility carbine",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/ivo/gear/2/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/abilities/2/effect",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/abilities/3/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/abilities/3/cost"
+          ]
+        },
+        {
+          "rule": "uniform-paragraph-length",
+          "severity": "low",
+          "evidence": [
+            "# UI copy batch",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/mara/abilities/2/effect",
+            "Break sight in an area."
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "after-15-part1.obelus",
+      "source_sha256": "5c56fef09ee2a5d128e4ea60daedd750692c14307b1bed77e4a52b70c883d83b",
+      "coverage": {
+        "extraction": "supported-subset",
+        "deterministic": "completed",
+        "semantic": "not-run",
+        "unit_count": 47
+      },
+      "findings": [
+        {
+          "rule": "repeated-multiword-phrase",
+          "severity": "medium",
+          "evidence": [
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds",
+            "catalog.json#/profiles/orders/builds"
+          ]
+        },
+        {
+          "rule": "lexical-confidence-fog",
+          "severity": "medium",
+          "evidence": [
+            "can",
+            "right",
+            "That"
+          ]
+        },
+        {
+          "rule": "lexical-restatement-cluster",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/0/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/1/name",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/0/name"
+          ]
+        },
+        {
+          "rule": "repeated-conclusion",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/garden_chapter.json#/premise",
+            "## godot/content/garden_chapter.json#/resolution"
+          ]
+        },
+        {
+          "rule": "repeated-syntax-template",
+          "severity": "medium",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/0/name",
+            "Medic carbine",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/gear/1/name"
+          ]
+        },
+        {
+          "rule": "readability-cluster",
+          "severity": "low",
+          "evidence": [
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/weakness",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/progression",
+            "## godot/content/rpg_catalog.json#/profiles/orders/builds/clerk/abilities/0/cost"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "disclaimer": "Routing scores choose an editorial workflow; they are not AI-authorship probabilities.",
+  "route": {
+    "mode": {
+      "selected": "review",
+      "reason": "default safe mode; request does not explicitly authorize rewriting"
+    },
+    "profile": {
+      "selected": "generic",
+      "confidence": "low",
+      "scores": {
+        "fiction": 0,
+        "nonfiction": 0,
+        "technical": 0,
+        "founder": 0,
+        "social": 1,
+        "generic": 0.5
+      },
+      "reasons": []
+    },
+    "platform": {
+      "selected": "generic",
+      "confidence": "low",
+      "reason": "no platform named"
+    },
+    "specialists": [],
+    "forkPlan": [],
+    "revisionPassLimit": 0
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "profile": "generic",
+    "disclaimer": "Editing-priority heuristics only. Findings do not determine whether text was written by AI.",
+    "summary": {
+      "findingCount": 1,
+      "bySeverity": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "revisionPriority": 4,
+      "band": "light",
+      "wordCount": 124,
+      "sentenceCount": 44,
+      "paragraphCount": 4
+    },
+    "metrics": {
+      "sentenceWords": {
+        "mean": 3.45,
+        "sd": 3.85,
+        "cv": 1.113,
+        "p10": 1,
+        "p50": 2,
+        "p90": 6.7
+      },
+      "paragraphWords": {
+        "mean": 24,
+        "sd": 21.87,
+        "cv": 0.911,
+        "p10": 5.3,
+        "p50": 16,
+        "p90": 49.1
+      },
+      "properNounCount": 16,
+      "valueCount": 19,
+      "parentheticalCount": 0,
+      "ellipsisCount": 0,
+      "emDashCount": 0,
+      "featureVector": {
+        "lexical": {
+          "uniqueWords": 83,
+          "typeTokenRatio": 0.669,
+          "rootTypeTokenRatio": 7.454,
+          "mattr50": 0.755,
+          "hapaxShare": 0.687,
+          "averageWordLength": 4.242,
+          "longWordShare": 0.065,
+          "wordUnigramEntropyBits": 6.168,
+          "characterTrigramEntropyBits": 8.44,
+          "uniqueBigramShare": 0.943,
+          "gzipCompressionRatio": 0.641,
+          "stopWordShare": 0.073,
+          "digitTokenShare": 0.161,
+          "contractionPer100Words": 0
+        },
+        "readability": {
+          "estimatedSyllablesPerWord": 1.355,
+          "fleschReadingEase": 89.36
+        },
+        "syntax": {
+          "posShares": {
+            "adjective": 0.064,
+            "adverb": 0,
+            "conjunction": 0.006,
+            "determiner": 0.032,
+            "noun": 0.615,
+            "preposition": 0.006,
+            "pronoun": 0.013,
+            "verb": 0.147
+          },
+          "passiveSentenceShare": 0,
+          "firstPersonPer100Words": 1.613,
+          "secondPersonPer100Words": 0,
+          "sentenceStartEntropyBits": 5.369,
+          "sentenceStartUniqueShare": 0.955,
+          "posSignatureEntropyBits": 4.352,
+          "posSignatureUniqueShare": 0.568,
+          "properNounPer100Words": 12.097,
+          "valuePer100Words": 15.323
+        },
+        "structure": {
+          "questionSentenceShare": 0,
+          "exclamationSentenceShare": 0,
+          "singleSentenceParagraphShare": 0,
+          "meanSentenceWords": 3.455,
+          "sentenceLengthCv": 1.113,
+          "meanParagraphWords": 24,
+          "paragraphLengthCv": 0.911,
+          "quotationSpansPer1000Words": 0
+        },
+        "punctuationPer1000Words": {
+          "colon": 24.194,
+          "semicolon": 0,
+          "emDash": 0,
+          "parenthetical": 0,
+          "ellipsis": 0
+        },
+        "discourse": {
+          "explicitTransitionSentenceShare": 0,
+          "sequenceOpenerSentenceShare": 0,
+          "retextMessageCounts": {
+            "retext-intensify": 2,
+            "retext-passive": 0,
+            "retext-readability": 2,
+            "retext-repeated-words": 0
+          }
+        },
+        "flat": {
+          "lexical.uniqueWords": 83,
+          "lexical.typeTokenRatio": 0.669,
+          "lexical.rootTypeTokenRatio": 7.454,
+          "lexical.mattr50": 0.755,
+          "lexical.hapaxShare": 0.687,
+          "lexical.averageWordLength": 4.242,
+          "lexical.longWordShare": 0.065,
+          "lexical.wordUnigramEntropyBits": 6.168,
+          "lexical.characterTrigramEntropyBits": 8.44,
+          "lexical.uniqueBigramShare": 0.943,
+          "lexical.gzipCompressionRatio": 0.641,
+          "lexical.stopWordShare": 0.073,
+          "lexical.digitTokenShare": 0.161,
+          "lexical.contractionPer100Words": 0,
+          "readability.estimatedSyllablesPerWord": 1.355,
+          "readability.fleschReadingEase": 89.36,
+          "syntax.posShares.adjective": 0.064,
+          "syntax.posShares.adverb": 0,
+          "syntax.posShares.conjunction": 0.006,
+          "syntax.posShares.determiner": 0.032,
+          "syntax.posShares.noun": 0.615,
+          "syntax.posShares.preposition": 0.006,
+          "syntax.posShares.pronoun": 0.013,
+          "syntax.posShares.verb": 0.147,
+          "syntax.passiveSentenceShare": 0,
+          "syntax.firstPersonPer100Words": 1.613,
+          "syntax.secondPersonPer100Words": 0,
+          "syntax.sentenceStartEntropyBits": 5.369,
+          "syntax.sentenceStartUniqueShare": 0.955,
+          "syntax.posSignatureEntropyBits": 4.352,
+          "syntax.posSignatureUniqueShare": 0.568,
+          "syntax.properNounPer100Words": 12.097,
+          "syntax.valuePer100Words": 15.323,
+          "structure.questionSentenceShare": 0,
+          "structure.exclamationSentenceShare": 0,
+          "structure.singleSentenceParagraphShare": 0,
+          "structure.meanSentenceWords": 3.455,
+          "structure.sentenceLengthCv": 1.113,
+          "structure.meanParagraphWords": 24,
+          "structure.paragraphLengthCv": 0.911,
+          "structure.quotationSpansPer1000Words": 0,
+          "punctuationPer1000Words.colon": 24.194,
+          "punctuationPer1000Words.semicolon": 0,
+          "punctuationPer1000Words.emDash": 0,
+          "punctuationPer1000Words.parenthetical": 0,
+          "punctuationPer1000Words.ellipsis": 0,
+          "discourse.explicitTransitionSentenceShare": 0,
+          "discourse.sequenceOpenerSentenceShare": 0,
+          "discourse.retextMessageCounts.retext-intensify": 2,
+          "discourse.retextMessageCounts.retext-passive": 0,
+          "discourse.retextMessageCounts.retext-readability": 2,
+          "discourse.retextMessageCounts.retext-repeated-words": 0
+        }
+      }
+    },
+    "findings": [
+      {
+        "category": "rhythm",
+        "confidence": "medium",
+        "id": "repeated-syntax-template",
+        "label": "Repeated grammatical template",
+        "severity": "medium",
+        "measurement": {
+          "consecutive": 3,
+          "signature": "Noun"
+        },
+        "evidence": [
+          {
+            "line": 28,
+            "paragraph": 4,
+            "text": "Devices"
+          },
+          {
+            "line": 29,
+            "paragraph": 4,
+            "text": "Items"
+          },
+          {
+            "line": 30,
+            "paragraph": 4,
+            "text": "Movement"
+          }
+        ],
+        "why": "The first five part-of-speech tags repeat across consecutive sentences, a useful but fallible proxy for parallel construction.",
+        "direction": "Combine one sentence, subordinate another, or make the actual relationship conditional or causal."
+      }
+    ],
+    "semanticQuestions": [
+      {
+        "id": "interpretation-repetition",
+        "question": "Does the draft explain a conclusion the concrete material already made clear?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "single-track-argument",
+        "question": "Does every section serve the same claim in the same way, with no resistant detail or alternative?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "causal-tidiness",
+        "question": "Does the draft make a contingent or messy sequence sound inevitable?",
+        "requiresCitedSpan": true
+      },
+      {
+        "id": "earned-specificity",
+        "question": "Which claims need a real example, source, constraint, or observed detail from the author?",
+        "requiresCitedSpan": true
+      }
+    ]
+  }
+}

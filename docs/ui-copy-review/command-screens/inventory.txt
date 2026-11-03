@@ -1,0 +1,71 @@
+Party ledger · Mara
+Close · Esc / B
+Inspecting Mara  ·  Orders remain with Mara  ·  Encounter
+Character
+Equipment
+Powers
+Party
+Inventory
+Journal
+Save
+Mara
+Deployed · Humanoid
+Mercy · Neutral
+Level 6
+Health  50 / 50
+Focus  56 / 56
+18 reserved · 38 free
+Inspect party
+Corsair
+Mara
+Civic clerk
+Ivo
+Inventory · 100 credits
+Filter
+All
+Container
+All
+Heavy armor ×1
+1 free / 0 reserved
+Buckler ×1
+1 free / 0 reserved
+Light coat ×1
+1 free / 0 reserved
+Light coat ×1
+1 free / 0 reserved
+Survey crossbow ×1
+1 free / 0 reserved
+Field dressing ×2
+2 free / 0 reserved
+Storm lens ×1
+1 free / 0 reserved
+Guard mace ×1
+1 free / 0 reserved
+Travel robe ×1
+1 free / 0 reserved
+Corsair sabre ×1
+1 free / 0 reserved
+Machine scrap ×6
+6 free / 0 reserved
+Buckler ×1
+1 free / 0 reserved
+Ash staff ×1
+1 free / 0 reserved
+Ash staff ×1
+1 free / 0 reserved
+Survey tool ×1
+1 free / 0 reserved
+Field dressing
+Consumable
+Party Pack
+Quantity 2 · Available 2 · Committed 0
+Use with Mara
+Choose a target. The item is used when this order begins.
+Workbench and trade
+Craft arc edge
+Four scrap and 20 credits; four Devices ranks required
+A settled camp is required
+Buy dressing
+One field dressing for eight credits
+A settled camp is required
+LB / RB Tabs  ·  L3 / R3 Inspect party  ·  D-pad / Tab Focus  ·  A / Enter Choose  ·  B Back

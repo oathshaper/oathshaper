@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "story_id": "lantern_quay",
+  "scope": "Boolean menu-state matrix; initial numeric scores; fresh choice history; no world reachability or render proof",
+  "complete_within_scope": true,
+  "evaluated_states": 2048,
+  "matched_rule_states": 3072,
+  "findings": [
+    {
+      "rule_id": "tower-light-invalidates-darkness",
+      "node": "mara_greeting",
+      "reason": "The tower is lit by shared oil or the returned payroll. Present-tense darkness topics are obsolete.",
+      "certainty": "contract_violation",
+      "observed": "obsolete choice still visible: ask_lamp",
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": true,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      }
+    },
+    {
+      "rule_id": "tower-light-invalidates-darkness",
+      "node": "mara_greeting",
+      "reason": "The tower is lit by shared oil or the returned payroll. Present-tense darkness topics are obsolete.",
+      "certainty": "heuristic_suspicion",
+      "observed": "possibly stale line: The tower's gone dark. I heard glass breaking in the clerk's office just now. Would you check on her? The door is beside the tower.",
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": true,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      }
+    },
+    {
+      "rule_id": "clerk-visit-invalidates-offer-to-check",
+      "node": "mara_greeting",
+      "reason": "The player has already obtained the clerk's account of the robbery.",
+      "certainty": "contract_violation",
+      "observed": "obsolete choice still visible: check_office",
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": false,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": true,
+        "shortcut_open": false
+      }
+    }
+  ]
+}

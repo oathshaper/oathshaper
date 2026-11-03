@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/meshes/equipment/staff.glb" id="1"]
+
+[node name="Staff" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1")]
+
+[node name="PrimaryGrip" type="Marker3D" parent="."]
+position = Vector3(0, 0, 0)
+
+[node name="SupportGrip" type="Marker3D" parent="."]
+position = Vector3(0, 0, 0.26)
+
+[node name="ImpactTip" type="Marker3D" parent="."]
+position = Vector3(0, 0, 0.98)

@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "story_id": "lantern_quay",
+  "complete_within_scope": true,
+  "scope": "All enabled dialogue branches in Boolean entry contexts; production effects, variants and choice history; repetition against every earlier spoken line on a path. Equivalent state/history/heard-utterance sets merge; silent response-menu returns add no speech.",
+  "explored_states": 9402,
+  "conditional_entries": 187,
+  "transitions": 9638,
+  "sequence_groups": 5,
+  "frontier_remaining": 0,
+  "budget_omissions": 0,
+  "findings": [
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "choice:mara_greeting/share_oil",
+        "speaker": "Corsair",
+        "text": "Here. This should get the tower burning again."
+      },
+      "later": {
+        "source": "node:mara_thanks",
+        "speaker": "Mara",
+        "text": "That's enough to get the tower burning again. Give me a moment to fill the reservoir. We should be able to see anyone else crossing the quay."
+      },
+      "repeated_phrase": "get the tower burning again",
+      "intervening_lines": 0,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": false,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:mara_greeting",
+        "choice:mara_greeting/share_oil"
+      ]
+    },
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "node:mara_greeting",
+        "speaker": "Mara",
+        "text": "I'll meet you at the garden gate. Ivo will know where the thief went."
+      },
+      "later": {
+        "source": "node:tide_gate",
+        "speaker": "Mara",
+        "text": "He ran east, towards the garden gate. It's the only way onto that terrace."
+      },
+      "repeated_phrase": "the garden gate",
+      "intervening_lines": 1,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": true,
+        "oil_decided": false,
+        "oil_shared": false,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:mara_greeting",
+        "choice:mara_greeting/ask_for_favor"
+      ]
+    },
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "node:mara_greeting",
+        "speaker": "Mara",
+        "text": "The tower's burning again. Would you check on the clerk? I heard glass breaking in her office. The door is beside the tower."
+      },
+      "later": {
+        "source": "choice:mara_greeting/check_office",
+        "speaker": "Corsair",
+        "text": "I'll check on the clerk."
+      },
+      "repeated_phrase": "check on the clerk",
+      "intervening_lines": 0,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": true,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:mara_greeting",
+        "choice:mara_greeting/check_office"
+      ]
+    },
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "node:ivo_gate",
+        "speaker": "Ivo",
+        "text": "The man in red ran from the office into the garden. I've shut the gate behind him. There's no other way out, but he's got two mechanical guards."
+      },
+      "later": {
+        "source": "node:ivo_gate_history",
+        "speaker": "Ivo",
+        "text": "One of his guards nearly took my head off. I shut the gate and held my ground. Get Mara.\n\nWe'll need someone who can tend a wound."
+      },
+      "repeated_phrase": "shut the gate",
+      "intervening_lines": 1,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": false,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:ivo_gate",
+        "choice:ivo_gate/ask_about_gate"
+      ]
+    },
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "node:ivo_gate_history",
+        "speaker": "Ivo",
+        "text": "One of his guards nearly took my head off. I shut the gate and held my ground. Get Mara.\n\nWe'll need someone who can tend a wound."
+      },
+      "later": {
+        "source": "node:ivo_sentries",
+        "speaker": "Ivo",
+        "text": "They're the raider's guards. One nearly took my head off when I tried to stop him. Keep clear of their weapons."
+      },
+      "repeated_phrase": "nearly took my head off",
+      "intervening_lines": 1,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": false,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:ivo_gate",
+        "choice:ivo_gate/ask_about_gate",
+        "finish_response:silent",
+        "choice:ivo_gate/ask_sentries"
+      ]
+    },
+    {
+      "certainty": "heuristic_suspicion",
+      "kind": "phrase_echo",
+      "earlier": {
+        "source": "node:ivo_sentries",
+        "speaker": "Ivo",
+        "text": "They're the raider's guards. One nearly took my head off when I tried to stop him. Keep clear of their weapons."
+      },
+      "later": {
+        "source": "node:ivo_gate_history",
+        "speaker": "Ivo",
+        "text": "One of his guards nearly took my head off. I shut the gate and held my ground. Get Mara.\n\nWe'll need someone who can tend a wound."
+      },
+      "repeated_phrase": "nearly took my head off",
+      "intervening_lines": 1,
+      "witness_flags": {
+        "gate_open": false,
+        "ivo_where_asked": false,
+        "mara_recruited": false,
+        "oil_decided": false,
+        "oil_shared": false,
+        "pay_recovered": false,
+        "pay_returned": false,
+        "records_clue": false,
+        "records_collected": false,
+        "robbery_known": false,
+        "shortcut_open": false
+      },
+      "path": [
+        "enter:ivo_gate",
+        "choice:ivo_gate/ask_sentries",
+        "finish_response:silent",
+        "choice:ivo_gate/ask_about_gate"
+      ]
+    }
+  ],
+  "limitations": [
+    "Entry contexts are logical candidates, including impossible world states; witness flags are assumptions, not physical reachability proof.",
+    "Numeric scores start at authored defaults. Numeric-gated conversations mark the report incomplete.",
+    "Phrase matches are review warnings, not semantic equivalence or automatic rewrite decisions. Short acknowledgements and intentional replays of the same authored line are excluded.",
+    "Coverage is within conversations and authored cutscene sequences, not arbitrary ordering of separate world interactions. All earlier lines within each conversation or sequence are compared."
+  ]
+}
