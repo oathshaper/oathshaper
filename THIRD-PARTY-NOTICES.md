@@ -1,30 +1,24 @@
-# Credits and third-party notices
+# Attribution and third-party notices
 
-Oathshaper contains original code and generated media alongside third-party assets. The root MIT license does not replace the licenses below. Native downloads include these records under `licenses/`.
+Dedicated to the people of BioWare, whose worlds made companions, conversations, and difficult choices central to so many adventures. Oathshaper is an independent homage, with no affiliation, sponsorship, endorsement, or permission to use BioWare's names or assets implied. The [research and third-party rights notice](docs/research/NOTICE.md) explains how the project treats references to other games and tools.
 
-| Material | Creator / source | Terms and records |
+## Project work
+
+The [MIT license](LICENSE) covers Oathshaper code and, [to the extent contributors hold the applicable rights](ASSET-LICENSE.md), project-owned artwork, models, textures, dialogue, generated voice recordings, music, and locally authored animation. The project includes AI-generated media. A project license does not replace the separate terms for third-party material or establish rights in an owner-supplied asset whose inputs and terms have not been verified.
+
+Original project concept art and prompts are documented in [concept provenance](art/concepts/README.md). The [material-map notes](godot/assets/textures/materials/README.md), [music provenance](godot/assets/audio/music/README.md), [procedural combat-sound notes](godot/assets/audio/combat/README.md), and [UI provenance](godot/assets/ui/README.md) describe their respective sources and transformations.
+
+## Third-party material
+
+| Material | Credit and applicable terms | Detailed record |
 | --- | --- | --- |
-| Game engine | Godot contributors, Godot 4.3 | MIT; engine `LICENSE` and `COPYRIGHT` are bundled with downloads |
-| Rust bindings | godot-rust contributors, 0.2.4 | MPL 2.0; dependency notices and exact unmodified MPL crate sources are bundled |
-| Other Rust dependencies | Authors listed in resolved crate packages | `Cargo.lock`; downloads include `licenses/rust-dependencies.json` and individual notices |
-| Display font | Libre Baskerville Project Authors / Impallari Type | [SIL OFL 1.1](godot/assets/fonts/OFL-LibreBaskerville.txt); [source/hash](godot/assets/fonts/README.md) |
-| UI and combat effects | Kenney: Interface Sounds, RPG Audio, Impact Sounds, Sci-fi Sounds | CC0; original license files and [per-file provenance](godot/assets/audio/cc0/provenance.json) |
-| Harbor ambience | clif_creates, *Harbor Ambience 1*; TRP, *Waves gentle distant gulls lake good water detail LAKE ONTARIO TO 180522.wav* | CC0; [source links and processing](godot/assets/audio/cc0/README.md) |
-| Animation donors | Quaternius, Universal Animation Libraries 1 and 2 | [CC0 dedication](tools/rigging/sources/quaternius/LICENSE.txt); [source hashes and clips](tools/rigging/sources/quaternius/manifest.json) |
-| Dialogue conditioning | CSTR VCTK 0.92; Kyutai Unmute voice donation | CC BY 4.0 and CC0 respectively; exact credits below |
-| Voice synthesis | Kyutai TTS 1.6B English/French; Moshi MLX | Model CC BY 4.0, runtime MIT; model/runtime are not bundled |
-| Music synthesis | ACE-Step 1.5, ACE Studio / StepFun; Audante MLX conversion | Generator/model MIT; no model or reference recording is bundled; [generation provenance](godot/assets/audio/music/provenance.json) |
-| Models and embedded textures | Project-owner Meshy paid/private generations | [Provider distribution terms and import provenance](godot/assets/meshes/README.md) |
-| Concept art, portraits and material maps | Project-specific OpenAI image generation | [Concept provenance](art/concepts/README.md), [material provenance](godot/assets/textures/materials/README.md) |
+| Sound effects and ambience | Kenney's Interface Sounds, RPG Audio, Impact Sounds, and Sci-fi Sounds; `clif_creates`'s *Harbor Ambience1*; and TRP's Lake Ontario waves recording. These 28 included clips are identified as [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/); included Kenney license files and per-file transformations remain recorded. | [CC0 sound palette](godot/assets/audio/cc0/README.md) and [manifest](godot/assets/audio/cc0/provenance.json) |
+| Display font | Libre Baskerville, by the Libre Baskerville Project Authors / Impallari Type, retains the SIL Open Font License 1.1. | [Font provenance](godot/assets/fonts/README.md) and [full OFL text](godot/assets/fonts/OFL-LibreBaskerville.txt) |
+| Animation donors | Quaternius's free Standard editions of *Universal Animation Library* and *Universal Animation Library 2* are supplied under CC0 1.0. The installed player walk and run derive from library clips. | [Source and transformation notes](tools/rigging/sources/quaternius/README.md), [CC0 notice](tools/rigging/sources/quaternius/LICENSE.txt), and [manifest](tools/rigging/sources/quaternius/manifest.json) |
+| Generated voices | Kyutai's TTS model weights are credited under CC BY 4.0. The VCTK voice-conditioning recordings are credited to Junichi Yamagishi, Christophe Veaux, and Kirsten MacDonald (2019), *CSTR VCTK Corpus*, version 0.92, [DOI:10.7488/ds/2645](https://doi.org/10.7488/ds/2645), under CC BY 4.0. The donated Vendor/Crimson Raider source is credited to its contributor and Kyutai under CC0 1.0; its requested citation is Václav Volhejn (2025), *Unmute Voice Donation Project*. The voice record identifies each role's source, the model, and the changes made during synthesis and processing. No source speaker performed or endorsed the game's dialogue. | [Full voice credits and change notices](godot/assets/audio/generated/ATTRIBUTION.md) and [production provenance](godot/assets/audio/generated/production-provenance.json) |
 
-## Dialogue voice credits
+## Owner-supplied 3D assets
 
-Junichi Yamagishi, Christophe Veaux, and Kirsten MacDonald (2019). *CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit, version 0.92*. University of Edinburgh, Centre for Speech Technology Research. [DOI: 10.7488/ds/2645](https://doi.org/10.7488/ds/2645). Licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), including its warranty and liability provisions.
+The owner reports that the supplied Meshy characters, weapons, tower, and garden were generated privately on a paid plan. The [model provenance](godot/assets/meshes/README.md), [equipment record](godot/assets/meshes/equipment/README.md), and [adversary record](godot/assets/meshes/adversaries/README.md) identify original exports, local derivatives, and remaining verification limits. The [tower texture extracts](godot/assets/textures/README.md#stonewatch-beacon-atlas-extracts) inherit their source model's terms. These records do not claim that Oathshaper's MIT license independently grants rights in the supplied meshes or their embedded textures.
 
-Kyutai supplied cleaned conditioning embeddings. Tessa Ward uses `p228_023`, Mara `p339_023`, the civic clerk `p231_023`, Ivo `p226_023`, and the narrator/filing cabinet `p255_023`. The Crimson Raider and vendor use the CC0 donated `dwp_enhanced` voice. Courtesy credit: the voice contributor, Kyutai, and Václav Volhejn (2025), *[Unmute Voice Donation Project](https://unmute.sh/voice-donation)*.
-
-New dialogue was synthesized, trimmed, gain-adjusted, faded and converted for Godot playback. The source speakers did not perform or endorse this game's dialogue. [Full attribution](godot/assets/audio/generated/ATTRIBUTION.md) includes pinned source links and model revisions; production/history manifests map the generated recordings to those sources. No source recordings, conditioning embeddings or model weights ship in the executable package.
-
-## Research references
-
-BioWare and other game names identify design influences. Their game assets are not licensed by this project. See the [research notice](docs/research/NOTICE.md).
+Software dependencies retain their own licenses and notices. The [release packaging record](docs/release-builds.md#candidate-contents-and-verification) describes the engine, Rust dependency, font, and asset notices included beside exported builds. This document is an index to the project's source records; preserve the applicable source notices and provenance when redistributing the assets.
