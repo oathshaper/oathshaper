@@ -138,6 +138,9 @@ def release_rust_flags(work, target):
     flags = [f"--remap-path-prefix={path.resolve()}={replacement}" for path, replacement in prefixes]
     if target == "x86_64-pc-windows-msvc":
         flags += ["-C", "target-feature=+crt-static"]
+        # A release DLL must not advertise an unshipped PDB. Godot 4.3's
+        # Windows editor tries to copy it when importing the extension.
+        flags += ["-C", "link-arg=/DEBUG:NONE"]
     return flags
 
 

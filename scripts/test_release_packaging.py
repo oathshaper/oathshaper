@@ -21,6 +21,7 @@ class ReleasePackagingTests(unittest.TestCase):
             self.assertIn(f"--remap-path-prefix={work.resolve()}=/build", flags)
             self.assertIn(f"--remap-path-prefix={release.ROOT.resolve()}=.", flags)
             self.assertEqual("target-feature=+crt-static" in flags, target.endswith("windows-msvc"))
+            self.assertEqual("link-arg=/DEBUG:NONE" in flags, target.endswith("windows-msvc"))
 
     def test_tracked_project_staging_excludes_local_outputs(self):
         with tempfile.TemporaryDirectory() as temp:
