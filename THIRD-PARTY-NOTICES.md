@@ -21,4 +21,12 @@ Original project concept art and prompts are documented in [concept provenance](
 
 The owner reports that the supplied Meshy characters, weapons, tower, and garden were generated privately on a paid plan. The [model provenance](godot/assets/meshes/README.md), [equipment record](godot/assets/meshes/equipment/README.md), and [adversary record](godot/assets/meshes/adversaries/README.md) identify original exports, local derivatives, and remaining verification limits. The [tower texture extracts](godot/assets/textures/README.md#stonewatch-beacon-atlas-extracts) inherit their source model's terms. These records do not claim that Oathshaper's MIT license independently grants rights in the supplied meshes or their embedded textures.
 
-Software dependencies retain their own licenses and notices. The [release packaging record](docs/release-builds.md#candidate-contents-and-verification) describes the engine, Rust dependency, font, and asset notices included beside exported builds. This document is an index to the project's source records; preserve the applicable source notices and provenance when redistributing the assets.
+## Runtime and release package
+
+Native downloads include license records under `licenses/`. Godot 4.3 retains its MIT license and engine `LICENSE` and `COPYRIGHT`; the `godot-rust` 0.2.4 bindings retain MPL 2.0, with their unmodified crate sources and notices. Other Rust dependencies retain their individual terms; `Cargo.lock`, `licenses/rust-dependencies.json`, and the bundled notices identify the resolved packages. The [release packaging record](docs/release-builds.md#candidate-contents-and-verification) describes the verification of these notices beside exported builds.
+
+The generated dialogue used Kyutai TTS 1.6B English/French model weights under CC BY 4.0 and the Moshi MLX runtime under MIT. Kyutai supplied cleaned conditioning embeddings: Tessa Ward uses `p228_023`, Mara `p339_023`, the civic clerk `p231_023`, Ivo `p226_023`, and the narrator and filing cabinet `p255_023`; the Crimson Raider and vendor use the donated `dwp_enhanced` voice. The recordings were synthesized and processed for Godot. Source recordings, conditioning embeddings, model weights, and the synthesis runtime are not bundled in the executable package. [Full voice attribution](godot/assets/audio/generated/ATTRIBUTION.md) records source links and model revisions.
+
+Music generation used ACE-Step 1.5 from ACE Studio / StepFun and Audante's MLX conversion under MIT. The model and any reference recording are not bundled; see the [music generation provenance](godot/assets/audio/music/provenance.json).
+
+This document is an index to the project's source records. Preserve applicable source notices and provenance when redistributing the assets.
