@@ -2,75 +2,145 @@ name: Native demo builds
 
 on:
   workflow_dispatch:
+    inputs:
+      platform:
+        description: Native platform to build and test
+        type: choice
+        options: [windows, all, linux, macos]
+        default: windows
+  workflow_call:
+    inputs:
+      revision:
+        description: Exact commit resolved by the milestone release workflow
+        type: string
+        required: true
+      platform:
+        type: string
+        default: all
   push:
     branches: [main, 'release/**']
-    tags: ['demo-*']
   pull_request:
 
 permissions:
   contents: read
 
 concurrency:
-  group: demo-builds-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: native-demo-${{ github.workflow }}-${{ github.ref }}-${{ inputs.platform || 'all' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  build:
-    name: ${{ matrix.platform }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - platform: linux
-            runner: ubuntu-22.04
-          - platform: windows
-            runner: windows-2022
-          - platform: macos
-            runner: macos-14
-    runs-on: ${{ matrix.runner }}
-    timeout-minutes: 45
+  prepare:
+    runs-on: ubuntu-22.04
+    outputs:
+      revision: ${{ steps.source.outputs.revision }}
+      matrix: ${{ steps.source.outputs.matrix }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
+          ref: ${{ inputs.revision || github.sha }}
           persist-credentials: false
+      - name: Resolve source and platform selection
+        id: source
+        shell: python
+        env:
+          SELECTED_PLATFORM: ${{ inputs.platform || 'all' }}
+        run: |
+          import json, os, subprocess
+          platforms = {"linux": "ubuntu-22.04", "windows": "windows-2022", "macos": "macos-14"}
+          selected = os.environ["SELECTED_PLATFORM"]
+          if selected not in ["all", *platforms]:
+              raise SystemExit("Unknown platform selection")
+          matrix = {"include": [{"platform": p, "runner": r} for p, r in platforms.items()
+                                if selected in ("all", p)]}
+          revision = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("revision=" + revision + "\n")
+              output.write("matrix=" + json.dumps(matrix) + "\n")
+
+  build:
+    needs: prepare
+    name: ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    env:
+      PYTHONUTF8: '1'
+      PYTHONUNBUFFERED: '1'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.prepare.outputs.revision }}
+          persist-credentials: false
+      - name: Configure directories outside the source checkout
+        shell: python
+        run: |
+          import os
+          from pathlib import Path
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as output:
+              for key, folder in [("BUILD_WORK", "oathshaper-build"), ("ARTIFACTS", "oathshaper-artifacts"),
+                                  ("ACCEPTANCE", "oathshaper-acceptance")]:
+                  output.write(key + "=" + (Path(os.environ["RUNNER_TEMP"]) / folder).as_posix() + "\n")
       - name: Install pinned Rust toolchain
         run: rustup toolchain install 1.95.0 --profile minimal
-      - name: Check public source and package boundaries
+      - name: Check source, packaging and publication boundaries
         run: |
           python scripts/check-public-tree.py
           python -m unittest discover -s scripts -p test_public_tree.py
           python -m unittest discover -s scripts -p test_release_packaging.py
           python -m unittest discover -s scripts -p test_exported_acceptance.py
-      - name: Build, import, export, and smoke launch
-        run: python scripts/export-release.py --platform ${{ matrix.platform }} --work-dir "${{ runner.temp }}/oathshaper-build" --output "${{ runner.temp }}/oathshaper-artifacts"
-      - name: Install Linux rendering test dependencies
+          python -m unittest discover -s scripts -p test_demo_release.py
+      - name: Build native extension, export and smoke launch
+        id: export
+        shell: python
+        env:
+          BUILD_PLATFORM: ${{ matrix.platform }}
+        run: |
+          import os, pathlib, subprocess, sys
+          report = pathlib.Path(os.environ["ACCEPTANCE"])
+          report.mkdir(parents=True, exist_ok=True)
+          command = [sys.executable, "scripts/export-release.py", "--platform", os.environ["BUILD_PLATFORM"],
+                     "--work-dir", os.environ["BUILD_WORK"], "--output", os.environ["ARTIFACTS"]]
+          with (report / "build.log").open("w", encoding="utf-8") as log:
+              result = subprocess.run(command, stdout=log, stderr=subprocess.STDOUT)
+          print((report / "build.log").read_text(encoding="utf-8", errors="replace"))
+          raise SystemExit(result.returncode)
+      - name: Install Linux rendering dependencies
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y xvfb libgl1-mesa-dri libgl1 libxrandr2 libxinerama1 libxcursor1 libxi6 libasound2
-      - name: Extract and test packaged story and combat (Linux renderer)
+      - name: Test extracted Linux game with Mesa
         if: runner.os == 'Linux'
         env:
           LIBGL_ALWAYS_SOFTWARE: '1'
-        run: xvfb-run -a python scripts/test-exported-demo.py --rendered --archives-dir "${{ runner.temp }}/oathshaper-artifacts" --output "${{ runner.temp }}/oathshaper-acceptance"
-      - name: Extract and test packaged story and combat (macOS renderer)
+        run: xvfb-run -a python scripts/test-exported-demo.py --rendered --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
+      - name: Test extracted macOS game with its renderer
         if: runner.os == 'macOS'
-        run: python scripts/test-exported-demo.py --rendered --archives-dir "${{ runner.temp }}/oathshaper-artifacts" --output "${{ runner.temp }}/oathshaper-acceptance"
-      - name: Extract and test packaged story and combat (Windows headless)
+        run: python scripts/test-exported-demo.py --rendered --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
+      - name: Test extracted Windows executable and DLL
         if: runner.os == 'Windows'
-        run: python scripts/test-exported-demo.py --archives-dir "${{ runner.temp }}/oathshaper-artifacts" --output "${{ runner.temp }}/oathshaper-acceptance"
-      - name: Upload acceptance receipts
+        run: python scripts/test-exported-demo.py --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
+      - name: Retain logs and acceptance evidence even on failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: oathshaper-acceptance-${{ matrix.platform }}-${{ github.sha }}
+          name: oathshaper-acceptance-${{ matrix.platform }}-${{ needs.prepare.outputs.revision }}
           path: |
-            ${{ runner.temp }}/oathshaper-acceptance/acceptance.json
-            ${{ runner.temp }}/oathshaper-acceptance/*/runtime.log
+            ${{ env.ACCEPTANCE }}/build.log
+            ${{ env.ACCEPTANCE }}/acceptance.json
+            ${{ env.ACCEPTANCE }}/*/runtime.log
+            ${{ env.ACCEPTANCE }}/*/*.png
           if-no-files-found: warn
-      - name: Upload candidate archive and checksums
+          retention-days: 14
+      - name: Retain exported candidate for manual testing
+        if: ${{ !cancelled() && steps.export.outcome == 'success' }}
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: oathshaper-demo-${{ matrix.platform }}-${{ github.sha }}
-          path: ${{ runner.temp }}/oathshaper-artifacts/*
+          name: oathshaper-demo-${{ matrix.platform }}-${{ needs.prepare.outputs.revision }}
+          path: ${{ env.ARTIFACTS }}/*
           if-no-files-found: error
           compression-level: 0
           retention-days: 14

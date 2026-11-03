@@ -1,0 +1,91 @@
+name: Milestone demo release
+
+on:
+  push:
+    tags: ['demo-*', 'milestone-*']
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing milestone tag to build, test and publish
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: milestone-demo-${{ github.event.release.tag_name || inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  source:
+    runs-on: ubuntu-22.04
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+      revision: ${{ steps.tag.outputs.revision }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/tags/${{ github.event.release.tag_name || inputs.tag || github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Bind release to an existing tag and commit
+        id: tag
+        shell: python
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag || github.ref_name }}
+        run: |
+          import os, subprocess
+          tag = os.environ["RELEASE_TAG"]
+          subprocess.run(["git", "check-ref-format", "refs/tags/" + tag], check=True)
+          revision = subprocess.check_output(["git", "rev-parse", "refs/tags/" + tag + "^{commit}"], text=True).strip()
+          head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          if revision != head:
+              raise SystemExit("Tag changed while preparing release")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("tag=" + tag + "\nrevision=" + revision + "\n")
+
+  build:
+    needs: source
+    uses: ./.github/workflows/demo-builds.yml
+    with:
+      revision: ${{ needs.source.outputs.revision }}
+      platform: all
+
+  publish:
+    needs: [source, build]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    env:
+      RELEASE_TAG: ${{ needs.source.outputs.tag }}
+      RELEASE_SHA: ${{ needs.source.outputs.revision }}
+      RELEASE_REPO: ${{ github.repository }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.source.outputs.revision }}
+          persist-credentials: false
+      - name: Configure download and release directories
+        shell: python
+        run: |
+          import os
+          from pathlib import Path
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as output:
+              for key, folder in [("DOWNLOADS", "demo-downloads"), ("PREPARED", "demo-release")]:
+                  output.write(key + "=" + (Path(os.environ["RUNNER_TEMP"]) / folder).as_posix() + "\n")
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          pattern: oathshaper-*-${{ needs.source.outputs.revision }}
+          path: ${{ env.DOWNLOADS }}
+      - name: Verify all archives and their exact executable acceptance
+        run: python scripts/demo-release.py prepare --artifacts "$DOWNLOADS" --revision "$RELEASE_SHA" --tag "$RELEASE_TAG" --run-url "$RUN_URL" --output "$PREPARED"
+      - name: Publish verified downloads without replacing existing assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/demo-release.py publish --prepared "$PREPARED" --repository "$RELEASE_REPO"

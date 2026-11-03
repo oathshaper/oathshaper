@@ -1,8 +1,45 @@
 # Native demo builds
 
-The `Native demo builds` workflow prepares downloadable candidates for Linux x86_64, Windows x86_64, and macOS Universal (Apple Silicon and Intel). It runs on pull requests, pushes to `main` or `release/**`, `demo-*` tags, and manual dispatch. It uploads Actions artifacts; it does not create repositories, organizations, releases, or public download links.
+The `Native demo builds` workflow builds and tests Linux x86_64, Windows x86_64, and macOS Universal (Apple Silicon and Intel). Pull requests and pushes to `main` or `release/**` run all platforms. Manual runs can select Windows alone, another platform, or all three. Its downloads stay in Actions artifacts.
+
+The `Milestone demo release` workflow calls that same build pipeline for an existing tag, verifies the resulting archives and acceptance reports, and attaches the downloads to a GitHub Release. It runs when a `demo-*` or `milestone-*` tag is pushed, when a GitHub Release is published, or when dispatched manually with an existing tag. Here a milestone release means a tagged source revision; closing an issue milestone does not publish a game.
 
 Release notes identify the exact published revision and artifact checksums. The current source includes asset provenance and third-party notices; each newly built archive still needs candidate-specific acceptance.
+
+## Test Windows on demand
+
+Once the workflows are on the default branch, open **Actions → Native demo builds → Run workflow**, select the branch and choose **windows**. The job compiles the MSVC extension, runs Rust tests, exports the Windows game, starts the exported executable, then tests its extracted scene/rules routes. Download the `oathshaper-demo-windows-<commit>` artifact, unzip the Actions wrapper and then the game archive, and run `Oathshaper.exe` with the other files beside it.
+
+The equivalent CLI command is:
+
+```sh
+gh workflow run demo-builds.yml --ref main -f platform=windows
+```
+
+The build download is retained after a successful export even if a later acceptance check fails, so you can reproduce failures on your machine. Check the job result and the corresponding `oathshaper-acceptance-windows-<commit>` artifact; a downloadable archive alone is not a passing release gate. Build logs, per-suite runtime logs, reports and rendered screenshots are retained for 14 days. Windows pixel/controller/audio-listening tests remain manual.
+
+## Release a milestone
+
+Tag the intended commit containing these workflows and their helper scripts, then push that tag:
+
+```sh
+git tag -a demo-milestone-1 -m "Lantern Quay milestone 1"
+git push origin demo-milestone-1
+```
+
+Alternatively, publish a GitHub Release for an existing tag, or rerun the workflow explicitly:
+
+```sh
+gh workflow run demo-release.yml --ref main -f tag=demo-milestone-1
+```
+
+All three platforms build the same resolved commit. Publication requires every build job to succeed, then independently checks archive checksums, all manifest file hashes, bundled code/voice notices, required suites, renderer coverage and the hash of the executable actually tested. Missing platforms, skipped required suites, script errors and shutdown-resource errors stop publication. The existing narrowly recorded Godot dummy-renderer diagnostic remains visible in Windows acceptance.
+
+For a new tag, the workflow creates a draft prerelease, uploads all three archives, their checksum sidecars, `SHA256SUMS`, `release-manifest.json` and `TESTING.md`, verifies GitHub's asset digests, then publishes. Existing release titles, notes and prerelease settings are preserved. Failed uploads leave a draft for recovery. Already-uploaded identical bytes are reused; changed or unverifiable assets are never overwritten. Rebuilding may produce different archive bytes, so use a new tag for replacement binaries. Immutable published releases cannot accept new assets: push the milestone tag first so CI can populate the draft before publication.
+
+The build jobs have read-only repository permission. Only the publication job receives `contents: write`; no personal access token is needed. Configure repository Actions to allow these workflows and the pinned official actions. The workflows do not create an organization or repository.
+
+GitHub's [release events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#release), [reusable workflows](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows), and [release asset digests](https://docs.github.com/en/rest/releases/assets#get-a-release-asset) define these behaviors. A release created using the workflow's `GITHUB_TOKEN` does not trigger another release workflow run.
 
 ## Build contract
 
@@ -12,7 +49,7 @@ Release notes identify the exact published revision and artifact checksums. The 
 | Windows x86_64 | Windows Server 2022 | `oathshaper_godot.dll` | `.zip` |
 | macOS Universal | macOS 14 | Universal `liboathshaper_godot.dylib` built with `lipo` | `.zip` containing `.app` |
 
-Godot **4.3.stable**, Rust **1.95.0**, and godot-rust **0.2.4** (`api-4-3`) match the project. Rust dependencies use `Cargo.lock`. Editor/template downloads use hashes pinned from [Godot's 4.3 SHA512 manifest](https://github.com/godotengine/godot-builds/releases/download/4.3-stable/SHA512-SUMS.txt). Actions use full commit IDs resolved from the official `actions/checkout` and `actions/upload-artifact` repositories on 2026-10-22.
+Godot **4.3.stable**, Rust **1.95.0**, and godot-rust **0.2.4** (`api-4-3`) match the project. Rust dependencies use `Cargo.lock`. Editor/template downloads use hashes pinned from [Godot's 4.3 SHA512 manifest](https://github.com/godotengine/godot-builds/releases/download/4.3-stable/SHA512-SUMS.txt). Actions use full commit IDs from the official checkout, upload-artifact and download-artifact repositories.
 
 The script compiles the extension on the target OS, stages only tracked Godot files, imports assets, exports with the platform preset, checks that the library was included, and runs the exported executable headlessly through its main scene for five frames, then uses the application audio service to close gracefully. Godot `ERROR` and `SCRIPT ERROR` messages fail the build even if its exit code is zero. The Rust core test suite also runs. A startup smoke is not full gameplay, visual, controller, or target hardware performance acceptance.
 
@@ -50,7 +87,7 @@ python3 scripts/export-release.py --platform macos \
 
 For Linux use `--platform linux`. On Windows use `python`, `--platform windows`, and dedicated paths such as `C:/Temp/oathshaper-release-build` and `C:/Temp/oathshaper-release-artifacts`. The build directory must be outside the repository. Reusing it reuses checked downloads and Cargo artifacts, and replaces its `project` and `package` subdirectories. It does not change the working project's `godot/bin`, import cache, installed Godot, or export template directory. Build from a clean checkout: the source commit is captured before compilation, and any dirty files or changed HEAD reject the candidate before manifest creation. Commit new Godot files first; the staging allowlist comes from `git ls-files`. Use a dedicated detached checkout for long builds.
 
-The official template archive is approximately 1.07 GB; each runner downloads it and extracts only its required template. The tracked source snapshot at checkpoint `daaee1c` totals 309,698,719 bytes; its largest file is the 39,040,004-byte garden GLB. Ordinary checkout is adequate for that snapshot, and no LFS migration is needed for these files. Each job has a 45-minute limit and artifacts expire after 14 days. No shared Cargo or Godot cache is restored between jobs.
+The official template archive is approximately 1.07 GB; each runner downloads it and extracts only its required template. The tracked source snapshot at checkpoint `daaee1c` totals 309,698,719 bytes; its largest file is the 39,040,004-byte garden GLB. Ordinary checkout is adequate for that snapshot, and no LFS migration is needed for these files. Each build job has a 60-minute limit and artifacts expire after 14 days. No shared Cargo or Godot cache is restored between jobs.
 
 ## Candidate contents and verification
 
