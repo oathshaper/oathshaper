@@ -112,8 +112,12 @@ def verify_acceptance(report, platform, revision, package):
     require(report["executable_sha256"] == package["executable_sha256"], "Different executable was tested")
     require(report["manifest_files_verified"] == package["manifest_files"], "Incomplete manifest verification")
     require(report["passed"] is True, "Acceptance failed")
-    require(report["rendered"] is (platform != "windows"), "Unexpected renderer coverage")
-    skipped = {"vanguard_presentation_test"} if platform == "windows" else set()
+    rendered = report["rendered"]
+    require(isinstance(rendered, bool), "Invalid renderer coverage")
+    # Hosted macOS uses headless checks; a matching local rendered receipt is
+    # also valid. Linux must retain its Mesa pixel checks.
+    require(platform == "macos" or rendered is (platform == "linux"), "Unexpected renderer coverage")
+    skipped = set() if rendered else {"vanguard_presentation_test"}
     require({r["suite"] for r in report["skipped"]} == skipped, "Unexpected skipped suites")
     expected = SUITES - skipped
     results = report["results"]

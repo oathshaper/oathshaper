@@ -76,6 +76,20 @@ def prepared_fixture(root):
 
 
 class ReleaseGateTests(unittest.TestCase):
+    def test_macos_renderer_claim_requires_the_pixel_suite(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            archive, report = fixture(Path(temporary), "macos")
+            package = release.verify_archive(archive, "macos", SHA)
+            pixel = "vanguard_presentation_test"
+            report["results"] = [row for row in report["results"] if row["suite"] != pixel]
+            report["skipped"] = [{"suite": pixel}]
+            with self.assertRaises(RuntimeError):
+                release.verify_acceptance(report, "macos", SHA, package)
+            report["rendered"] = False
+            checked = release.verify_acceptance(report, "macos", SHA, package)
+            self.assertFalse(checked["rendered"])
+            self.assertEqual(checked["skipped"], [pixel])
+
     def test_all_native_archive_formats_and_reports(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

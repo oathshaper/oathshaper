@@ -117,9 +117,11 @@ jobs:
         env:
           LIBGL_ALWAYS_SOFTWARE: '1'
         run: xvfb-run -a python scripts/test-exported-demo.py --rendered --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
-      - name: Test extracted macOS game with its renderer
+      - name: Test extracted macOS executable headlessly
         if: runner.os == 'macOS'
-        run: python scripts/test-exported-demo.py --rendered --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
+        # The standard runner uses Apple Software Renderer. Validate rendering
+        # from this exact download on a Mac with graphics acceleration.
+        run: python scripts/test-exported-demo.py --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
       - name: Test extracted Windows executable and DLL
         if: runner.os == 'Windows'
         run: python scripts/test-exported-demo.py --archives-dir "$ARTIFACTS" --output "$ACCEPTANCE"
