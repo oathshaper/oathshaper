@@ -176,7 +176,16 @@ def release_for_tag(repository, tag):
     result = subprocess.run(["gh", "api", f"repos/{repository}/releases/tags/{quote(tag, safe='')}"],
                             capture_output=True, text=True)
     if result.returncode and "(HTTP 404)" in result.stderr:
-        return None
+        # The tag endpoint finds published releases. Drafts are discoverable
+        # through the authenticated release list, including after an upload
+        # interruption. Search every page before creating another draft.
+        pages = json.loads(gh("api", "--paginate", "--slurp",
+                              f"repos/{repository}/releases?per_page=100"))
+        matches = [item for page in pages for item in page if item["tag_name"] == tag]
+        require(len(matches) <= 1, "Multiple releases use the requested tag")
+        if not matches:
+            return None
+        return json.loads(gh("api", f"repos/{repository}/releases/{matches[0]['id']}"))
     require(result.returncode == 0, "Could not read release metadata")
     return json.loads(result.stdout)
 

@@ -77,6 +77,36 @@ def prepared_fixture(root):
 
 
 class ReleaseGateTests(unittest.TestCase):
+    def test_draft_lookup_survives_tag_endpoint_404_and_pagination(self):
+        draft = {"id": 17, "tag_name": "demo-test", "draft": True, "assets": []}
+        missing = release.subprocess.CompletedProcess([], 1, "", "gh: Not Found (HTTP 404)")
+        pages = [[{"id": 8, "tag_name": "another-tag"}], [draft]]
+        with patch.object(release.subprocess, "run", return_value=missing), \
+                patch.object(release, "gh", side_effect=[json.dumps(pages), json.dumps(draft)]) as gh:
+            self.assertEqual(release.release_for_tag("example/game", "demo-test"), draft)
+            self.assertEqual(gh.call_args_list[0].args,
+                             ("api", "--paginate", "--slurp", "repos/example/game/releases?per_page=100"))
+            self.assertEqual(gh.call_args_list[1].args, ("api", "repos/example/game/releases/17"))
+
+    def test_release_lookup_distinguishes_absence_from_permission_failure(self):
+        missing = release.subprocess.CompletedProcess([], 1, "", "gh: Not Found (HTTP 404)")
+        with patch.object(release.subprocess, "run", return_value=missing), \
+                patch.object(release, "gh", return_value="[[]]"):
+            self.assertIsNone(release.release_for_tag("example/game", "demo-test"))
+        denied = release.subprocess.CompletedProcess([], 1, "", "gh: Forbidden (HTTP 403)")
+        with patch.object(release.subprocess, "run", return_value=denied), patch.object(release, "gh") as gh:
+            with self.assertRaisesRegex(RuntimeError, "Could not read release"):
+                release.release_for_tag("example/game", "demo-test")
+            gh.assert_not_called()
+
+    def test_ambiguous_draft_lookup_refuses_mutation(self):
+        missing = release.subprocess.CompletedProcess([], 1, "", "gh: Not Found (HTTP 404)")
+        pages = [[{"id": 1, "tag_name": "demo-test"}, {"id": 2, "tag_name": "demo-test"}]]
+        with patch.object(release.subprocess, "run", return_value=missing), \
+                patch.object(release, "gh", return_value=json.dumps(pages)):
+            with self.assertRaisesRegex(RuntimeError, "Multiple releases"):
+                release.release_for_tag("example/game", "demo-test")
+
     def test_macos_renderer_claim_requires_the_pixel_suite(self):
         with tempfile.TemporaryDirectory() as temporary:
             archive, report = fixture(Path(temporary), "macos")
