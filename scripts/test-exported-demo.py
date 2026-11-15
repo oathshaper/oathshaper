@@ -17,6 +17,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 SUITES = [
+    ("character_presentation_test", [], "CHARACTER_PRESENTATION:"),
     ("playable_profiles_test", [], "PLAYABLE_PROFILES:"),
     ("flow_presentation_test", [], "FLOW_PRESENTATION:"),
     ("vanguard_presentation_test", [], "VANGUARD_PRESENTATION_TEST:"),
@@ -146,7 +147,8 @@ def main():
         folder = output / label
         folder.mkdir(exist_ok=True)
         driver = prepare_driver(suite, folder)
-        command = [str(executable), "--audio-driver", "Dummy"]
+        command = [str(executable), "--audio-driver", "Dummy",
+                   "--log-file", str(folder / "engine.log")]
         if not args.rendered:
             command.append("--headless")
         command += ["--script", str(driver), "--", *arguments]

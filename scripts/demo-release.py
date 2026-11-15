@@ -22,7 +22,7 @@ PLATFORMS = {
     "windows": ("windows-x86_64", ".zip", "Oathshaper.exe"),
     "macos": ("macos-universal", ".zip", None),
 }
-SUITES = {"playable_profiles_test", "flow_presentation_test", "vanguard_presentation_test",
+SUITES = {"character_presentation_test", "playable_profiles_test", "flow_presentation_test", "vanguard_presentation_test",
           "vanguard_aim_test", "chapter_route_test", "garden_outcome_test-flow",
           "garden_outcome_test-vanguard"}
 

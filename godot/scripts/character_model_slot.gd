@@ -4,7 +4,8 @@ extends Node3D
 @export var model_path := ""
 @export var rigged_model_path := ""
 @export var require_rigged_walk := false
-@export var placeholder_names: PackedStringArray = []
+# An Array-literal default loses the authored values during binary scene export.
+@export var placeholder_names: PackedStringArray = PackedStringArray()
 @export var model_offset := Vector3(0.0, -1.0, 0.0)
 @export var model_scale := Vector3.ONE
 @export var untextured_color := Color(0.55, 0.55, 0.52)
