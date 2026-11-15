@@ -22,7 +22,7 @@ Styles 04–09 are design previews, not playable combat modes. Oathshaper is an 
 
 ## Download the demo
 
-[Download the Windows, macOS, or Linux demo](https://github.com/oathshaper/oathshaper/releases/tag/demo-2026-11-03). Extract the full archive before launching; Godot and Rust are only needed to build from source. The release page lists platform-specific test coverage and limits, and the [installation guide](docs/install.md) covers launch steps and controls.
+[Download the Windows, macOS, or Linux demo](https://github.com/oathshaper/oathshaper/releases). Extract the full archive before launching; Godot and Rust are only needed to build from source. The release page lists platform-specific test coverage and limits, and the [installation guide](docs/install.md) covers launch steps and controls.
 
 ## Run from source
 
