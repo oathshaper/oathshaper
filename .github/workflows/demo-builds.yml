@@ -46,7 +46,7 @@ jobs:
           SELECTED_PLATFORM: ${{ inputs.platform || 'all' }}
         run: |
           import json, os, subprocess
-          platforms = {"linux": "ubuntu-22.04", "windows": "windows-2022", "macos": "macos-14"}
+          platforms = {"linux": "ubuntu-22.04", "windows": "windows-2022", "macos": "macos-15"}
           selected = os.environ["SELECTED_PLATFORM"]
           if selected not in ["all", *platforms]:
               raise SystemExit("Unknown platform selection")
