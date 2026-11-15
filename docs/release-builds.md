@@ -47,7 +47,7 @@ GitHub's [release events](https://docs.github.com/en/actions/reference/workflows
 | --- | --- | --- | --- |
 | Linux x86_64 | Ubuntu 22.04 | `liboathshaper_godot.so` | `.tar.gz`, preserving executable permissions |
 | Windows x86_64 | Windows Server 2022 | `oathshaper_godot.dll` | `.zip` |
-| macOS Universal | macOS 14 | Universal `liboathshaper_godot.dylib` built with `lipo` | `.zip` containing `.app` |
+| macOS Universal | macOS 15 | Universal `liboathshaper_godot.dylib` built with `lipo` | `.zip` containing `.app` |
 
 Godot **4.3.stable**, Rust **1.95.0**, and godot-rust **0.2.4** (`api-4-3`) match the project. Rust dependencies use `Cargo.lock`. Editor/template downloads use hashes pinned from [Godot's 4.3 SHA512 manifest](https://github.com/godotengine/godot-builds/releases/download/4.3-stable/SHA512-SUMS.txt). Actions use full commit IDs from the official checkout, upload-artifact and download-artifact repositories.
 

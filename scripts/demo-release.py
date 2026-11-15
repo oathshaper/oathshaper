@@ -14,6 +14,7 @@ import shutil
 import stat
 import subprocess
 import tarfile
+import time
 from urllib.parse import quote
 import zipfile
 
@@ -200,6 +201,18 @@ def remote_revision(repository, tag):
     raise RuntimeError("Too many nested tags")
 
 
+def confirm_created_release(repository, tag):
+    # A successful create can precede visibility in GitHub's release list.
+    # Retry reads only; never create a second draft or hide permission errors.
+    for delay in (0, 1, 2, 4, 8):
+        if delay:
+            time.sleep(delay)
+        release = release_for_tag(repository, tag)
+        if release is not None:
+            return release
+    raise RuntimeError("Draft release creation was not confirmed; preserve the draft and retry publication")
+
+
 def pending_assets(release, files):
     existing = {asset["name"]: asset for asset in release["assets"]}
     pending = []
@@ -233,8 +246,7 @@ def publish(prepared, repository):
     if release is None:
         gh("release", "create", tag, "--repo", repository, "--verify-tag", "--draft", "--prerelease",
            "--title", "Oathshaper demo: " + tag, "--notes-file", str(prepared / "TESTING.md"))
-        release = release_for_tag(repository, tag)
-        require(release is not None, "Draft release creation was not confirmed")
+        release = confirm_created_release(repository, tag)
     pending = pending_assets(release, files)
     for name in pending:
         # No --clobber: existing bytes are never removed or replaced.

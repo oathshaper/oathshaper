@@ -77,6 +77,32 @@ def prepared_fixture(root):
 
 
 class ReleaseGateTests(unittest.TestCase):
+    def test_created_draft_can_appear_after_delayed_metadata_reads(self):
+        draft = {"id": 17, "tag_name": "demo-test", "draft": True, "assets": []}
+        with patch.object(release, "release_for_tag", side_effect=[None, None, draft]) as lookup, \
+                patch.object(release.time, "sleep") as sleep, patch.object(release, "gh") as gh:
+            self.assertEqual(release.confirm_created_release("example/game", "demo-test"), draft)
+            self.assertEqual(lookup.call_count, 3)
+            self.assertEqual([call.args[0] for call in sleep.call_args_list], [1, 2])
+            gh.assert_not_called()
+
+    def test_created_draft_confirmation_is_bounded_and_never_recreates(self):
+        with patch.object(release, "release_for_tag", return_value=None) as lookup, \
+                patch.object(release.time, "sleep") as sleep, patch.object(release, "gh") as gh:
+            with self.assertRaisesRegex(RuntimeError, "preserve the draft"):
+                release.confirm_created_release("example/game", "demo-test")
+            self.assertEqual(lookup.call_count, 5)
+            self.assertEqual([call.args[0] for call in sleep.call_args_list], [1, 2, 4, 8])
+            gh.assert_not_called()
+
+    def test_created_draft_permission_failure_stops_without_retry(self):
+        with patch.object(release, "release_for_tag", side_effect=RuntimeError("Could not read release metadata")) as lookup, \
+                patch.object(release.time, "sleep") as sleep:
+            with self.assertRaisesRegex(RuntimeError, "Could not read release"):
+                release.confirm_created_release("example/game", "demo-test")
+            self.assertEqual(lookup.call_count, 1)
+            sleep.assert_not_called()
+
     def test_draft_lookup_survives_tag_endpoint_404_and_pagination(self):
         draft = {"id": 17, "tag_name": "demo-test", "draft": True, "assets": []}
         missing = release.subprocess.CompletedProcess([], 1, "", "gh: Not Found (HTTP 404)")
